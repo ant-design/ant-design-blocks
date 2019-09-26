@@ -31,7 +31,7 @@ const modifyPackageInfo = async (blockDir, name, description) => {
 
 const generateBlock = async (demoWithText, current, total) => {
   const { name, text } = demoWithText;
-  // spinner.start(`(${current}/${total}) generate block ${name}`);
+  spinner.start(`(${current}/${total}) generate block ${name}`);
 
   const blockDir = path.join(rootDir, name);
 
