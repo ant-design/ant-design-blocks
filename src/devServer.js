@@ -6,7 +6,7 @@ const runDevServer = ({ cwd, blockName, port = 1234 }) => {
     const command = `PAGES_PATH=${blockName}/src BROWSER=none npm run dev`;
 
     const devServerUrl = `http://localhost:${port}`;
-    const devServer = exec(`${command} -- --port ${port}`, { cwd });
+    devServer = exec(`${command} -- --port ${port}`, { cwd });
     devServer.stdout.on('data', data => {
       if (/DONE/.test(data.toString())) {
         resolve(devServerUrl);
@@ -22,7 +22,7 @@ const runDevServer = ({ cwd, blockName, port = 1234 }) => {
 };
 
 const killDevServer = () => {
-  if (devServer && devServer !== null) {
+  if (devServer !== null) {
     devServer.kill('SIGINT');
     devServer = null;
   }

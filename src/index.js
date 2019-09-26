@@ -108,7 +108,6 @@ const generateBlockList = async demosWithText => {
       previewUrl
     };
   });
-  console.log(blockList[0]);
   const blockListFilePath = path.join(rootDir, 'blockList.json');
   await fs.writeJSON(blockListFilePath, blockList);
   spinner.succeed();
@@ -124,7 +123,7 @@ const main = async () => {
     return;
   }
 
-  const demosWithText = await Promise.all(
+  let demosWithText = await Promise.all(
     demos.map(async demo => {
       const text = await fs.readFile(demo.filePath, 'utf8');
       return {
@@ -133,6 +132,8 @@ const main = async () => {
       };
     })
   );
+
+  demosWithText = demosWithText.filter(demo => !parseIsDebug(demo.text));
 
   await openBrowser();
 

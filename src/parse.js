@@ -2,6 +2,7 @@ const JSX_SCRIPT = /```jsx\n*(.*(?=```))/is;
 const STYLE_SCRIPT = /<style>\n*(.*(?=<\/style>))/is;
 const TITLE_SCRIPT = /title:\s*zh-CN: (.*)/i;
 const DESC_SCRIPT = /## zh-CN\n\n(.*)(?=\n\n## en-US)/is;
+const DEBUG_SCRIPT = /debug: true.*(?=---)/is;
 
 const parseJSX = text => {
   let jsxText = null;
@@ -53,10 +54,7 @@ const parseDesc = text => {
   return desc;
 };
 
-const parseIsDebug = text => {
-  let IsDebug = false;
-  return IsDebug;
-};
+const parseIsDebug = text => DEBUG_SCRIPT.test(text);
 
 module.exports = {
   parseJSX,
