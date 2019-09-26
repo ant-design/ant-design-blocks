@@ -1,5 +1,6 @@
-const JSX_SCRIPT = /```jsx\n*(.*(?=```))/is;
-const STYLE_SCRIPT = /<style>\n*(.*(?=<\/style>))/is;
+const JSX_SCRIPT = /```jsx\n*(.*?(?=```))/is;
+const STYLE_TAG_SCRIPT = /<style>\n*(.*(?=<\/style>))/is;
+const CSS_MARK_SCRIPT = /```css\n*(.*?(?=```))/is;
 const TITLE_SCRIPT = /title:\s*zh-CN: (.*)/i;
 const DESC_SCRIPT = /## zh-CN\n\n(.*)(?=\n\n## en-US)/is;
 const DEBUG_SCRIPT = /debug: true.*(?=---)/is;
@@ -25,13 +26,22 @@ const parseJSX = text => {
 
 const parseStyle = text => {
   let cssText = null;
-  const result = text.match(STYLE_SCRIPT);
-  if (result && result.length > 0) {
-    cssText = result[1];
+  const result1 = text.match(STYLE_TAG_SCRIPT);
+  if (result1 && result1.length > 0) {
+    cssText = result1[1];
   }
 
-  // TODO: prettier
-  cssText = `.card {\n  :global {\n    ${cssText}\n  }\n}`;
+  if (cssText === null) {
+    const result2 = text.match(CSS_MARK_SCRIPT);
+    if (result2 && result2.length > 0) {
+      cssText = result2[1];
+    }
+  }
+
+  if (cssText !== null) {
+    // TODO: prettier
+    cssText = `.card {\n  :global {\n    ${cssText}\n  }\n}`;
+  }
 
   return cssText;
 };

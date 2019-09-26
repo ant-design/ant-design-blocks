@@ -3,6 +3,7 @@ const puppeteer = require('puppeteer');
 const path = require('path');
 
 let browser = null;
+let page = null;
 
 const openBrowser = async () => {
   browser = await puppeteer.launch({
@@ -15,10 +16,10 @@ const openBrowser = async () => {
       '--no-sandbox'
     ]
   });
+  page = await browser.newPage();
 };
 
 const screenshot = async (blockName, blockDir, rootDir) => {
-  const page = await browser.newPage();
   const imagePath = path.join(blockDir, 'snapshot.png');
   const devServerUrl = await runDevServer({
     cwd: rootDir,
