@@ -1,0 +1,3 @@
+[submodule "ant-design"]
+	path = ant-design
+	url = https://github.com/ant-design/ant-design.git
