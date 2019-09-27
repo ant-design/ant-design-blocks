@@ -87,10 +87,8 @@ const generateBlocks = async (demosWithText, needContinue) => {
     spinner.start(`(${current}/${total}) generate block ${name}`);
 
     await generateBlock(demoWithText);
-    if (needContinue) {
-      historyList.push(name);
-      await fs.writeJSON(continueFilePath, historyList);
-    }
+    historyList.push(name);
+    await fs.writeJSON(continueFilePath, historyList);
   }
   const total = demosWithText.length;
   spinner.succeed(`${total} blocks generated`);
