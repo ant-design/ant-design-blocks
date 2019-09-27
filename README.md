@@ -7,13 +7,15 @@ umi blocks of Ant Design.
 With version 2.13 of Git and later:
 
 ```bash
-git clone --recurse-submodules https://github.com/ant-design/ant-design-blocks.git
+git clone https://github.com/ant-design/ant-design.git
 yarn install
 yarn start
 ```
 
 ## TODO
 
+- [ ] 支持断点解析
+- [ ] 支持 error log 写入文件
 - [ ] 优化 package.json 的生成
 - [ ] 不抓取 debug 为 true 的 Demo
 - [ ] 优化 CSS 的生成

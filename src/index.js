@@ -1,6 +1,5 @@
 const fs = require('fs-extra');
 const path = require('path');
-const pLimit = require('p-limit');
 const ora = require('ora');
 require('events').EventEmitter.defaultMaxListeners = 0;
 const {
@@ -13,10 +12,11 @@ const {
 const fetchAntDDemos = require('./fetchAntDDemos');
 const { screenshot, openBrowser, closeBrowser } = require('./screenshot');
 
-const limit = pLimit(1);
 const blockTemplateDir = path.join(__dirname, '../assets/block-template');
 const rootDir = path.join(__dirname, '..');
+const continueFilePath = path.join(__dirname, '../continue.json');
 const spinner = ora();
+let historyList = [];
 
 const modifyPackageInfo = async (blockDir, name, description) => {
   const pkgFilePath = path.join(blockDir, 'package.json');
@@ -72,12 +72,20 @@ const generateBlock = async (demoWithText, current, total) => {
   await screenshot(name, blockDir, rootDir);
 };
 
-const generateBlocks = async demosWithText => {
-  await Promise.all(
-    demosWithText.map((demoWithText, index) =>
-      limit(() => generateBlock(demoWithText, index + 1, demosWithText.length))
-    )
-  );
+const generateBlocks = async (demosWithText, needContinue) => {
+  for (let index = 0; index < demosWithText.length; index++) {
+    const demoWithText = demosWithText[index];
+    const { name } = demoWithText;
+    if (needContinue && historyList.indexOf(name) !== -1) {
+      continue;
+    }
+
+    await generateBlock(demoWithText, index + 1, demosWithText.length);
+    if (needContinue) {
+      historyList.push(name);
+      await fs.writeJSON(continueFilePath, historyList);
+    }
+  }
   const total = demosWithText.length;
   spinner.succeed(`${total} blocks generated`);
 };
@@ -92,7 +100,7 @@ const generateBlockList = async demosWithText => {
     const img = `https://github.com/ant-design/ant-design-blocks/raw/master/${name}/snapshot.png`;
     const previewUrl = `https://ant.design/components/${componentName}-cn/#components-${componentName}-demo-${mdBaseName}`;
     const url = `https://github.com/ant-design/ant-design-blocks/tree/master/${name}`;
-    const tags = [componentName, mdBaseName, demoTitle];
+    const tags = [componentName];
     return {
       title,
       value: name,
@@ -115,6 +123,14 @@ const generateBlockList = async demosWithText => {
 };
 
 const main = async () => {
+  const needContinue = process.argv[2] === '-c';
+
+  if (needContinue) {
+    historyList = await fs.readJSON(continueFilePath, 'utf8');
+  } else {
+    await fs.writeJSON(continueFilePath, historyList);
+  }
+
   const demos = await fetchAntDDemos();
 
   if (demos.length <= 0) {
@@ -138,7 +154,7 @@ const main = async () => {
 
   await openBrowser();
 
-  await generateBlocks(demosWithText);
+  await generateBlocks(demosWithText, needContinue);
 
   await generateBlockList(demosWithText);
 
