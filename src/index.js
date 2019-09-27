@@ -167,7 +167,7 @@ const main = async () => {
     demosWithText = demosWithText.slice(0, DEBUG_COUNT);
   }
 
-  spinner.succeed(`get ${demosWithText.length} antd demos`);
+  console.log(`will generate ${demosWithText.length} blocks`);
 
   await openBrowser();
 
