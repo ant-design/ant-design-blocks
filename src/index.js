@@ -32,9 +32,8 @@ const modifyPackageInfo = async (blockDir, name, description) => {
   await fs.outputFile(pkgFilePath, jsonStr);
 };
 
-const generateBlock = async (demoWithText, current, total) => {
+const generateBlock = async demoWithText => {
   const { name, text } = demoWithText;
-  spinner.start(`(${current}/${total}) generate block ${name}`);
 
   const blockDir = path.join(rootDir, name);
 
@@ -83,7 +82,11 @@ const generateBlocks = async (demosWithText, needContinue) => {
       continue;
     }
 
-    await generateBlock(demoWithText, index + 1, demosWithText.length);
+    const current = historyList.length + 1;
+    const total = demosWithText.length;
+    spinner.start(`(${current}/${total}) generate block ${name}`);
+
+    await generateBlock(demoWithText);
     if (needContinue) {
       historyList.push(name);
       await fs.writeJSON(continueFilePath, historyList);
