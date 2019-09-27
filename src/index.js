@@ -17,6 +17,7 @@ const rootDir = path.join(__dirname, '..');
 const continueFilePath = path.join(__dirname, '../continue.json');
 const spinner = ora();
 let historyList = [];
+const DEBUG_COUNT = 10;
 
 const modifyPackageInfo = async (blockDir, name, description) => {
   const pkgFilePath = path.join(blockDir, 'package.json');
@@ -92,7 +93,9 @@ const generateBlocks = async (demosWithText, needContinue) => {
 
 const generateBlockList = async demosWithText => {
   spinner.start('generate blockList.json');
-  const blockList = demosWithText.map(demoWithText => {
+  let blockList = [];
+  for (let index = 0; index < demosWithText.length; index++) {
+    const demoWithText = demosWithText[index];
     const { name, componentName, mdBaseName, text } = demoWithText;
     const description = parseDesc(text);
     const demoTitle = parseTitle(text);
@@ -101,7 +104,7 @@ const generateBlockList = async demosWithText => {
     const previewUrl = `https://ant.design/components/${componentName}-cn/#components-${componentName}-demo-${mdBaseName}`;
     const url = `https://github.com/ant-design/ant-design-blocks/tree/master/${name}`;
     const tags = [componentName];
-    return {
+    blockList.push({
       title,
       value: name,
       key: name,
@@ -115,8 +118,8 @@ const generateBlockList = async demosWithText => {
       tags,
       name: title,
       previewUrl
-    };
-  });
+    });
+  }
   const blockListFilePath = path.join(rootDir, 'blockList.json');
   await fs.writeJSON(blockListFilePath, blockList);
   spinner.succeed();
@@ -151,6 +154,10 @@ const main = async () => {
   );
 
   demosWithText = demosWithText.filter(demo => !parseIsDebug(demo.text));
+
+  if (DEBUG_COUNT !== 0) {
+    demosWithText = demosWithText.slice(0, DEBUG_COUNT);
+  }
 
   await openBrowser();
 
