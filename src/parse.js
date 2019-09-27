@@ -7,6 +7,7 @@ const TITLE_SCRIPT = /title:\s*zh-CN: (.*)/i;
 const DESC_SCRIPT = /## zh-CN\n\n(.*)(?=\n\n## en-US)/is;
 const DEBUG_SCRIPT = /debug: true.*(?=---)/is;
 const COMPONENT_TYPE_SCRIPT = /\ntype: (.*)(?=\n)/i;
+const COL_SCRIPT = /\ncols: (\d)(?=\n)/i;
 
 const parseJSX = text => {
   let jsxText = null;
@@ -78,11 +79,21 @@ const parseComponentType = text => {
   return componentType;
 };
 
+const parseCol = text => {
+  let col = '2';
+  const result = text.match(COL_SCRIPT);
+  if (result && result.length > 0) {
+    col = result[1];
+  }
+  return parseInt(col, 10);
+};
+
 module.exports = {
   parseJSX,
   parseStyle,
   parseTitle,
   parseDesc,
   parseIsDebug,
-  parseComponentType
+  parseComponentType,
+  parseCol
 };

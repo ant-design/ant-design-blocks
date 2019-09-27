@@ -33,7 +33,7 @@ const modifyPackageInfo = async (blockDir, name, description) => {
 };
 
 const generateBlock = async demoWithText => {
-  const { name, text } = demoWithText;
+  const { name, text, width, height } = demoWithText;
 
   const blockDir = path.join(rootDir, name);
 
@@ -71,7 +71,7 @@ const generateBlock = async demoWithText => {
   const description = parseDesc(text);
   await modifyPackageInfo(blockDir, name, description);
 
-  await screenshot(name, blockDir, rootDir);
+  await screenshot(name, blockDir, rootDir, width, height);
 };
 
 const generateBlocks = async (demosWithText, needContinue) => {
@@ -84,7 +84,7 @@ const generateBlocks = async (demosWithText, needContinue) => {
 
     const current = historyList.length + 1;
     const total = demosWithText.length;
-    spinner.start(`(${current}/${total}) generate block ${name}`);
+    spinner.start(`[${current}/${total}] generate block ${name}`);
 
     await generateBlock(demoWithText);
     historyList.push(name);
@@ -109,7 +109,7 @@ const generateBlockList = async demosWithText => {
     const description = parseDesc(text);
     const demoTitle = parseTitle(text);
     const title = `${componentName}-${demoTitle}`;
-    const img = `https://github.com/ant-design/ant-design-blocks/raw/master/${name}/snapshot.png`;
+    const img = `https://raw.githubusercontent.com/ant-design/ant-design-blocks/master/${name}/snapshot.png`;
     const previewUrl = `https://ant.design/components/${componentName}-cn/#components-${componentName}-demo-${mdBaseName}`;
     const url = `https://github.com/ant-design/ant-design-blocks/tree/master/${name}`;
     const tags = [componentType];

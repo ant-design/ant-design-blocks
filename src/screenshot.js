@@ -12,20 +12,26 @@ const openBrowser = async () => {
       '--disable-gpu',
       '--disable-dev-shm-usage',
       '--no-first-run',
+      `–disable-setuid-sandbox`,
       '--no-zygote',
-      '--no-sandbox'
+      '--no-sandbox',
+      `–single-process`
     ]
   });
   page = await browser.newPage();
 };
 
-const screenshot = async (blockName, blockDir, rootDir) => {
+const screenshot = async (blockName, blockDir, rootDir, width, height) => {
   const imagePath = path.join(blockDir, 'snapshot.png');
   const devServerUrl = await runDevServer({
     cwd: rootDir,
     blockName
   });
   await page.goto(devServerUrl);
+  await page.setViewport({
+    width,
+    height,
+  });
   await page.screenshot({
     path: imagePath
   });
