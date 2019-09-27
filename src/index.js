@@ -1,6 +1,7 @@
 const fs = require('fs-extra');
 const path = require('path');
 const ora = require('ora');
+const prettier = require('prettier');
 require('events').EventEmitter.defaultMaxListeners = 0;
 const {
   parseJSX,
@@ -17,7 +18,7 @@ const rootDir = path.join(__dirname, '..');
 const continueFilePath = path.join(__dirname, '../continue.json');
 const spinner = ora();
 let historyList = [];
-const DEBUG_COUNT = 10;
+const DEBUG_COUNT = 0;
 
 const modifyPackageInfo = async (blockDir, name, description) => {
   const pkgFilePath = path.join(blockDir, 'package.json');
@@ -27,7 +28,8 @@ const modifyPackageInfo = async (blockDir, name, description) => {
     name: `@umi-block/${name}`,
     description
   };
-  await fs.writeJSON(pkgFilePath, json);
+  const jsonStr = prettier.format(JSON.stringify(json), { parser: 'json' });
+  await fs.outputFile(pkgFilePath, jsonStr);
 };
 
 const generateBlock = async (demoWithText, current, total) => {
@@ -96,14 +98,20 @@ const generateBlockList = async demosWithText => {
   let blockList = [];
   for (let index = 0; index < demosWithText.length; index++) {
     const demoWithText = demosWithText[index];
-    const { name, componentName, mdBaseName, text } = demoWithText;
+    const {
+      name,
+      componentName,
+      mdBaseName,
+      text,
+      componentType
+    } = demoWithText;
     const description = parseDesc(text);
     const demoTitle = parseTitle(text);
     const title = `${componentName}-${demoTitle}`;
     const img = `https://github.com/ant-design/ant-design-blocks/raw/master/${name}/snapshot.png`;
     const previewUrl = `https://ant.design/components/${componentName}-cn/#components-${componentName}-demo-${mdBaseName}`;
     const url = `https://github.com/ant-design/ant-design-blocks/tree/master/${name}`;
-    const tags = [componentName];
+    const tags = [componentType];
     blockList.push({
       title,
       value: name,

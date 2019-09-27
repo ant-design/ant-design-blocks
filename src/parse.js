@@ -1,9 +1,12 @@
+const prettier = require('prettier');
+
 const JSX_SCRIPT = /```jsx\n*(.*?(?=```))/is;
 const STYLE_TAG_SCRIPT = /<style>\n*(.*(?=<\/style>))/is;
 const CSS_MARK_SCRIPT = /```css\n*(.*?(?=```))/is;
 const TITLE_SCRIPT = /title:\s*zh-CN: (.*)/i;
 const DESC_SCRIPT = /## zh-CN\n\n(.*)(?=\n\n## en-US)/is;
 const DEBUG_SCRIPT = /debug: true.*(?=---)/is;
+const COMPONENT_TYPE_SCRIPT = /\ntype: (.*)(?=\n)/i;
 
 const parseJSX = text => {
   let jsxText = null;
@@ -39,8 +42,8 @@ const parseStyle = text => {
   }
 
   if (cssText !== null) {
-    // TODO: prettier
     cssText = `.card {\n  :global {\n    ${cssText}\n  }\n}`;
+    cssText = prettier.format(cssText, { parser: 'less' });
   }
 
   return cssText;
@@ -66,10 +69,20 @@ const parseDesc = text => {
 
 const parseIsDebug = text => DEBUG_SCRIPT.test(text);
 
+const parseComponentType = text => {
+  let componentType = '';
+  const result = text.match(COMPONENT_TYPE_SCRIPT);
+  if (result && result.length > 0) {
+    componentType = result[1];
+  }
+  return componentType;
+};
+
 module.exports = {
   parseJSX,
   parseStyle,
   parseTitle,
   parseDesc,
-  parseIsDebug
+  parseIsDebug,
+  parseComponentType
 };

@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs-extra');
 const ora = require('ora');
+const { parseComponentType } = require('./parse');
 
 const spinner = ora();
 const componentsDir = path.join(__dirname, '../ant-design/components');
@@ -10,8 +11,22 @@ const filterFolders = ['__tests__', '_util'];
 const fetchComponent = async componentName => {
   const componentPath = path.join(componentsDir, componentName);
   const demoPath = path.join(componentPath, 'demo');
+  const demoIndexCNFilePath = path.join(componentPath, 'index.zh-CN.md');
   let demoFiles = [];
   try {
+    let componentType = '';
+    if (componentName === 'table') {
+      componentType = '表格';
+    } else if (componentName === 'form') {
+      componentType = '表单';
+    } else {
+      const demoIndexCNFileText = await fs.readFile(
+        demoIndexCNFilePath,
+        'utf8'
+      );
+      componentType = parseComponentType(demoIndexCNFileText);
+    }
+
     const fileNames = await fs.readdir(demoPath);
     demoFiles = fileNames
       .filter(fileName => path.extname(fileName) === '.md')
@@ -23,7 +38,8 @@ const fetchComponent = async componentName => {
           componentName,
           mdBaseName,
           name: fileName,
-          filePath
+          filePath,
+          componentType
         };
       });
   } catch (err) {}
