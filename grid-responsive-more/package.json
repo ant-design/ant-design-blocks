@@ -1,0 +1,18 @@
+{
+  "name": "@umi-block/grid-responsive-more",
+  "version": "0.0.1",
+  "description": "`span` `pull` `push` `offset` `order` 属性可以通过内嵌到 `xs` `sm` `md` `lg` `xl` `xxl` 属性中来使用。\n\n其中 `xs={6}` 相当于 `xs={{ span: 6 }}`。",
+  "main": "src/index.js",
+  "authors": { "name": "", "email": "" },
+  "repository": "https://github.com/ant-design/ant-design-blocks/${BLOCKNAME}",
+  "scripts": { "dev": "umi dev" },
+  "dependencies": { "antd": "^3.23.4" },
+  "devDependencies": {
+    "umi": "^2.9.0",
+    "umi-plugin-block-dev": "^2.0.0",
+    "umi-types": "^0.3.0",
+    "react": ">=16.0.0",
+    "umi-plugin-react": "^1.10.1"
+  },
+  "license": "MIT"
+}

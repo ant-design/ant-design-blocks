@@ -1,0 +1,18 @@
+{
+  "name": "@umi-block/dropdown-event",
+  "version": "0.0.1",
+  "description": "点击菜单项后会触发事件，用户可以通过相应的菜单项 key 进行不同的操作。",
+  "main": "src/index.js",
+  "authors": { "name": "", "email": "" },
+  "repository": "https://github.com/ant-design/ant-design-blocks/${BLOCKNAME}",
+  "scripts": { "dev": "umi dev" },
+  "dependencies": { "antd": "^3.23.4" },
+  "devDependencies": {
+    "umi": "^2.9.0",
+    "umi-plugin-block-dev": "^2.0.0",
+    "umi-types": "^0.3.0",
+    "react": ">=16.0.0",
+    "umi-plugin-react": "^1.10.1"
+  },
+  "license": "MIT"
+}

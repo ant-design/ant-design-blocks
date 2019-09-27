@@ -1,0 +1,26 @@
+.card {
+  :global {
+    tr:last-child td {
+      padding-bottom: 0;
+    }
+    #components-page-header-demo-responsive .content {
+      display: flex;
+    }
+    @media (max-width: 576px) {
+      #components-page-header-demo-responsive .content {
+        display: block;
+      }
+
+      #components-page-header-demo-responsive .main {
+        width: 100%;
+        margin-bottom: 12px;
+      }
+
+      #components-page-header-demo-responsive .extra {
+        width: 100%;
+        margin-left: 0;
+        text-align: left;
+      }
+    }
+  }
+}

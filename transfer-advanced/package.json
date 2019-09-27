@@ -1,0 +1,18 @@
+{
+  "name": "@umi-block/transfer-advanced",
+  "version": "0.0.1",
+  "description": "穿梭框高级用法，可配置操作文案，可定制宽高，可对底部进行自定义渲染。",
+  "main": "src/index.js",
+  "authors": { "name": "", "email": "" },
+  "repository": "https://github.com/ant-design/ant-design-blocks/${BLOCKNAME}",
+  "scripts": { "dev": "umi dev" },
+  "dependencies": { "antd": "^3.23.4" },
+  "devDependencies": {
+    "umi": "^2.9.0",
+    "umi-plugin-block-dev": "^2.0.0",
+    "umi-types": "^0.3.0",
+    "react": ">=16.0.0",
+    "umi-plugin-react": "^1.10.1"
+  },
+  "license": "MIT"
+}

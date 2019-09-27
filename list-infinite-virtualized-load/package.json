@@ -1,0 +1,18 @@
+{
+  "name": "@umi-block/list-infinite-virtualized-load",
+  "version": "0.0.1",
+  "description": "结合 [react-virtualized](https://github.com/bvaughn/react-virtualized) 实现滚动加载无限长列表，带有虚拟化（[virtualization](https://blog.jscrambler.com/optimizing-react-rendering-through-virtualization/)）功能，能够提高数据量大时候长列表的性能。\n\n`virtualized` 是在大数据列表中应用的一种技术，主要是为了减少不可见区域不必要的渲染从而提高性能，特别是数据量在成千上万条效果尤为明显。[了解更多](https://blog.jscrambler.com/optimizing-react-rendering-through-virtualization/)",
+  "main": "src/index.js",
+  "authors": { "name": "", "email": "" },
+  "repository": "https://github.com/ant-design/ant-design-blocks/${BLOCKNAME}",
+  "scripts": { "dev": "umi dev" },
+  "dependencies": { "antd": "^3.23.4" },
+  "devDependencies": {
+    "umi": "^2.9.0",
+    "umi-plugin-block-dev": "^2.0.0",
+    "umi-types": "^0.3.0",
+    "react": ">=16.0.0",
+    "umi-plugin-react": "^1.10.1"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,18 @@
+{
+  "name": "@umi-block/button-ghost",
+  "version": "0.0.1",
+  "description": "幽灵按钮将按钮的内容反色，背景变为透明，常用在有色背景上。",
+  "main": "src/index.js",
+  "authors": { "name": "", "email": "" },
+  "repository": "https://github.com/ant-design/ant-design-blocks/${BLOCKNAME}",
+  "scripts": { "dev": "umi dev" },
+  "dependencies": { "antd": "^3.23.4" },
+  "devDependencies": {
+    "umi": "^2.9.0",
+    "umi-plugin-block-dev": "^2.0.0",
+    "umi-types": "^0.3.0",
+    "react": ">=16.0.0",
+    "umi-plugin-react": "^1.10.1"
+  },
+  "license": "MIT"
+}
