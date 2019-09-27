@@ -62,7 +62,6 @@ const fetchAntDDemos = async () => {
       demos = demos.concat(result);
     })
   );
-  spinner.succeed(`get ${demos.length} antd demos`);
   return demos;
 };
 
