@@ -3,7 +3,7 @@ const prettier = require('prettier');
 const JSX_SCRIPT = /```jsx\n*(.*?(?=```))/is;
 const STYLE_TAG_SCRIPT = /<style>\n*(.*(?=<\/style>))/is;
 const CSS_MARK_SCRIPT = /```css\n*(.*?(?=```))/is;
-const TITLE_SCRIPT = /title:\s*zh-CN: (.*)/i;
+const TITLE_SCRIPT = /zh-CN: (.*)/i;
 const DESC_SCRIPT = /## zh-CN\n\n(.*)(?=\n\n## en-US)/is;
 const DEBUG_SCRIPT = /debug: true.*(?=---)/is;
 const COMPONENT_TYPE_SCRIPT = /\ntype: (.*)(?=\n)/i;

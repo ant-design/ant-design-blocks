@@ -95,7 +95,7 @@ const generateBlocks = async (demosWithText, needContinue) => {
 };
 
 const generateBlockList = async demosWithText => {
-  spinner.start('generate blockList.json');
+  spinner.start('generate umi-block.json');
   let blockList = [];
   for (let index = 0; index < demosWithText.length; index++) {
     const demoWithText = demosWithText[index];
