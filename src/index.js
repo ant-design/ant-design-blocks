@@ -129,8 +129,9 @@ const generateBlockList = async demosWithText => {
       previewUrl
     });
   }
-  const blockListFilePath = path.join(rootDir, 'blockList.json');
-  await fs.writeJSON(blockListFilePath, blockList);
+  const umiBlockJSON = { blocks: blockList };
+  const blockListFilePath = path.join(rootDir, 'umi-block.json');
+  await fs.writeJSON(blockListFilePath, umiBlockJSON);
   spinner.succeed();
 };
 
