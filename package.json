@@ -10,7 +10,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "antd": "^3.23.4",
+    "antd": "^3.23.4"
+  },
+  "devDependencies": {
     "fs-extra": "^8.1.0",
     "jest": "^24.9.0",
     "ora": "^4.0.1",
@@ -19,9 +21,7 @@
     "react-infinite-scroller": "^1.2.4",
     "reqwest": "^2.0.5",
     "typescript": "^3.6.3",
-    "umi-plugin-react": "^1.10.1"
-  },
-  "devDependencies": {
+    "umi-plugin-react": "^1.10.1",
     "puppeteer": "^1.20.0",
     "umi": "^2.9.0",
     "umi-plugin-block-dev": "^2.0.0",
