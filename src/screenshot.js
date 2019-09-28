@@ -1,24 +1,32 @@
 const { runDevServer, killDevServer } = require('./devServer');
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-core');
 const path = require('path');
+const findChrome = require('./find_chrome');
 
 let browser = null;
 let page = null;
 
 const openBrowser = async () => {
-  browser = await puppeteer.launch({
-    headless: true,
-    args: [
-      '--disable-gpu',
-      '--disable-dev-shm-usage',
-      '--no-first-run',
-      '--disable-setuid-sandbox',
-      '--no-zygote',
-      '--no-sandbox',
-      '--single-process',
-    ],
-  });
-  page = await browser.newPage();
+  try {
+    const { executablePath } = await findChrome({});
+    browser = await puppeteer.launch({
+      executablePath,
+      headless: false,
+      args: [
+        '--disable-gpu',
+        '--disable-dev-shm-usage',
+        '--no-first-run',
+        '--disable-setuid-sandbox',
+        '--no-zygote',
+        '--no-sandbox',
+        '--single-process',
+      ],
+    });
+    console.log(browser);
+    page = await browser.newPage();
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 const screenshot = async (blockName, blockDir, rootDir, width, height) => {

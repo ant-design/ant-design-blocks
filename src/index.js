@@ -2,20 +2,23 @@ const fs = require('fs-extra');
 const path = require('path');
 const ora = require('ora');
 const prettier = require('prettier');
-require('events').EventEmitter.defaultMaxListeners = 0;
+const { winPath } = require('umi-utils');
+
 const { parseJSX, parseStyle, parseTitle, parseDesc, parseIsDebug } = require('./parse');
 const fetchAntDDemos = require('./fetchAntDDemos');
 const { screenshot, openBrowser, closeBrowser } = require('./screenshot');
 
-const blockTemplateDir = path.join(__dirname, '../assets/block-template');
-const rootDir = path.join(__dirname, '..');
-const continueFilePath = path.join(__dirname, '../continue.json');
+require('events').EventEmitter.defaultMaxListeners = 0;
+
+const blockTemplateDir = winPath(path.join(__dirname, '../assets/block-template'));
+const rootDir = winPath(path.join(__dirname, '..'));
+const continueFilePath = winPath(path.join(__dirname, '../continue.json'));
 const spinner = ora();
 let historyList = [];
 const DEBUG_COUNT = 0;
 
 const modifyPackageInfo = async (blockDir, name, description) => {
-  const pkgFilePath = path.join(blockDir, 'package.json');
+  const pkgFilePath = winPath(path.join(blockDir, 'package.json'));
   const pkg = require(pkgFilePath);
   const json = {
     ...pkg,
@@ -29,7 +32,7 @@ const modifyPackageInfo = async (blockDir, name, description) => {
 const generateBlock = async demoWithText => {
   const { name, text, width, height } = demoWithText;
 
-  const blockDir = path.join(rootDir, name);
+  const blockDir = winPath(path.join(rootDir, name));
 
   try {
     await fs.remove(blockDir);
@@ -142,24 +145,21 @@ const main = async () => {
     return;
   }
 
-  let demosWithText = await Promise.all(
-    demos.map(async demo => {
-      const text = await fs.readFile(demo.filePath, 'utf8');
+  let demosWithText = demos
+    .map(demo => {
+      const text = fs.readFileSync(winPath(demo.filePath), 'utf8');
       return {
         ...demo,
         text,
       };
-    }),
-  );
-
-  demosWithText = demosWithText.filter(demo => !parseIsDebug(demo.text));
+    })
+    .filter(demo => !parseIsDebug(demo.text));
 
   if (DEBUG_COUNT !== 0) {
     demosWithText = demosWithText.slice(0, DEBUG_COUNT);
   }
 
   console.log(`will generate ${demosWithText.length} blocks`);
-
   await openBrowser();
 
   await generateBlocks(demosWithText, needContinue);
