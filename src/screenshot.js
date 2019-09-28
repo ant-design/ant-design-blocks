@@ -12,11 +12,11 @@ const openBrowser = async () => {
       '--disable-gpu',
       '--disable-dev-shm-usage',
       '--no-first-run',
-      `–disable-setuid-sandbox`,
+      '--disable-setuid-sandbox',
       '--no-zygote',
       '--no-sandbox',
-      `–single-process`
-    ]
+      '--single-process',
+    ],
   });
   page = await browser.newPage();
 };
@@ -25,15 +25,26 @@ const screenshot = async (blockName, blockDir, rootDir, width, height) => {
   const imagePath = path.join(blockDir, 'snapshot.png');
   const devServerUrl = await runDevServer({
     cwd: rootDir,
-    blockName
+    blockName,
   });
   await page.goto(devServerUrl);
+  await page.evaluate(() => {
+    document.body.style.padding = '24px';
+    const root = document.getElementById('root');
+    root.style.border = '1px solid #ddd';
+    root.style.height = '100%';
+    root.style.width = '100%';
+    root.style.padding = '24px';
+    root.style.position = 'relative';
+    root.style.transform = 'scale(1, 1)';
+  });
+
   await page.setViewport({
-    width,
-    height,
+    width: width + 56,
+    height: height + 56,
   });
   await page.screenshot({
-    path: imagePath
+    path: imagePath,
   });
   await killDevServer();
 };

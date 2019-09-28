@@ -3,13 +3,7 @@ const path = require('path');
 const ora = require('ora');
 const prettier = require('prettier');
 require('events').EventEmitter.defaultMaxListeners = 0;
-const {
-  parseJSX,
-  parseStyle,
-  parseTitle,
-  parseDesc,
-  parseIsDebug
-} = require('./parse');
+const { parseJSX, parseStyle, parseTitle, parseDesc, parseIsDebug } = require('./parse');
 const fetchAntDDemos = require('./fetchAntDDemos');
 const { screenshot, openBrowser, closeBrowser } = require('./screenshot');
 
@@ -26,7 +20,7 @@ const modifyPackageInfo = async (blockDir, name, description) => {
   const json = {
     ...pkg,
     name: `@umi-block/${name}`,
-    description
+    description,
   };
   const jsonStr = prettier.format(JSON.stringify(json), { parser: 'json' });
   await fs.outputFile(pkgFilePath, jsonStr);
@@ -99,13 +93,10 @@ const generateBlockList = async demosWithText => {
   let blockList = [];
   for (let index = 0; index < demosWithText.length; index++) {
     const demoWithText = demosWithText[index];
-    const {
-      name,
-      componentName,
-      mdBaseName,
-      text,
-      componentType
-    } = demoWithText;
+    const { name, componentName, mdBaseName, text, componentType } = demoWithText;
+    if (componentType === '废弃') {
+      return;
+    }
     const description = parseDesc(text);
     const demoTitle = parseTitle(text);
     const title = `${componentName}-${demoTitle}`;
@@ -126,7 +117,7 @@ const generateBlockList = async demosWithText => {
       img,
       tags,
       name: title,
-      previewUrl
+      previewUrl,
     });
   }
   const umiBlockJSON = { blocks: blockList };
@@ -147,9 +138,7 @@ const main = async () => {
   const demos = await fetchAntDDemos();
 
   if (demos.length <= 0) {
-    console.error(
-      'antd demos not found, please check ant-design submodule is existed!'
-    );
+    console.error('antd demos not found, please check ant-design submodule is existed!');
     return;
   }
 
@@ -158,9 +147,9 @@ const main = async () => {
       const text = await fs.readFile(demo.filePath, 'utf8');
       return {
         ...demo,
-        text
+        text,
       };
-    })
+    }),
   );
 
   demosWithText = demosWithText.filter(demo => !parseIsDebug(demo.text));
