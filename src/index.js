@@ -141,8 +141,9 @@ const generateBlockList = async demosWithText => {
   const topBlocks = [];
   const restBlocks = [];
   blockList.forEach(block => {
-    if (topList.indexOf(block.key) !== -1) {
-      topBlocks.push(block);
+    const pos = topList.indexOf(block.key);
+    if (pos !== -1) {
+      topBlocks[pos] = block;
     } else {
       restBlocks.push(block);
     }
@@ -193,7 +194,7 @@ const main = async () => {
   console.log(`will generate ${demosWithText.length} blocks`);
   await openBrowser();
 
-  await generateBlocks(demosWithText, needContinue);
+  // await generateBlocks(demosWithText, needContinue);
 
   await generateBlockList(demosWithText);
 
