@@ -4,18 +4,27 @@ const ora = require('ora');
 const prettier = require('prettier');
 const { winPath } = require('umi-utils');
 
-const { parseJSX, parseStyle, parseTitle, parseDesc, parseIsDebug } = require('./parse');
+const {
+  parseJSX,
+  parseStyle,
+  parseTitle,
+  parseDesc,
+  parseIsDebug
+} = require('./parse');
 const fetchAntDDemos = require('./fetchAntDDemos');
 const { screenshot, openBrowser, closeBrowser } = require('./screenshot');
 
 require('events').EventEmitter.defaultMaxListeners = 0;
 
-const blockTemplateDir = winPath(path.join(__dirname, '../assets/block-template'));
+const blockTemplateDir = winPath(
+  path.join(__dirname, '../assets/block-template')
+);
 const rootDir = winPath(path.join(__dirname, '..'));
 const continueFilePath = winPath(path.join(__dirname, '../continue.json'));
 const spinner = ora();
 let historyList = [];
 const DEBUG_COUNT = 0;
+const isWin = process.platform === 'win32';
 
 const modifyPackageInfo = async (blockDir, name, description) => {
   const pkgFilePath = winPath(path.join(blockDir, 'package.json'));
@@ -23,7 +32,7 @@ const modifyPackageInfo = async (blockDir, name, description) => {
   const json = {
     ...pkg,
     name: `@umi-block/${name}`,
-    description,
+    description
   };
   const jsonStr = prettier.format(JSON.stringify(json), { parser: 'json' });
   await fs.outputFile(pkgFilePath, jsonStr);
@@ -96,9 +105,15 @@ const generateBlockList = async demosWithText => {
   let blockList = [];
   for (let index = 0; index < demosWithText.length; index++) {
     const demoWithText = demosWithText[index];
-    const { name, componentName, mdBaseName, text, componentType } = demoWithText;
+    const {
+      name,
+      componentName,
+      mdBaseName,
+      text,
+      componentType
+    } = demoWithText;
     if (componentType === '废弃') {
-      return;
+      continue;
     }
     const description = parseDesc(text);
     const demoTitle = parseTitle(text);
@@ -120,7 +135,7 @@ const generateBlockList = async demosWithText => {
       img,
       tags,
       name: title,
-      previewUrl,
+      previewUrl
     });
   }
   const umiBlockJSON = { blocks: blockList };
@@ -141,16 +156,21 @@ const main = async () => {
   const demos = await fetchAntDDemos();
 
   if (demos.length <= 0) {
-    console.error('antd demos not found, please check ant-design submodule is existed!');
+    console.error(
+      'antd demos not found, please check ant-design submodule is existed!'
+    );
     return;
   }
 
   let demosWithText = demos
     .map(demo => {
-      const text = fs.readFileSync(winPath(demo.filePath), 'utf8');
+      const text = fs.readFileSync(
+        isWin ? winPath(demo.filePath) : demo.filePath,
+        'utf8'
+      );
       return {
         ...demo,
-        text,
+        text
       };
     })
     .filter(demo => !parseIsDebug(demo.text));
