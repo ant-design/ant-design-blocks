@@ -134,7 +134,8 @@ const generateBlockList = async demosWithText => {
       img,
       tags,
       name: title,
-      previewUrl
+      previewUrl,
+      features: ['antd']
     });
   }
 
@@ -194,7 +195,7 @@ const main = async () => {
   console.log(`will generate ${demosWithText.length} blocks`);
   await openBrowser();
 
-  // await generateBlocks(demosWithText, needContinue);
+  await generateBlocks(demosWithText, needContinue);
 
   await generateBlockList(demosWithText);
 
