@@ -21,7 +21,7 @@
     "ora": "^4.0.1",
     "p-limit": "^2.2.1",
     "prettier": "^1.18.2",
-    "puppeteer-core": "^1.20.0",
+    "puppeteer": "^1.20.0",
     "querystring": "^0.2.0",
     "rc-tween-one": "^2.6.3",
     "react": ">=16.0.0",

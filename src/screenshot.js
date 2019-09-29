@@ -1,16 +1,13 @@
 const { runDevServer, killDevServer } = require('./devServer');
-const puppeteer = require('puppeteer-core');
+const puppeteer = require('puppeteer');
 const path = require('path');
-const findChrome = require('./find_chrome');
 
 let browser = null;
 let page = null;
 
 const openBrowser = async () => {
   try {
-    const { executablePath } = await findChrome({});
     browser = await puppeteer.launch({
-      executablePath,
       headless: false,
       args: [
         '--disable-gpu',
@@ -22,7 +19,6 @@ const openBrowser = async () => {
         '--single-process',
       ],
     });
-    console.log(browser);
     page = await browser.newPage();
   } catch (error) {
     console.log(error);
