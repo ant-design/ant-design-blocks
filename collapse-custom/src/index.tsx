@@ -17,7 +17,7 @@ const customPanelStyle = {
   overflow: 'hidden',
 };
 
-export default () => 
+export default () => <div id="components-collapse-demo-custom">
   <Collapse
     bordered={false}
     defaultActiveKey={['1']}
@@ -32,4 +32,4 @@ export default () =>
     <Panel header="This is panel header 3" key="3" style={customPanelStyle}>
       <p>{text}</p>
     </Panel>
-  </Collapse>;
+  </Collapse></div>;

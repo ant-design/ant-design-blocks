@@ -3,7 +3,7 @@ import { Result, Button, Icon, Typography } from 'antd';
 
 const { Paragraph, Text } = Typography;
 
-export default () => 
+export default () => <div id="components-result-demo-error">
   <Result
     status="error"
     title="Submission Failed"
@@ -35,4 +35,4 @@ export default () =>
         apply <a>Apply Unlock &gt;</a>
       </Paragraph>
     </div>
-  </Result>;
+  </Result></div>;

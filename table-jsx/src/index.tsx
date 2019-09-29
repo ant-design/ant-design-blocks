@@ -30,7 +30,7 @@ const data = [
   },
 ];
 
-export default () => 
+export default () => <div id="components-table-demo-jsx">
   <Table dataSource={data}>
     <ColumnGroup title="Name">
       <Column title="First Name" dataIndex="firstName" key="firstName" />
@@ -63,4 +63,4 @@ export default () =>
         </span>
       )}
     />
-  </Table>;
+  </Table></div>;

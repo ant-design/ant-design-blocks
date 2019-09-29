@@ -75,4 +75,4 @@ class App extends React.Component {
   }
 }
 
-export default () => <App />;
+export default () => <div id="components-menu-demo-inline-collapsed"><App /></div>;

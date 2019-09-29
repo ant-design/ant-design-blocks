@@ -16,4 +16,4 @@ function showConfirm() {
   });
 }
 
-export default () => <Button onClick={showConfirm}>Confirm</Button>;
+export default () => <div id="components-modal-demo-confirm-promise"><Button onClick={showConfirm}>Confirm</Button></div>;

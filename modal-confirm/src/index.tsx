@@ -51,7 +51,7 @@ function showPropsConfirm() {
   });
 }
 
-export default () => 
+export default () => <div id="components-modal-demo-confirm">
   <div>
     <Button onClick={showConfirm}>Confirm</Button>
     <Button onClick={showDeleteConfirm} type="dashed">
@@ -60,4 +60,4 @@ export default () =>
     <Button onClick={showPropsConfirm} type="dashed">
       With extra props
     </Button>
-  </div>;
+  </div></div>;

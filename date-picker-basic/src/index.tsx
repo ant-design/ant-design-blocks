@@ -7,7 +7,7 @@ function onChange(date, dateString) {
   console.log(date, dateString);
 }
 
-export default () => 
+export default () => <div id="components-date-picker-demo-basic">
   <div>
     <DatePicker onChange={onChange} />
     <br />
@@ -16,4 +16,4 @@ export default () =>
     <RangePicker onChange={onChange} />
     <br />
     <WeekPicker onChange={onChange} placeholder="Select week" />
-  </div>;
+  </div></div>;

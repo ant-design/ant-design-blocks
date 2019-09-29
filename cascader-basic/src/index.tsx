@@ -40,5 +40,5 @@ function onChange(value) {
   console.log(value);
 }
 
-export default () => 
-  <Cascader options={options} onChange={onChange} placeholder="Please select" />;
+export default () => <div id="components-cascader-demo-basic">
+  <Cascader options={options} onChange={onChange} placeholder="Please select" /></div>;

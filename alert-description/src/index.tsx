@@ -1,7 +1,7 @@
 import React from 'react';
 import { Alert } from 'antd';
 
-export default () => 
+export default () => <div id="components-alert-demo-description">
   <div>
     <Alert
       message="Success Text"
@@ -23,4 +23,4 @@ export default () =>
       description="Error Description Error Description Error Description Error Description"
       type="error"
     />
-  </div>;
+  </div></div>;

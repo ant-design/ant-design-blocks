@@ -92,4 +92,4 @@ function onChange(pagination, filters, sorter) {
   console.log('params', pagination, filters, sorter);
 }
 
-export default () => <Table columns={columns} dataSource={data} onChange={onChange} />;
+export default () => <div id="components-table-demo-head"><Table columns={columns} dataSource={data} onChange={onChange} /></div>;

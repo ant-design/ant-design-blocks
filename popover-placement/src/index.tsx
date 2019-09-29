@@ -11,7 +11,7 @@ const content = (
 
 const buttonWidth = 70;
 
-export default () => 
+export default () => <div id="components-popover-demo-placement">
   <div className="demo">
     <div style={{ marginLeft: buttonWidth, whiteSpace: 'nowrap' }}>
       <Popover placement="topLeft" title={text} content={content} trigger="click">
@@ -57,4 +57,4 @@ export default () =>
         <Button>BR</Button>
       </Popover>
     </div>
-  </div>;
+  </div></div>;

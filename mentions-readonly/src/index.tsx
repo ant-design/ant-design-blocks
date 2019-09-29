@@ -26,4 +26,4 @@ function App() {
   );
 }
 
-export default () => <App />;
+export default () => <div id="components-mentions-demo-readonly"><App /></div>;

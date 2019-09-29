@@ -1,7 +1,7 @@
 import React from 'react';
 import { Alert } from 'antd';
 
-export default () => 
+export default () => <div id="components-alert-demo-banner">
   <div>
     <Alert message="Warning text" banner />
     <br />
@@ -14,4 +14,4 @@ export default () =>
     <Alert showIcon={false} message="Warning text without icon" banner />
     <br />
     <Alert type="error" message="Error text" banner />
-  </div>;
+  </div></div>;

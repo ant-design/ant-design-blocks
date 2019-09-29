@@ -7,7 +7,7 @@ function onPanelChange(value, mode) {
   console.log(value, mode);
 }
 
-export default () => 
+export default () => <div id="components-calendar-demo-customize-header">
   <div style={{ width: 300, border: '1px solid #d9d9d9', borderRadius: 4 }}>
     <Calendar
       fullscreen={false}
@@ -86,4 +86,4 @@ export default () =>
       }}
       onPanelChange={onPanelChange}
     />
-  </div>;
+  </div></div>;

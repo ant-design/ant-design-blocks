@@ -48,4 +48,4 @@ const data = [
   },
 ];
 
-export default () => <Table columns={columns} dataSource={data} scroll={{ x: 1300 }} />;
+export default () => <div id="components-table-demo-fixed-columns"><Table columns={columns} dataSource={data} scroll={{ x: 1300 }} /></div>;

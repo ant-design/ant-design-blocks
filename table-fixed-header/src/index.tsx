@@ -28,5 +28,5 @@ for (let i = 0; i < 100; i++) {
   });
 }
 
-export default () => 
-  <Table columns={columns} dataSource={data} pagination={{ pageSize: 50 }} scroll={{ y: 240 }} />;
+export default () => <div id="components-table-demo-fixed-header">
+  <Table columns={columns} dataSource={data} pagination={{ pageSize: 50 }} scroll={{ y: 240 }} /></div>;

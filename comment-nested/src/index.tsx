@@ -22,10 +22,10 @@ const ExampleComment = ({ children }) => (
   </Comment>
 );
 
-export default () => 
+export default () => <div id="components-comment-demo-nested">
   <ExampleComment>
     <ExampleComment>
       <ExampleComment />
       <ExampleComment />
     </ExampleComment>
-  </ExampleComment>;
+  </ExampleComment></div>;

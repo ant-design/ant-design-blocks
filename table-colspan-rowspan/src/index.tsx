@@ -113,4 +113,4 @@ const data = [
   },
 ];
 
-export default () => <Table columns={columns} dataSource={data} bordered />;
+export default () => <div id="components-table-demo-colspan-rowspan"><Table columns={columns} dataSource={data} bordered /></div>;

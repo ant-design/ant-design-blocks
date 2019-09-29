@@ -1,7 +1,7 @@
 import React from 'react';
 import { Radio } from 'antd';
 
-export default () => 
+export default () => <div id="components-radio-demo-radiobutton-solid">
   <div>
     <div>
       <Radio.Group defaultValue="a" buttonStyle="solid">
@@ -21,4 +21,4 @@ export default () =>
         <Radio.Button value="d">Chengdu</Radio.Button>
       </Radio.Group>
     </div>
-  </div>;
+  </div></div>;

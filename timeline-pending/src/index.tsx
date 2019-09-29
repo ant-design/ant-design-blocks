@@ -26,4 +26,4 @@ class PendingTimeLine extends React.Component {
   }
 }
 
-export default () => <PendingTimeLine />;
+export default () => <div id="components-timeline-demo-pending"><PendingTimeLine /></div>;

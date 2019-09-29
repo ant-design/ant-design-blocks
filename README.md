@@ -8,16 +8,7 @@ With version 2.13 of Git and later:
 
 ```bash
 git clone https://github.com/ant-design/ant-design.git
-yarn install
-yarn start
+npm install
+echo [] > continue.json
+npm run start-c // If the process of generating a block does not respond for a long time, you need to re-run this command.
 ```
-
-## TODO
-
-- [x] table, form 的 tags 特殊化
-- [x] tags 改为大类
-- [x] 优化 package.json 的生成
-- [x] 优化 CSS 的生成
-- [x] 生成区块的缩略图等信息
-- [x] 支持断点解析
-- [x] 不抓取 debug 为 true 的 Demo

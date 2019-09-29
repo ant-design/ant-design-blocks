@@ -3,9 +3,9 @@ import { Steps } from 'antd';
 
 const { Step } = Steps;
 
-export default () => 
+export default () => <div id="components-steps-demo-small-size">
   <Steps size="small" current={1}>
     <Step title="Finished" />
     <Step title="In Progress" />
     <Step title="Waiting" />
-  </Steps>;
+  </Steps></div>;

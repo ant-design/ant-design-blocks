@@ -28,4 +28,4 @@ class AnchorExample extends React.Component {
   }
 }
 
-export default () => <AnchorExample />;
+export default () => <div id="components-anchor-demo-targetOffset"><AnchorExample /></div>;

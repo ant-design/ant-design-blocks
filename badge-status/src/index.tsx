@@ -1,7 +1,7 @@
 import React from 'react';
 import { Badge } from 'antd';
 
-export default () => 
+export default () => <div id="components-badge-demo-status">
   <div>
     <Badge status="success" />
     <Badge status="error" />
@@ -18,4 +18,4 @@ export default () =>
     <Badge status="processing" text="Processing" />
     <br />
     <Badge status="warning" text="Warning" />
-  </div>;
+  </div></div>;

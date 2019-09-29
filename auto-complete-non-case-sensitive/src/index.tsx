@@ -16,4 +16,4 @@ function Complete() {
   );
 }
 
-export default () => <Complete />;
+export default () => <div id="components-auto-complete-demo-non-case-sensitive"><Complete /></div>;

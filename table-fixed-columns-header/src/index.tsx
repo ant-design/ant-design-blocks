@@ -78,5 +78,5 @@ for (let i = 0; i < 100; i++) {
   });
 }
 
-export default () => 
-  <Table columns={columns} dataSource={data} scroll={{ x: 1500, y: 300 }} />;
+export default () => <div id="components-table-demo-fixed-columns-header">
+  <Table columns={columns} dataSource={data} scroll={{ x: 1500, y: 300 }} /></div>;

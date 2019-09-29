@@ -4,7 +4,7 @@ import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
-export default () => 
+export default () => <div id="components-layout-demo-top-side-2">
   <Layout>
     <Header className="header">
       <div className="logo" />
@@ -89,4 +89,4 @@ export default () =>
         </Content>
       </Layout>
     </Layout>
-  </Layout>;
+  </Layout></div>;

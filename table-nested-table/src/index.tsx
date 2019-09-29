@@ -87,4 +87,4 @@ function NestedTable() {
   );
 }
 
-export default () => <NestedTable />;
+export default () => <div id="components-table-demo-nested-table"><NestedTable /></div>;

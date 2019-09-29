@@ -39,4 +39,4 @@ class Autoset extends React.Component {
   }
 }
 
-export default () => <Autoset />;
+export default () => <div id="components-avatar-demo-dynamic"><Autoset /></div>;

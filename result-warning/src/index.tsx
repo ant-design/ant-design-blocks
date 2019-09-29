@@ -1,7 +1,7 @@
 import React from 'react';
 import { Result, Button } from 'antd';
 
-export default () => 
+export default () => <div id="components-result-demo-warning">
   <Result
     status="warning"
     title="There are some problems with your operation."
@@ -10,4 +10,4 @@ export default () =>
         Go Console
       </Button>
     }
-  />;
+  /></div>;

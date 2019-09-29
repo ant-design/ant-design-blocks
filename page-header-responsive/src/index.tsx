@@ -45,7 +45,7 @@ const Content = ({ children, extra }) => {
   );
 };
 
-export default () => 
+export default () => <div id="components-page-header-demo-responsive">
   <div>
     <PageHeader
       onBack={() => window.history.back()}
@@ -67,4 +67,4 @@ export default () =>
     >
       <Content extra={extraContent}>{renderContent()}</Content>
     </PageHeader>
-  </div>;
+  </div></div>;

@@ -5,7 +5,7 @@ function onShowSizeChange(current, pageSize) {
   console.log(current, pageSize);
 }
 
-export default () => 
+export default () => <div id="components-pagination-demo-changer">
   <div>
     <Pagination
       showSizeChanger
@@ -21,4 +21,4 @@ export default () =>
       total={500}
       disabled
     />
-  </div>;
+  </div></div>;

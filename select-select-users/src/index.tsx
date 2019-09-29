@@ -67,4 +67,4 @@ class UserRemoteSelect extends React.Component {
   }
 }
 
-export default () => <UserRemoteSelect />;
+export default () => <div id="components-select-demo-select-users"><UserRemoteSelect /></div>;

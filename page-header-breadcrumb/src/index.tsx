@@ -16,5 +16,5 @@ const routes = [
   },
 ];
 
-export default () => 
-  <PageHeader title="Title" breadcrumb={{ routes }} subTitle="This is a subtitle" />;
+export default () => <div id="components-page-header-demo-breadcrumb">
+  <PageHeader title="Title" breadcrumb={{ routes }} subTitle="This is a subtitle" /></div>;

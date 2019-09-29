@@ -36,4 +36,4 @@ class HotTags extends React.Component {
   }
 }
 
-export default () => <HotTags />;
+export default () => <div id="components-tag-demo-hot-tags"><HotTags /></div>;

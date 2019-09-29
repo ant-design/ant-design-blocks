@@ -39,11 +39,11 @@ const data = [
   },
 ];
 
-export default () => 
+export default () => <div id="components-table-demo-bordered">
   <Table
     columns={columns}
     dataSource={data}
     bordered
     title={() => 'Header'}
     footer={() => 'Footer'}
-  />;
+  /></div>;

@@ -53,4 +53,4 @@ class FormLayoutDemo extends React.Component {
   }
 }
 
-export default () => <FormLayoutDemo />;
+export default () => <div id="components-form-demo-layout"><FormLayoutDemo /></div>;

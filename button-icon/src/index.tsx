@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'antd';
 
-export default () => 
+export default () => <div id="components-button-demo-icon">
   <div>
     <Button type="primary" shape="circle" icon="search" />
     <Button type="primary" shape="circle">
@@ -19,4 +19,4 @@ export default () =>
     <Button type="dashed" icon="search">
       Search
     </Button>
-  </div>;
+  </div></div>;

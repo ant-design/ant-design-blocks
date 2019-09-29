@@ -36,10 +36,10 @@ const data = [
   },
 ];
 
-export default () => 
+export default () => <div id="components-table-demo-size">
   <div>
     <h4>Middle size table</h4>
     <Table columns={columns} dataSource={data} size="middle" />
     <h4>Small size table</h4>
     <Table columns={columns} dataSource={data} size="small" />
-  </div>;
+  </div></div>;

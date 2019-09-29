@@ -3,7 +3,7 @@ import { Tabs, Icon } from 'antd';
 
 const { TabPane } = Tabs;
 
-export default () => 
+export default () => <div id="components-tabs-demo-icon">
   <Tabs defaultActiveKey="2">
     <TabPane
       tab={
@@ -27,4 +27,4 @@ export default () =>
     >
       Tab 2
     </TabPane>
-  </Tabs>;
+  </Tabs></div>;

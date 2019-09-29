@@ -1,7 +1,7 @@
 import React from 'react';
 import { Divider } from 'antd';
 
-export default () => 
+export default () => <div id="components-divider-demo-horizontal">
   <div>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista
@@ -17,4 +17,4 @@ export default () =>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne merninisti licere mihi ista
       probare, quae sunt a te dicta? Refert tamen, quo modo.
     </p>
-  </div>;
+  </div></div>;

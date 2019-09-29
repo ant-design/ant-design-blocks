@@ -24,11 +24,11 @@ const props = {
   },
 };
 
-export default () => 
+export default () => <div id="components-upload-demo-transform-file">
   <div>
     <Upload {...props}>
       <Button>
         <Icon type="upload" /> Upload
       </Button>
     </Upload>
-  </div>;
+  </div></div>;

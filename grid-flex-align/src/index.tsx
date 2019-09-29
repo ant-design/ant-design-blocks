@@ -3,7 +3,7 @@ import { Row, Col } from 'antd';
 
 const DemoBox = props => <p className={`height-${props.value}`}>{props.children}</p>;
 
-export default () => 
+export default () => <div id="components-grid-demo-flex-align">
   <div>
     <p>Align Top</p>
     <Row type="flex" justify="center" align="top">
@@ -52,4 +52,4 @@ export default () =>
         <DemoBox value={80}>col-4</DemoBox>
       </Col>
     </Row>
-  </div>;
+  </div></div>;

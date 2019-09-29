@@ -12,7 +12,7 @@ function handleChange(value) {
   console.log(`selected ${value}`);
 }
 
-export default () => 
+export default () => <div id="components-select-demo-tags">
   <Select mode="tags" style={{ width: '100%' }} placeholder="Tags Mode" onChange={handleChange}>
     {children}
-  </Select>;
+  </Select></div>;

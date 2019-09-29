@@ -40,9 +40,9 @@ function onChange(value) {
   console.log(value);
 }
 
-export default () => 
+export default () => <div id="components-cascader-demo-default-value">
   <Cascader
     defaultValue={['zhejiang', 'hangzhou', 'xihu']}
     options={options}
     onChange={onChange}
-  />;
+  /></div>;

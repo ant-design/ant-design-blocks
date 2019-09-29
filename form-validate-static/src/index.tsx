@@ -14,7 +14,7 @@ const formItemLayout = {
   },
 };
 
-export default () => 
+export default () => <div id="components-form-demo-validate-static">
   <Form {...formItemLayout}>
     <Form.Item
       label="Fail"
@@ -96,4 +96,4 @@ export default () =>
     <Form.Item label="Success" hasFeedback validateStatus="success">
       <InputNumber style={{ width: '100%' }} />
     </Form.Item>
-  </Form>;
+  </Form></div>;

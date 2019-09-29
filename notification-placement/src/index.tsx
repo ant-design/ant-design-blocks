@@ -11,7 +11,7 @@ const openNotification = () => {
   });
 };
 
-export default () => 
+export default () => <div id="components-notification-demo-placement">
   <div>
     <Select
       defaultValue="topRight"
@@ -31,4 +31,4 @@ export default () =>
     <Button type="primary" onClick={openNotification}>
       Open the notification box
     </Button>
-  </div>;
+  </div></div>;

@@ -9,7 +9,7 @@ const monthFormat = 'YYYY/MM';
 
 const dateFormatList = ['DD/MM/YYYY', 'DD/MM/YY'];
 
-export default () => 
+export default () => <div id="components-date-picker-demo-format">
   <div>
     <DatePicker defaultValue={moment('2015/01/01', dateFormat)} format={dateFormat} />
     <br />
@@ -21,4 +21,4 @@ export default () =>
       defaultValue={[moment('2015/01/01', dateFormat), moment('2015/01/01', dateFormat)]}
       format={dateFormat}
     />
-  </div>;
+  </div></div>;

@@ -5,5 +5,5 @@ const onChange = e => {
   console.log(e);
 };
 
-export default () => 
-  <Input placeholder="input with clear icon" allowClear onChange={onChange} />;
+export default () => <div id="components-input-demo-allowClear">
+  <Input placeholder="input with clear icon" allowClear onChange={onChange} /></div>;

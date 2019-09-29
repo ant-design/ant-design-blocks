@@ -24,4 +24,4 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <Demo />;
+export default () => <div id="components-typography-demo-interactive"><Demo /></div>;

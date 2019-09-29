@@ -88,4 +88,4 @@ class CollectionsPage extends React.Component {
   }
 }
 
-export default () => <CollectionsPage />;
+export default () => <div id="components-form-demo-form-in-modal"><CollectionsPage /></div>;

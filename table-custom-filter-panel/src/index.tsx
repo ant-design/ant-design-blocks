@@ -121,4 +121,4 @@ class App extends React.Component {
   }
 }
 
-export default () => <App />;
+export default () => <div id="components-table-demo-custom-filter-panel"><App /></div>;

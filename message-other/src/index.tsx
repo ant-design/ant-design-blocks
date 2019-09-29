@@ -13,9 +13,9 @@ const warning = () => {
   message.warning('This is a warning message');
 };
 
-export default () => 
+export default () => <div id="components-message-demo-other">
   <div>
     <Button onClick={success}>Success</Button>
     <Button onClick={error}>Error</Button>
     <Button onClick={warning}>Warning</Button>
-  </div>;
+  </div></div>;

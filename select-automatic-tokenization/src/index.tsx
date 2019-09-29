@@ -12,7 +12,7 @@ function handleChange(value) {
   console.log(`selected ${value}`);
 }
 
-export default () => 
+export default () => <div id="components-select-demo-automatic-tokenization">
   <Select mode="tags" style={{ width: '100%' }} onChange={handleChange} tokenSeparators={[',']}>
     {children}
-  </Select>;
+  </Select></div>;

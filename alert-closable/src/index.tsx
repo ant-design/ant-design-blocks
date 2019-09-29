@@ -5,7 +5,7 @@ const onClose = e => {
   console.log(e, 'I was closed.');
 };
 
-export default () => 
+export default () => <div id="components-alert-demo-closable">
   <div>
     <Alert
       message="Warning Text Warning Text Warning TextW arning Text Warning Text Warning TextWarning Text"
@@ -20,4 +20,4 @@ export default () =>
       closable
       onClose={onClose}
     />
-  </div>;
+  </div></div>;

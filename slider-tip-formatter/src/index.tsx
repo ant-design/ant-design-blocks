@@ -5,8 +5,8 @@ function formatter(value) {
   return `${value}%`;
 }
 
-export default () => 
+export default () => <div id="components-slider-demo-tip-formatter">
   <div>
     <Slider tipFormatter={formatter} />
     <Slider tipFormatter={null} />
-  </div>;
+  </div></div>;

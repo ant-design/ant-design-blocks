@@ -58,4 +58,4 @@ class SiderDemo extends React.Component {
   }
 }
 
-export default () => <SiderDemo />;
+export default () => <div id="components-layout-demo-custom-trigger"><SiderDemo /></div>;

@@ -21,7 +21,7 @@ const menu = (
   </Menu>
 );
 
-export default () => 
+export default () => <div id="components-dropdown-demo-placement">
   <div>
     <Dropdown overlay={menu} placement="bottomLeft">
       <Button>bottomLeft</Button>
@@ -42,4 +42,4 @@ export default () =>
     <Dropdown overlay={menu} placement="topRight">
       <Button>topRight</Button>
     </Dropdown>
-  </div>;
+  </div></div>;

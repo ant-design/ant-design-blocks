@@ -45,4 +45,4 @@ class App extends React.Component {
   }
 }
 
-export default () => <App />;
+export default () => <div id="components-modal-demo-basic"><App /></div>;

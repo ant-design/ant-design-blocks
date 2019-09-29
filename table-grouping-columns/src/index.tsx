@@ -100,11 +100,11 @@ for (let i = 0; i < 100; i++) {
   });
 }
 
-export default () => 
+export default () => <div id="components-table-demo-grouping-columns">
   <Table
     columns={columns}
     dataSource={data}
     bordered
     size="middle"
     scroll={{ x: '130%', y: 240 }}
-  />;
+  /></div>;

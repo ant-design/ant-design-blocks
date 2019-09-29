@@ -185,4 +185,4 @@ class EditableTable extends React.Component {
 
 const EditableFormTable = Form.create()(EditableTable);
 
-export default () => <EditableFormTable />;
+export default () => <div id="components-table-demo-edit-row"><EditableFormTable /></div>;

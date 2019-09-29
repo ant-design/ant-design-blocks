@@ -7,4 +7,4 @@ const success = () => {
   setTimeout(hide, 2500);
 };
 
-export default () => <Button onClick={success}>Display a loading indicator</Button>;
+export default () => <div id="components-message-demo-loading"><Button onClick={success}>Display a loading indicator</Button></div>;

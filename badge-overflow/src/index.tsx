@@ -1,7 +1,7 @@
 import React from 'react';
 import { Badge } from 'antd';
 
-export default () => 
+export default () => <div id="components-badge-demo-overflow">
   <div>
     <Badge count={99}>
       <a href="#" className="head-example" />
@@ -15,4 +15,4 @@ export default () =>
     <Badge count={1000} overflowCount={999}>
       <a href="#" className="head-example" />
     </Badge>
-  </div>;
+  </div></div>;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Icon } from 'antd';
 
-export default () => 
+export default () => <div id="components-switch-demo-text">
   <div>
     <Switch checkedChildren="开" unCheckedChildren="关" defaultChecked />
     <br />
@@ -12,4 +12,4 @@ export default () =>
       unCheckedChildren={<Icon type="close" />}
       defaultChecked
     />
-  </div>;
+  </div></div>;

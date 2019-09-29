@@ -3,7 +3,7 @@ import { Tabs } from 'antd';
 
 const { TabPane } = Tabs;
 
-export default () => 
+export default () => <div id="components-tabs-demo-card-top">
   <div className="card-container">
     <Tabs type="card">
       <TabPane tab="Tab Title 1" key="1">
@@ -22,4 +22,4 @@ export default () =>
         <p>Content of Tab Pane 3</p>
       </TabPane>
     </Tabs>
-  </div>;
+  </div></div>;

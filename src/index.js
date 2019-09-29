@@ -13,6 +13,7 @@ const {
 } = require('./parse');
 const fetchAntDDemos = require('./fetchAntDDemos');
 const { screenshot, openBrowser, closeBrowser } = require('./screenshot');
+const topList = require('./top');
 
 require('events').EventEmitter.defaultMaxListeners = 0;
 
@@ -39,7 +40,7 @@ const modifyPackageInfo = async (blockDir, name, description) => {
 };
 
 const generateBlock = async demoWithText => {
-  const { name, text, width, height } = demoWithText;
+  const { name, text, componentName, mdBaseName, width, height } = demoWithText;
 
   const blockDir = winPath(path.join(rootDir, name));
 
@@ -61,7 +62,8 @@ const generateBlock = async demoWithText => {
     console.log(err);
   }
 
-  const jsxText = parseJSX(text);
+  const id = `components-${componentName}-demo-${mdBaseName}`;
+  const jsxText = parseJSX(text, id);
   const cssText = parseStyle(text);
   const indexTSXPath = path.join(blockDir, 'src/index.tsx');
   const indexLessPath = path.join(blockDir, 'src/index.less');
@@ -112,9 +114,6 @@ const generateBlockList = async demosWithText => {
       text,
       componentType
     } = demoWithText;
-    if (componentType === '废弃') {
-      continue;
-    }
     const description = parseDesc(text);
     const demoTitle = parseTitle(text);
     const title = `${componentName}-${demoTitle}`;
@@ -138,7 +137,18 @@ const generateBlockList = async demosWithText => {
       previewUrl
     });
   }
-  const umiBlockJSON = { blocks: blockList };
+
+  const topBlocks = [];
+  const restBlocks = [];
+  blockList.forEach(block => {
+    if (topList.indexOf(block.key) !== -1) {
+      topBlocks.push(block);
+    } else {
+      restBlocks.push(block);
+    }
+  });
+
+  const umiBlockJSON = { blocks: topBlocks.concat(restBlocks) };
   const blockListFilePath = path.join(rootDir, 'umi-block.json');
   await fs.writeJSON(blockListFilePath, umiBlockJSON);
   spinner.succeed();
@@ -173,7 +183,8 @@ const main = async () => {
         text
       };
     })
-    .filter(demo => !parseIsDebug(demo.text));
+    .filter(demo => !parseIsDebug(demo.text))
+    .filter(demo => demo.componentType !== '废弃');
 
   if (DEBUG_COUNT !== 0) {
     demosWithText = demosWithText.slice(0, DEBUG_COUNT);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tag } from 'antd';
 
-export default () => 
+export default () => <div id="components-tag-demo-colorful">
   <div>
     <h4 style={{ marginBottom: 16 }}>Presets:</h4>
     <div>
@@ -24,4 +24,4 @@ export default () =>
       <Tag color="#87d068">#87d068</Tag>
       <Tag color="#108ee9">#108ee9</Tag>
     </div>
-  </div>;
+  </div></div>;

@@ -54,5 +54,5 @@ const rowSelection = {
   }),
 };
 
-export default () => 
-  <Table rowSelection={rowSelection} columns={columns} dataSource={data} />;
+export default () => <div id="components-table-demo-row-selection">
+  <Table rowSelection={rowSelection} columns={columns} dataSource={data} /></div>;

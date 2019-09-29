@@ -1,7 +1,7 @@
 import React from 'react';
 import { Result, Button } from 'antd';
 
-export default () => 
+export default () => <div id="components-result-demo-info">
   <Result
     title="Your operation has been executed"
     extra={
@@ -9,4 +9,4 @@ export default () =>
         Go Console
       </Button>
     }
-  />;
+  /></div>;

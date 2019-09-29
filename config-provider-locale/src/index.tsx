@@ -150,4 +150,4 @@ class App extends React.Component {
   }
 }
 
-export default () => <App />;
+export default () => <div id="components-config-provider-demo-locale"><App /></div>;

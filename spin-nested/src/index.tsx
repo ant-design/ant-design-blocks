@@ -27,4 +27,4 @@ class Card extends React.Component {
   }
 }
 
-export default () => <Card />;
+export default () => <div id="components-spin-demo-nested"><Card /></div>;

@@ -64,4 +64,4 @@ class Avatar extends React.Component {
   }
 }
 
-export default () => <Avatar />;
+export default () => <div id="components-upload-demo-avatar"><Avatar /></div>;

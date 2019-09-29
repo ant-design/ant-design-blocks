@@ -99,5 +99,5 @@ const rowSelection = {
   },
 };
 
-export default () => 
-  <Table columns={columns} rowSelection={rowSelection} dataSource={data} />;
+export default () => <div id="components-table-demo-expand-children">
+  <Table columns={columns} rowSelection={rowSelection} dataSource={data} /></div>;

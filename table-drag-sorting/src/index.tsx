@@ -144,4 +144,4 @@ class DragSortingTable extends React.Component {
   }
 }
 
-export default () => <DragSortingTable />;
+export default () => <div id="components-table-demo-drag-sorting"><DragSortingTable /></div>;

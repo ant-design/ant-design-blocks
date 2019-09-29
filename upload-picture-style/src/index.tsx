@@ -31,7 +31,7 @@ const props2 = {
   className: 'upload-list-inline',
 };
 
-export default () => 
+export default () => <div id="components-upload-demo-picture-style">
   <div>
     <Upload {...props}>
       <Button>
@@ -45,4 +45,4 @@ export default () =>
         <Icon type="upload" /> Upload
       </Button>
     </Upload>
-  </div>;
+  </div></div>;

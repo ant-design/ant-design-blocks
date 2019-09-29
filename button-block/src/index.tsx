@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'antd';
 
-export default () => 
+export default () => <div id="components-button-demo-block">
   <div>
     <Button type="primary" block>
       Primary
@@ -16,4 +16,4 @@ export default () =>
     <Button type="link" block>
       Link
     </Button>
-  </div>;
+  </div></div>;

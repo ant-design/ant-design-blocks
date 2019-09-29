@@ -9,7 +9,7 @@ function onAfterChange(value) {
   console.log('onAfterChange: ', value);
 }
 
-export default () => 
+export default () => <div id="components-slider-demo-event">
   <div>
     <Slider defaultValue={30} onChange={onChange} onAfterChange={onAfterChange} />
     <Slider
@@ -19,4 +19,4 @@ export default () =>
       onChange={onChange}
       onAfterChange={onAfterChange}
     />
-  </div>;
+  </div></div>;

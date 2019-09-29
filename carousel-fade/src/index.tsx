@@ -1,7 +1,7 @@
 import React from 'react';
 import { Carousel } from 'antd';
 
-export default () => 
+export default () => <div id="components-carousel-demo-fade">
   <Carousel effect="fade">
     <div>
       <h3>1</h3>
@@ -15,4 +15,4 @@ export default () =>
     <div>
       <h3>4</h3>
     </div>
-  </Carousel>;
+  </Carousel></div>;

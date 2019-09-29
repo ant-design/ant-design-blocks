@@ -1,7 +1,7 @@
 import React from 'react';
 import { Input, Tooltip, Icon } from 'antd';
 
-export default () => 
+export default () => <div id="components-input-demo-presuffix">
   <div>
     <Input
       placeholder="Enter your username"
@@ -17,4 +17,4 @@ export default () =>
     <br />
 
     <Input prefix="￥" suffix="RMB" />
-  </div>;
+  </div></div>;

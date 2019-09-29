@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from 'antd';
 
-export default () => 
+export default () => <div id="components-card-demo-inner">
   <Card title="Card title">
     <p
       style={{
@@ -24,4 +24,4 @@ export default () =>
     >
       Inner Card content
     </Card>
-  </Card>;
+  </Card></div>;

@@ -84,4 +84,4 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <Demo />;
+export default () => <div id="components-upload-demo-upload-manually"><Demo /></div>;

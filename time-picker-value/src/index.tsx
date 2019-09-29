@@ -16,4 +16,4 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <Demo />;
+export default () => <div id="components-time-picker-demo-value"><Demo /></div>;

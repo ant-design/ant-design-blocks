@@ -56,10 +56,10 @@ const displayRender = (labels, selectedOptions) =>
     return <span key={option.value}>{label} / </span>;
   });
 
-export default () => 
+export default () => <div id="components-cascader-demo-custom-render">
   <Cascader
     options={options}
     defaultValue={['zhejiang', 'hangzhou', 'xihu']}
     displayRender={displayRender}
     style={{ width: '100%' }}
-  />;
+  /></div>;

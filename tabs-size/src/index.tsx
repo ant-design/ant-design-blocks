@@ -35,4 +35,4 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <Demo />;
+export default () => <div id="components-tabs-demo-size"><Demo /></div>;

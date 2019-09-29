@@ -12,7 +12,7 @@ function handleChange(value) {
   console.log(`selected ${value}`);
 }
 
-export default () => 
+export default () => <div id="components-select-demo-multiple">
   <Select
     mode="multiple"
     style={{ width: '100%' }}
@@ -21,4 +21,4 @@ export default () =>
     onChange={handleChange}
   >
     {children}
-  </Select>;
+  </Select></div>;

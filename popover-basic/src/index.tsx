@@ -8,7 +8,7 @@ const content = (
   </div>
 );
 
-export default () => 
+export default () => <div id="components-popover-demo-basic">
   <Popover content={content} title="Title">
     <Button type="primary">Hover me</Button>
-  </Popover>;
+  </Popover></div>;

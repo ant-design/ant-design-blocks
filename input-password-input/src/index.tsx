@@ -1,4 +1,4 @@
 import React from 'react';
 import { Input } from 'antd';
 
-export default () => <Input.Password placeholder="input password" />;
+export default () => <div id="components-input-demo-password-input"><Input.Password placeholder="input password" /></div>;

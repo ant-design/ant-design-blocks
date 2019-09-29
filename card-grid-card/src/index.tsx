@@ -6,7 +6,7 @@ const gridStyle = {
   textAlign: 'center',
 };
 
-export default () => 
+export default () => <div id="components-card-demo-grid-card">
   <Card title="Card Title">
     <Card.Grid style={gridStyle}>Content</Card.Grid>
     <Card.Grid hoverable={false} style={gridStyle}>
@@ -17,4 +17,4 @@ export default () =>
     <Card.Grid style={gridStyle}>Content</Card.Grid>
     <Card.Grid style={gridStyle}>Content</Card.Grid>
     <Card.Grid style={gridStyle}>Content</Card.Grid>
-  </Card>;
+  </Card></div>;

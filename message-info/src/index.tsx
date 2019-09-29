@@ -5,7 +5,7 @@ const info = () => {
   message.info('This is a normal message');
 };
 
-export default () => 
+export default () => <div id="components-message-demo-info">
   <Button type="primary" onClick={info}>
     Display normal message
-  </Button>;
+  </Button></div>;

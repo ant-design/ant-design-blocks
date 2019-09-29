@@ -3,7 +3,7 @@ import { Button, Icon } from 'antd';
 
 const ButtonGroup = Button.Group;
 
-export default () => 
+export default () => <div id="components-button-demo-button-group">
   <div>
     <h4>Basic</h4>
     <ButtonGroup>
@@ -40,4 +40,4 @@ export default () =>
       <Button type="primary" size="small" icon="cloud" />
       <Button type="primary" size="small" icon="cloud-download" />
     </ButtonGroup>
-  </div>;
+  </div></div>;

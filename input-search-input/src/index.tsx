@@ -3,7 +3,7 @@ import { Input } from 'antd';
 
 const { Search } = Input;
 
-export default () => 
+export default () => <div id="components-input-demo-search-input">
   <div>
     <Search
       placeholder="input search text"
@@ -21,4 +21,4 @@ export default () =>
       size="large"
       onSearch={value => console.log(value)}
     />
-  </div>;
+  </div></div>;

@@ -35,10 +35,10 @@ function warning() {
   });
 }
 
-export default () => 
+export default () => <div id="components-modal-demo-info">
   <div>
     <Button onClick={info}>Info</Button>
     <Button onClick={success}>Success</Button>
     <Button onClick={error}>Error</Button>
     <Button onClick={warning}>Warning</Button>
-  </div>;
+  </div></div>;

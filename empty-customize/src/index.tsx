@@ -1,7 +1,7 @@
 import React from 'react';
 import { Empty, Button } from 'antd';
 
-export default () => 
+export default () => <div id="components-empty-demo-customize">
   <Empty
     image="https://gw.alipayobjects.com/mdn/miniapp_social/afts/img/A*pevERLJC9v0AAAAAAAAAAABjAQAAAQ/original"
     imageStyle={{
@@ -14,4 +14,4 @@ export default () =>
     }
   >
     <Button type="primary">Create Now</Button>
-  </Empty>;
+  </Empty></div>;

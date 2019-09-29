@@ -45,4 +45,4 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <Demo />;
+export default () => <div id="components-tabs-demo-position"><Demo /></div>;

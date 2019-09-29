@@ -49,10 +49,10 @@ function filter(inputValue, path) {
   return path.some(option => option.label.toLowerCase().indexOf(inputValue.toLowerCase()) > -1);
 }
 
-export default () => 
+export default () => <div id="components-cascader-demo-search">
   <Cascader
     options={options}
     onChange={onChange}
     placeholder="Please select"
     showSearch={{ filter }}
-  />;
+  /></div>;

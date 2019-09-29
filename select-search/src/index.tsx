@@ -19,7 +19,7 @@ function onSearch(val) {
   console.log('search:', val);
 }
 
-export default () => 
+export default () => <div id="components-select-demo-search">
   <Select
     showSearch
     style={{ width: 200 }}
@@ -36,4 +36,4 @@ export default () =>
     <Option value="jack">Jack</Option>
     <Option value="lucy">Lucy</Option>
     <Option value="tom">Tom</Option>
-  </Select>;
+  </Select></div>;

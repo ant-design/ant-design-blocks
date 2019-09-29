@@ -107,4 +107,4 @@ class DynamicFieldSet extends React.Component {
 }
 
 const WrappedDynamicFieldSet = Form.create({ name: 'dynamic_form_item' })(DynamicFieldSet);
-export default () => <WrappedDynamicFieldSet />;
+export default () => <div id="components-form-demo-dynamic-form-item"><WrappedDynamicFieldSet /></div>;

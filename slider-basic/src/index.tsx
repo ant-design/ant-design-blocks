@@ -22,4 +22,4 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <Demo />;
+export default () => <div id="components-slider-demo-basic"><Demo /></div>;

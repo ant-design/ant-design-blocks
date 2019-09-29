@@ -82,4 +82,4 @@ class TabsCard extends React.Component {
   }
 }
 
-export default () => <TabsCard />;
+export default () => <div id="components-card-demo-tabs"><TabsCard /></div>;

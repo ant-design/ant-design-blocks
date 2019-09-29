@@ -21,7 +21,7 @@ const menu = (
   </Menu>
 );
 
-export default () => 
+export default () => <div id="components-breadcrumb-demo-overlay">
   <Breadcrumb>
     <Breadcrumb.Item>Ant Design</Breadcrumb.Item>
     <Breadcrumb.Item>
@@ -31,4 +31,4 @@ export default () =>
       <a href="">General</a>
     </Breadcrumb.Item>
     <Breadcrumb.Item>Button</Breadcrumb.Item>
-  </Breadcrumb>;
+  </Breadcrumb></div>;

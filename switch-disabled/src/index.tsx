@@ -25,4 +25,4 @@ class App extends React.Component {
   }
 }
 
-export default () => <App />;
+export default () => <div id="components-switch-demo-disabled"><App /></div>;

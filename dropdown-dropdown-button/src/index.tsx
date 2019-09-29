@@ -28,7 +28,7 @@ const menu = (
   </Menu>
 );
 
-export default () => 
+export default () => <div id="components-dropdown-demo-dropdown-button">
   <div id="components-dropdown-demo-dropdown-button">
     <Dropdown.Button onClick={handleButtonClick} overlay={menu}>
       Dropdown
@@ -44,4 +44,4 @@ export default () =>
         Button <Icon type="down" />
       </Button>
     </Dropdown>
-  </div>;
+  </div></div>;

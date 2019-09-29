@@ -71,4 +71,4 @@ class App extends React.Component {
   }
 }
 
-export default () => <App />;
+export default () => <div id="components-table-demo-row-selection-and-operation"><App /></div>;

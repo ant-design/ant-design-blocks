@@ -1,4 +1,4 @@
 import React from 'react';
 import { Skeleton } from 'antd';
 
-export default () => <Skeleton active />;
+export default () => <div id="components-skeleton-demo-active"><Skeleton active /></div>;

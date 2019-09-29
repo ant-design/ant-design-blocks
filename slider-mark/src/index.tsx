@@ -13,7 +13,7 @@ const marks = {
   },
 };
 
-export default () => 
+export default () => <div id="components-slider-demo-mark">
   <div>
     <h4>included=true</h4>
     <Slider marks={marks} defaultValue={37} />
@@ -27,4 +27,4 @@ export default () =>
 
     <h4>step=null</h4>
     <Slider marks={marks} step={null} defaultValue={37} />
-  </div>;
+  </div></div>;

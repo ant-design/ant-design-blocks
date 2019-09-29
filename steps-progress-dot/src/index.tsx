@@ -3,7 +3,7 @@ import { Steps, Divider } from 'antd';
 
 const { Step } = Steps;
 
-export default () => 
+export default () => <div id="components-steps-demo-progress-dot">
   <div>
     <Steps progressDot current={1}>
       <Step title="Finished" description="This is a description." />
@@ -18,4 +18,4 @@ export default () =>
       <Step title="Waiting" description="This is a description." />
       <Step title="Waiting" description="This is a description." />
     </Steps>
-  </div>;
+  </div></div>;

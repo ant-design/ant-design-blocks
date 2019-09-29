@@ -3,7 +3,7 @@ import { Layout } from 'antd';
 
 const { Header, Footer, Sider, Content } = Layout;
 
-export default () => 
+export default () => <div id="components-layout-demo-basic">
   <div>
     <Layout>
       <Header>Header</Header>
@@ -37,4 +37,4 @@ export default () =>
         <Footer>Footer</Footer>
       </Layout>
     </Layout>
-  </div>;
+  </div></div>;

@@ -60,9 +60,9 @@ class ControlledRangePicker extends React.Component {
   }
 }
 
-export default () => 
+export default () => <div id="components-date-picker-demo-mode">
   <div>
     <ControlledDatePicker />
     <br />
     <ControlledRangePicker />
-  </div>;
+  </div></div>;

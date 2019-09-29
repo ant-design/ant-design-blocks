@@ -27,4 +27,4 @@ class App extends React.Component {
   }
 }
 
-export default () => <App />;
+export default () => <div id="components-alert-demo-smooth-closed"><App /></div>;

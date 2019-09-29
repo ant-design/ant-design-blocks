@@ -79,4 +79,4 @@ class EditableTagGroup extends React.Component {
   }
 }
 
-export default () => <EditableTagGroup />;
+export default () => <div id="components-tag-demo-control"><EditableTagGroup /></div>;

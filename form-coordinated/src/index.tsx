@@ -54,4 +54,4 @@ class App extends React.Component {
 
 const WrappedApp = Form.create({ name: 'coordinated' })(App);
 
-export default () => <WrappedApp />;
+export default () => <div id="components-form-demo-coordinated"><WrappedApp /></div>;

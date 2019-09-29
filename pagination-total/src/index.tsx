@@ -1,7 +1,7 @@
 import React from 'react';
 import { Pagination } from 'antd';
 
-export default () => 
+export default () => <div id="components-pagination-demo-total">
   <div>
     <Pagination
       total={85}
@@ -16,4 +16,4 @@ export default () =>
       pageSize={20}
       defaultCurrent={1}
     />
-  </div>;
+  </div></div>;

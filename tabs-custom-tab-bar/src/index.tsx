@@ -12,7 +12,7 @@ const renderTabBar = (props, DefaultTabBar) => (
   </Sticky>
 );
 
-export default () => 
+export default () => <div id="components-tabs-demo-custom-tab-bar">
   <StickyContainer>
     <Tabs defaultActiveKey="1" renderTabBar={renderTabBar}>
       <TabPane tab="Tab 1" key="1" style={{ height: 200 }}>
@@ -25,4 +25,4 @@ export default () =>
         Content of Tab Pane 3
       </TabPane>
     </Tabs>
-  </StickyContainer>;
+  </StickyContainer></div>;

@@ -14,9 +14,9 @@ const menu = (
   </Menu>
 );
 
-export default () => 
+export default () => <div id="components-dropdown-demo-trigger">
   <Dropdown overlay={menu} trigger={['click']}>
     <a className="ant-dropdown-link" href="#">
       Click me <Icon type="down" />
     </a>
-  </Dropdown>;
+  </Dropdown></div>;

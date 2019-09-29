@@ -80,8 +80,8 @@ class DecimalStep extends React.Component {
   }
 }
 
-export default () => 
+export default () => <div id="components-slider-demo-input-number">
   <div>
     <IntegerStep />
     <DecimalStep />
-  </div>;
+  </div></div>;

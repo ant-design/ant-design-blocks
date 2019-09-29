@@ -132,4 +132,4 @@ class SearchTree extends React.Component {
   }
 }
 
-export default () => <SearchTree />;
+export default () => <div id="components-tree-demo-search"><SearchTree /></div>;

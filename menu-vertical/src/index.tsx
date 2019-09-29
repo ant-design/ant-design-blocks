@@ -7,7 +7,7 @@ function handleClick(e) {
   console.log('click', e);
 }
 
-export default () => 
+export default () => <div id="components-menu-demo-vertical">
   <Menu onClick={handleClick} style={{ width: 256 }} mode="vertical">
     <SubMenu
       key="sub1"
@@ -57,4 +57,4 @@ export default () =>
       <Menu.Item key="11">Option 11</Menu.Item>
       <Menu.Item key="12">Option 12</Menu.Item>
     </SubMenu>
-  </Menu>;
+  </Menu></div>;

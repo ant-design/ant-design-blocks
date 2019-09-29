@@ -58,4 +58,4 @@ class LazyOptions extends React.Component {
   }
 }
 
-export default () => <LazyOptions />;
+export default () => <div id="components-cascader-demo-lazy"><LazyOptions /></div>;

@@ -7,7 +7,7 @@ function handleChange(value) {
   console.log(`selected ${value}`);
 }
 
-export default () => 
+export default () => <div id="components-select-demo-basic">
   <div>
     <Select defaultValue="lucy" style={{ width: 120 }} onChange={handleChange}>
       <Option value="jack">Jack</Option>
@@ -23,4 +23,4 @@ export default () =>
     <Select defaultValue="lucy" style={{ width: 120 }} loading>
       <Option value="lucy">Lucy</Option>
     </Select>
-  </div>;
+  </div></div>;

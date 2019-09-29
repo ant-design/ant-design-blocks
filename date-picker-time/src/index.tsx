@@ -12,7 +12,7 @@ function onOk(value) {
   console.log('onOk: ', value);
 }
 
-export default () => 
+export default () => <div id="components-date-picker-demo-time">
   <div>
     <DatePicker showTime placeholder="Select Time" onChange={onChange} onOk={onOk} />
     <br />
@@ -23,4 +23,4 @@ export default () =>
       onChange={onChange}
       onOk={onOk}
     />
-  </div>;
+  </div></div>;

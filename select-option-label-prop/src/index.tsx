@@ -7,7 +7,7 @@ function handleChange(value) {
   console.log(`selected ${value}`);
 }
 
-export default () => 
+export default () => <div id="components-select-demo-option-label-prop">
   <Select
     mode="multiple"
     style={{ width: '100%' }}
@@ -40,4 +40,4 @@ export default () =>
       </span>
       Korea (韩国)
     </Option>
-  </Select>;
+  </Select></div>;

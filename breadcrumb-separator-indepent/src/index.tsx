@@ -1,7 +1,7 @@
 import React from 'react';
 import { Breadcrumb } from 'antd';
 
-export default () => 
+export default () => <div id="components-breadcrumb-demo-separator-indepent">
   <Breadcrumb separator="">
     <Breadcrumb.Item>Location</Breadcrumb.Item>
     <Breadcrumb.Separator>:</Breadcrumb.Separator>
@@ -10,4 +10,4 @@ export default () =>
     <Breadcrumb.Item href="">Application List</Breadcrumb.Item>
     <Breadcrumb.Separator />
     <Breadcrumb.Item>An Application</Breadcrumb.Item>
-  </Breadcrumb>;
+  </Breadcrumb></div>;

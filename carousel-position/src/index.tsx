@@ -41,4 +41,4 @@ class PositionCarouselDemo extends React.Component {
   }
 }
 
-export default () => <PositionCarouselDemo />;
+export default () => <div id="components-carousel-demo-position"><PositionCarouselDemo /></div>;

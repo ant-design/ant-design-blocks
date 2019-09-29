@@ -124,7 +124,7 @@ const Content = ({ children, extraContent }) => {
   );
 };
 
-export default () => 
+export default () => <div id="components-page-header-demo-content">
   <PageHeader
     title="Title"
     subTitle="This is a subtitle"
@@ -150,4 +150,4 @@ export default () =>
     >
       {content}
     </Content>
-  </PageHeader>;
+  </PageHeader></div>;

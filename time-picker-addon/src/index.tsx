@@ -25,4 +25,4 @@ class TimePickerAddonDemo extends React.Component {
   }
 }
 
-export default () => <TimePickerAddonDemo />;
+export default () => <div id="components-time-picker-demo-addon"><TimePickerAddonDemo /></div>;

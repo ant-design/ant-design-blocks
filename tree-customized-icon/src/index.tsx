@@ -3,7 +3,7 @@ import { Tree, Icon } from 'antd';
 
 const { TreeNode } = Tree;
 
-export default () => 
+export default () => <div id="components-tree-demo-customized-icon">
   <Tree
     showIcon
     defaultExpandAll
@@ -18,4 +18,4 @@ export default () =>
         key="0-0-1"
       />
     </TreeNode>
-  </Tree>;
+  </Tree></div>;

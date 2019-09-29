@@ -8,7 +8,7 @@ const content = (
   </div>
 );
 
-export default () => 
+export default () => <div id="components-popover-demo-triggerType">
   <div>
     <Popover content={content} title="Title" trigger="hover">
       <Button>Hover me</Button>
@@ -19,4 +19,4 @@ export default () =>
     <Popover content={content} title="Title" trigger="click">
       <Button>Click me</Button>
     </Popover>
-  </div>;
+  </div></div>;

@@ -121,7 +121,7 @@ class DraggableTabs extends React.Component {
   }
 }
 
-export default () => 
+export default () => <div id="components-tabs-demo-custom-tab-bar-node">
   <DraggableTabs>
     <TabPane tab="tab 1" key="1">
       Content of Tab Pane 1
@@ -132,4 +132,4 @@ export default () =>
     <TabPane tab="tab 3" key="3">
       Content of Tab Pane 3
     </TabPane>
-  </DraggableTabs>;
+  </DraggableTabs></div>;

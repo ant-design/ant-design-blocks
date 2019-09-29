@@ -90,4 +90,4 @@ class PicturesWall extends React.Component {
   }
 }
 
-export default () => <PicturesWall />;
+export default () => <div id="components-upload-demo-picture-card"><PicturesWall /></div>;

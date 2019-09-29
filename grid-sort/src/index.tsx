@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 
-export default () => 
+export default () => <div id="components-grid-demo-sort">
   <div>
     <Row>
       <Col span={18} push={6}>
@@ -11,4 +11,4 @@ export default () =>
         col-6 col-pull-18
       </Col>
     </Row>
-  </div>;
+  </div></div>;

@@ -76,4 +76,4 @@ class DateRange extends React.Component {
   }
 }
 
-export default () => <DateRange />;
+export default () => <div id="components-date-picker-demo-start-end"><DateRange /></div>;

@@ -38,4 +38,4 @@ class App extends React.Component {
   }
 }
 
-export default () => <App />;
+export default () => <div id="components-drawer-demo-basic-right"><App /></div>;

@@ -5,7 +5,7 @@ function onChange(a, b, c) {
   console.log(a, b, c);
 }
 
-export default () => 
+export default () => <div id="components-carousel-demo-basic">
   <Carousel afterChange={onChange}>
     <div>
       <h3>1</h3>
@@ -19,4 +19,4 @@ export default () =>
     <div>
       <h3>4</h3>
     </div>
-  </Carousel>;
+  </Carousel></div>;

@@ -52,4 +52,4 @@ class App extends React.Component {
   }
 }
 
-export default () => <App />;
+export default () => <div id="components-checkbox-demo-check-all"><App /></div>;

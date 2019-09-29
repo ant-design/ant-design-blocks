@@ -46,4 +46,4 @@ class App extends React.Component {
   }
 }
 
-export default () => <App />;
+export default () => <div id="components-select-demo-custom-dropdown-menu"><App /></div>;

@@ -23,4 +23,4 @@ class Rater extends React.Component {
   }
 }
 
-export default () => <Rater />;
+export default () => <div id="components-rate-demo-text"><Rater /></div>;

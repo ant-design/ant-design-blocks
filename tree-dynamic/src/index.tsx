@@ -47,4 +47,4 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <Demo />;
+export default () => <div id="components-tree-demo-dynamic"><Demo /></div>;

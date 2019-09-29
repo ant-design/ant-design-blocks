@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'antd';
 
-export default () => 
+export default () => <div id="components-button-demo-ghost">
   <div style={{ background: 'rgb(190, 200, 200)', padding: '26px 16px 16px' }}>
     <Button type="primary" ghost>
       Primary
@@ -16,4 +16,4 @@ export default () =>
     <Button type="link" ghost>
       link
     </Button>
-  </div>;
+  </div></div>;

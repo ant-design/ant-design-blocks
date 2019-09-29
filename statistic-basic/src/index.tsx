@@ -1,7 +1,7 @@
 import React from 'react';
 import { Statistic, Row, Col, Button } from 'antd';
 
-export default () => 
+export default () => <div id="components-statistic-demo-basic">
   <Row gutter={16}>
     <Col span={12}>
       <Statistic title="Active Users" value={112893} />
@@ -12,4 +12,4 @@ export default () =>
         Recharge
       </Button>
     </Col>
-  </Row>;
+  </Row></div>;

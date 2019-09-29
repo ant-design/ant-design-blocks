@@ -73,4 +73,4 @@ class DynamicRule extends React.Component {
 }
 
 const WrappedDynamicRule = Form.create({ name: 'dynamic_rule' })(DynamicRule);
-export default () => <WrappedDynamicRule />;
+export default () => <div id="components-form-demo-dynamic-rule"><WrappedDynamicRule /></div>;

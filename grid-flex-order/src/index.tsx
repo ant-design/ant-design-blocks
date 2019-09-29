@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 
-export default () => 
+export default () => <div id="components-grid-demo-flex-order">
   <div>
     <Row type="flex">
       <Col span={6} order={4}>
@@ -17,4 +17,4 @@ export default () =>
         4 col-order-1
       </Col>
     </Row>
-  </div>;
+  </div></div>;

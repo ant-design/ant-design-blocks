@@ -12,7 +12,7 @@ const openNotification = () => {
   });
 };
 
-export default () => 
+export default () => <div id="components-notification-demo-basic">
   <Button type="primary" onClick={openNotification}>
     Open the notification box
-  </Button>;
+  </Button></div>;

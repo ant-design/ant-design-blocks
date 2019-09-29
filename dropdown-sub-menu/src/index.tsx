@@ -18,9 +18,9 @@ const menu = (
   </Menu>
 );
 
-export default () => 
+export default () => <div id="components-dropdown-demo-sub-menu">
   <Dropdown overlay={menu}>
     <a className="ant-dropdown-link" href="#">
       Cascading menu <Icon type="down" />
     </a>
-  </Dropdown>;
+  </Dropdown></div>;

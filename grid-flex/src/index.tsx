@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 
-export default () => 
+export default () => <div id="components-grid-demo-flex">
   <div>
     <p>sub-element align left</p>
     <Row type="flex" justify="start">
@@ -42,4 +42,4 @@ export default () =>
       <Col span={4}>col-4</Col>
       <Col span={4}>col-4</Col>
     </Row>
-  </div>;
+  </div></div>;

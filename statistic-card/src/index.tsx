@@ -1,7 +1,7 @@
 import React from 'react';
 import { Statistic, Card, Row, Col, Icon } from 'antd';
 
-export default () => 
+export default () => <div id="components-statistic-demo-card">
   <div style={{ background: '#ECECEC', padding: '30px' }}>
     <Row gutter={16}>
       <Col span={12}>
@@ -29,4 +29,4 @@ export default () =>
         </Card>
       </Col>
     </Row>
-  </div>;
+  </div></div>;

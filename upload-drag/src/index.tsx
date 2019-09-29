@@ -20,7 +20,7 @@ const props = {
   },
 };
 
-export default () => 
+export default () => <div id="components-upload-demo-drag">
   <Dragger {...props}>
     <p className="ant-upload-drag-icon">
       <Icon type="inbox" />
@@ -30,4 +30,4 @@ export default () =>
       Support for a single or bulk upload. Strictly prohibit from uploading company data or other
       band files
     </p>
-  </Dragger>;
+  </Dragger></div>;

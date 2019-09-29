@@ -3,7 +3,7 @@ import { Layout, Menu, Breadcrumb } from 'antd';
 
 const { Header, Content, Footer } = Layout;
 
-export default () => 
+export default () => <div id="components-layout-demo-top">
   <Layout className="layout">
     <Header>
       <div className="logo" />
@@ -27,4 +27,4 @@ export default () =>
       <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>Content</div>
     </Content>
     <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
-  </Layout>;
+  </Layout></div>;

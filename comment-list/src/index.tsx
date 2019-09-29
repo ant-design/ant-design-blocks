@@ -55,7 +55,7 @@ const data = [
   },
 ];
 
-export default () => 
+export default () => <div id="components-comment-demo-list">
   <List
     className="comment-list"
     header={`${data.length} replies`}
@@ -72,4 +72,4 @@ export default () =>
         />
       </li>
     )}
-  />;
+  /></div>;

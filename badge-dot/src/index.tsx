@@ -1,7 +1,7 @@
 import React from 'react';
 import { Badge, Icon } from 'antd';
 
-export default () => 
+export default () => <div id="components-badge-demo-dot">
   <div>
     <Badge dot>
       <Icon type="notification" />
@@ -12,4 +12,4 @@ export default () =>
     <Badge dot>
       <a href="#">Link something</a>
     </Badge>
-  </div>;
+  </div></div>;

@@ -8,7 +8,7 @@ function onFinish() {
   console.log('finished!');
 }
 
-export default () => 
+export default () => <div id="components-statistic-demo-countdown">
   <Row gutter={16}>
     <Col span={12}>
       <Countdown title="Countdown" value={deadline} onFinish={onFinish} />
@@ -19,4 +19,4 @@ export default () =>
     <Col span={24} style={{ marginTop: 32 }}>
       <Countdown title="Day Level" value={deadline} format="D 天 H 时 m 分 s 秒" />
     </Col>
-  </Row>;
+  </Row></div>;

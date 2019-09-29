@@ -40,7 +40,7 @@ function disabledRangeTime(_, type) {
   };
 }
 
-export default () => 
+export default () => <div id="components-date-picker-demo-disabled-date">
   <div>
     <DatePicker
       format="YYYY-MM-DD HH:mm:ss"
@@ -60,4 +60,4 @@ export default () =>
       }}
       format="YYYY-MM-DD HH:mm:ss"
     />
-  </div>;
+  </div></div>;

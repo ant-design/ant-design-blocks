@@ -79,4 +79,4 @@ class SearchInput extends React.Component {
   }
 }
 
-export default () => <SearchInput placeholder="input search text" style={{ width: 200 }} />;
+export default () => <div id="components-select-demo-search-box"><SearchInput placeholder="input search text" style={{ width: 200 }} /></div>;

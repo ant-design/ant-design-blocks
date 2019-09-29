@@ -9,7 +9,7 @@ const data = [
   'Los Angeles battles huge wildfires.',
 ];
 
-export default () => 
+export default () => <div id="components-list-demo-simple">
   <div>
     <h3 style={{ marginBottom: 16 }}>Default Size</h3>
     <List
@@ -41,4 +41,4 @@ export default () =>
       dataSource={data}
       renderItem={item => <List.Item>{item}</List.Item>}
     />
-  </div>;
+  </div></div>;

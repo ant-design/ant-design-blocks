@@ -38,4 +38,4 @@ class OverlayVisible extends React.Component {
   }
 }
 
-export default () => <OverlayVisible />;
+export default () => <div id="components-dropdown-demo-overlay-visible"><OverlayVisible /></div>;

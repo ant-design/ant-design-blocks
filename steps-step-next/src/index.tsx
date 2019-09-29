@@ -68,4 +68,4 @@ class App extends React.Component {
   }
 }
 
-export default () => <App />;
+export default () => <div id="components-steps-demo-step-next"><App /></div>;

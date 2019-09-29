@@ -3,7 +3,7 @@ import { Typography } from 'antd';
 
 const { Paragraph } = Typography;
 
-export default () => 
+export default () => <div id="components-typography-demo-ellipsis">
   <div>
     <Paragraph ellipsis>
       Ant Design, a design language for background applications, is refined by Ant UED Team. Ant
@@ -22,4 +22,4 @@ export default () =>
       language for background applications, is refined by Ant UED Team. Ant Design, a design
       language for background applications, is refined by Ant UED Team.
     </Paragraph>
-  </div>;
+  </div></div>;

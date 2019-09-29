@@ -90,4 +90,4 @@ class TimeRelatedForm extends React.Component {
 
 const WrappedTimeRelatedForm = Form.create({ name: 'time_related_controls' })(TimeRelatedForm);
 
-export default () => <WrappedTimeRelatedForm />;
+export default () => <div id="components-form-demo-time-related-controls"><WrappedTimeRelatedForm /></div>;

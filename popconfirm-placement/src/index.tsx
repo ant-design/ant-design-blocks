@@ -7,7 +7,7 @@ function confirm() {
   message.info('Clicked on Yes.');
 }
 
-export default () => 
+export default () => <div id="components-popconfirm-demo-placement">
   <div className="demo">
     <div style={{ marginLeft: 70, whiteSpace: 'nowrap' }}>
       <Popconfirm placement="topLeft" title={text} onConfirm={confirm} okText="Yes" cancelText="No">
@@ -89,4 +89,4 @@ export default () =>
         <Button>BR</Button>
       </Popconfirm>
     </div>
-  </div>;
+  </div></div>;

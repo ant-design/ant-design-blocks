@@ -9,7 +9,7 @@ function onChange(dates, dateStrings) {
   console.log('From: ', dateStrings[0], ', to: ', dateStrings[1]);
 }
 
-export default () => 
+export default () => <div id="components-date-picker-demo-presetted-ranges">
   <div>
     <RangePicker
       ranges={{
@@ -28,4 +28,4 @@ export default () =>
       format="YYYY/MM/DD HH:mm:ss"
       onChange={onChange}
     />
-  </div>;
+  </div></div>;

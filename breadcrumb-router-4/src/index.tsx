@@ -52,7 +52,7 @@ const Home = withRouter(props => {
   );
 });
 
-export default () => 
+export default () => <div id="components-breadcrumb-demo-router-4">
   <Router>
     <Home />
-  </Router>;
+  </Router></div>;

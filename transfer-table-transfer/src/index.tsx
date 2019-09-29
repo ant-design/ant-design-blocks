@@ -142,4 +142,4 @@ class App extends React.Component {
   }
 }
 
-export default () => <App />;
+export default () => <div id="components-transfer-demo-table-transfer"><App /></div>;

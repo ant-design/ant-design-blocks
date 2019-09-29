@@ -62,4 +62,4 @@ class SelectSizesDemo extends React.Component {
   }
 }
 
-export default () => <SelectSizesDemo />;
+export default () => <div id="components-select-demo-size"><SelectSizesDemo /></div>;

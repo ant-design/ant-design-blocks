@@ -3,7 +3,7 @@ import { Tabs } from 'antd';
 
 const { TabPane } = Tabs;
 
-export default () => 
+export default () => <div id="components-tabs-demo-disabled">
   <Tabs defaultActiveKey="1">
     <TabPane tab="Tab 1" key="1">
       Tab 1
@@ -14,4 +14,4 @@ export default () =>
     <TabPane tab="Tab 3" key="3">
       Tab 3
     </TabPane>
-  </Tabs>;
+  </Tabs></div>;

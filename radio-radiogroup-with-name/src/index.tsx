@@ -12,4 +12,4 @@ function App() {
   );
 }
 
-export default () => <App />;
+export default () => <div id="components-radio-demo-radiogroup-with-name"><App /></div>;

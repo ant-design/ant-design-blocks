@@ -37,4 +37,4 @@ const Demo = () => (
   </div>
 );
 
-export default () => <Demo />;
+export default () => <div id="components-progress-demo-gradient-line"><Demo /></div>;

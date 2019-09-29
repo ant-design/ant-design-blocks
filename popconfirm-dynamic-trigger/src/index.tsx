@@ -58,4 +58,4 @@ class App extends React.Component {
   }
 }
 
-export default () => <App />;
+export default () => <div id="components-popconfirm-demo-dynamic-trigger"><App /></div>;

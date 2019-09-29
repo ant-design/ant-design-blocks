@@ -60,4 +60,4 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <Demo />;
+export default () => <div id="components-tree-select-demo-async"><Demo /></div>;

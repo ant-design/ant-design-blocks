@@ -61,4 +61,4 @@ class HorizontalLoginForm extends React.Component {
 
 const WrappedHorizontalLoginForm = Form.create({ name: 'horizontal_login' })(HorizontalLoginForm);
 
-export default () => <WrappedHorizontalLoginForm />;
+export default () => <div id="components-form-demo-inline-login"><WrappedHorizontalLoginForm /></div>;

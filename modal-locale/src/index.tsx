@@ -48,9 +48,9 @@ function confirm() {
   });
 }
 
-export default () => 
+export default () => <div id="components-modal-demo-locale">
   <div>
     <LocalizedModal />
     <br />
     <Button onClick={confirm}>Confirm</Button>
-  </div>;
+  </div></div>;

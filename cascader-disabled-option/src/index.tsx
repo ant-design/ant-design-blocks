@@ -41,4 +41,4 @@ function onChange(value) {
   console.log(value);
 }
 
-export default () => <Cascader options={options} onChange={onChange} />;
+export default () => <div id="components-cascader-demo-disabled-option"><Cascader options={options} onChange={onChange} /></div>;

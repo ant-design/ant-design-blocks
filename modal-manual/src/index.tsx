@@ -19,4 +19,4 @@ function countDown() {
   }, secondsToGo * 1000);
 }
 
-export default () => <Button onClick={countDown}>Open modal to close in 5s</Button>;
+export default () => <div id="components-modal-demo-manual"><Button onClick={countDown}>Open modal to close in 5s</Button></div>;

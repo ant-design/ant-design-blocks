@@ -35,4 +35,4 @@ class PickerSizesDemo extends React.Component {
   }
 }
 
-export default () => <PickerSizesDemo />;
+export default () => <div id="components-date-picker-demo-size"><PickerSizesDemo /></div>;

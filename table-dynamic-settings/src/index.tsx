@@ -175,4 +175,4 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <Demo />;
+export default () => <div id="components-table-demo-dynamic-settings"><Demo /></div>;

@@ -189,4 +189,4 @@ class Demo extends React.Component {
 
 const WrappedDemo = Form.create({ name: 'validate_other' })(Demo);
 
-export default () => <WrappedDemo />;
+export default () => <div id="components-form-demo-validate-other"><WrappedDemo /></div>;

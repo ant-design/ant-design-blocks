@@ -17,9 +17,9 @@ class MyTag extends React.Component {
   }
 }
 
-export default () => 
+export default () => <div id="components-tag-demo-checkable">
   <div>
     <MyTag>Tag1</MyTag>
     <MyTag>Tag2</MyTag>
     <MyTag>Tag3</MyTag>
-  </div>;
+  </div></div>;

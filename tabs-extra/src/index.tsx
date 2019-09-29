@@ -5,7 +5,7 @@ const { TabPane } = Tabs;
 
 const operations = <Button>Extra Action</Button>;
 
-export default () => 
+export default () => <div id="components-tabs-demo-extra">
   <Tabs tabBarExtraContent={operations}>
     <TabPane tab="Tab 1" key="1">
       Content of tab 1
@@ -16,4 +16,4 @@ export default () =>
     <TabPane tab="Tab 3" key="3">
       Content of tab 3
     </TabPane>
-  </Tabs>;
+  </Tabs></div>;

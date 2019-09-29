@@ -103,4 +103,4 @@ class LoadMoreList extends React.Component {
   }
 }
 
-export default () => <LoadMoreList />;
+export default () => <div id="components-list-demo-loadmore"><LoadMoreList /></div>;

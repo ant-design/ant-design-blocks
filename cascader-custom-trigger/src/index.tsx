@@ -48,4 +48,4 @@ class CitySwitcher extends React.Component {
   }
 }
 
-export default () => <CitySwitcher />;
+export default () => <div id="components-cascader-demo-custom-trigger"><CitySwitcher /></div>;

@@ -4,4 +4,4 @@ import moment from 'moment';
 
 const format = 'HH:mm';
 
-export default () => <TimePicker defaultValue={moment('12:08', format)} format={format} />;
+export default () => <div id="components-time-picker-demo-hide-column"><TimePicker defaultValue={moment('12:08', format)} format={format} /></div>;

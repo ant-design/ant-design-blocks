@@ -5,4 +5,4 @@ function onPanelChange(value, mode) {
   console.log(value, mode);
 }
 
-export default () => <Calendar onPanelChange={onPanelChange} />;
+export default () => <div id="components-calendar-demo-basic"><Calendar onPanelChange={onPanelChange} /></div>;

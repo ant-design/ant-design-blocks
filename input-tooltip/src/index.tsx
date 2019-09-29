@@ -80,4 +80,4 @@ class NumericInputDemo extends React.Component {
   }
 }
 
-export default () => <NumericInputDemo />;
+export default () => <div id="components-input-demo-tooltip"><NumericInputDemo /></div>;

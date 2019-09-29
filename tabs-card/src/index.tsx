@@ -7,7 +7,7 @@ function callback(key) {
   console.log(key);
 }
 
-export default () => 
+export default () => <div id="components-tabs-demo-card">
   <Tabs onChange={callback} type="card">
     <TabPane tab="Tab 1" key="1">
       Content of Tab Pane 1
@@ -18,4 +18,4 @@ export default () =>
     <TabPane tab="Tab 3" key="3">
       Content of Tab Pane 3
     </TabPane>
-  </Tabs>;
+  </Tabs></div>;

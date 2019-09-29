@@ -33,4 +33,4 @@ class SelectWithHiddenSelectedOptions extends React.Component {
   }
 }
 
-export default () => <SelectWithHiddenSelectedOptions />;
+export default () => <div id="components-select-demo-hide-selected"><SelectWithHiddenSelectedOptions /></div>;

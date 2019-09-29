@@ -149,4 +149,4 @@ class DrawerForm extends React.Component {
 
 const App = Form.create()(DrawerForm);
 
-export default () => <App />;
+export default () => <div id="components-drawer-demo-form-in-drawer"><App /></div>;

@@ -5,9 +5,9 @@ function onChange(pageNumber) {
   console.log('Page: ', pageNumber);
 }
 
-export default () => 
+export default () => <div id="components-pagination-demo-jump">
   <div>
     <Pagination showQuickJumper defaultCurrent={2} total={500} onChange={onChange} />
     <br />
     <Pagination showQuickJumper defaultCurrent={2} total={500} onChange={onChange} disabled />
-  </div>;
+  </div></div>;

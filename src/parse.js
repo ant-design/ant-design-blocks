@@ -9,7 +9,7 @@ const DEBUG_SCRIPT = /debug: true.*(?=---)/is;
 const COMPONENT_TYPE_SCRIPT = /\ntype: (.*)(?=\n)/i;
 const COL_SCRIPT = /\ncols: (\d)(?=\n)/i;
 
-const parseJSX = text => {
+const parseJSX = (text, id = '') => {
   let jsxText = null;
   const result = text.match(JSX_SCRIPT);
   if (result && result.length > 0) {
@@ -18,7 +18,7 @@ const parseJSX = text => {
   jsxText = jsxText.replace(
     /ReactDOM.render\((.*),.*mountNode.*\)/is,
     (match, key) => {
-      return `export default () => ${key}`;
+      return `export default () => <div id="${id}">${key}</div>`;
     }
   );
 

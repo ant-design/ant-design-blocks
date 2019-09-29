@@ -106,4 +106,4 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <Demo />;
+export default () => <div id="components-table-demo-resizable-column"><Demo /></div>;

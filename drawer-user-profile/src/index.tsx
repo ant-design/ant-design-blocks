@@ -173,4 +173,4 @@ class App extends React.Component {
   }
 }
 
-export default () => <App />;
+export default () => <div id="components-drawer-demo-user-profile"><App /></div>;

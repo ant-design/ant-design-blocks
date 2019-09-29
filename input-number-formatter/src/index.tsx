@@ -5,7 +5,7 @@ function onChange(value) {
   console.log('changed', value);
 }
 
-export default () => 
+export default () => <div id="components-input-number-demo-formatter">
   <div>
     <InputNumber
       defaultValue={1000}
@@ -21,4 +21,4 @@ export default () =>
       parser={value => value.replace('%', '')}
       onChange={onChange}
     />
-  </div>;
+  </div></div>;

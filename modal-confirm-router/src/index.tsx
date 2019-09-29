@@ -23,7 +23,7 @@ function showConfirm() {
   }
 }
 
-export default () => 
+export default () => <div id="components-modal-demo-confirm-router">
   <div>
     <Button onClick={showConfirm}>Confirm</Button>
-  </div>;
+  </div></div>;

@@ -18,7 +18,7 @@ const selectAfter = (
   </Select>
 );
 
-export default () => 
+export default () => <div id="components-input-demo-addon">
   <div>
     <div style={{ marginBottom: 16 }}>
       <Input addonBefore="Http://" addonAfter=".com" defaultValue="mysite" />
@@ -29,4 +29,4 @@ export default () =>
     <div style={{ marginBottom: 16 }}>
       <Input addonAfter={<Icon type="setting" />} defaultValue="mysite" />
     </div>
-  </div>;
+  </div></div>;

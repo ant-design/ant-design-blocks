@@ -11,7 +11,7 @@ const openNotification = () => {
   notification.open(args);
 };
 
-export default () => 
+export default () => <div id="components-notification-demo-duration">
   <Button type="primary" onClick={openNotification}>
     Open the notification box
-  </Button>;
+  </Button></div>;

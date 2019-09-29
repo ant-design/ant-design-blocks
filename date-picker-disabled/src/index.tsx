@@ -5,7 +5,7 @@ import moment from 'moment';
 const { MonthPicker, RangePicker } = DatePicker;
 
 const dateFormat = 'YYYY-MM-DD';
-export default () => 
+export default () => <div id="components-date-picker-demo-disabled">
   <div>
     <DatePicker defaultValue={moment('2015-06-06', dateFormat)} disabled />
     <br />
@@ -15,4 +15,4 @@ export default () =>
       defaultValue={[moment('2015-06-06', dateFormat), moment('2015-06-06', dateFormat)]}
       disabled
     />
-  </div>;
+  </div></div>;

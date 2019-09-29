@@ -5,4 +5,4 @@ function onChange(checked) {
   console.log(`switch to ${checked}`);
 }
 
-export default () => <Switch defaultChecked onChange={onChange} />;
+export default () => <div id="components-switch-demo-basic"><Switch defaultChecked onChange={onChange} /></div>;

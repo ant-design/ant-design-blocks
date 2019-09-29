@@ -60,4 +60,4 @@ class ButtonSize extends React.Component {
   }
 }
 
-export default () => <ButtonSize />;
+export default () => <div id="components-button-demo-size"><ButtonSize /></div>;

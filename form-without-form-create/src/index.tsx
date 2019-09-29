@@ -53,4 +53,4 @@ class RawForm extends React.Component {
   }
 }
 
-export default () => <RawForm />;
+export default () => <div id="components-form-demo-without-form-create"><RawForm /></div>;

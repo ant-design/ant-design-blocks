@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'antd';
 
-export default () => 
+export default () => <div id="components-button-demo-disabled">
   <div>
     <Button type="primary">Primary</Button>
     <Button type="primary" disabled>
@@ -26,4 +26,4 @@ export default () =>
         Ghost(disabled)
       </Button>
     </div>
-  </div>;
+  </div></div>;

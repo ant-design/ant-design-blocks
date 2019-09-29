@@ -36,4 +36,4 @@ class SlidingTabsDemo extends React.Component {
   }
 }
 
-export default () => <SlidingTabsDemo />;
+export default () => <div id="components-tabs-demo-slide"><SlidingTabsDemo /></div>;

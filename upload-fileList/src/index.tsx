@@ -48,4 +48,4 @@ class MyUpload extends React.Component {
   }
 }
 
-export default () => <MyUpload />;
+export default () => <div id="components-upload-demo-fileList"><MyUpload /></div>;

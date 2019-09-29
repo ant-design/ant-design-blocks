@@ -1,7 +1,7 @@
 import React from 'react';
 import { PageHeader, Tag, Button, Statistic, Descriptions, Row } from 'antd';
 
-export default () => 
+export default () => <div id="components-page-header-demo-actions">
   <div>
     <PageHeader
       onBack={() => window.history.back()}
@@ -54,4 +54,4 @@ export default () =>
         <Statistic title="Balance" prefix="$" value={3345.08} />
       </Row>
     </PageHeader>
-  </div>;
+  </div></div>;

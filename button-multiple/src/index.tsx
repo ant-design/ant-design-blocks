@@ -13,7 +13,7 @@ const menu = (
   </Menu>
 );
 
-export default () => 
+export default () => <div id="components-button-demo-multiple">
   <div>
     <Button type="primary">primary</Button>
     <Button>secondary</Button>
@@ -22,4 +22,4 @@ export default () =>
         Actions <Icon type="down" />
       </Button>
     </Dropdown>
-  </div>;
+  </div></div>;

@@ -19,9 +19,9 @@ const props = {
   },
 };
 
-export default () => 
+export default () => <div id="components-upload-demo-basic">
   <Upload {...props}>
     <Button>
       <Icon type="upload" /> Click to Upload
     </Button>
-  </Upload>;
+  </Upload></div>;

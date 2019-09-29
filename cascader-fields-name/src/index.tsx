@@ -40,10 +40,10 @@ function onChange(value) {
   console.log(value);
 }
 
-export default () => 
+export default () => <div id="components-cascader-demo-fields-name">
   <Cascader
     fieldNames={{ label: 'name', value: 'code', children: 'items' }}
     options={options}
     onChange={onChange}
     placeholder="Please select"
-  />;
+  /></div>;

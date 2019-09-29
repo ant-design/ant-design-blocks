@@ -119,4 +119,4 @@ class Demo extends React.Component {
 
 const WrappedDemo = Form.create({ name: 'customized_form_controls' })(Demo);
 
-export default () => <WrappedDemo />;
+export default () => <div id="components-form-demo-customized-form-controls"><WrappedDemo /></div>;

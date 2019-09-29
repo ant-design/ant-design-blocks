@@ -3,7 +3,7 @@ import { Typography, Divider } from 'antd';
 
 const { Title, Paragraph, Text } = Typography;
 
-export default () => 
+export default () => <div id="components-typography-demo-basic">
   <Typography>
     <Title>Introduction</Title>
     <Paragraph>
@@ -73,4 +73,4 @@ export default () =>
         </li>
       </ul>
     </Paragraph>
-  </Typography>;
+  </Typography></div>;

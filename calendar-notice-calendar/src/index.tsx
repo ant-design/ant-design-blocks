@@ -61,5 +61,5 @@ function monthCellRender(value) {
   ) : null;
 }
 
-export default () => 
-  <Calendar dateCellRender={dateCellRender} monthCellRender={monthCellRender} />;
+export default () => <div id="components-calendar-demo-notice-calendar">
+  <Calendar dateCellRender={dateCellRender} monthCellRender={monthCellRender} /></div>;

@@ -73,4 +73,4 @@ class App extends React.Component {
 
 const FormDemo = Form.create()(App);
 
-export default () => <FormDemo />;
+export default () => <div id="components-mentions-demo-form"><FormDemo /></div>;

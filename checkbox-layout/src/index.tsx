@@ -5,7 +5,7 @@ function onChange(checkedValues) {
   console.log('checked = ', checkedValues);
 }
 
-export default () => 
+export default () => <div id="components-checkbox-demo-layout">
   <Checkbox.Group style={{ width: '100%' }} onChange={onChange}>
     <Row>
       <Col span={8}>
@@ -24,4 +24,4 @@ export default () =>
         <Checkbox value="E">E</Checkbox>
       </Col>
     </Row>
-  </Checkbox.Group>;
+  </Checkbox.Group></div>;

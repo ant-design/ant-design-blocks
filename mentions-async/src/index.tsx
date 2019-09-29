@@ -60,4 +60,4 @@ class AsyncMention extends React.Component {
   }
 }
 
-export default () => <AsyncMention />;
+export default () => <div id="components-mentions-demo-async"><AsyncMention /></div>;

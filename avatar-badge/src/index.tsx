@@ -1,7 +1,7 @@
 import React from 'react';
 import { Avatar, Badge } from 'antd';
 
-export default () => 
+export default () => <div id="components-avatar-demo-badge">
   <div>
     <span style={{ marginRight: 24 }}>
       <Badge count={1}>
@@ -13,4 +13,4 @@ export default () =>
         <Avatar shape="square" icon="user" />
       </Badge>
     </span>
-  </div>;
+  </div></div>;

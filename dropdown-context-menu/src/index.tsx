@@ -9,7 +9,7 @@ const menu = (
   </Menu>
 );
 
-export default () => 
+export default () => <div id="components-dropdown-demo-context-menu">
   <Dropdown overlay={menu} trigger={['contextMenu']}>
     <span style={{ userSelect: 'none' }}>Right Click on Me</span>
-  </Dropdown>;
+  </Dropdown></div>;

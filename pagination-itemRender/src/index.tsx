@@ -11,4 +11,4 @@ function itemRender(current, type, originalElement) {
   return originalElement;
 }
 
-export default () => <Pagination total={500} itemRender={itemRender} />;
+export default () => <div id="components-pagination-demo-itemRender"><Pagination total={500} itemRender={itemRender} /></div>;

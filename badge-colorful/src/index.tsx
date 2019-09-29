@@ -17,7 +17,7 @@ const colors = [
   'lime',
 ];
 
-export default () => 
+export default () => <div id="components-badge-demo-colorful">
   <div>
     <h4 style={{ marginBottom: 16 }}>Presets:</h4>
     <div>
@@ -37,4 +37,4 @@ export default () =>
       <br />
       <Badge color="#108ee9" text="#108ee9" />
     </div>
-  </div>;
+  </div></div>;

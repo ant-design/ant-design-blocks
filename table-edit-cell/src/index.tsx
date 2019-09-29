@@ -205,4 +205,4 @@ class EditableTable extends React.Component {
   }
 }
 
-export default () => <EditableTable />;
+export default () => <div id="components-table-demo-edit-cell"><EditableTable /></div>;

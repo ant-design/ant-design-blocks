@@ -5,7 +5,7 @@ const text = <span>prompt text</span>;
 
 const buttonWidth = 70;
 
-export default () => 
+export default () => <div id="components-tooltip-demo-placement">
   <div className="demo">
     <div style={{ marginLeft: buttonWidth, whiteSpace: 'nowrap' }}>
       <Tooltip placement="topLeft" title={text}>
@@ -51,4 +51,4 @@ export default () =>
         <Button>BR</Button>
       </Tooltip>
     </div>
-  </div>;
+  </div></div>;

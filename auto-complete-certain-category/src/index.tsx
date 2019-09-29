@@ -96,4 +96,4 @@ function Complete() {
   );
 }
 
-export default () => <Complete />;
+export default () => <div id="components-auto-complete-demo-certain-category"><Complete /></div>;

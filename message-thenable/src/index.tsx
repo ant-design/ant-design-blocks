@@ -8,4 +8,4 @@ const success = () => {
     .then(() => message.info('Loading finished is finished', 2.5));
 };
 
-export default () => <Button onClick={success}>Display sequential messages</Button>;
+export default () => <div id="components-message-demo-thenable"><Button onClick={success}>Display sequential messages</Button></div>;

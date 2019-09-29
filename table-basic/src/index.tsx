@@ -75,4 +75,4 @@ const data = [
   },
 ];
 
-export default () => <Table columns={columns} dataSource={data} />;
+export default () => <div id="components-table-demo-basic"><Table columns={columns} dataSource={data} /></div>;

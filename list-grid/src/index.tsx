@@ -16,7 +16,7 @@ const data = [
   },
 ];
 
-export default () => 
+export default () => <div id="components-list-demo-grid">
   <List
     grid={{ gutter: 16, column: 4 }}
     dataSource={data}
@@ -25,4 +25,4 @@ export default () =>
         <Card title={item.title}>Card content</Card>
       </List.Item>
     )}
-  />;
+  /></div>;

@@ -6,5 +6,5 @@ function onChange(time, timeString) {
   console.log(time, timeString);
 }
 
-export default () => 
-  <TimePicker onChange={onChange} defaultOpenValue={moment('00:00:00', 'HH:mm:ss')} />;
+export default () => <div id="components-time-picker-demo-basic">
+  <TimePicker onChange={onChange} defaultOpenValue={moment('00:00:00', 'HH:mm:ss')} /></div>;

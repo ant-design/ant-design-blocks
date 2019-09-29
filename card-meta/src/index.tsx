@@ -3,7 +3,7 @@ import { Card, Icon, Avatar } from 'antd';
 
 const { Meta } = Card;
 
-export default () => 
+export default () => <div id="components-card-demo-meta">
   <Card
     style={{ width: 300 }}
     cover={
@@ -23,4 +23,4 @@ export default () =>
       title="Card title"
       description="This is the description"
     />
-  </Card>;
+  </Card></div>;

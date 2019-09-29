@@ -1,7 +1,7 @@
 import React from 'react';
 import { Descriptions } from 'antd';
 
-export default () => 
+export default () => <div id="components-descriptions-demo-basic">
   <Descriptions title="User Info">
     <Descriptions.Item label="UserName">Zhou Maomao</Descriptions.Item>
     <Descriptions.Item label="Telephone">1810000000</Descriptions.Item>
@@ -10,4 +10,4 @@ export default () =>
     <Descriptions.Item label="Address">
       No. 18, Wantang Road, Xihu District, Hangzhou, Zhejiang, China
     </Descriptions.Item>
-  </Descriptions>;
+  </Descriptions></div>;

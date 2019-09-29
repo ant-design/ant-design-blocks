@@ -1,7 +1,7 @@
 import React from 'react';
 import { Avatar } from 'antd';
 
-export default () => 
+export default () => <div id="components-avatar-demo-basic">
   <div>
     <div>
       <Avatar size={64} icon="user" />
@@ -15,4 +15,4 @@ export default () =>
       <Avatar shape="square" icon="user" />
       <Avatar shape="square" size="small" icon="user" />
     </div>
-  </div>;
+  </div></div>;

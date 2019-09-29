@@ -25,7 +25,7 @@ const Home = ({ routes, params, children }) => (
   </div>
 );
 
-export default () => 
+export default () => <div id="components-breadcrumb-demo-router">
   <Router history={hashHistory}>
     <Route name="home" breadcrumbName="Home" path="/" component={Home}>
       <Route name="apps" breadcrumbName="Application List" path="apps" component={Apps}>
@@ -34,4 +34,4 @@ export default () =>
         </Route>
       </Route>
     </Route>
-  </Router>;
+  </Router></div>;

@@ -11,7 +11,7 @@ function cancel(e) {
   message.error('Click on No');
 }
 
-export default () => 
+export default () => <div id="components-popconfirm-demo-basic">
   <Popconfirm
     title="Are you sure delete this task?"
     onConfirm={confirm}
@@ -20,4 +20,4 @@ export default () =>
     cancelText="No"
   >
     <a href="#">Delete</a>
-  </Popconfirm>;
+  </Popconfirm></div>;

@@ -10,7 +10,7 @@ const text = (
   </p>
 );
 
-export default () => 
+export default () => <div id="components-collapse-demo-borderless">
   <Collapse bordered={false} defaultActiveKey={['1']}>
     <Panel header="This is panel header 1" key="1">
       {text}
@@ -21,4 +21,4 @@ export default () =>
     <Panel header="This is panel header 3" key="3">
       {text}
     </Panel>
-  </Collapse>;
+  </Collapse></div>;

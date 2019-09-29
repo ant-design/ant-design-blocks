@@ -56,8 +56,8 @@ const HeartIcon = props => <Icon component={HeartSvg} {...props} />;
 
 const PandaIcon = props => <Icon component={PandaSvg} {...props} />;
 
-export default () => 
+export default () => <div id="components-icon-demo-custom">
   <div className="custom-icons-list">
     <HeartIcon style={{ color: 'hotpink' }} />
     <PandaIcon style={{ fontSize: '32px' }} />
-  </div>;
+  </div></div>;

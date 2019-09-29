@@ -3,7 +3,7 @@ import { DatePicker } from 'antd';
 
 const { RangePicker } = DatePicker;
 
-export default () => 
+export default () => <div id="components-date-picker-demo-date-render">
   <div>
     <DatePicker
       dateRender={current => {
@@ -33,4 +33,4 @@ export default () =>
         );
       }}
     />
-  </div>;
+  </div></div>;

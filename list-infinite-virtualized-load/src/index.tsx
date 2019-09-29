@@ -137,4 +137,4 @@ class VirtualizedExample extends React.Component {
   }
 }
 
-export default () => <VirtualizedExample />;
+export default () => <div id="components-list-demo-infinite-virtualized-load"><VirtualizedExample /></div>;

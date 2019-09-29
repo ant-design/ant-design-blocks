@@ -21,7 +21,7 @@ const IconText = ({ type, text }) => (
   </span>
 );
 
-export default () => 
+export default () => <div id="components-list-demo-vertical">
   <List
     itemLayout="vertical"
     size="large"
@@ -61,4 +61,4 @@ export default () =>
         {item.content}
       </List.Item>
     )}
-  />;
+  /></div>;

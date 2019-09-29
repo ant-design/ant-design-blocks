@@ -3,7 +3,7 @@ import { Layout, Menu, Icon } from 'antd';
 
 const { Header, Content, Footer, Sider } = Layout;
 
-export default () => 
+export default () => <div id="components-layout-demo-responsive">
   <Layout>
     <Sider
       breakpoint="lg"
@@ -42,4 +42,4 @@ export default () =>
       </Content>
       <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
     </Layout>
-  </Layout>;
+  </Layout></div>;

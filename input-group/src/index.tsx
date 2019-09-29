@@ -149,4 +149,4 @@ class CompactDemo extends React.Component {
   }
 }
 
-export default () => <CompactDemo />;
+export default () => <div id="components-input-demo-group"><CompactDemo /></div>;

@@ -33,4 +33,4 @@ const Demo = () => {
   );
 };
 
-export default () => <Demo />;
+export default () => <div id="components-descriptions-demo-responsive"><Demo /></div>;

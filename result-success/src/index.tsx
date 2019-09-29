@@ -1,7 +1,7 @@
 import React from 'react';
 import { Result, Button } from 'antd';
 
-export default () => 
+export default () => <div id="components-result-demo-success">
   <Result
     status="success"
     title="Successfully Purchased Cloud Server ECS!"
@@ -12,4 +12,4 @@ export default () =>
       </Button>,
       <Button key="buy">Buy Again</Button>,
     ]}
-  />;
+  /></div>;

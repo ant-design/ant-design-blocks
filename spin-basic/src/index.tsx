@@ -1,4 +1,4 @@
 import React from 'react';
 import { Spin } from 'antd';
 
-export default () => <Spin />;
+export default () => <div id="components-spin-demo-basic"><Spin /></div>;

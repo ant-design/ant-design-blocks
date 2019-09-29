@@ -19,7 +19,7 @@ const marks = {
   },
 };
 
-export default () => 
+export default () => <div id="components-slider-demo-vertical">
   <div style={{ height: 300 }}>
     <div style={style}>
       <Slider vertical defaultValue={30} />
@@ -30,4 +30,4 @@ export default () =>
     <div style={style}>
       <Slider vertical range marks={marks} defaultValue={[26, 37]} />
     </div>
-  </div>;
+  </div></div>;

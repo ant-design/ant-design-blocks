@@ -92,4 +92,4 @@ class InfiniteListExample extends React.Component {
   }
 }
 
-export default () => <InfiniteListExample />;
+export default () => <div id="components-list-demo-infinite-load"><InfiniteListExample /></div>;

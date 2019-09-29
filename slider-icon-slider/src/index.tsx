@@ -26,4 +26,4 @@ class IconSlider extends React.Component {
   }
 }
 
-export default () => <IconSlider min={0} max={20} />;
+export default () => <div id="components-slider-demo-icon-slider"><IconSlider min={0} max={20} /></div>;

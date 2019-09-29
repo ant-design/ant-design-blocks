@@ -91,4 +91,4 @@ class Sider extends React.Component {
   }
 }
 
-export default () => <Sider />;
+export default () => <div id="components-menu-demo-theme"><Sider /></div>;

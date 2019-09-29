@@ -35,4 +35,4 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <Demo />;
+export default () => <div id="components-tree-demo-switcher-icon"><Demo /></div>;

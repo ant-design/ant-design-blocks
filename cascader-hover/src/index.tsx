@@ -45,10 +45,10 @@ function displayRender(label) {
   return label[label.length - 1];
 }
 
-export default () => 
+export default () => <div id="components-cascader-demo-hover">
   <Cascader
     options={options}
     expandTrigger="hover"
     displayRender={displayRender}
     onChange={onChange}
-  />;
+  /></div>;

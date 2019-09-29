@@ -5,7 +5,7 @@ function onChange(e) {
   console.log(`radio checked:${e.target.value}`);
 }
 
-export default () => 
+export default () => <div id="components-radio-demo-radiobutton">
   <div>
     <div>
       <Radio.Group onChange={onChange} defaultValue="a">
@@ -33,4 +33,4 @@ export default () =>
         <Radio.Button value="d">Chengdu</Radio.Button>
       </Radio.Group>
     </div>
-  </div>;
+  </div></div>;

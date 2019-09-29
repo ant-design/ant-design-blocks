@@ -10,7 +10,7 @@ function preventDefault(e) {
   console.log('Clicked! But prevent default.');
 }
 
-export default () => 
+export default () => <div id="components-tag-demo-basic">
   <div>
     <Tag>Tag 1</Tag>
     <Tag>
@@ -22,4 +22,4 @@ export default () =>
     <Tag closable onClose={preventDefault}>
       Prevent Default
     </Tag>
-  </div>;
+  </div></div>;

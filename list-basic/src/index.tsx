@@ -16,7 +16,7 @@ const data = [
   },
 ];
 
-export default () => 
+export default () => <div id="components-list-demo-basic">
   <List
     itemLayout="horizontal"
     dataSource={data}
@@ -29,4 +29,4 @@ export default () =>
         />
       </List.Item>
     )}
-  />;
+  /></div>;

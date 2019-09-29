@@ -40,7 +40,7 @@ function onChange(value) {
   console.log(value);
 }
 
-export default () => 
+export default () => <div id="components-cascader-demo-size">
   <div>
     <Cascader size="large" options={options} onChange={onChange} />
     <br />
@@ -51,4 +51,4 @@ export default () =>
     <Cascader size="small" options={options} onChange={onChange} />
     <br />
     <br />
-  </div>;
+  </div></div>;

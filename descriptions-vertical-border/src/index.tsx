@@ -1,7 +1,7 @@
 import React from 'react';
 import { Descriptions, Badge } from 'antd';
 
-export default () => 
+export default () => <div id="components-descriptions-demo-vertical-border">
   <Descriptions title="User Info" layout="vertical" bordered>
     <Descriptions.Item label="Product">Cloud Database</Descriptions.Item>
     <Descriptions.Item label="Billing Mode">Prepaid</Descriptions.Item>
@@ -29,4 +29,4 @@ export default () =>
       <br />
       Region: East China 1<br />
     </Descriptions.Item>
-  </Descriptions>;
+  </Descriptions></div>;

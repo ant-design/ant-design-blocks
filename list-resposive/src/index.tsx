@@ -22,7 +22,7 @@ const data = [
   },
 ];
 
-export default () => 
+export default () => <div id="components-list-demo-resposive">
   <List
     grid={{
       gutter: 16,
@@ -39,4 +39,4 @@ export default () =>
         <Card title={item.title}>Card content</Card>
       </List.Item>
     )}
-  />;
+  /></div>;

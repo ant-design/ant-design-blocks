@@ -29,4 +29,4 @@ class Complete extends React.Component {
   }
 }
 
-export default () => <Complete />;
+export default () => <div id="components-auto-complete-demo-options"><Complete /></div>;

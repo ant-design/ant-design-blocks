@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 
-export default () => 
+export default () => <div id="components-grid-demo-offset">
   <div>
     <Row>
       <Col span={8}>col-8</Col>
@@ -22,4 +22,4 @@ export default () =>
         col-12 col-offset-6
       </Col>
     </Row>
-  </div>;
+  </div></div>;

@@ -37,9 +37,9 @@ const data = [
   },
 ];
 
-export default () => 
+export default () => <div id="components-table-demo-expand">
   <Table
     columns={columns}
     expandedRowRender={record => <p style={{ margin: 0 }}>{record.description}</p>}
     dataSource={data}
-  />;
+  /></div>;

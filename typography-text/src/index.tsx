@@ -3,7 +3,7 @@ import { Typography } from 'antd';
 
 const { Text } = Typography;
 
-export default () => 
+export default () => <div id="components-typography-demo-text">
   <div>
     <Text>Ant Design</Text>
     <br />
@@ -24,4 +24,4 @@ export default () =>
     <Text delete>Ant Design</Text>
     <br />
     <Text strong>Ant Design</Text>
-  </div>;
+  </div></div>;
