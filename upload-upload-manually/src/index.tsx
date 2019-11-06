@@ -1,43 +1,43 @@
-import React from 'react';
-import { Upload, Button, Icon, message } from 'antd';
-import reqwest from 'reqwest';
+import React from "react";
+import { Upload, Button, Icon, message } from "antd";
+import reqwest from "reqwest";
 
 class Demo extends React.Component {
   state = {
     fileList: [],
-    uploading: false,
+    uploading: false
   };
 
   handleUpload = () => {
     const { fileList } = this.state;
     const formData = new FormData();
     fileList.forEach(file => {
-      formData.append('files[]', file);
+      formData.append("files[]", file);
     });
 
     this.setState({
-      uploading: true,
+      uploading: true
     });
 
     // You can use any AJAX library you like
     reqwest({
-      url: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
-      method: 'post',
+      url: "https://www.mocky.io/v2/5cc8019d300000980a055e76",
+      method: "post",
       processData: false,
       data: formData,
       success: () => {
         this.setState({
           fileList: [],
-          uploading: false,
+          uploading: false
         });
-        message.success('upload successfully.');
+        message.success("upload successfully.");
       },
       error: () => {
         this.setState({
-          uploading: false,
+          uploading: false
         });
-        message.error('upload failed.');
-      },
+        message.error("upload failed.");
+      }
     });
   };
 
@@ -50,17 +50,17 @@ class Demo extends React.Component {
           const newFileList = state.fileList.slice();
           newFileList.splice(index, 1);
           return {
-            fileList: newFileList,
+            fileList: newFileList
           };
         });
       },
       beforeUpload: file => {
         this.setState(state => ({
-          fileList: [...state.fileList, file],
+          fileList: [...state.fileList, file]
         }));
         return false;
       },
-      fileList,
+      fileList
     };
 
     return (
@@ -77,11 +77,17 @@ class Demo extends React.Component {
           loading={uploading}
           style={{ marginTop: 16 }}
         >
-          {uploading ? 'Uploading' : 'Start Upload'}
+          {uploading ? "Uploading" : "Start Upload"}
         </Button>
       </div>
     );
   }
 }
 
-export default () => <div id="components-upload-demo-upload-manually"><Demo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-upload-demo-upload-manually">
+      <Demo />
+    </div>
+  </div>
+);

@@ -1,20 +1,32 @@
-import React from 'react';
-import { PageHeader } from 'antd';
+import React from "react";
+import { PageHeader } from "antd";
 
 const routes = [
   {
-    path: 'index',
-    breadcrumbName: 'First-level Menu',
+    path: "index",
+    breadcrumbName: "First-level Menu"
   },
   {
-    path: 'first',
-    breadcrumbName: 'Second-level Menu',
+    path: "first",
+    breadcrumbName: "Second-level Menu"
   },
   {
-    path: 'second',
-    breadcrumbName: 'Third-level Menu',
-  },
+    path: "second",
+    breadcrumbName: "Third-level Menu"
+  }
 ];
 
-export default () => <div id="components-page-header-demo-breadcrumb">
-  <PageHeader title="Title" breadcrumb={{ routes }} subTitle="This is a subtitle" /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-page-header-demo-breadcrumb">
+      <PageHeader
+        style={{
+          border: "1px solid rgb(235, 237, 240)"
+        }}
+        title="Title"
+        breadcrumb={{ routes }}
+        subTitle="This is a subtitle"
+      />
+    </div>
+  </div>
+);

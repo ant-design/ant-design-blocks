@@ -1,5 +1,5 @@
-import React from 'react';
-import { Upload, Icon, Modal } from 'antd';
+import React from "react";
+import { Upload, Icon, Modal } from "antd";
 
 function getBase64(file) {
   return new Promise((resolve, reject) => {
@@ -13,39 +13,44 @@ function getBase64(file) {
 class PicturesWall extends React.Component {
   state = {
     previewVisible: false,
-    previewImage: '',
+    previewImage: "",
     fileList: [
       {
-        uid: '-1',
-        name: 'image.png',
-        status: 'done',
-        url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+        uid: "-1",
+        name: "image.png",
+        status: "done",
+        url:
+          "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
       },
       {
-        uid: '-2',
-        name: 'image.png',
-        status: 'done',
-        url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+        uid: "-2",
+        name: "image.png",
+        status: "done",
+        url:
+          "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
       },
       {
-        uid: '-3',
-        name: 'image.png',
-        status: 'done',
-        url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+        uid: "-3",
+        name: "image.png",
+        status: "done",
+        url:
+          "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
       },
       {
-        uid: '-4',
-        name: 'image.png',
-        status: 'done',
-        url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+        uid: "-4",
+        name: "image.png",
+        status: "done",
+        url:
+          "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
       },
       {
-        uid: '-5',
-        name: 'image.png',
-        status: 'done',
-        url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
-      },
-    ],
+        uid: "-5",
+        name: "image.png",
+        status: "done",
+        url:
+          "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+      }
+    ]
   };
 
   handleCancel = () => this.setState({ previewVisible: false });
@@ -57,7 +62,7 @@ class PicturesWall extends React.Component {
 
     this.setState({
       previewImage: file.url || file.preview,
-      previewVisible: true,
+      previewVisible: true
     });
   };
 
@@ -82,12 +87,22 @@ class PicturesWall extends React.Component {
         >
           {fileList.length >= 8 ? null : uploadButton}
         </Upload>
-        <Modal visible={previewVisible} footer={null} onCancel={this.handleCancel}>
-          <img alt="example" style={{ width: '100%' }} src={previewImage} />
+        <Modal
+          visible={previewVisible}
+          footer={null}
+          onCancel={this.handleCancel}
+        >
+          <img alt="example" style={{ width: "100%" }} src={previewImage} />
         </Modal>
       </div>
     );
   }
 }
 
-export default () => <div id="components-upload-demo-picture-card"><PicturesWall /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-upload-demo-picture-card">
+      <PicturesWall />
+    </div>
+  </div>
+);

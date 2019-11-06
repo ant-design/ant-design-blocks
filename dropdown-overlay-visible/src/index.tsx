@@ -1,13 +1,13 @@
-import React from 'react';
-import { Menu, Dropdown, Icon } from 'antd';
+import React from "react";
+import { Menu, Dropdown, Icon } from "antd";
 
 class OverlayVisible extends React.Component {
   state = {
-    visible: false,
+    visible: false
   };
 
   handleMenuClick = e => {
-    if (e.key === '3') {
+    if (e.key === "3") {
       this.setState({ visible: false });
     }
   };
@@ -38,4 +38,10 @@ class OverlayVisible extends React.Component {
   }
 }
 
-export default () => <div id="components-dropdown-demo-overlay-visible"><OverlayVisible /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-dropdown-demo-overlay-visible">
+      <OverlayVisible />
+    </div>
+  </div>
+);

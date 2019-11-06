@@ -1,28 +1,36 @@
-import React from 'react';
-import { Table } from 'antd';
-import { DndProvider, DragSource, DropTarget } from 'react-dnd';
-import HTML5Backend from 'react-dnd-html5-backend';
-import update from 'immutability-helper';
+import React from "react";
+import { Table } from "antd";
+import { DndProvider, DragSource, DropTarget } from "react-dnd";
+import HTML5Backend from "react-dnd-html5-backend";
+import update from "immutability-helper";
 
 let dragingIndex = -1;
 
 class BodyRow extends React.Component {
   render() {
-    const { isOver, connectDragSource, connectDropTarget, moveRow, ...restProps } = this.props;
-    const style = { ...restProps.style, cursor: 'move' };
+    const {
+      isOver,
+      connectDragSource,
+      connectDropTarget,
+      moveRow,
+      ...restProps
+    } = this.props;
+    const style = { ...restProps.style, cursor: "move" };
 
     let { className } = restProps;
     if (isOver) {
       if (restProps.index > dragingIndex) {
-        className += ' drop-over-downward';
+        className += " drop-over-downward";
       }
       if (restProps.index < dragingIndex) {
-        className += ' drop-over-upward';
+        className += " drop-over-upward";
       }
     }
 
     return connectDragSource(
-      connectDropTarget(<tr {...restProps} className={className} style={style} />),
+      connectDropTarget(
+        <tr {...restProps} className={className} style={style} />
+      )
     );
   }
 }
@@ -31,9 +39,9 @@ const rowSource = {
   beginDrag(props) {
     dragingIndex = props.index;
     return {
-      index: props.index,
+      index: props.index
     };
-  },
+  }
 };
 
 const rowTarget = {
@@ -54,64 +62,64 @@ const rowTarget = {
     // but it's good here for the sake of performance
     // to avoid expensive index searches.
     monitor.getItem().index = hoverIndex;
-  },
+  }
 };
 
-const DragableBodyRow = DropTarget('row', rowTarget, (connect, monitor) => ({
+const DragableBodyRow = DropTarget("row", rowTarget, (connect, monitor) => ({
   connectDropTarget: connect.dropTarget(),
-  isOver: monitor.isOver(),
+  isOver: monitor.isOver()
 }))(
-  DragSource('row', rowSource, connect => ({
-    connectDragSource: connect.dragSource(),
-  }))(BodyRow),
+  DragSource("row", rowSource, connect => ({
+    connectDragSource: connect.dragSource()
+  }))(BodyRow)
 );
 
 const columns = [
   {
-    title: 'Name',
-    dataIndex: 'name',
-    key: 'name',
+    title: "Name",
+    dataIndex: "name",
+    key: "name"
   },
   {
-    title: 'Age',
-    dataIndex: 'age',
-    key: 'age',
+    title: "Age",
+    dataIndex: "age",
+    key: "age"
   },
   {
-    title: 'Address',
-    dataIndex: 'address',
-    key: 'address',
-  },
+    title: "Address",
+    dataIndex: "address",
+    key: "address"
+  }
 ];
 
 class DragSortingTable extends React.Component {
   state = {
     data: [
       {
-        key: '1',
-        name: 'John Brown',
+        key: "1",
+        name: "John Brown",
         age: 32,
-        address: 'New York No. 1 Lake Park',
+        address: "New York No. 1 Lake Park"
       },
       {
-        key: '2',
-        name: 'Jim Green',
+        key: "2",
+        name: "Jim Green",
         age: 42,
-        address: 'London No. 1 Lake Park',
+        address: "London No. 1 Lake Park"
       },
       {
-        key: '3',
-        name: 'Joe Black',
+        key: "3",
+        name: "Joe Black",
         age: 32,
-        address: 'Sidney No. 1 Lake Park',
-      },
-    ],
+        address: "Sidney No. 1 Lake Park"
+      }
+    ]
   };
 
   components = {
     body: {
-      row: DragableBodyRow,
-    },
+      row: DragableBodyRow
+    }
   };
 
   moveRow = (dragIndex, hoverIndex) => {
@@ -121,9 +129,9 @@ class DragSortingTable extends React.Component {
     this.setState(
       update(this.state, {
         data: {
-          $splice: [[dragIndex, 1], [hoverIndex, 0, dragRow]],
-        },
-      }),
+          $splice: [[dragIndex, 1], [hoverIndex, 0, dragRow]]
+        }
+      })
     );
   };
 
@@ -136,7 +144,7 @@ class DragSortingTable extends React.Component {
           components={this.components}
           onRow={(record, index) => ({
             index,
-            moveRow: this.moveRow,
+            moveRow: this.moveRow
           })}
         />
       </DndProvider>
@@ -144,4 +152,10 @@ class DragSortingTable extends React.Component {
   }
 }
 
-export default () => <div id="components-table-demo-drag-sorting"><DragSortingTable /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-table-demo-drag-sorting">
+      <DragSortingTable />
+    </div>
+  </div>
+);

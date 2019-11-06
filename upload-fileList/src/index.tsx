@@ -1,16 +1,16 @@
-import React from 'react';
-import { Upload, Button, Icon } from 'antd';
+import React from "react";
+import { Upload, Button, Icon } from "antd";
 
 class MyUpload extends React.Component {
   state = {
     fileList: [
       {
-        uid: '-1',
-        name: 'xxx.png',
-        status: 'done',
-        url: 'http://www.baidu.com/xxx.png',
-      },
-    ],
+        uid: "-1",
+        name: "xxx.png",
+        status: "done",
+        url: "http://www.baidu.com/xxx.png"
+      }
+    ]
   };
 
   handleChange = info => {
@@ -34,9 +34,9 @@ class MyUpload extends React.Component {
 
   render() {
     const props = {
-      action: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
+      action: "https://www.mocky.io/v2/5cc8019d300000980a055e76",
       onChange: this.handleChange,
-      multiple: true,
+      multiple: true
     };
     return (
       <Upload {...props} fileList={this.state.fileList}>
@@ -48,4 +48,10 @@ class MyUpload extends React.Component {
   }
 }
 
-export default () => <div id="components-upload-demo-fileList"><MyUpload /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-upload-demo-fileList">
+      <MyUpload />
+    </div>
+  </div>
+);

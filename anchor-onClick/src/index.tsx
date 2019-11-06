@@ -1,5 +1,5 @@
-import React from 'react';
-import { Anchor } from 'antd';
+import React from "react";
+import { Anchor } from "antd";
 
 const { Link } = Anchor;
 
@@ -8,12 +8,17 @@ const handleClick = (e, link) => {
   console.log(link);
 };
 
-export default () => <div id="components-anchor-demo-onClick">
-  <Anchor affix={false} onClick={handleClick}>
-    <Link href="#components-anchor-demo-basic" title="Basic demo" />
-    <Link href="#components-anchor-demo-static" title="Static demo" />
-    <Link href="#API" title="API">
-      <Link href="#Anchor-Props" title="Anchor Props" />
-      <Link href="#Link-Props" title="Link Props" />
-    </Link>
-  </Anchor></div>;
+export default () => (
+  <div className="container">
+    <div id="components-anchor-demo-onClick">
+      <Anchor affix={false} onClick={handleClick}>
+        <Link href="#components-anchor-demo-basic" title="Basic demo" />
+        <Link href="#components-anchor-demo-static" title="Static demo" />
+        <Link href="#API" title="API">
+          <Link href="#Anchor-Props" title="Anchor Props" />
+          <Link href="#Link-Props" title="Link Props" />
+        </Link>
+      </Anchor>
+    </div>
+  </div>
+);

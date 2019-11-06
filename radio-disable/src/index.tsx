@@ -1,14 +1,14 @@
-import React from 'react';
-import { Radio, Button } from 'antd';
+import React from "react";
+import { Radio, Button } from "antd";
 
 class App extends React.Component {
   state = {
-    disabled: true,
+    disabled: true
   };
 
   toggleDisabled = () => {
     this.setState({
-      disabled: !this.state.disabled,
+      disabled: !this.state.disabled
     });
   };
 
@@ -32,4 +32,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-radio-demo-disable"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-radio-demo-disable">
+      <App />
+    </div>
+  </div>
+);

@@ -1,31 +1,26 @@
-import React from 'react';
-import { Table, Icon, Switch, Radio, Form, Divider } from 'antd';
-
-const FormItem = Form.Item;
+import React from "react";
+import { Table, Icon, Switch, Radio, Form, Divider } from "antd";
 
 const columns = [
   {
-    title: 'Name',
-    dataIndex: 'name',
-    key: 'name',
-    width: 150,
-    render: text => <a>{text}</a>,
+    title: "Name",
+    dataIndex: "name",
+    key: "name",
+    render: text => <a>{text}</a>
   },
   {
-    title: 'Age',
-    dataIndex: 'age',
-    key: 'age',
-    width: 70,
+    title: "Age",
+    dataIndex: "age",
+    key: "age"
   },
   {
-    title: 'Address',
-    dataIndex: 'address',
-    key: 'address',
+    title: "Address",
+    dataIndex: "address",
+    key: "address"
   },
   {
-    title: 'Action',
-    key: 'action',
-    width: 360,
+    title: "Action",
+    key: "action",
     render: (text, record) => (
       <span>
         <a>Action 一 {record.name}</a>
@@ -36,34 +31,34 @@ const columns = [
           More actions <Icon type="down" />
         </a>
       </span>
-    ),
-  },
+    )
+  }
 ];
 
 const data = [];
 for (let i = 1; i <= 10; i++) {
   data.push({
     key: i,
-    name: 'John Brown',
+    name: "John Brown",
     age: `${i}2`,
     address: `New York No. ${i} Lake Park`,
-    description: `My name is John Brown, I am ${i}2 years old, living in New York No. ${i} Lake Park.`,
+    description: `My name is John Brown, I am ${i}2 years old, living in New York No. ${i} Lake Park.`
   });
 }
 
 const expandedRowRender = record => <p>{record.description}</p>;
-const title = () => 'Here is title';
+const title = () => "Here is title";
 const showHeader = true;
-const footer = () => 'Here is footer';
+const footer = () => "Here is footer";
 const scroll = { y: 240 };
-const pagination = { position: 'bottom' };
+const pagination = { position: "bottom" };
 
 class Demo extends React.Component {
   state = {
     bordered: false,
     loading: false,
     pagination,
-    size: 'default',
+    size: "default",
     expandedRowRender,
     title: undefined,
     showHeader,
@@ -71,6 +66,7 @@ class Demo extends React.Component {
     rowSelection: {},
     scroll: undefined,
     hasData: true,
+    tableLayout: undefined
   };
 
   handleToggle = prop => enable => {
@@ -81,8 +77,18 @@ class Demo extends React.Component {
     this.setState({ size: e.target.value });
   };
 
+  handleTableLayoutChange = e => {
+    this.setState({ tableLayout: e.target.value });
+  };
+
   handleExpandChange = enable => {
-    this.setState({ expandedRowRender: enable ? expandedRowRender : undefined });
+    this.setState({
+      expandedRowRender: enable ? expandedRowRender : undefined
+    });
+  };
+
+  handleEllipsisChange = enable => {
+    this.setState({ ellipsis: enable });
   };
 
   handleTitleChange = enable => {
@@ -112,7 +118,7 @@ class Demo extends React.Component {
   handlePaginationChange = e => {
     const { value } = e.target;
     this.setState({
-      pagination: value === 'none' ? false : { position: value },
+      pagination: value === "none" ? false : { position: value }
     });
   };
 
@@ -120,59 +126,110 @@ class Demo extends React.Component {
     const { state } = this;
     return (
       <div>
-        <div className="components-table-demo-control-bar">
-          <Form layout="inline">
-            <FormItem label="Bordered">
-              <Switch checked={state.bordered} onChange={this.handleToggle('bordered')} />
-            </FormItem>
-            <FormItem label="loading">
-              <Switch checked={state.loading} onChange={this.handleToggle('loading')} />
-            </FormItem>
-            <FormItem label="Title">
-              <Switch checked={!!state.title} onChange={this.handleTitleChange} />
-            </FormItem>
-            <FormItem label="Column Header">
-              <Switch checked={!!state.showHeader} onChange={this.handleHeaderChange} />
-            </FormItem>
-            <FormItem label="Footer">
-              <Switch checked={!!state.footer} onChange={this.handleFooterChange} />
-            </FormItem>
-            <FormItem label="Expandable">
-              <Switch checked={!!state.expandedRowRender} onChange={this.handleExpandChange} />
-            </FormItem>
-            <FormItem label="Checkbox">
-              <Switch checked={!!state.rowSelection} onChange={this.handleRowSelectionChange} />
-            </FormItem>
-            <FormItem label="Fixed Header">
-              <Switch checked={!!state.scroll} onChange={this.handleScollChange} />
-            </FormItem>
-            <FormItem label="Has Data">
-              <Switch checked={!!state.hasData} onChange={this.handleDataChange} />
-            </FormItem>
-            <FormItem label="Size">
-              <Radio.Group size="default" value={state.size} onChange={this.handleSizeChange}>
-                <Radio.Button value="default">Default</Radio.Button>
-                <Radio.Button value="middle">Middle</Radio.Button>
-                <Radio.Button value="small">Small</Radio.Button>
-              </Radio.Group>
-            </FormItem>
-            <FormItem label="Pagination">
-              <Radio.Group
-                value={state.pagination ? state.pagination.position : 'none'}
-                onChange={this.handlePaginationChange}
-              >
-                <Radio.Button value="top">Top</Radio.Button>
-                <Radio.Button value="bottom">Bottom</Radio.Button>
-                <Radio.Button value="both">Both</Radio.Button>
-                <Radio.Button value="none">None</Radio.Button>
-              </Radio.Group>
-            </FormItem>
-          </Form>
-        </div>
-        <Table {...this.state} columns={columns} dataSource={state.hasData ? data : null} />
+        <Form
+          layout="inline"
+          className="components-table-demo-control-bar"
+          style={{ marginBottom: 16 }}
+        >
+          <Form.Item label="Bordered">
+            <Switch
+              checked={state.bordered}
+              onChange={this.handleToggle("bordered")}
+            />
+          </Form.Item>
+          <Form.Item label="loading">
+            <Switch
+              checked={state.loading}
+              onChange={this.handleToggle("loading")}
+            />
+          </Form.Item>
+          <Form.Item label="Title">
+            <Switch checked={!!state.title} onChange={this.handleTitleChange} />
+          </Form.Item>
+          <Form.Item label="Column Header">
+            <Switch
+              checked={!!state.showHeader}
+              onChange={this.handleHeaderChange}
+            />
+          </Form.Item>
+          <Form.Item label="Footer">
+            <Switch
+              checked={!!state.footer}
+              onChange={this.handleFooterChange}
+            />
+          </Form.Item>
+          <Form.Item label="Expandable">
+            <Switch
+              checked={!!state.expandedRowRender}
+              onChange={this.handleExpandChange}
+            />
+          </Form.Item>
+          <Form.Item label="Checkbox">
+            <Switch
+              checked={!!state.rowSelection}
+              onChange={this.handleRowSelectionChange}
+            />
+          </Form.Item>
+          <Form.Item label="Fixed Header">
+            <Switch
+              checked={!!state.scroll}
+              onChange={this.handleScollChange}
+            />
+          </Form.Item>
+          <Form.Item label="Has Data">
+            <Switch
+              checked={!!state.hasData}
+              onChange={this.handleDataChange}
+            />
+          </Form.Item>
+          <Form.Item label="Ellipsis">
+            <Switch
+              checked={!!state.ellipsis}
+              onChange={this.handleEllipsisChange}
+            />
+          </Form.Item>
+          <Form.Item label="Size">
+            <Radio.Group value={state.size} onChange={this.handleSizeChange}>
+              <Radio.Button value="default">Default</Radio.Button>
+              <Radio.Button value="middle">Middle</Radio.Button>
+              <Radio.Button value="small">Small</Radio.Button>
+            </Radio.Group>
+          </Form.Item>
+          <Form.Item label="Table Layout">
+            <Radio.Group
+              value={state.tableLayout}
+              onChange={this.handleTableLayoutChange}
+            >
+              <Radio.Button value={undefined}>Unset</Radio.Button>
+              <Radio.Button value="fixed">Fixed</Radio.Button>
+            </Radio.Group>
+          </Form.Item>
+          <Form.Item label="Pagination">
+            <Radio.Group
+              value={state.pagination ? state.pagination.position : "none"}
+              onChange={this.handlePaginationChange}
+            >
+              <Radio.Button value="top">Top</Radio.Button>
+              <Radio.Button value="bottom">Bottom</Radio.Button>
+              <Radio.Button value="both">Both</Radio.Button>
+              <Radio.Button value="none">None</Radio.Button>
+            </Radio.Group>
+          </Form.Item>
+        </Form>
+        <Table
+          {...this.state}
+          columns={columns.map(item => ({ ...item, ellipsis: state.ellipsis }))}
+          dataSource={state.hasData ? data : null}
+        />
       </div>
     );
   }
 }
 
-export default () => <div id="components-table-demo-dynamic-settings"><Demo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-table-demo-dynamic-settings">
+      <Demo />
+    </div>
+  </div>
+);

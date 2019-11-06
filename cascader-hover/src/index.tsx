@@ -1,39 +1,39 @@
-import React from 'react';
-import { Cascader } from 'antd';
+import React from "react";
+import { Cascader } from "antd";
 
 const options = [
   {
-    value: 'zhejiang',
-    label: 'Zhejiang',
+    value: "zhejiang",
+    label: "Zhejiang",
     children: [
       {
-        value: 'hangzhou',
-        label: 'Hangzhou',
+        value: "hangzhou",
+        label: "Hangzhou",
         children: [
           {
-            value: 'xihu',
-            label: 'West Lake',
-          },
-        ],
-      },
-    ],
+            value: "xihu",
+            label: "West Lake"
+          }
+        ]
+      }
+    ]
   },
   {
-    value: 'jiangsu',
-    label: 'Jiangsu',
+    value: "jiangsu",
+    label: "Jiangsu",
     children: [
       {
-        value: 'nanjing',
-        label: 'Nanjing',
+        value: "nanjing",
+        label: "Nanjing",
         children: [
           {
-            value: 'zhonghuamen',
-            label: 'Zhong Hua Men',
-          },
-        ],
-      },
-    ],
-  },
+            value: "zhonghuamen",
+            label: "Zhong Hua Men"
+          }
+        ]
+      }
+    ]
+  }
 ];
 
 function onChange(value) {
@@ -45,10 +45,15 @@ function displayRender(label) {
   return label[label.length - 1];
 }
 
-export default () => <div id="components-cascader-demo-hover">
-  <Cascader
-    options={options}
-    expandTrigger="hover"
-    displayRender={displayRender}
-    onChange={onChange}
-  /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-cascader-demo-hover">
+      <Cascader
+        options={options}
+        expandTrigger="hover"
+        displayRender={displayRender}
+        onChange={onChange}
+      />
+    </div>
+  </div>
+);

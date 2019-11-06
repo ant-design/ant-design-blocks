@@ -1,23 +1,27 @@
-import React from 'react';
-import { Menu, Icon } from 'antd';
+import React from "react";
+import { Menu, Icon } from "antd";
 
 const { SubMenu } = Menu;
 
 class App extends React.Component {
   state = {
-    current: 'mail',
+    current: "mail"
   };
 
   handleClick = e => {
-    console.log('click ', e);
+    console.log("click ", e);
     this.setState({
-      current: e.key,
+      current: e.key
     });
   };
 
   render() {
     return (
-      <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
+      <Menu
+        onClick={this.handleClick}
+        selectedKeys={[this.state.current]}
+        mode="horizontal"
+      >
         <Menu.Item key="mail">
           <Icon type="mail" />
           Navigation One
@@ -44,7 +48,11 @@ class App extends React.Component {
           </Menu.ItemGroup>
         </SubMenu>
         <Menu.Item key="alipay">
-          <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://ant.design"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Navigation Four - Link
           </a>
         </Menu.Item>
@@ -53,4 +61,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-menu-demo-horizontal"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-menu-demo-horizontal">
+      <App />
+    </div>
+  </div>
+);

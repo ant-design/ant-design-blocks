@@ -1,7 +1,7 @@
-import React from 'react';
-import { Button, Modal, Form, Input, Radio } from 'antd';
+import React from "react";
+import { Button, Modal, Form, Input, Radio } from "antd";
 
-const CollectionCreateForm = Form.create({ name: 'form_in_modal' })(
+const CollectionCreateForm = Form.create({ name: "form_in_modal" })(
   // eslint-disable-next-line
   class extends React.Component {
     render() {
@@ -17,33 +17,38 @@ const CollectionCreateForm = Form.create({ name: 'form_in_modal' })(
         >
           <Form layout="vertical">
             <Form.Item label="Title">
-              {getFieldDecorator('title', {
-                rules: [{ required: true, message: 'Please input the title of collection!' }],
+              {getFieldDecorator("title", {
+                rules: [
+                  {
+                    required: true,
+                    message: "Please input the title of collection!"
+                  }
+                ]
               })(<Input />)}
             </Form.Item>
             <Form.Item label="Description">
-              {getFieldDecorator('description')(<Input type="textarea" />)}
+              {getFieldDecorator("description")(<Input type="textarea" />)}
             </Form.Item>
             <Form.Item className="collection-create-form_last-form-item">
-              {getFieldDecorator('modifier', {
-                initialValue: 'public',
+              {getFieldDecorator("modifier", {
+                initialValue: "public"
               })(
                 <Radio.Group>
                   <Radio value="public">Public</Radio>
                   <Radio value="private">Private</Radio>
-                </Radio.Group>,
+                </Radio.Group>
               )}
             </Form.Item>
           </Form>
         </Modal>
       );
     }
-  },
+  }
 );
 
 class CollectionsPage extends React.Component {
   state = {
-    visible: false,
+    visible: false
   };
 
   showModal = () => {
@@ -61,7 +66,7 @@ class CollectionsPage extends React.Component {
         return;
       }
 
-      console.log('Received values of form: ', values);
+      console.log("Received values of form: ", values);
       form.resetFields();
       this.setState({ visible: false });
     });
@@ -88,4 +93,10 @@ class CollectionsPage extends React.Component {
   }
 }
 
-export default () => <div id="components-form-demo-form-in-modal"><CollectionsPage /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-form-demo-form-in-modal">
+      <CollectionsPage />
+    </div>
+  </div>
+);

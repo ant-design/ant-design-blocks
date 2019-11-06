@@ -1,5 +1,5 @@
-import React from 'react';
-import { Spin, Alert, Switch } from 'antd';
+import React from "react";
+import { Spin, Alert, Switch } from "antd";
 
 class Card extends React.Component {
   state = { loading: false };
@@ -30,4 +30,10 @@ class Card extends React.Component {
   }
 }
 
-export default () => <div id="components-spin-demo-delayAndDebounce"><Card /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-spin-demo-delayAndDebounce">
+      <Card />
+    </div>
+  </div>
+);

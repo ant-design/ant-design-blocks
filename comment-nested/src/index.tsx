@@ -1,5 +1,5 @@
-import React from 'react';
-import { Comment, Avatar } from 'antd';
+import React from "react";
+import { Comment, Avatar } from "antd";
 
 const ExampleComment = ({ children }) => (
   <Comment
@@ -13,8 +13,8 @@ const ExampleComment = ({ children }) => (
     }
     content={
       <p>
-        We supply a series of design principles, practical patterns and high quality design
-        resources (Sketch and Axure).
+        We supply a series of design principles, practical patterns and high
+        quality design resources (Sketch and Axure).
       </p>
     }
   >
@@ -22,10 +22,15 @@ const ExampleComment = ({ children }) => (
   </Comment>
 );
 
-export default () => <div id="components-comment-demo-nested">
-  <ExampleComment>
-    <ExampleComment>
-      <ExampleComment />
-      <ExampleComment />
-    </ExampleComment>
-  </ExampleComment></div>;
+export default () => (
+  <div className="container">
+    <div id="components-comment-demo-nested">
+      <ExampleComment>
+        <ExampleComment>
+          <ExampleComment />
+          <ExampleComment />
+        </ExampleComment>
+      </ExampleComment>
+    </div>
+  </div>
+);

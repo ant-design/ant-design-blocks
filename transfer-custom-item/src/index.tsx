@@ -1,10 +1,10 @@
-import React from 'react';
-import { Transfer } from 'antd';
+import React from "react";
+import { Transfer } from "antd";
 
 class App extends React.Component {
   state = {
     mockData: [],
-    targetKeys: [],
+    targetKeys: []
   };
 
   componentDidMount() {
@@ -19,7 +19,7 @@ class App extends React.Component {
         key: i.toString(),
         title: `content${i + 1}`,
         description: `description of content${i + 1}`,
-        chosen: Math.random() * 2 > 1,
+        chosen: Math.random() * 2 > 1
       };
       if (data.chosen) {
         targetKeys.push(data.key);
@@ -43,7 +43,7 @@ class App extends React.Component {
 
     return {
       label: customLabel, // for displayed item
-      value: item.title, // for title and filter matching
+      value: item.title // for title and filter matching
     };
   };
 
@@ -53,7 +53,7 @@ class App extends React.Component {
         dataSource={this.state.mockData}
         listStyle={{
           width: 300,
-          height: 300,
+          height: 300
         }}
         targetKeys={this.state.targetKeys}
         onChange={this.handleChange}
@@ -63,4 +63,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-transfer-demo-custom-item"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-transfer-demo-custom-item">
+      <App />
+    </div>
+  </div>
+);

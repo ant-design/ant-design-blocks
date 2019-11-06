@@ -1,11 +1,11 @@
-import React from 'react';
-import { DatePicker, Radio } from 'antd';
+import React from "react";
+import { DatePicker, Radio } from "antd";
 
 const { MonthPicker, RangePicker, WeekPicker } = DatePicker;
 
 class PickerSizesDemo extends React.Component {
   state = {
-    size: 'default',
+    size: "default"
   };
 
   handleSizeChange = e => {
@@ -35,4 +35,10 @@ class PickerSizesDemo extends React.Component {
   }
 }
 
-export default () => <div id="components-date-picker-demo-size"><PickerSizesDemo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-date-picker-demo-size">
+      <PickerSizesDemo />
+    </div>
+  </div>
+);

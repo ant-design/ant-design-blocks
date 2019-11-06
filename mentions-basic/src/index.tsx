@@ -1,24 +1,29 @@
-import React from 'react';
-import { Mentions } from 'antd';
+import React from "react";
+import { Mentions } from "antd";
 
 const { Option } = Mentions;
 
 function onChange(value) {
-  console.log('Change:', value);
+  console.log("Change:", value);
 }
 
 function onSelect(option) {
-  console.log('select', option);
+  console.log("select", option);
 }
 
-export default () => <div id="components-mentions-demo-basic">
-  <Mentions
-    style={{ width: '100%' }}
-    onChange={onChange}
-    onSelect={onSelect}
-    defaultValue="@afc163"
-  >
-    <Option value="afc163">afc163</Option>
-    <Option value="zombieJ">zombieJ</Option>
-    <Option value="yesmeck">yesmeck</Option>
-  </Mentions></div>;
+export default () => (
+  <div className="container">
+    <div id="components-mentions-demo-basic">
+      <Mentions
+        style={{ width: "100%" }}
+        onChange={onChange}
+        onSelect={onSelect}
+        defaultValue="@afc163"
+      >
+        <Option value="afc163">afc163</Option>
+        <Option value="zombieJ">zombieJ</Option>
+        <Option value="yesmeck">yesmeck</Option>
+      </Mentions>
+    </div>
+  </div>
+);

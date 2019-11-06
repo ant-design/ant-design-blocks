@@ -1,9 +1,9 @@
-import React from 'react';
-import { Form, Row, Col, Input, Button, Icon } from 'antd';
+import React from "react";
+import { Form, Row, Col, Input, Button, Icon } from "antd";
 
 class AdvancedSearchForm extends React.Component {
   state = {
-    expand: false,
+    expand: false
   };
 
   // To generate mock Form.Item
@@ -13,18 +13,18 @@ class AdvancedSearchForm extends React.Component {
     const children = [];
     for (let i = 0; i < 10; i++) {
       children.push(
-        <Col span={8} key={i} style={{ display: i < count ? 'block' : 'none' }}>
+        <Col span={8} key={i} style={{ display: i < count ? "block" : "none" }}>
           <Form.Item label={`Field ${i}`}>
             {getFieldDecorator(`field-${i}`, {
               rules: [
                 {
                   required: true,
-                  message: 'Input something!',
-                },
-              ],
+                  message: "Input something!"
+                }
+              ]
             })(<Input placeholder="placeholder" />)}
           </Form.Item>
-        </Col>,
+        </Col>
       );
     }
     return children;
@@ -33,7 +33,7 @@ class AdvancedSearchForm extends React.Component {
   handleSearch = e => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
-      console.log('Received values of form: ', values);
+      console.log("Received values of form: ", values);
     });
   };
 
@@ -51,7 +51,7 @@ class AdvancedSearchForm extends React.Component {
       <Form className="ant-advanced-search-form" onSubmit={this.handleSearch}>
         <Row gutter={24}>{this.getFields()}</Row>
         <Row>
-          <Col span={24} style={{ textAlign: 'right' }}>
+          <Col span={24} style={{ textAlign: "right" }}>
             <Button type="primary" htmlType="submit">
               Search
             </Button>
@@ -59,7 +59,7 @@ class AdvancedSearchForm extends React.Component {
               Clear
             </Button>
             <a style={{ marginLeft: 8, fontSize: 12 }} onClick={this.toggle}>
-              Collapse <Icon type={this.state.expand ? 'up' : 'down'} />
+              Collapse <Icon type={this.state.expand ? "up" : "down"} />
             </a>
           </Col>
         </Row>
@@ -68,9 +68,16 @@ class AdvancedSearchForm extends React.Component {
   }
 }
 
-const WrappedAdvancedSearchForm = Form.create({ name: 'advanced_search' })(AdvancedSearchForm);
-export default () => <div id="components-form-demo-advanced-search">
-  <div>
-    <WrappedAdvancedSearchForm />
-    <div className="search-result-list">Search Result List</div>
-  </div></div>;
+const WrappedAdvancedSearchForm = Form.create({ name: "advanced_search" })(
+  AdvancedSearchForm
+);
+export default () => (
+  <div className="container">
+    <div id="components-form-demo-advanced-search">
+      <div>
+        <WrappedAdvancedSearchForm />
+        <div className="search-result-list">Search Result List</div>
+      </div>
+    </div>
+  </div>
+);

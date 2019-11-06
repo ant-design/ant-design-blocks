@@ -1,16 +1,16 @@
-import React from 'react';
-import { Mentions } from 'antd';
+import React from "react";
+import { Mentions } from "antd";
 
 const { Option } = Mentions;
 
 const MOCK_DATA = {
-  '@': ['afc163', 'zombiej', 'yesmeck'],
-  '#': ['1.0', '2.0', '3.0'],
+  "@": ["afc163", "zombiej", "yesmeck"],
+  "#": ["1.0", "2.0", "3.0"]
 };
 
 class App extends React.Component {
   state = {
-    prefix: '@',
+    prefix: "@"
   };
 
   onSearch = (_, prefix) => {
@@ -22,9 +22,9 @@ class App extends React.Component {
 
     return (
       <Mentions
-        style={{ width: '100%' }}
+        style={{ width: "100%" }}
         placeholder="input @ to mention people, # to mention tag"
-        prefix={['@', '#']}
+        prefix={["@", "#"]}
         onSearch={this.onSearch}
       >
         {(MOCK_DATA[prefix] || []).map(value => (
@@ -37,4 +37,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-mentions-demo-prefix"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-mentions-demo-prefix">
+      <App />
+    </div>
+  </div>
+);

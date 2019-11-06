@@ -1,5 +1,5 @@
-import React from 'react';
-import { Menu, Dropdown, Icon, message } from 'antd';
+import React from "react";
+import { Menu, Dropdown, Icon, message } from "antd";
 
 const onClick = ({ key }) => {
   message.info(`Click on item ${key}`);
@@ -13,9 +13,14 @@ const menu = (
   </Menu>
 );
 
-export default () => <div id="components-dropdown-demo-event">
-  <Dropdown overlay={menu}>
-    <a className="ant-dropdown-link" href="#">
-      Hover me, Click menu item <Icon type="down" />
-    </a>
-  </Dropdown></div>;
+export default () => (
+  <div className="container">
+    <div id="components-dropdown-demo-event">
+      <Dropdown overlay={menu}>
+        <a className="ant-dropdown-link" href="#">
+          Hover me, Click menu item <Icon type="down" />
+        </a>
+      </Dropdown>
+    </div>
+  </div>
+);

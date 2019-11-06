@@ -1,18 +1,18 @@
-import React from 'react';
-import { Drawer, Button } from 'antd';
+import React from "react";
+import { Drawer, Button } from "antd";
 
 class App extends React.Component {
   state = { visible: false };
 
   showDrawer = () => {
     this.setState({
-      visible: true,
+      visible: true
     });
   };
 
   onClose = () => {
     this.setState({
-      visible: false,
+      visible: false
     });
   };
 
@@ -21,13 +21,13 @@ class App extends React.Component {
       <div
         style={{
           height: 200,
-          overflow: 'hidden',
-          position: 'relative',
-          border: '1px solid #ebedf0',
+          overflow: "hidden",
+          position: "relative",
+          border: "1px solid #ebedf0",
           borderRadius: 2,
           padding: 48,
-          textAlign: 'center',
-          background: '#fafafa',
+          textAlign: "center",
+          background: "#fafafa"
         }}
       >
         Render in this
@@ -43,7 +43,7 @@ class App extends React.Component {
           onClose={this.onClose}
           visible={this.state.visible}
           getContainer={false}
-          style={{ position: 'absolute' }}
+          style={{ position: "absolute" }}
         >
           <p>Some contents...</p>
         </Drawer>
@@ -52,4 +52,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-drawer-demo-render-in-current"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-drawer-demo-render-in-current">
+      <App />
+    </div>
+  </div>
+);

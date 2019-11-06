@@ -1,30 +1,30 @@
-import React from 'react';
-import { Calendar, Badge } from 'antd';
+import React from "react";
+import { Calendar, Badge } from "antd";
 
 function getListData(value) {
   let listData;
   switch (value.date()) {
     case 8:
       listData = [
-        { type: 'warning', content: 'This is warning event.' },
-        { type: 'success', content: 'This is usual event.' },
+        { type: "warning", content: "This is warning event." },
+        { type: "success", content: "This is usual event." }
       ];
       break;
     case 10:
       listData = [
-        { type: 'warning', content: 'This is warning event.' },
-        { type: 'success', content: 'This is usual event.' },
-        { type: 'error', content: 'This is error event.' },
+        { type: "warning", content: "This is warning event." },
+        { type: "success", content: "This is usual event." },
+        { type: "error", content: "This is error event." }
       ];
       break;
     case 15:
       listData = [
-        { type: 'warning', content: 'This is warning event' },
-        { type: 'success', content: 'This is very long usual event。。....' },
-        { type: 'error', content: 'This is error event 1.' },
-        { type: 'error', content: 'This is error event 2.' },
-        { type: 'error', content: 'This is error event 3.' },
-        { type: 'error', content: 'This is error event 4.' },
+        { type: "warning", content: "This is warning event" },
+        { type: "success", content: "This is very long usual event。。...." },
+        { type: "error", content: "This is error event 1." },
+        { type: "error", content: "This is error event 2." },
+        { type: "error", content: "This is error event 3." },
+        { type: "error", content: "This is error event 4." }
       ];
       break;
     default:
@@ -61,5 +61,13 @@ function monthCellRender(value) {
   ) : null;
 }
 
-export default () => <div id="components-calendar-demo-notice-calendar">
-  <Calendar dateCellRender={dateCellRender} monthCellRender={monthCellRender} /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-calendar-demo-notice-calendar">
+      <Calendar
+        dateCellRender={dateCellRender}
+        monthCellRender={monthCellRender}
+      />
+    </div>
+  </div>
+);

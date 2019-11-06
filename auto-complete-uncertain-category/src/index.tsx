@@ -1,10 +1,10 @@
-import React from 'react';
-import { Icon, Button, Input, AutoComplete } from 'antd';
+import React from "react";
+import { Icon, Button, Input, AutoComplete } from "antd";
 
 const { Option } = AutoComplete;
 
 function onSelect(value) {
-  console.log('onSelect', value);
+  console.log("onSelect", value);
 }
 
 function getRandomInt(max, min = 0) {
@@ -13,12 +13,12 @@ function getRandomInt(max, min = 0) {
 
 function searchResult(query) {
   return new Array(getRandomInt(5))
-    .join('.')
-    .split('.')
+    .join(".")
+    .split(".")
     .map((item, idx) => ({
       query,
       category: `${query}${idx}`,
-      count: getRandomInt(200, 100),
+      count: getRandomInt(200, 100)
     }));
 }
 
@@ -44,12 +44,12 @@ function renderOption(item) {
 
 class Complete extends React.Component {
   state = {
-    dataSource: [],
+    dataSource: []
   };
 
   handleSearch = value => {
     this.setState({
-      dataSource: value ? searchResult(value) : [],
+      dataSource: value ? searchResult(value) : []
     });
   };
 
@@ -60,7 +60,7 @@ class Complete extends React.Component {
         <AutoComplete
           className="global-search"
           size="large"
-          style={{ width: '100%' }}
+          style={{ width: "100%" }}
           dataSource={dataSource.map(renderOption)}
           onSelect={onSelect}
           onSearch={this.handleSearch}
@@ -85,4 +85,10 @@ class Complete extends React.Component {
   }
 }
 
-export default () => <div id="components-auto-complete-demo-uncertain-category"><Complete /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-auto-complete-demo-uncertain-category">
+      <Complete />
+    </div>
+  </div>
+);

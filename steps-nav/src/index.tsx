@@ -1,20 +1,20 @@
-import React from 'react';
-import { Steps } from 'antd';
+import React from "react";
+import { Steps } from "antd";
 
 const { Step } = Steps;
 
 const stepStyle = {
   marginBottom: 60,
-  boxShadow: '0px -1px 0 0 #e8e8e8 inset',
+  boxShadow: "0px -1px 0 0 #e8e8e8 inset"
 };
 
 class Demo extends React.Component {
   state = {
-    current: 0,
+    current: 0
   };
 
   onChange = current => {
-    console.log('onChange:', current);
+    console.log("onChange:", current);
     this.setState({ current });
   };
 
@@ -48,7 +48,12 @@ class Demo extends React.Component {
             description="This is a description."
           />
         </Steps>
-        <Steps type="navigation" current={current} onChange={this.onChange} style={stepStyle}>
+        <Steps
+          type="navigation"
+          current={current}
+          onChange={this.onChange}
+          style={stepStyle}
+        >
           <Step status="finish" title="Step 1" />
           <Step status="process" title="Step 2" />
           <Step status="wait" title="Step 3" />
@@ -71,4 +76,10 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <div id="components-steps-demo-nav"><Demo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-steps-demo-nav">
+      <Demo />
+    </div>
+  </div>
+);

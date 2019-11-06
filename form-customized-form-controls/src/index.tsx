@@ -1,14 +1,14 @@
-import React from 'react';
-import { Form, Input, Select, Button } from 'antd';
+import React from "react";
+import { Form, Input, Select, Button } from "antd";
 
 const { Option } = Select;
 
 class PriceInput extends React.Component {
   static getDerivedStateFromProps(nextProps) {
     // Should be a controlled component.
-    if ('value' in nextProps) {
+    if ("value" in nextProps) {
       return {
-        ...(nextProps.value || {}),
+        ...(nextProps.value || {})
       };
     }
     return null;
@@ -20,7 +20,7 @@ class PriceInput extends React.Component {
     const value = props.value || {};
     this.state = {
       number: value.number || 0,
-      currency: value.currency || 'rmb',
+      currency: value.currency || "rmb"
     };
   }
 
@@ -29,14 +29,14 @@ class PriceInput extends React.Component {
     if (isNaN(number)) {
       return;
     }
-    if (!('value' in this.props)) {
+    if (!("value" in this.props)) {
       this.setState({ number });
     }
     this.triggerChange({ number });
   };
 
   handleCurrencyChange = currency => {
-    if (!('value' in this.props)) {
+    if (!("value" in this.props)) {
       this.setState({ currency });
     }
     this.triggerChange({ currency });
@@ -48,7 +48,7 @@ class PriceInput extends React.Component {
     if (onChange) {
       onChange({
         ...this.state,
-        ...changedValue,
+        ...changedValue
       });
     }
   };
@@ -63,12 +63,12 @@ class PriceInput extends React.Component {
           size={size}
           value={number}
           onChange={this.handleNumberChange}
-          style={{ width: '65%', marginRight: '3%' }}
+          style={{ width: "65%", marginRight: "3%" }}
         />
         <Select
           value={currency}
           size={size}
-          style={{ width: '32%' }}
+          style={{ width: "32%" }}
           onChange={this.handleCurrencyChange}
         >
           <Option value="rmb">RMB</Option>
@@ -84,7 +84,7 @@ class Demo extends React.Component {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
+        console.log("Received values of form: ", values);
       }
     });
   };
@@ -94,7 +94,7 @@ class Demo extends React.Component {
       callback();
       return;
     }
-    callback('Price must greater than zero!');
+    callback("Price must greater than zero!");
   };
 
   render() {
@@ -102,9 +102,9 @@ class Demo extends React.Component {
     return (
       <Form layout="inline" onSubmit={this.handleSubmit}>
         <Form.Item label="Price">
-          {getFieldDecorator('price', {
-            initialValue: { number: 0, currency: 'rmb' },
-            rules: [{ validator: this.checkPrice }],
+          {getFieldDecorator("price", {
+            initialValue: { number: 0, currency: "rmb" },
+            rules: [{ validator: this.checkPrice }]
           })(<PriceInput />)}
         </Form.Item>
         <Form.Item>
@@ -117,6 +117,12 @@ class Demo extends React.Component {
   }
 }
 
-const WrappedDemo = Form.create({ name: 'customized_form_controls' })(Demo);
+const WrappedDemo = Form.create({ name: "customized_form_controls" })(Demo);
 
-export default () => <div id="components-form-demo-customized-form-controls"><WrappedDemo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-form-demo-customized-form-controls">
+      <WrappedDemo />
+    </div>
+  </div>
+);

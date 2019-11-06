@@ -1,5 +1,5 @@
-import React from 'react';
-import { Tree, Input } from 'antd';
+import React from "react";
+import { Tree, Input } from "antd";
 
 const { TreeNode } = Tree;
 const { Search } = Input;
@@ -10,7 +10,7 @@ const z = 1;
 const gData = [];
 
 const generateData = (_level, _preKey, _tns) => {
-  const preKey = _preKey || '0';
+  const preKey = _preKey || "0";
   const tns = _tns || gData;
 
   const children = [];
@@ -63,14 +63,14 @@ const getParentKey = (key, tree) => {
 class SearchTree extends React.Component {
   state = {
     expandedKeys: [],
-    searchValue: '',
-    autoExpandParent: true,
+    searchValue: "",
+    autoExpandParent: true
   };
 
   onExpand = expandedKeys => {
     this.setState({
       expandedKeys,
-      autoExpandParent: false,
+      autoExpandParent: false
     });
   };
 
@@ -87,7 +87,7 @@ class SearchTree extends React.Component {
     this.setState({
       expandedKeys,
       searchValue: value,
-      autoExpandParent: true,
+      autoExpandParent: true
     });
   };
 
@@ -102,7 +102,7 @@ class SearchTree extends React.Component {
           index > -1 ? (
             <span>
               {beforeStr}
-              <span style={{ color: '#f50' }}>{searchValue}</span>
+              <span style={{ color: "#f50" }}>{searchValue}</span>
               {afterStr}
             </span>
           ) : (
@@ -119,7 +119,11 @@ class SearchTree extends React.Component {
       });
     return (
       <div>
-        <Search style={{ marginBottom: 8 }} placeholder="Search" onChange={this.onChange} />
+        <Search
+          style={{ marginBottom: 8 }}
+          placeholder="Search"
+          onChange={this.onChange}
+        />
         <Tree
           onExpand={this.onExpand}
           expandedKeys={expandedKeys}
@@ -132,4 +136,10 @@ class SearchTree extends React.Component {
   }
 }
 
-export default () => <div id="components-tree-demo-search"><SearchTree /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-tree-demo-search">
+      <SearchTree />
+    </div>
+  </div>
+);

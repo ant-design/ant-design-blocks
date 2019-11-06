@@ -1,10 +1,10 @@
-import React from 'react';
-import { Transfer, Button } from 'antd';
+import React from "react";
+import { Transfer, Button } from "antd";
 
 class App extends React.Component {
   state = {
     mockData: [],
-    targetKeys: [],
+    targetKeys: []
   };
 
   componentDidMount() {
@@ -19,7 +19,7 @@ class App extends React.Component {
         key: i.toString(),
         title: `content${i + 1}`,
         description: `description of content${i + 1}`,
-        chosen: Math.random() * 2 > 1,
+        chosen: Math.random() * 2 > 1
       };
       if (data.chosen) {
         targetKeys.push(data.key);
@@ -34,7 +34,11 @@ class App extends React.Component {
   };
 
   renderFooter = () => (
-    <Button size="small" style={{ float: 'right', margin: 5 }} onClick={this.getMock}>
+    <Button
+      size="small"
+      style={{ float: "right", margin: 5 }}
+      onClick={this.getMock}
+    >
       reload
     </Button>
   );
@@ -46,9 +50,9 @@ class App extends React.Component {
         showSearch
         listStyle={{
           width: 250,
-          height: 300,
+          height: 300
         }}
-        operations={['to right', 'to left']}
+        operations={["to right", "to left"]}
         targetKeys={this.state.targetKeys}
         onChange={this.handleChange}
         render={item => `${item.title}-${item.description}`}
@@ -58,4 +62,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-transfer-demo-advanced"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-transfer-demo-advanced">
+      <App />
+    </div>
+  </div>
+);

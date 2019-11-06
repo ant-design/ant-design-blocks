@@ -1,6 +1,6 @@
-import React from 'react';
-import moment from 'moment';
-import { DatePicker } from 'antd';
+import React from "react";
+import moment from "moment";
+import { DatePicker } from "antd";
 
 const { MonthPicker, RangePicker } = DatePicker;
 
@@ -14,50 +14,58 @@ function range(start, end) {
 
 function disabledDate(current) {
   // Can not select days before today and today
-  return current && current < moment().endOf('day');
+  return current && current < moment().endOf("day");
 }
 
 function disabledDateTime() {
   return {
     disabledHours: () => range(0, 24).splice(4, 20),
     disabledMinutes: () => range(30, 60),
-    disabledSeconds: () => [55, 56],
+    disabledSeconds: () => [55, 56]
   };
 }
 
 function disabledRangeTime(_, type) {
-  if (type === 'start') {
+  if (type === "start") {
     return {
       disabledHours: () => range(0, 60).splice(4, 20),
       disabledMinutes: () => range(30, 60),
-      disabledSeconds: () => [55, 56],
+      disabledSeconds: () => [55, 56]
     };
   }
   return {
     disabledHours: () => range(0, 60).splice(20, 4),
     disabledMinutes: () => range(0, 31),
-    disabledSeconds: () => [55, 56],
+    disabledSeconds: () => [55, 56]
   };
 }
 
-export default () => <div id="components-date-picker-demo-disabled-date">
-  <div>
-    <DatePicker
-      format="YYYY-MM-DD HH:mm:ss"
-      disabledDate={disabledDate}
-      disabledTime={disabledDateTime}
-      showTime={{ defaultValue: moment('00:00:00', 'HH:mm:ss') }}
-    />
-    <br />
-    <MonthPicker disabledDate={disabledDate} placeholder="Select month" />
-    <br />
-    <RangePicker
-      disabledDate={disabledDate}
-      disabledTime={disabledRangeTime}
-      showTime={{
-        hideDisabledOptions: true,
-        defaultValue: [moment('00:00:00', 'HH:mm:ss'), moment('11:59:59', 'HH:mm:ss')],
-      }}
-      format="YYYY-MM-DD HH:mm:ss"
-    />
-  </div></div>;
+export default () => (
+  <div className="container">
+    <div id="components-date-picker-demo-disabled-date">
+      <div>
+        <DatePicker
+          format="YYYY-MM-DD HH:mm:ss"
+          disabledDate={disabledDate}
+          disabledTime={disabledDateTime}
+          showTime={{ defaultValue: moment("00:00:00", "HH:mm:ss") }}
+        />
+        <br />
+        <MonthPicker disabledDate={disabledDate} placeholder="Select month" />
+        <br />
+        <RangePicker
+          disabledDate={disabledDate}
+          disabledTime={disabledRangeTime}
+          showTime={{
+            hideDisabledOptions: true,
+            defaultValue: [
+              moment("00:00:00", "HH:mm:ss"),
+              moment("11:59:59", "HH:mm:ss")
+            ]
+          }}
+          format="YYYY-MM-DD HH:mm:ss"
+        />
+      </div>
+    </div>
+  </div>
+);

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Descriptions } from 'antd';
+import React from "react";
+import { Descriptions } from "antd";
 
 const Demo = () => {
   return (
@@ -24,7 +24,7 @@ const Demo = () => {
           <br />
           Storage space: 10 GB
           <br />
-          Replication_factor:3
+          Replication factor: 3
           <br />
           Region: East China 1
         </Descriptions.Item>
@@ -33,4 +33,10 @@ const Demo = () => {
   );
 };
 
-export default () => <div id="components-descriptions-demo-responsive"><Demo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-descriptions-demo-responsive">
+      <Demo />
+    </div>
+  </div>
+);

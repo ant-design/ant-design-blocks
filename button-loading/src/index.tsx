@@ -1,10 +1,10 @@
-import React from 'react';
-import { Button } from 'antd';
+import React from "react";
+import { Button } from "antd";
 
 class App extends React.Component {
   state = {
     loading: false,
-    iconLoading: false,
+    iconLoading: false
   };
 
   enterLoading = () => {
@@ -25,7 +25,11 @@ class App extends React.Component {
           Loading
         </Button>
         <br />
-        <Button type="primary" loading={this.state.loading} onClick={this.enterLoading}>
+        <Button
+          type="primary"
+          loading={this.state.loading}
+          onClick={this.enterLoading}
+        >
           Click me!
         </Button>
         <Button
@@ -45,4 +49,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-button-demo-loading"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-button-demo-loading">
+      <App />
+    </div>
+  </div>
+);

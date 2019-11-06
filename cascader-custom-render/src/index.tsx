@@ -1,46 +1,46 @@
-import React from 'react';
-import { Cascader } from 'antd';
+import React from "react";
+import { Cascader } from "antd";
 
 const options = [
   {
-    value: 'zhejiang',
-    label: 'Zhejiang',
+    value: "zhejiang",
+    label: "Zhejiang",
     children: [
       {
-        value: 'hangzhou',
-        label: 'Hangzhou',
+        value: "hangzhou",
+        label: "Hangzhou",
         children: [
           {
-            value: 'xihu',
-            label: 'West Lake',
-            code: 752100,
-          },
-        ],
-      },
-    ],
+            value: "xihu",
+            label: "West Lake",
+            code: 752100
+          }
+        ]
+      }
+    ]
   },
   {
-    value: 'jiangsu',
-    label: 'Jiangsu',
+    value: "jiangsu",
+    label: "Jiangsu",
     children: [
       {
-        value: 'nanjing',
-        label: 'Nanjing',
+        value: "nanjing",
+        label: "Nanjing",
         children: [
           {
-            value: 'zhonghuamen',
-            label: 'Zhong Hua Men',
-            code: 453400,
-          },
-        ],
-      },
-    ],
-  },
+            value: "zhonghuamen",
+            label: "Zhong Hua Men",
+            code: 453400
+          }
+        ]
+      }
+    ]
+  }
 ];
 
 function handleAreaClick(e, label, option) {
   e.stopPropagation();
-  console.log('clicked', label, option);
+  console.log("clicked", label, option);
 }
 
 const displayRender = (labels, selectedOptions) =>
@@ -49,17 +49,23 @@ const displayRender = (labels, selectedOptions) =>
     if (i === labels.length - 1) {
       return (
         <span key={option.value}>
-          {label} (<a onClick={e => handleAreaClick(e, label, option)}>{option.code}</a>)
+          {label} (
+          <a onClick={e => handleAreaClick(e, label, option)}>{option.code}</a>)
         </span>
       );
     }
     return <span key={option.value}>{label} / </span>;
   });
 
-export default () => <div id="components-cascader-demo-custom-render">
-  <Cascader
-    options={options}
-    defaultValue={['zhejiang', 'hangzhou', 'xihu']}
-    displayRender={displayRender}
-    style={{ width: '100%' }}
-  /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-cascader-demo-custom-render">
+      <Cascader
+        options={options}
+        defaultValue={["zhejiang", "hangzhou", "xihu"]}
+        displayRender={displayRender}
+        style={{ width: "100%" }}
+      />
+    </div>
+  </div>
+);

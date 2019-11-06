@@ -1,11 +1,11 @@
-import React from 'react';
-import { Form, Input, Button, Radio } from 'antd';
+import React from "react";
+import { Form, Input, Button, Radio } from "antd";
 
 class FormLayoutDemo extends React.Component {
   constructor() {
     super();
     this.state = {
-      formLayout: 'horizontal',
+      formLayout: "horizontal"
     };
   }
 
@@ -16,23 +16,26 @@ class FormLayoutDemo extends React.Component {
   render() {
     const { formLayout } = this.state;
     const formItemLayout =
-      formLayout === 'horizontal'
+      formLayout === "horizontal"
         ? {
             labelCol: { span: 4 },
-            wrapperCol: { span: 14 },
+            wrapperCol: { span: 14 }
           }
         : null;
     const buttonItemLayout =
-      formLayout === 'horizontal'
+      formLayout === "horizontal"
         ? {
-            wrapperCol: { span: 14, offset: 4 },
+            wrapperCol: { span: 14, offset: 4 }
           }
         : null;
     return (
       <div>
         <Form layout={formLayout}>
           <Form.Item label="Form Layout" {...formItemLayout}>
-            <Radio.Group defaultValue="horizontal" onChange={this.handleFormLayoutChange}>
+            <Radio.Group
+              defaultValue="horizontal"
+              onChange={this.handleFormLayoutChange}
+            >
               <Radio.Button value="horizontal">Horizontal</Radio.Button>
               <Radio.Button value="vertical">Vertical</Radio.Button>
               <Radio.Button value="inline">Inline</Radio.Button>
@@ -53,4 +56,10 @@ class FormLayoutDemo extends React.Component {
   }
 }
 
-export default () => <div id="components-form-demo-layout"><FormLayoutDemo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-form-demo-layout">
+      <FormLayoutDemo />
+    </div>
+  </div>
+);

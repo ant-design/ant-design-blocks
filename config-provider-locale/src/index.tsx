@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   ConfigProvider,
   Pagination,
@@ -11,38 +11,38 @@ import {
   Button,
   Select,
   Transfer,
-  Radio,
-} from 'antd';
-import enUS from 'antd/es/locale/en_US';
-import zhCN from 'antd/es/locale/zh_CN';
-import moment from 'moment';
-import 'moment/locale/zh-cn';
+  Radio
+} from "antd";
+import enUS from "antd/es/locale/en_US";
+import zhCN from "antd/es/locale/zh_CN";
+import moment from "moment";
+import "moment/locale/zh-cn";
 
-moment.locale('en');
+moment.locale("en");
 
 const { Option } = Select;
 const { RangePicker } = DatePicker;
 
 const columns = [
   {
-    title: 'Name',
-    dataIndex: 'name',
+    title: "Name",
+    dataIndex: "name",
     filters: [
       {
-        text: 'filter1',
-        value: 'filter1',
-      },
-    ],
+        text: "filter1",
+        value: "filter1"
+      }
+    ]
   },
   {
-    title: 'Age',
-    dataIndex: 'age',
-  },
+    title: "Age",
+    dataIndex: "age"
+  }
 ];
 
 class Page extends React.Component {
   state = {
-    visible: false,
+    visible: false
   };
 
   showModal = () => {
@@ -56,14 +56,14 @@ class Page extends React.Component {
   render() {
     const info = () => {
       Modal.info({
-        title: 'some info',
-        content: 'some info',
+        title: "some info",
+        content: "some info"
       });
     };
     const confirm = () => {
       Modal.confirm({
-        title: 'some info',
-        content: 'some info',
+        title: "some info",
+        content: "some info"
       });
     };
     return (
@@ -91,15 +91,26 @@ class Page extends React.Component {
           </Popconfirm>
         </div>
         <div className="example">
-          <Transfer dataSource={[]} showSearch targetKeys={[]} render={item => item.title} />
+          <Transfer
+            dataSource={[]}
+            showSearch
+            targetKeys={[]}
+            render={item => item.title}
+          />
         </div>
-        <div style={{ width: 319, border: '1px solid #d9d9d9', borderRadius: 4 }}>
+        <div
+          style={{ width: 319, border: "1px solid #d9d9d9", borderRadius: 4 }}
+        >
           <Calendar fullscreen={false} value={moment()} />
         </div>
         <div className="example">
           <Table dataSource={[]} columns={columns} />
         </div>
-        <Modal title="Locale Modal" visible={this.state.visible} onCancel={this.hideModal}>
+        <Modal
+          title="Locale Modal"
+          visible={this.state.visible}
+          onCancel={this.hideModal}
+        >
           <p>Locale Modal</p>
         </Modal>
       </div>
@@ -111,7 +122,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      locale: enUS,
+      locale: enUS
     };
   }
 
@@ -119,9 +130,9 @@ class App extends React.Component {
     const localeValue = e.target.value;
     this.setState({ locale: localeValue });
     if (!localeValue) {
-      moment.locale('en');
+      moment.locale("en");
     } else {
-      moment.locale('zh-cn');
+      moment.locale("zh-cn");
     }
   };
 
@@ -142,7 +153,11 @@ class App extends React.Component {
         </div>
         <ConfigProvider locale={locale}>
           <Page
-            key={locale ? locale.locale : 'en' /* Have to refresh for production environment */}
+            key={
+              locale
+                ? locale.locale
+                : "en" /* Have to refresh for production environment */
+            }
           />
         </ConfigProvider>
       </div>
@@ -150,4 +165,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-config-provider-demo-locale"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-config-provider-demo-locale">
+      <App />
+    </div>
+  </div>
+);

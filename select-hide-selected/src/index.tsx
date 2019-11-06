@@ -1,11 +1,11 @@
-import React from 'react';
-import { Select } from 'antd';
+import React from "react";
+import { Select } from "antd";
 
-const OPTIONS = ['Apples', 'Nails', 'Bananas', 'Helicopters'];
+const OPTIONS = ["Apples", "Nails", "Bananas", "Helicopters"];
 
 class SelectWithHiddenSelectedOptions extends React.Component {
   state = {
-    selectedItems: [],
+    selectedItems: []
   };
 
   handleChange = selectedItems => {
@@ -21,7 +21,7 @@ class SelectWithHiddenSelectedOptions extends React.Component {
         placeholder="Inserted are removed"
         value={selectedItems}
         onChange={this.handleChange}
-        style={{ width: '100%' }}
+        style={{ width: "100%" }}
       >
         {filteredOptions.map(item => (
           <Select.Option key={item} value={item}>
@@ -33,4 +33,10 @@ class SelectWithHiddenSelectedOptions extends React.Component {
   }
 }
 
-export default () => <div id="components-select-demo-hide-selected"><SelectWithHiddenSelectedOptions /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-select-demo-hide-selected">
+      <SelectWithHiddenSelectedOptions />
+    </div>
+  </div>
+);

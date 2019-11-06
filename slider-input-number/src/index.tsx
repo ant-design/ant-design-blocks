@@ -1,14 +1,14 @@
-import React from 'react';
-import { Slider, InputNumber, Row, Col } from 'antd';
+import React from "react";
+import { Slider, InputNumber, Row, Col } from "antd";
 
 class IntegerStep extends React.Component {
   state = {
-    inputValue: 1,
+    inputValue: 1
   };
 
   onChange = value => {
     this.setState({
-      inputValue: value,
+      inputValue: value
     });
   };
 
@@ -21,7 +21,7 @@ class IntegerStep extends React.Component {
             min={1}
             max={20}
             onChange={this.onChange}
-            value={typeof inputValue === 'number' ? inputValue : 0}
+            value={typeof inputValue === "number" ? inputValue : 0}
           />
         </Col>
         <Col span={4}>
@@ -40,7 +40,7 @@ class IntegerStep extends React.Component {
 
 class DecimalStep extends React.Component {
   state = {
-    inputValue: 0,
+    inputValue: 0
   };
 
   onChange = value => {
@@ -48,7 +48,7 @@ class DecimalStep extends React.Component {
       return;
     }
     this.setState({
-      inputValue: value,
+      inputValue: value
     });
   };
 
@@ -61,7 +61,7 @@ class DecimalStep extends React.Component {
             min={0}
             max={1}
             onChange={this.onChange}
-            value={typeof inputValue === 'number' ? inputValue : 0}
+            value={typeof inputValue === "number" ? inputValue : 0}
             step={0.01}
           />
         </Col>
@@ -80,8 +80,13 @@ class DecimalStep extends React.Component {
   }
 }
 
-export default () => <div id="components-slider-demo-input-number">
-  <div>
-    <IntegerStep />
-    <DecimalStep />
-  </div></div>;
+export default () => (
+  <div className="container">
+    <div id="components-slider-demo-input-number">
+      <div>
+        <IntegerStep />
+        <DecimalStep />
+      </div>
+    </div>
+  </div>
+);

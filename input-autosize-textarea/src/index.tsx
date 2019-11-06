@@ -1,11 +1,11 @@
-import React from 'react';
-import { Input } from 'antd';
+import React from "react";
+import { Input } from "antd";
 
 const { TextArea } = Input;
 
 class Demo extends React.Component {
   state = {
-    value: '',
+    value: ""
   };
 
   onChange = ({ target: { value } }) => {
@@ -17,22 +17,31 @@ class Demo extends React.Component {
 
     return (
       <div>
-        <TextArea placeholder="Autosize height based on content lines" autosize />
-        <div style={{ margin: '24px 0' }} />
+        <TextArea
+          placeholder="Autosize height based on content lines"
+          autoSize
+        />
+        <div style={{ margin: "24px 0" }} />
         <TextArea
           placeholder="Autosize height with minimum and maximum number of lines"
-          autosize={{ minRows: 2, maxRows: 6 }}
+          autoSize={{ minRows: 2, maxRows: 6 }}
         />
-        <div style={{ margin: '24px 0' }} />
+        <div style={{ margin: "24px 0" }} />
         <TextArea
           value={value}
           onChange={this.onChange}
           placeholder="Controlled autosize"
-          autosize={{ minRows: 3, maxRows: 5 }}
+          autoSize={{ minRows: 3, maxRows: 5 }}
         />
       </div>
     );
   }
 }
 
-export default () => <div id="components-input-demo-autosize-textarea"><Demo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-input-demo-autosize-textarea">
+      <Demo />
+    </div>
+  </div>
+);

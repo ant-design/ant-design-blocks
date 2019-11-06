@@ -1,11 +1,11 @@
-import React from 'react';
-import { Tree, Icon } from 'antd';
+import React from "react";
+import { Tree, Icon } from "antd";
 
 const { TreeNode } = Tree;
 
 class Demo extends React.Component {
   onSelect = (selectedKeys, info) => {
-    console.log('selected', selectedKeys, info);
+    console.log("selected", selectedKeys, info);
   };
 
   render() {
@@ -13,7 +13,7 @@ class Demo extends React.Component {
       <Tree
         showLine
         switcherIcon={<Icon type="down" />}
-        defaultExpandedKeys={['0-0-0']}
+        defaultExpandedKeys={["0-0-0"]}
         onSelect={this.onSelect}
       >
         <TreeNode title="parent 1" key="0-0">
@@ -35,4 +35,10 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <div id="components-tree-demo-switcher-icon"><Demo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-tree-demo-switcher-icon">
+      <Demo />
+    </div>
+  </div>
+);

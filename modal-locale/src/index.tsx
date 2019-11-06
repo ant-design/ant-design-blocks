@@ -1,18 +1,18 @@
-import React from 'react';
-import { Modal, Button } from 'antd';
+import React from "react";
+import { Modal, Button } from "antd";
 
 class LocalizedModal extends React.Component {
   state = { visible: false };
 
   showModal = () => {
     this.setState({
-      visible: true,
+      visible: true
     });
   };
 
   hideModal = () => {
     this.setState({
-      visible: false,
+      visible: false
     });
   };
 
@@ -41,16 +41,21 @@ class LocalizedModal extends React.Component {
 
 function confirm() {
   Modal.confirm({
-    title: 'Confirm',
-    content: 'Bla bla ...',
-    okText: '确认',
-    cancelText: '取消',
+    title: "Confirm",
+    content: "Bla bla ...",
+    okText: "确认",
+    cancelText: "取消"
   });
 }
 
-export default () => <div id="components-modal-demo-locale">
-  <div>
-    <LocalizedModal />
-    <br />
-    <Button onClick={confirm}>Confirm</Button>
-  </div></div>;
+export default () => (
+  <div className="container">
+    <div id="components-modal-demo-locale">
+      <div>
+        <LocalizedModal />
+        <br />
+        <Button onClick={confirm}>Confirm</Button>
+      </div>
+    </div>
+  </div>
+);

@@ -1,7 +1,7 @@
 {
   "name": "@umi-block/table-resizable-column",
   "version": "0.0.1",
-  "description": "集成 react-resizable 来实现可伸缩列。",
+  "description": "集成 [react-resizable](https://github.com/STRML/react-resizable) 来实现可伸缩列。",
   "main": "src/index.js",
   "authors": { "name": "", "email": "" },
   "repository": "https://github.com/ant-design/ant-design-blocks/${BLOCKNAME}",

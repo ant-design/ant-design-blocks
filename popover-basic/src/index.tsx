@@ -1,5 +1,5 @@
-import React from 'react';
-import { Popover, Button } from 'antd';
+import React from "react";
+import { Popover, Button } from "antd";
 
 const content = (
   <div>
@@ -8,7 +8,12 @@ const content = (
   </div>
 );
 
-export default () => <div id="components-popover-demo-basic">
-  <Popover content={content} title="Title">
-    <Button type="primary">Hover me</Button>
-  </Popover></div>;
+export default () => (
+  <div className="container">
+    <div id="components-popover-demo-basic">
+      <Popover content={content} title="Title">
+        <Button type="primary">Hover me</Button>
+      </Popover>
+    </div>
+  </div>
+);

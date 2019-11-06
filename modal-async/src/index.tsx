@@ -1,36 +1,36 @@
-import React from 'react';
-import { Modal, Button } from 'antd';
+import React from "react";
+import { Modal, Button } from "antd";
 
 class App extends React.Component {
   state = {
-    ModalText: 'Content of the modal',
+    ModalText: "Content of the modal",
     visible: false,
-    confirmLoading: false,
+    confirmLoading: false
   };
 
   showModal = () => {
     this.setState({
-      visible: true,
+      visible: true
     });
   };
 
   handleOk = () => {
     this.setState({
-      ModalText: 'The modal will be closed after two seconds',
-      confirmLoading: true,
+      ModalText: "The modal will be closed after two seconds",
+      confirmLoading: true
     });
     setTimeout(() => {
       this.setState({
         visible: false,
-        confirmLoading: false,
+        confirmLoading: false
       });
     }, 2000);
   };
 
   handleCancel = () => {
-    console.log('Clicked cancel button');
+    console.log("Clicked cancel button");
     this.setState({
-      visible: false,
+      visible: false
     });
   };
 
@@ -55,4 +55,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-modal-demo-async"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-modal-demo-async">
+      <App />
+    </div>
+  </div>
+);

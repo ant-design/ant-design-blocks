@@ -1,11 +1,11 @@
-import React from 'react';
-import { Skeleton, Switch, Card, Icon, Avatar } from 'antd';
+import React from "react";
+import { Skeleton, Switch, Card, Icon, Avatar } from "antd";
 
 const { Meta } = Card;
 
 class App extends React.Component {
   state = {
-    loading: true,
+    loading: true
   };
 
   onChange = checked => {
@@ -34,7 +34,7 @@ class App extends React.Component {
           actions={[
             <Icon type="setting" key="setting" />,
             <Icon type="edit" key="edit" />,
-            <Icon type="ellipsis" key="ellipsis" />,
+            <Icon type="ellipsis" key="ellipsis" />
           ]}
         >
           <Skeleton loading={loading} avatar active>
@@ -52,4 +52,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-card-demo-loading"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-card-demo-loading">
+      <App />
+    </div>
+  </div>
+);

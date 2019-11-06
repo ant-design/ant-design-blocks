@@ -1,11 +1,11 @@
-import React from 'react';
-import { Menu, Icon } from 'antd';
+import React from "react";
+import { Menu, Icon } from "antd";
 
 const { SubMenu } = Menu;
 
 class Sider extends React.Component {
   handleClick = e => {
-    console.log('click ', e);
+    console.log("click ", e);
   };
 
   render() {
@@ -13,8 +13,8 @@ class Sider extends React.Component {
       <Menu
         onClick={this.handleClick}
         style={{ width: 256 }}
-        defaultSelectedKeys={['1']}
-        defaultOpenKeys={['sub1']}
+        defaultSelectedKeys={["1"]}
+        defaultOpenKeys={["sub1"]}
         mode="inline"
       >
         <SubMenu
@@ -70,4 +70,10 @@ class Sider extends React.Component {
   }
 }
 
-export default () => <div id="components-menu-demo-inline"><Sider /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-menu-demo-inline">
+      <Sider />
+    </div>
+  </div>
+);

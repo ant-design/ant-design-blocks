@@ -1,28 +1,28 @@
-import React from 'react';
-import { Steps, Button, message } from 'antd';
+import React from "react";
+import { Steps, Button, message } from "antd";
 
 const { Step } = Steps;
 
 const steps = [
   {
-    title: 'First',
-    content: 'First-content',
+    title: "First",
+    content: "First-content"
   },
   {
-    title: 'Second',
-    content: 'Second-content',
+    title: "Second",
+    content: "Second-content"
   },
   {
-    title: 'Last',
-    content: 'Last-content',
-  },
+    title: "Last",
+    content: "Last-content"
+  }
 ];
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      current: 0,
+      current: 0
     };
   }
 
@@ -53,7 +53,10 @@ class App extends React.Component {
             </Button>
           )}
           {current === steps.length - 1 && (
-            <Button type="primary" onClick={() => message.success('Processing complete!')}>
+            <Button
+              type="primary"
+              onClick={() => message.success("Processing complete!")}
+            >
               Done
             </Button>
           )}
@@ -68,4 +71,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-steps-demo-step-next"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-steps-demo-step-next">
+      <App />
+    </div>
+  </div>
+);

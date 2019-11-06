@@ -1,6 +1,6 @@
-import React from 'react';
-import { Transfer, Switch, Table, Tag } from 'antd';
-import difference from 'lodash/difference';
+import React from "react";
+import { Transfer, Switch, Table, Tag } from "antd";
+import difference from "lodash/difference";
 
 // Customize Table Transfer
 const TableTransfer = ({ leftColumns, rightColumns, ...restProps }) => (
@@ -11,9 +11,9 @@ const TableTransfer = ({ leftColumns, rightColumns, ...restProps }) => (
       onItemSelectAll,
       onItemSelect,
       selectedKeys: listSelectedKeys,
-      disabled: listDisabled,
+      disabled: listDisabled
     }) => {
-      const columns = direction === 'left' ? leftColumns : rightColumns;
+      const columns = direction === "left" ? leftColumns : rightColumns;
 
       const rowSelection = {
         getCheckboxProps: item => ({ disabled: listDisabled || item.disabled }),
@@ -29,7 +29,7 @@ const TableTransfer = ({ leftColumns, rightColumns, ...restProps }) => (
         onSelect({ key }, selected) {
           onItemSelect(key, selected);
         },
-        selectedRowKeys: listSelectedKeys,
+        selectedRowKeys: listSelectedKeys
       };
 
       return (
@@ -38,12 +38,12 @@ const TableTransfer = ({ leftColumns, rightColumns, ...restProps }) => (
           columns={columns}
           dataSource={filteredItems}
           size="small"
-          style={{ pointerEvents: listDisabled ? 'none' : null }}
+          style={{ pointerEvents: listDisabled ? "none" : null }}
           onRow={({ key, disabled: itemDisabled }) => ({
             onClick: () => {
               if (itemDisabled || listDisabled) return;
               onItemSelect(key, !listSelectedKeys.includes(key));
-            },
+            }
           })}
         />
       );
@@ -51,7 +51,7 @@ const TableTransfer = ({ leftColumns, rightColumns, ...restProps }) => (
   </Transfer>
 );
 
-const mockTags = ['cat', 'dog', 'bird'];
+const mockTags = ["cat", "dog", "bird"];
 
 const mockData = [];
 for (let i = 0; i < 20; i++) {
@@ -60,39 +60,41 @@ for (let i = 0; i < 20; i++) {
     title: `content${i + 1}`,
     description: `description of content${i + 1}`,
     disabled: i % 4 === 0,
-    tag: mockTags[i % 3],
+    tag: mockTags[i % 3]
   });
 }
 
-const originTargetKeys = mockData.filter(item => +item.key % 3 > 1).map(item => item.key);
+const originTargetKeys = mockData
+  .filter(item => +item.key % 3 > 1)
+  .map(item => item.key);
 
 const leftTableColumns = [
   {
-    dataIndex: 'title',
-    title: 'Name',
+    dataIndex: "title",
+    title: "Name"
   },
   {
-    dataIndex: 'tag',
-    title: 'Tag',
-    render: tag => <Tag>{tag}</Tag>,
+    dataIndex: "tag",
+    title: "Tag",
+    render: tag => <Tag>{tag}</Tag>
   },
   {
-    dataIndex: 'description',
-    title: 'Description',
-  },
+    dataIndex: "description",
+    title: "Description"
+  }
 ];
 const rightTableColumns = [
   {
-    dataIndex: 'title',
-    title: 'Name',
-  },
+    dataIndex: "title",
+    title: "Name"
+  }
 ];
 
 class App extends React.Component {
   state = {
     targetKeys: originTargetKeys,
     disabled: false,
-    showSearch: false,
+    showSearch: false
   };
 
   onChange = nextTargetKeys => {
@@ -118,7 +120,8 @@ class App extends React.Component {
           showSearch={showSearch}
           onChange={this.onChange}
           filterOption={(inputValue, item) =>
-            item.title.indexOf(inputValue) !== -1 || item.tag.indexOf(inputValue) !== -1
+            item.title.indexOf(inputValue) !== -1 ||
+            item.tag.indexOf(inputValue) !== -1
           }
           leftColumns={leftTableColumns}
           rightColumns={rightTableColumns}
@@ -142,4 +145,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-transfer-demo-table-transfer"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-transfer-demo-table-transfer">
+      <App />
+    </div>
+  </div>
+);

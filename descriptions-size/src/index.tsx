@@ -1,15 +1,15 @@
-import React from 'react';
-import { Descriptions, Radio } from 'antd';
+import React from "react";
+import { Descriptions, Radio } from "antd";
 
 class Demo extends React.Component {
   state = {
-    size: 'default',
+    size: "default"
   };
 
   onChange = e => {
-    console.log('size checked', e.target.value);
+    console.log("size checked", e.target.value);
     this.setState({
-      size: e.target.value,
+      size: e.target.value
     });
   };
 
@@ -39,7 +39,7 @@ class Demo extends React.Component {
             <br />
             Storage space: 10 GB
             <br />
-            Replication_factor:3
+            Replication factor: 3
             <br />
             Region: East China 1<br />
           </Descriptions.Item>
@@ -59,4 +59,10 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <div id="components-descriptions-demo-size"><Demo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-descriptions-demo-size">
+      <Demo />
+    </div>
+  </div>
+);

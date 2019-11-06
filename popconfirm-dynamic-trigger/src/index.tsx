@@ -1,10 +1,10 @@
-import React from 'react';
-import { Popconfirm, Switch, message } from 'antd';
+import React from "react";
+import { Popconfirm, Switch, message } from "antd";
 
 class App extends React.Component {
   state = {
     visible: false,
-    condition: true, // Whether meet the condition, if not show popconfirm.
+    condition: true // Whether meet the condition, if not show popconfirm.
   };
 
   changeCondition = value => {
@@ -13,12 +13,12 @@ class App extends React.Component {
 
   confirm = () => {
     this.setState({ visible: false });
-    message.success('Next step.');
+    message.success("Next step.");
   };
 
   cancel = () => {
     this.setState({ visible: false });
-    message.error('Click on cancel.');
+    message.error("Click on cancel.");
   };
 
   handleVisibleChange = visible => {
@@ -58,4 +58,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-popconfirm-demo-dynamic-trigger"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-popconfirm-demo-dynamic-trigger">
+      <App />
+    </div>
+  </div>
+);

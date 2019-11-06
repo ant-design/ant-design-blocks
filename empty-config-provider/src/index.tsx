@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   ConfigProvider,
   Switch,
@@ -9,11 +9,11 @@ import {
   Cascader,
   Transfer,
   Table,
-  List,
-} from 'antd';
+  List
+} from "antd";
 
 const customizeRenderEmpty = () => (
-  <div style={{ textAlign: 'center' }}>
+  <div style={{ textAlign: "center" }}>
     <Icon type="smile" style={{ fontSize: 20 }} />
     <p>Data Not Found</p>
   </div>
@@ -23,7 +23,7 @@ const style = { width: 200 };
 
 class Demo extends React.Component {
   state = {
-    customize: false,
+    customize: false
   };
 
   render() {
@@ -60,15 +60,15 @@ class Demo extends React.Component {
               style={{ marginTop: 8 }}
               columns={[
                 {
-                  title: 'Name',
-                  dataIndex: 'name',
-                  key: 'name',
+                  title: "Name",
+                  dataIndex: "name",
+                  key: "name"
                 },
                 {
-                  title: 'Age',
-                  dataIndex: 'age',
-                  key: 'age',
-                },
+                  title: "Age",
+                  dataIndex: "age",
+                  key: "age"
+                }
               ]}
             />
 
@@ -81,4 +81,10 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <div id="components-empty-demo-config-provider"><Demo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-empty-demo-config-provider">
+      <Demo />
+    </div>
+  </div>
+);

@@ -1,10 +1,10 @@
-import React from 'react';
-import { Modal, Button } from 'antd';
+import React from "react";
+import { Modal, Button } from "antd";
 
 class App extends React.Component {
   state = {
     modal1Visible: false,
-    modal2Visible: false,
+    modal2Visible: false
   };
 
   setModal1Visible(modal1Visible) {
@@ -53,4 +53,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-modal-demo-position"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-modal-demo-position">
+      <App />
+    </div>
+  </div>
+);

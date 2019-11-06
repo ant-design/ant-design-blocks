@@ -1,30 +1,30 @@
-import React from 'react';
-import { Popover, Button } from 'antd';
+import React from "react";
+import { Popover, Button } from "antd";
 
 class App extends React.Component {
   state = {
     clicked: false,
-    hovered: false,
+    hovered: false
   };
 
   hide = () => {
     this.setState({
       clicked: false,
-      hovered: false,
+      hovered: false
     });
   };
 
   handleHoverChange = visible => {
     this.setState({
       hovered: visible,
-      clicked: false,
+      clicked: false
     });
   };
 
   handleClickChange = visible => {
     this.setState({
       clicked: visible,
-      hovered: false,
+      hovered: false
     });
   };
 
@@ -59,4 +59,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-popover-demo-hover-with-click"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-popover-demo-hover-with-click">
+      <App />
+    </div>
+  </div>
+);

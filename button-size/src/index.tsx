@@ -1,9 +1,9 @@
-import React from 'react';
-import { Button, Radio, Icon } from 'antd';
+import React from "react";
+import { Button, Radio, Icon } from "antd";
 
 class ButtonSize extends React.Component {
   state = {
-    size: 'large',
+    size: "large"
   };
 
   handleSizeChange = e => {
@@ -60,4 +60,10 @@ class ButtonSize extends React.Component {
   }
 }
 
-export default () => <div id="components-button-demo-size"><ButtonSize /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-button-demo-size">
+      <ButtonSize />
+    </div>
+  </div>
+);

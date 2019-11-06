@@ -1,5 +1,5 @@
-import React from 'react';
-import { Collapse, Icon } from 'antd';
+import React from "react";
+import { Collapse, Icon } from "antd";
 
 const { Panel } = Collapse;
 
@@ -10,26 +10,33 @@ const text = `
 `;
 
 const customPanelStyle = {
-  background: '#f7f7f7',
+  background: "#f7f7f7",
   borderRadius: 4,
   marginBottom: 24,
   border: 0,
-  overflow: 'hidden',
+  overflow: "hidden"
 };
 
-export default () => <div id="components-collapse-demo-custom">
-  <Collapse
-    bordered={false}
-    defaultActiveKey={['1']}
-    expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}
-  >
-    <Panel header="This is panel header 1" key="1" style={customPanelStyle}>
-      <p>{text}</p>
-    </Panel>
-    <Panel header="This is panel header 2" key="2" style={customPanelStyle}>
-      <p>{text}</p>
-    </Panel>
-    <Panel header="This is panel header 3" key="3" style={customPanelStyle}>
-      <p>{text}</p>
-    </Panel>
-  </Collapse></div>;
+export default () => (
+  <div className="container">
+    <div id="components-collapse-demo-custom">
+      <Collapse
+        bordered={false}
+        defaultActiveKey={["1"]}
+        expandIcon={({ isActive }) => (
+          <Icon type="caret-right" rotate={isActive ? 90 : 0} />
+        )}
+      >
+        <Panel header="This is panel header 1" key="1" style={customPanelStyle}>
+          <p>{text}</p>
+        </Panel>
+        <Panel header="This is panel header 2" key="2" style={customPanelStyle}>
+          <p>{text}</p>
+        </Panel>
+        <Panel header="This is panel header 3" key="3" style={customPanelStyle}>
+          <p>{text}</p>
+        </Panel>
+      </Collapse>
+    </div>
+  </div>
+);

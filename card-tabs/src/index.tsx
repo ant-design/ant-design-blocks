@@ -1,47 +1,47 @@
-import React from 'react';
-import { Card } from 'antd';
+import React from "react";
+import { Card } from "antd";
 
 const tabList = [
   {
-    key: 'tab1',
-    tab: 'tab1',
+    key: "tab1",
+    tab: "tab1"
   },
   {
-    key: 'tab2',
-    tab: 'tab2',
-  },
+    key: "tab2",
+    tab: "tab2"
+  }
 ];
 
 const contentList = {
   tab1: <p>content1</p>,
-  tab2: <p>content2</p>,
+  tab2: <p>content2</p>
 };
 
 const tabListNoTitle = [
   {
-    key: 'article',
-    tab: 'article',
+    key: "article",
+    tab: "article"
   },
   {
-    key: 'app',
-    tab: 'app',
+    key: "app",
+    tab: "app"
   },
   {
-    key: 'project',
-    tab: 'project',
-  },
+    key: "project",
+    tab: "project"
+  }
 ];
 
 const contentListNoTitle = {
   article: <p>article content</p>,
   app: <p>app content</p>,
-  project: <p>project content</p>,
+  project: <p>project content</p>
 };
 
 class TabsCard extends React.Component {
   state = {
-    key: 'tab1',
-    noTitleKey: 'app',
+    key: "tab1",
+    noTitleKey: "app"
   };
 
   onTabChange = (key, type) => {
@@ -53,13 +53,13 @@ class TabsCard extends React.Component {
     return (
       <div>
         <Card
-          style={{ width: '100%' }}
+          style={{ width: "100%" }}
           title="Card title"
           extra={<a href="#">More</a>}
           tabList={tabList}
           activeTabKey={this.state.key}
           onTabChange={key => {
-            this.onTabChange(key, 'key');
+            this.onTabChange(key, "key");
           }}
         >
           {contentList[this.state.key]}
@@ -67,12 +67,12 @@ class TabsCard extends React.Component {
         <br />
         <br />
         <Card
-          style={{ width: '100%' }}
+          style={{ width: "100%" }}
           tabList={tabListNoTitle}
           activeTabKey={this.state.noTitleKey}
           tabBarExtraContent={<a href="#">More</a>}
           onTabChange={key => {
-            this.onTabChange(key, 'noTitleKey');
+            this.onTabChange(key, "noTitleKey");
           }}
         >
           {contentListNoTitle[this.state.noTitleKey]}
@@ -82,4 +82,10 @@ class TabsCard extends React.Component {
   }
 }
 
-export default () => <div id="components-card-demo-tabs"><TabsCard /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-card-demo-tabs">
+      <TabsCard />
+    </div>
+  </div>
+);

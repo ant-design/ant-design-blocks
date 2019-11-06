@@ -1,5 +1,5 @@
-import React from 'react';
-import { Icon } from 'antd';
+import React from "react";
+import { Icon } from "antd";
 
 const HeartSvg = () => (
   <svg width="1em" height="1em" fill="currentColor" viewBox="0 0 1024 1024">
@@ -56,8 +56,13 @@ const HeartIcon = props => <Icon component={HeartSvg} {...props} />;
 
 const PandaIcon = props => <Icon component={PandaSvg} {...props} />;
 
-export default () => <div id="components-icon-demo-custom">
-  <div className="custom-icons-list">
-    <HeartIcon style={{ color: 'hotpink' }} />
-    <PandaIcon style={{ fontSize: '32px' }} />
-  </div></div>;
+export default () => (
+  <div className="container">
+    <div id="components-icon-demo-custom">
+      <div className="custom-icons-list">
+        <HeartIcon style={{ color: "hotpink" }} />
+        <PandaIcon style={{ fontSize: "32px" }} />
+      </div>
+    </div>
+  </div>
+);

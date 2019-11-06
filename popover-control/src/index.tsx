@@ -1,14 +1,14 @@
-import React from 'react';
-import { Popover, Button } from 'antd';
+import React from "react";
+import { Popover, Button } from "antd";
 
 class App extends React.Component {
   state = {
-    visible: false,
+    visible: false
   };
 
   hide = () => {
     this.setState({
-      visible: false,
+      visible: false
     });
   };
 
@@ -31,4 +31,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-popover-demo-control"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-popover-demo-control">
+      <App />
+    </div>
+  </div>
+);

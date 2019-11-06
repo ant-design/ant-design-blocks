@@ -1,15 +1,15 @@
-import React from 'react';
-import { Modal, Button } from 'antd';
+import React from "react";
+import { Modal, Button } from "antd";
 
 class App extends React.Component {
   state = {
     loading: false,
-    visible: false,
+    visible: false
   };
 
   showModal = () => {
     this.setState({
-      visible: true,
+      visible: true
     });
   };
 
@@ -40,9 +40,14 @@ class App extends React.Component {
             <Button key="back" onClick={this.handleCancel}>
               Return
             </Button>,
-            <Button key="submit" type="primary" loading={loading} onClick={this.handleOk}>
+            <Button
+              key="submit"
+              type="primary"
+              loading={loading}
+              onClick={this.handleOk}
+            >
               Submit
-            </Button>,
+            </Button>
           ]}
         >
           <p>Some contents...</p>
@@ -56,4 +61,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-modal-demo-footer"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-modal-demo-footer">
+      <App />
+    </div>
+  </div>
+);

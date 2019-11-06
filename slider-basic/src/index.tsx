@@ -1,9 +1,9 @@
-import React from 'react';
-import { Slider, Switch } from 'antd';
+import React from "react";
+import { Slider, Switch } from "antd";
 
 class Demo extends React.Component {
   state = {
-    disabled: false,
+    disabled: false
   };
 
   handleDisabledChange = disabled => {
@@ -16,10 +16,21 @@ class Demo extends React.Component {
       <div>
         <Slider defaultValue={30} disabled={disabled} />
         <Slider range defaultValue={[20, 50]} disabled={disabled} />
-        Disabled: <Switch size="small" checked={disabled} onChange={this.handleDisabledChange} />
+        Disabled:{" "}
+        <Switch
+          size="small"
+          checked={disabled}
+          onChange={this.handleDisabledChange}
+        />
       </div>
     );
   }
 }
 
-export default () => <div id="components-slider-demo-basic"><Demo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-slider-demo-basic">
+      <Demo />
+    </div>
+  </div>
+);

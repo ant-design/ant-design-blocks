@@ -1,44 +1,44 @@
-import React from 'react';
-import { Icon, Input, AutoComplete } from 'antd';
+import React from "react";
+import { Icon, Input, AutoComplete } from "antd";
 
 const { Option, OptGroup } = AutoComplete;
 
 const dataSource = [
   {
-    title: 'Libraries',
+    title: "Libraries",
     children: [
       {
-        title: 'AntDesign',
-        count: 10000,
+        title: "AntDesign",
+        count: 10000
       },
       {
-        title: 'AntDesign UI',
-        count: 10600,
-      },
-    ],
+        title: "AntDesign UI",
+        count: 10600
+      }
+    ]
   },
   {
-    title: 'Solutions',
+    title: "Solutions",
     children: [
       {
-        title: 'AntDesign UI',
-        count: 60100,
+        title: "AntDesign UI",
+        count: 60100
       },
       {
-        title: 'AntDesign',
-        count: 30010,
-      },
-    ],
+        title: "AntDesign",
+        count: 30010
+      }
+    ]
   },
   {
-    title: 'Articles',
+    title: "Articles",
     children: [
       {
-        title: 'AntDesign design language',
-        count: 100000,
-      },
-    ],
-  },
+        title: "AntDesign design language",
+        count: 100000
+      }
+    ]
+  }
 ];
 
 function renderTitle(title) {
@@ -46,7 +46,7 @@ function renderTitle(title) {
     <span>
       {title}
       <a
-        style={{ float: 'right' }}
+        style={{ float: "right" }}
         href="https://www.google.com/search?q=antd"
         target="_blank"
         rel="noopener noreferrer"
@@ -70,10 +70,14 @@ const options = dataSource
   ))
   .concat([
     <Option disabled key="all" className="show-all">
-      <a href="https://www.google.com/search?q=antd" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://www.google.com/search?q=antd"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         View all results
       </a>
-    </Option>,
+    </Option>
   ]);
 
 function Complete() {
@@ -85,15 +89,23 @@ function Complete() {
         dropdownMatchSelectWidth={false}
         dropdownStyle={{ width: 300 }}
         size="large"
-        style={{ width: '100%' }}
+        style={{ width: "100%" }}
         dataSource={options}
         placeholder="input here"
         optionLabelProp="value"
       >
-        <Input suffix={<Icon type="search" className="certain-category-icon" />} />
+        <Input
+          suffix={<Icon type="search" className="certain-category-icon" />}
+        />
       </AutoComplete>
     </div>
   );
 }
 
-export default () => <div id="components-auto-complete-demo-certain-category"><Complete /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-auto-complete-demo-certain-category">
+      <Complete />
+    </div>
+  </div>
+);

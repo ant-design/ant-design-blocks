@@ -1,8 +1,8 @@
-import React from 'react';
-import { Form, Input } from 'antd';
+import React from "react";
+import { Form, Input } from "antd";
 
 const CustomizedForm = Form.create({
-  name: 'global_state',
+  name: "global_state",
   onFieldsChange(props, changedFields) {
     props.onChange(changedFields);
   },
@@ -10,20 +10,20 @@ const CustomizedForm = Form.create({
     return {
       username: Form.createFormField({
         ...props.username,
-        value: props.username.value,
-      }),
+        value: props.username.value
+      })
     };
   },
   onValuesChange(_, values) {
     console.log(values);
-  },
+  }
 })(props => {
   const { getFieldDecorator } = props.form;
   return (
     <Form layout="inline">
       <Form.Item label="Username">
-        {getFieldDecorator('username', {
-          rules: [{ required: true, message: 'Username is required!' }],
+        {getFieldDecorator("username", {
+          rules: [{ required: true, message: "Username is required!" }]
         })(<Input />)}
       </Form.Item>
     </Form>
@@ -34,14 +34,14 @@ class Demo extends React.Component {
   state = {
     fields: {
       username: {
-        value: 'benjycui',
-      },
-    },
+        value: "benjycui"
+      }
+    }
   };
 
   handleFormChange = changedFields => {
     this.setState(({ fields }) => ({
-      fields: { ...fields, ...changedFields },
+      fields: { ...fields, ...changedFields }
     }));
   };
 
@@ -56,4 +56,10 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <div id="components-form-demo-global-state"><Demo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-form-demo-global-state">
+      <Demo />
+    </div>
+  </div>
+);

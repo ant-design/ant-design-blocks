@@ -1,17 +1,34 @@
-import React from 'react';
-import { PageHeader, Menu, Dropdown, Icon, Button, Tag, Typography, Row } from 'antd';
+import React from "react";
+import {
+  PageHeader,
+  Menu,
+  Dropdown,
+  Icon,
+  Button,
+  Tag,
+  Typography,
+  Row
+} from "antd";
 
 const { Paragraph } = Typography;
 
 const menu = (
   <Menu>
     <Menu.Item>
-      <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="http://www.alipay.com/"
+      >
         1st menu item
       </a>
     </Menu.Item>
     <Menu.Item>
-      <a target="_blank" rel="noopener noreferrer" href="http://www.taobao.com/">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="http://www.taobao.com/"
+      >
         2nd menu item
       </a>
     </Menu.Item>
@@ -28,15 +45,15 @@ const DropdownMenu = () => {
     <Dropdown key="more" overlay={menu}>
       <Button
         style={{
-          border: 'none',
-          padding: 0,
+          border: "none",
+          padding: 0
         }}
       >
         <Icon
           type="ellipsis"
           style={{
             fontSize: 20,
-            verticalAlign: 'top',
+            verticalAlign: "top"
           }}
         />
       </Button>
@@ -46,30 +63,30 @@ const DropdownMenu = () => {
 
 const routes = [
   {
-    path: 'index',
-    breadcrumbName: 'First-level Menu',
+    path: "index",
+    breadcrumbName: "First-level Menu"
   },
   {
-    path: 'first',
-    breadcrumbName: 'Second-level Menu',
+    path: "first",
+    breadcrumbName: "Second-level Menu"
   },
   {
-    path: 'second',
-    breadcrumbName: 'Third-level Menu',
-  },
+    path: "second",
+    breadcrumbName: "Third-level Menu"
+  }
 ];
 
 const IconLink = ({ src, text }) => (
   <a
     style={{
       marginRight: 16,
-      display: 'flex',
-      alignItems: 'center',
+      display: "flex",
+      alignItems: "center"
     }}
   >
     <img
       style={{
-        marginRight: 8,
+        marginRight: 8
       }}
       src={src}
       alt="start"
@@ -81,13 +98,14 @@ const IconLink = ({ src, text }) => (
 const content = (
   <div className="content">
     <Paragraph>
-      Ant Design interprets the color system into two levels: a system-level color system and a
-      product-level color system.
+      Ant Design interprets the color system into two levels: a system-level
+      color system and a product-level color system.
     </Paragraph>
     <Paragraph>
-      Ant Design&#x27;s design team preferred to design with the HSB color model, which makes it
-      easier for designers to have a clear psychological expectation of color when adjusting colors,
-      as well as facilitate communication in teams.
+      Ant Design&#x27;s design team preferred to design with the HSB color
+      model, which makes it easier for designers to have a clear psychological
+      expectation of color when adjusting colors, as well as facilitate
+      communication in teams.
     </Paragraph>
     <Row className="contentLink" type="flex">
       <IconLink
@@ -115,7 +133,7 @@ const Content = ({ children, extraContent }) => {
       <div
         className="extra"
         style={{
-          marginLeft: 80,
+          marginLeft: 80
         }}
       >
         {extraContent}
@@ -124,30 +142,40 @@ const Content = ({ children, extraContent }) => {
   );
 };
 
-export default () => <div id="components-page-header-demo-content">
-  <PageHeader
-    title="Title"
-    subTitle="This is a subtitle"
-    tags={<Tag color="blue">Running</Tag>}
-    extra={[
-      <Button key="3">Operation</Button>,
-      <Button key="2">Operation</Button>,
-      <Button key="1" type="primary">
-        Primary
-      </Button>,
-      <DropdownMenu key="more" />,
-    ]}
-    avatar={{ src: 'https://avatars1.githubusercontent.com/u/8186664?s=460&v=4' }}
-    breadcrumb={{ routes }}
-  >
-    <Content
-      extraContent={
-        <img
-          src="https://gw.alipayobjects.com/mdn/mpaas_user/afts/img/A*KsfVQbuLRlYAAAAAAAAAAABjAQAAAQ/original"
-          alt="content"
-        />
-      }
-    >
-      {content}
-    </Content>
-  </PageHeader></div>;
+export default () => (
+  <div className="container">
+    <div id="components-page-header-demo-content">
+      <PageHeader
+        title="Title"
+        style={{
+          border: "1px solid rgb(235, 237, 240)"
+        }}
+        subTitle="This is a subtitle"
+        tags={<Tag color="blue">Running</Tag>}
+        extra={[
+          <Button key="3">Operation</Button>,
+          <Button key="2">Operation</Button>,
+          <Button key="1" type="primary">
+            Primary
+          </Button>,
+          <DropdownMenu key="more" />
+        ]}
+        avatar={{
+          src: "https://avatars1.githubusercontent.com/u/8186664?s=460&v=4"
+        }}
+        breadcrumb={{ routes }}
+      >
+        <Content
+          extraContent={
+            <img
+              src="https://gw.alipayobjects.com/mdn/mpaas_user/afts/img/A*KsfVQbuLRlYAAAAAAAAAAABjAQAAAQ/original"
+              alt="content"
+            />
+          }
+        >
+          {content}
+        </Content>
+      </PageHeader>
+    </div>
+  </div>
+);

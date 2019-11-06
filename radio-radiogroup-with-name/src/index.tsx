@@ -1,5 +1,5 @@
-import React from 'react';
-import { Radio } from 'antd';
+import React from "react";
+import { Radio } from "antd";
 
 function App() {
   return (
@@ -12,4 +12,10 @@ function App() {
   );
 }
 
-export default () => <div id="components-radio-demo-radiogroup-with-name"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-radio-demo-radiogroup-with-name">
+      <App />
+    </div>
+  </div>
+);

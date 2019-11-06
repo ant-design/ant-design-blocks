@@ -1,12 +1,13 @@
-import React from 'react';
-import { Carousel, Radio } from 'antd';
+import React from "react";
+import { Carousel, Radio } from "antd";
 
 class PositionCarouselDemo extends React.Component {
   state = {
-    dotPosition: 'top',
+    dotPosition: "top"
   };
 
-  handlePositionChange = ({ target: { value: dotPosition } }) => this.setState({ dotPosition });
+  handlePositionChange = ({ target: { value: dotPosition } }) =>
+    this.setState({ dotPosition });
 
   render() {
     const { dotPosition } = this.state;
@@ -41,4 +42,10 @@ class PositionCarouselDemo extends React.Component {
   }
 }
 
-export default () => <div id="components-carousel-demo-position"><PositionCarouselDemo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-carousel-demo-position">
+      <PositionCarouselDemo />
+    </div>
+  </div>
+);

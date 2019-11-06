@@ -1,11 +1,11 @@
-import React from 'react';
-import { Progress, Button } from 'antd';
+import React from "react";
+import { Progress, Button } from "antd";
 
 const ButtonGroup = Button.Group;
 
 class App extends React.Component {
   state = {
-    percent: 0,
+    percent: 0
   };
 
   increase = () => {
@@ -37,4 +37,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-progress-demo-dynamic"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-progress-demo-dynamic">
+      <App />
+    </div>
+  </div>
+);

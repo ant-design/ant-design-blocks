@@ -1,26 +1,26 @@
-import React from 'react';
-import { Drawer, Button, Radio } from 'antd';
+import React from "react";
+import { Drawer, Button, Radio } from "antd";
 
 const RadioGroup = Radio.Group;
 
 class App extends React.Component {
-  state = { visible: false, placement: 'left' };
+  state = { visible: false, placement: "left" };
 
   showDrawer = () => {
     this.setState({
-      visible: true,
+      visible: true
     });
   };
 
   onClose = () => {
     this.setState({
-      visible: false,
+      visible: false
     });
   };
 
   onChange = e => {
     this.setState({
-      placement: e.target.value,
+      placement: e.target.value
     });
   };
 
@@ -56,4 +56,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-drawer-demo-placement"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-drawer-demo-placement">
+      <App />
+    </div>
+  </div>
+);

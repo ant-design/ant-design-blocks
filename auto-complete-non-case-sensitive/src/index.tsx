@@ -1,7 +1,7 @@
-import React from 'react';
-import { AutoComplete } from 'antd';
+import React from "react";
+import { AutoComplete } from "antd";
 
-const dataSource = ['Burns Bay Road', 'Downing Street', 'Wall Street'];
+const dataSource = ["Burns Bay Road", "Downing Street", "Wall Street"];
 
 function Complete() {
   return (
@@ -10,10 +10,18 @@ function Complete() {
       dataSource={dataSource}
       placeholder="try to type `b`"
       filterOption={(inputValue, option) =>
-        option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
+        option.props.children
+          .toUpperCase()
+          .indexOf(inputValue.toUpperCase()) !== -1
       }
     />
   );
 }
 
-export default () => <div id="components-auto-complete-demo-non-case-sensitive"><Complete /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-auto-complete-demo-non-case-sensitive">
+      <Complete />
+    </div>
+  </div>
+);

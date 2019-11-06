@@ -1,6 +1,6 @@
-import React from 'react';
-import { Mentions } from 'antd';
-import debounce from 'lodash/debounce';
+import React from "react";
+import { Mentions } from "antd";
+import debounce from "lodash/debounce";
 
 const { Option } = Mentions;
 
@@ -12,21 +12,21 @@ class AsyncMention extends React.Component {
   }
 
   state = {
-    search: '',
+    search: "",
     loading: false,
-    users: [],
+    users: []
   };
 
   onSearch = search => {
     this.setState({ search, loading: !!search, users: [] });
-    console.log('Search:', search);
+    console.log("Search:", search);
     this.loadGithubUsers(search);
   };
 
   loadGithubUsers(key) {
     if (!key) {
       this.setState({
-        users: [],
+        users: []
       });
       return;
     }
@@ -39,7 +39,7 @@ class AsyncMention extends React.Component {
 
         this.setState({
           users: items.slice(0, 10),
-          loading: false,
+          loading: false
         });
       });
   }
@@ -48,9 +48,17 @@ class AsyncMention extends React.Component {
     const { users, loading } = this.state;
 
     return (
-      <Mentions style={{ width: '100%' }} loading={loading} onSearch={this.onSearch}>
+      <Mentions
+        style={{ width: "100%" }}
+        loading={loading}
+        onSearch={this.onSearch}
+      >
         {users.map(({ login, avatar_url: avatar }) => (
-          <Option key={login} value={login} className="antd-demo-dynamic-option">
+          <Option
+            key={login}
+            value={login}
+            className="antd-demo-dynamic-option"
+          >
             <img src={avatar} alt={login} />
             <span>{login}</span>
           </Option>
@@ -60,4 +68,10 @@ class AsyncMention extends React.Component {
   }
 }
 
-export default () => <div id="components-mentions-demo-async"><AsyncMention /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-mentions-demo-async">
+      <AsyncMention />
+    </div>
+  </div>
+);

@@ -18,17 +18,18 @@ const parseJSX = (text, id = '') => {
   jsxText = jsxText.replace(
     /ReactDOM.render\((.*),.*mountNode.*\)/is,
     (match, key) => {
-      return `export default () => <div id="${id}">${key}</div>`;
+      return `export default () => <div className="container"><div id="${id}">${key}</div></div>`;
     }
   );
 
-  // TODO: import-sort
   jsxText = `import React from 'react';\n${jsxText}`;
+
+  jsxText = prettier.format(jsxText, { parser: 'babel' });
 
   return jsxText;
 };
 
-const parseStyle = text => {
+const parseStyle = (text, componentName) => {
   let cssText = null;
   const result1 = text.match(STYLE_TAG_SCRIPT);
   if (result1 && result1.length > 0) {
@@ -42,8 +43,18 @@ const parseStyle = text => {
     }
   }
 
+  if (componentName === 'button') {
+    if (cssText === null) {
+      cssText =
+        '.ant-btn {margin-right: 8px;margin-bottom: 12px; } .ant-btn-group > .ant-btn {margin-right: 0;}';
+    } else {
+      cssText +=
+        '.ant-btn {margin-right: 8px;margin-bottom: 12px; } .ant-btn-group > .ant-btn {margin-right: 0;}';
+    }
+  }
+
   if (cssText !== null) {
-    cssText = `.card {\n  :global {\n    ${cssText}\n  }\n}`;
+    cssText = `.container {\n  :global {\n    ${cssText}\n  }\n}`;
     cssText = prettier.format(cssText, { parser: 'less' });
   }
 

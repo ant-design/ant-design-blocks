@@ -1,19 +1,20 @@
-import React from 'react';
-import { List, message, Avatar, Spin } from 'antd';
+import React from "react";
+import { List, message, Avatar, Spin } from "antd";
 
-import reqwest from 'reqwest';
+import reqwest from "reqwest";
 
-import WindowScroller from 'react-virtualized/dist/commonjs/WindowScroller';
-import AutoSizer from 'react-virtualized/dist/commonjs/AutoSizer';
-import VList from 'react-virtualized/dist/commonjs/List';
-import InfiniteLoader from 'react-virtualized/dist/commonjs/InfiniteLoader';
+import WindowScroller from "react-virtualized/dist/commonjs/WindowScroller";
+import AutoSizer from "react-virtualized/dist/commonjs/AutoSizer";
+import VList from "react-virtualized/dist/commonjs/List";
+import InfiniteLoader from "react-virtualized/dist/commonjs/InfiniteLoader";
 
-const fakeDataUrl = 'https://randomuser.me/api/?results=5&inc=name,gender,email,nat&noinfo';
+const fakeDataUrl =
+  "https://randomuser.me/api/?results=5&inc=name,gender,email,nat&noinfo";
 
 class VirtualizedExample extends React.Component {
   state = {
     data: [],
-    loading: false,
+    loading: false
   };
 
   loadedRowsMap = {};
@@ -21,7 +22,7 @@ class VirtualizedExample extends React.Component {
   componentDidMount() {
     this.fetchData(res => {
       this.setState({
-        data: res.results,
+        data: res.results
       });
     });
   }
@@ -29,28 +30,28 @@ class VirtualizedExample extends React.Component {
   fetchData = callback => {
     reqwest({
       url: fakeDataUrl,
-      type: 'json',
-      method: 'get',
-      contentType: 'application/json',
+      type: "json",
+      method: "get",
+      contentType: "application/json",
       success: res => {
         callback(res);
-      },
+      }
     });
   };
 
   handleInfiniteOnLoad = ({ startIndex, stopIndex }) => {
     let { data } = this.state;
     this.setState({
-      loading: true,
+      loading: true
     });
     for (let i = startIndex; i <= stopIndex; i++) {
       // 1 means loading
       this.loadedRowsMap[i] = 1;
     }
     if (data.length > 19) {
-      message.warning('Virtualized List loaded all');
+      message.warning("Virtualized List loaded all");
       this.setState({
-        loading: false,
+        loading: false
       });
       return;
     }
@@ -58,7 +59,7 @@ class VirtualizedExample extends React.Component {
       data = data.concat(res.results);
       this.setState({
         data,
-        loading: false,
+        loading: false
       });
     });
   };
@@ -71,7 +72,9 @@ class VirtualizedExample extends React.Component {
     return (
       <List.Item key={key} style={style}>
         <List.Item.Meta
-          avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+          avatar={
+            <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+          }
           title={<a href="https://ant.design">{item.name.last}</a>}
           description={item.email}
         />
@@ -82,7 +85,14 @@ class VirtualizedExample extends React.Component {
 
   render() {
     const { data } = this.state;
-    const vlist = ({ height, isScrolling, onChildScroll, scrollTop, onRowsRendered, width }) => (
+    const vlist = ({
+      height,
+      isScrolling,
+      onChildScroll,
+      scrollTop,
+      onRowsRendered,
+      width
+    }) => (
       <VList
         autoHeight
         height={height}
@@ -97,7 +107,13 @@ class VirtualizedExample extends React.Component {
         width={width}
       />
     );
-    const autoSize = ({ height, isScrolling, onChildScroll, scrollTop, onRowsRendered }) => (
+    const autoSize = ({
+      height,
+      isScrolling,
+      onChildScroll,
+      scrollTop,
+      onRowsRendered
+    }) => (
       <AutoSizer disableHeight>
         {({ width }) =>
           vlist({
@@ -106,12 +122,17 @@ class VirtualizedExample extends React.Component {
             onChildScroll,
             scrollTop,
             onRowsRendered,
-            width,
+            width
           })
         }
       </AutoSizer>
     );
-    const infiniteLoader = ({ height, isScrolling, onChildScroll, scrollTop }) => (
+    const infiniteLoader = ({
+      height,
+      isScrolling,
+      onChildScroll,
+      scrollTop
+    }) => (
       <InfiniteLoader
         isRowLoaded={this.isRowLoaded}
         loadMoreRows={this.handleInfiniteOnLoad}
@@ -123,7 +144,7 @@ class VirtualizedExample extends React.Component {
             isScrolling,
             onChildScroll,
             scrollTop,
-            onRowsRendered,
+            onRowsRendered
           })
         }
       </InfiniteLoader>
@@ -137,4 +158,10 @@ class VirtualizedExample extends React.Component {
   }
 }
 
-export default () => <div id="components-list-demo-infinite-virtualized-load"><VirtualizedExample /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-list-demo-infinite-virtualized-load">
+      <VirtualizedExample />
+    </div>
+  </div>
+);

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Affix, Button } from 'antd';
+import React from "react";
+import { Affix, Button } from "antd";
 
 class Demo extends React.Component {
   render() {
@@ -20,4 +20,10 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <div id="components-affix-demo-target"><Demo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-affix-demo-target">
+      <Demo />
+    </div>
+  </div>
+);

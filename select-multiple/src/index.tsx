@@ -1,5 +1,5 @@
-import React from 'react';
-import { Select } from 'antd';
+import React from "react";
+import { Select } from "antd";
 
 const { Option } = Select;
 
@@ -12,13 +12,18 @@ function handleChange(value) {
   console.log(`selected ${value}`);
 }
 
-export default () => <div id="components-select-demo-multiple">
-  <Select
-    mode="multiple"
-    style={{ width: '100%' }}
-    placeholder="Please select"
-    defaultValue={['a10', 'c12']}
-    onChange={handleChange}
-  >
-    {children}
-  </Select></div>;
+export default () => (
+  <div className="container">
+    <div id="components-select-demo-multiple">
+      <Select
+        mode="multiple"
+        style={{ width: "100%" }}
+        placeholder="Please select"
+        defaultValue={["a10", "c12"]}
+        onChange={handleChange}
+      >
+        {children}
+      </Select>
+    </div>
+  </div>
+);

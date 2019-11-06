@@ -1,19 +1,19 @@
-import React from 'react';
-import { Table } from 'antd';
+import React from "react";
+import { Table } from "antd";
 
 const columns = [
   {
-    title: 'Name',
-    dataIndex: 'name',
+    title: "Name",
+    dataIndex: "name"
   },
   {
-    title: 'Age',
-    dataIndex: 'age',
+    title: "Age",
+    dataIndex: "age"
   },
   {
-    title: 'Address',
-    dataIndex: 'address',
-  },
+    title: "Address",
+    dataIndex: "address"
+  }
 ];
 
 const data = [];
@@ -22,17 +22,17 @@ for (let i = 0; i < 46; i++) {
     key: i,
     name: `Edward King ${i}`,
     age: 32,
-    address: `London, Park Lane no. ${i}`,
+    address: `London, Park Lane no. ${i}`
   });
 }
 
 class App extends React.Component {
   state = {
-    selectedRowKeys: [], // Check here to configure the default column
+    selectedRowKeys: [] // Check here to configure the default column
   };
 
   onSelectChange = selectedRowKeys => {
-    console.log('selectedRowKeys changed: ', selectedRowKeys);
+    console.log("selectedRowKeys changed: ", selectedRowKeys);
     this.setState({ selectedRowKeys });
   };
 
@@ -44,17 +44,17 @@ class App extends React.Component {
       hideDefaultSelections: true,
       selections: [
         {
-          key: 'all-data',
-          text: 'Select All Data',
+          key: "all-data",
+          text: "Select All Data",
           onSelect: () => {
             this.setState({
-              selectedRowKeys: [...Array(46).keys()], // 0...45
+              selectedRowKeys: [...Array(46).keys()] // 0...45
             });
-          },
+          }
         },
         {
-          key: 'odd',
-          text: 'Select Odd Row',
+          key: "odd",
+          text: "Select Odd Row",
           onSelect: changableRowKeys => {
             let newSelectedRowKeys = [];
             newSelectedRowKeys = changableRowKeys.filter((key, index) => {
@@ -64,11 +64,11 @@ class App extends React.Component {
               return true;
             });
             this.setState({ selectedRowKeys: newSelectedRowKeys });
-          },
+          }
         },
         {
-          key: 'even',
-          text: 'Select Even Row',
+          key: "even",
+          text: "Select Even Row",
           onSelect: changableRowKeys => {
             let newSelectedRowKeys = [];
             newSelectedRowKeys = changableRowKeys.filter((key, index) => {
@@ -78,12 +78,20 @@ class App extends React.Component {
               return false;
             });
             this.setState({ selectedRowKeys: newSelectedRowKeys });
-          },
-        },
-      ],
+          }
+        }
+      ]
     };
-    return <Table rowSelection={rowSelection} columns={columns} dataSource={data} />;
+    return (
+      <Table rowSelection={rowSelection} columns={columns} dataSource={data} />
+    );
   }
 }
 
-export default () => <div id="components-table-demo-row-selection-custom"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-table-demo-row-selection-custom">
+      <App />
+    </div>
+  </div>
+);

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Tabs, Button } from 'antd';
+import React from "react";
+import { Tabs, Button } from "antd";
 
 const { TabPane } = Tabs;
 
@@ -8,12 +8,12 @@ class Demo extends React.Component {
     super(props);
     this.newTabIndex = 0;
     const panes = [
-      { title: 'Tab 1', content: 'Content of Tab Pane 1', key: '1' },
-      { title: 'Tab 2', content: 'Content of Tab Pane 2', key: '2' },
+      { title: "Tab 1", content: "Content of Tab Pane 1", key: "1" },
+      { title: "Tab 2", content: "Content of Tab Pane 2", key: "2" }
     ];
     this.state = {
       activeKey: panes[0].key,
-      panes,
+      panes
     };
   }
 
@@ -28,7 +28,7 @@ class Demo extends React.Component {
   add = () => {
     const { panes } = this.state;
     const activeKey = `newTab${this.newTabIndex++}`;
-    panes.push({ title: 'New Tab', content: 'New Tab Pane', key: activeKey });
+    panes.push({ title: "New Tab", content: "New Tab Pane", key: activeKey });
     this.setState({ panes, activeKey });
   };
 
@@ -75,4 +75,10 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <div id="components-tabs-demo-custom-add-trigger"><Demo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-tabs-demo-custom-add-trigger">
+      <Demo />
+    </div>
+  </div>
+);

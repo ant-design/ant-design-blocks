@@ -1,12 +1,12 @@
-import React from 'react';
-import { Tabs, Select } from 'antd';
+import React from "react";
+import { Tabs, Select } from "antd";
 
 const { TabPane } = Tabs;
 const { Option } = Select;
 
 class Demo extends React.Component {
   state = {
-    tabPosition: 'top',
+    tabPosition: "top"
   };
 
   changeTabPosition = tabPosition => {
@@ -45,4 +45,10 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <div id="components-tabs-demo-position"><Demo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-tabs-demo-position">
+      <Demo />
+    </div>
+  </div>
+);

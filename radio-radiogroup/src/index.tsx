@@ -1,15 +1,15 @@
-import React from 'react';
-import { Radio } from 'antd';
+import React from "react";
+import { Radio } from "antd";
 
 class App extends React.Component {
   state = {
-    value: 1,
+    value: 1
   };
 
   onChange = e => {
-    console.log('radio checked', e.target.value);
+    console.log("radio checked", e.target.value);
     this.setState({
-      value: e.target.value,
+      value: e.target.value
     });
   };
 
@@ -25,4 +25,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-radio-demo-radiogroup"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-radio-demo-radiogroup">
+      <App />
+    </div>
+  </div>
+);

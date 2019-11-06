@@ -1,22 +1,23 @@
-import React from 'react';
-import { List, message, Avatar, Spin } from 'antd';
-import reqwest from 'reqwest';
+import React from "react";
+import { List, message, Avatar, Spin } from "antd";
+import reqwest from "reqwest";
 
-import InfiniteScroll from 'react-infinite-scroller';
+import InfiniteScroll from "react-infinite-scroller";
 
-const fakeDataUrl = 'https://randomuser.me/api/?results=5&inc=name,gender,email,nat&noinfo';
+const fakeDataUrl =
+  "https://randomuser.me/api/?results=5&inc=name,gender,email,nat&noinfo";
 
 class InfiniteListExample extends React.Component {
   state = {
     data: [],
     loading: false,
-    hasMore: true,
+    hasMore: true
   };
 
   componentDidMount() {
     this.fetchData(res => {
       this.setState({
-        data: res.results,
+        data: res.results
       });
     });
   }
@@ -24,25 +25,25 @@ class InfiniteListExample extends React.Component {
   fetchData = callback => {
     reqwest({
       url: fakeDataUrl,
-      type: 'json',
-      method: 'get',
-      contentType: 'application/json',
+      type: "json",
+      method: "get",
+      contentType: "application/json",
       success: res => {
         callback(res);
-      },
+      }
     });
   };
 
   handleInfiniteOnLoad = () => {
     let { data } = this.state;
     this.setState({
-      loading: true,
+      loading: true
     });
     if (data.length > 14) {
-      message.warning('Infinite List loaded all');
+      message.warning("Infinite List loaded all");
       this.setState({
         hasMore: false,
-        loading: false,
+        loading: false
       });
       return;
     }
@@ -50,7 +51,7 @@ class InfiniteListExample extends React.Component {
       data = data.concat(res.results);
       this.setState({
         data,
-        loading: false,
+        loading: false
       });
     });
   };
@@ -92,4 +93,10 @@ class InfiniteListExample extends React.Component {
   }
 }
 
-export default () => <div id="components-list-demo-infinite-load"><InfiniteListExample /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-list-demo-infinite-load">
+      <InfiniteListExample />
+    </div>
+  </div>
+);

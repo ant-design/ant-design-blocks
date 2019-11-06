@@ -1,9 +1,9 @@
-import React from 'react';
-import { TimePicker } from 'antd';
+import React from "react";
+import { TimePicker } from "antd";
 
 class Demo extends React.Component {
   state = {
-    value: null,
+    value: null
   };
 
   onChange = time => {
@@ -16,4 +16,10 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <div id="components-time-picker-demo-value"><Demo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-time-picker-demo-value">
+      <Demo />
+    </div>
+  </div>
+);

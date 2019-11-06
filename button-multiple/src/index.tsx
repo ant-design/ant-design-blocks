@@ -1,8 +1,8 @@
-import React from 'react';
-import { Button, Menu, Dropdown, Icon } from 'antd';
+import React from "react";
+import { Button, Menu, Dropdown, Icon } from "antd";
 
 function handleMenuClick(e) {
-  console.log('click', e);
+  console.log("click", e);
 }
 
 const menu = (
@@ -13,13 +13,18 @@ const menu = (
   </Menu>
 );
 
-export default () => <div id="components-button-demo-multiple">
-  <div>
-    <Button type="primary">primary</Button>
-    <Button>secondary</Button>
-    <Dropdown overlay={menu}>
-      <Button>
-        Actions <Icon type="down" />
-      </Button>
-    </Dropdown>
-  </div></div>;
+export default () => (
+  <div className="container">
+    <div id="components-button-demo-multiple">
+      <div>
+        <Button type="primary">primary</Button>
+        <Button>secondary</Button>
+        <Dropdown overlay={menu}>
+          <Button>
+            Actions <Icon type="down" />
+          </Button>
+        </Dropdown>
+      </div>
+    </div>
+  </div>
+);

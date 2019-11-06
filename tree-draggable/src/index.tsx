@@ -1,5 +1,5 @@
-import React from 'react';
-import { Tree } from 'antd';
+import React from "react";
+import { Tree } from "antd";
 
 const { TreeNode } = Tree;
 
@@ -9,7 +9,7 @@ const z = 1;
 const gData = [];
 
 const generateData = (_level, _preKey, _tns) => {
-  const preKey = _preKey || '0';
+  const preKey = _preKey || "0";
   const tns = _tns || gData;
 
   const children = [];
@@ -34,7 +34,7 @@ generateData(z);
 class Demo extends React.Component {
   state = {
     gData,
-    expandedKeys: ['0-0', '0-0-0', '0-0-0-0'],
+    expandedKeys: ["0-0", "0-0-0", "0-0-0-0"]
   };
 
   onDragEnter = info => {
@@ -49,8 +49,9 @@ class Demo extends React.Component {
     console.log(info);
     const dropKey = info.node.props.eventKey;
     const dragKey = info.dragNode.props.eventKey;
-    const dropPos = info.node.props.pos.split('-');
-    const dropPosition = info.dropPosition - Number(dropPos[dropPos.length - 1]);
+    const dropPos = info.node.props.pos.split("-");
+    const dropPosition =
+      info.dropPosition - Number(dropPos[dropPos.length - 1]);
 
     const loop = (data, key, callback) => {
       data.forEach((item, index, arr) => {
@@ -103,7 +104,7 @@ class Demo extends React.Component {
     }
 
     this.setState({
-      gData: data,
+      gData: data
     });
   };
 
@@ -134,4 +135,10 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <div id="components-tree-demo-draggable"><Demo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-tree-demo-draggable">
+      <Demo />
+    </div>
+  </div>
+);

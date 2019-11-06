@@ -1,11 +1,11 @@
-import React from 'react';
-import { Rate } from 'antd';
+import React from "react";
+import { Rate } from "antd";
 
-const desc = ['terrible', 'bad', 'normal', 'good', 'wonderful'];
+const desc = ["terrible", "bad", "normal", "good", "wonderful"];
 
 class Rater extends React.Component {
   state = {
-    value: 3,
+    value: 3
   };
 
   handleChange = value => {
@@ -17,10 +17,16 @@ class Rater extends React.Component {
     return (
       <span>
         <Rate tooltips={desc} onChange={this.handleChange} value={value} />
-        {value ? <span className="ant-rate-text">{desc[value - 1]}</span> : ''}
+        {value ? <span className="ant-rate-text">{desc[value - 1]}</span> : ""}
       </span>
     );
   }
 }
 
-export default () => <div id="components-rate-demo-text"><Rater /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-rate-demo-text">
+      <Rater />
+    </div>
+  </div>
+);

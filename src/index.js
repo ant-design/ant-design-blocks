@@ -64,7 +64,7 @@ const generateBlock = async demoWithText => {
 
   const id = `components-${componentName}-demo-${mdBaseName}`;
   const jsxText = parseJSX(text, id);
-  const cssText = parseStyle(text);
+  const cssText = parseStyle(text, componentName);
   const indexTSXPath = path.join(blockDir, 'src/index.tsx');
   const indexLessPath = path.join(blockDir, 'src/index.less');
   try {

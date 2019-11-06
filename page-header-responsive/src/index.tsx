@@ -1,5 +1,5 @@
-import React from 'react';
-import { PageHeader, Tabs, Button, Statistic, Descriptions } from 'antd';
+import React from "react";
+import { PageHeader, Tabs, Button, Statistic, Descriptions } from "antd";
 
 const { TabPane } = Tabs;
 
@@ -20,16 +20,16 @@ const renderContent = (column = 2) => (
 const extraContent = (
   <div
     style={{
-      display: 'flex',
-      width: 'max-content',
-      justifyContent: 'flex-end',
+      display: "flex",
+      width: "max-content",
+      justifyContent: "flex-end"
     }}
   >
     <Statistic
       title="Status"
       value="Pending"
       style={{
-        marginRight: 32,
+        marginRight: 32
       }}
     />
     <Statistic title="Price" prefix="$" value={568.08} />
@@ -45,26 +45,34 @@ const Content = ({ children, extra }) => {
   );
 };
 
-export default () => <div id="components-page-header-demo-responsive">
-  <div>
-    <PageHeader
-      onBack={() => window.history.back()}
-      title="Title"
-      subTitle="This is a subtitle"
-      extra={[
-        <Button key="3">Operation</Button>,
-        <Button key="2">Operation</Button>,
-        <Button key="1" type="primary">
-          Primary
-        </Button>,
-      ]}
-      footer={
-        <Tabs defaultActiveKey="1">
-          <TabPane tab="Details" key="1" />
-          <TabPane tab="Rule" key="2" />
-        </Tabs>
-      }
-    >
-      <Content extra={extraContent}>{renderContent()}</Content>
-    </PageHeader>
-  </div></div>;
+export default () => (
+  <div className="container">
+    <div id="components-page-header-demo-responsive">
+      <div>
+        <PageHeader
+          style={{
+            border: "1px solid rgb(235, 237, 240)"
+          }}
+          onBack={() => window.history.back()}
+          title="Title"
+          subTitle="This is a subtitle"
+          extra={[
+            <Button key="3">Operation</Button>,
+            <Button key="2">Operation</Button>,
+            <Button key="1" type="primary">
+              Primary
+            </Button>
+          ]}
+          footer={
+            <Tabs defaultActiveKey="1">
+              <TabPane tab="Details" key="1" />
+              <TabPane tab="Rule" key="2" />
+            </Tabs>
+          }
+        >
+          <Content extra={extraContent}>{renderContent()}</Content>
+        </PageHeader>
+      </div>
+    </div>
+  </div>
+);

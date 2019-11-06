@@ -1,5 +1,5 @@
-import React from 'react';
-import { Select } from 'antd';
+import React from "react";
+import { Select } from "antd";
 
 const { Option } = Select;
 
@@ -12,7 +12,17 @@ function handleChange(value) {
   console.log(`selected ${value}`);
 }
 
-export default () => <div id="components-select-demo-automatic-tokenization">
-  <Select mode="tags" style={{ width: '100%' }} onChange={handleChange} tokenSeparators={[',']}>
-    {children}
-  </Select></div>;
+export default () => (
+  <div className="container">
+    <div id="components-select-demo-automatic-tokenization">
+      <Select
+        mode="tags"
+        style={{ width: "100%" }}
+        onChange={handleChange}
+        tokenSeparators={[","]}
+      >
+        {children}
+      </Select>
+    </div>
+  </div>
+);

@@ -1,14 +1,14 @@
-import React from 'react';
-import { TreeSelect } from 'antd';
+import React from "react";
+import { TreeSelect } from "antd";
 
 class Demo extends React.Component {
   state = {
     value: undefined,
     treeData: [
-      { id: 1, pId: 0, value: '1', title: 'Expand to load' },
-      { id: 2, pId: 0, value: '2', title: 'Expand to load' },
-      { id: 3, pId: 0, value: '3', title: 'Tree Node', isLeaf: true },
-    ],
+      { id: 1, pId: 0, value: "1", title: "Expand to load" },
+      { id: 2, pId: 0, value: "2", title: "Expand to load" },
+      { id: 3, pId: 0, value: "3", title: "Tree Node", isLeaf: true }
+    ]
   };
 
   genTreeNode = (parentId, isLeaf = false) => {
@@ -19,8 +19,8 @@ class Demo extends React.Component {
       id: random,
       pId: parentId,
       value: random,
-      title: isLeaf ? 'Tree Node' : 'Expand to load',
-      isLeaf,
+      title: isLeaf ? "Tree Node" : "Expand to load",
+      isLeaf
     };
   };
 
@@ -31,8 +31,8 @@ class Demo extends React.Component {
         this.setState({
           treeData: this.state.treeData.concat([
             this.genTreeNode(id, false),
-            this.genTreeNode(id, true),
-          ]),
+            this.genTreeNode(id, true)
+          ])
         });
         resolve();
       }, 300);
@@ -48,9 +48,9 @@ class Demo extends React.Component {
     return (
       <TreeSelect
         treeDataSimpleMode
-        style={{ width: 300 }}
+        style={{ width: "100%" }}
         value={this.state.value}
-        dropdownStyle={{ maxHeight: 400, overflow: 'auto' }}
+        dropdownStyle={{ maxHeight: 400, overflow: "auto" }}
         placeholder="Please select"
         onChange={this.onChange}
         loadData={this.onLoadData}
@@ -60,4 +60,10 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <div id="components-tree-select-demo-async"><Demo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-tree-select-demo-async">
+      <Demo />
+    </div>
+  </div>
+);

@@ -1,7 +1,7 @@
 {
   "name": "@umi-block/input-autosize-textarea",
   "version": "0.0.1",
-  "description": "`autosize` 属性适用于 `textarea` 节点，并且只有高度会自动变化。另外 `autosize` 可以设定为一个对象，指定最小行数和最大行数。",
+  "description": "`autoSize` 属性适用于 `textarea` 节点，并且只有高度会自动变化。另外 `autoSize` 可以设定为一个对象，指定最小行数和最大行数。\n\n> `3.24.0` 后 `autosize` 被废弃，请使用 `autoSize`。",
   "main": "src/index.js",
   "authors": { "name": "", "email": "" },
   "repository": "https://github.com/ant-design/ant-design-blocks/${BLOCKNAME}",

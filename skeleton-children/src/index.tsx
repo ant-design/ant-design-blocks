@@ -1,9 +1,9 @@
-import React from 'react';
-import { Skeleton, Button } from 'antd';
+import React from "react";
+import { Skeleton, Button } from "antd";
 
 class Demo extends React.Component {
   state = {
-    loading: false,
+    loading: false
   };
 
   showSkeleton = () => {
@@ -20,9 +20,9 @@ class Demo extends React.Component {
           <div>
             <h4>Ant Design, a design language</h4>
             <p>
-              We supply a series of design principles, practical patterns and high quality design
-              resources (Sketch and Axure), to help people create their product prototypes
-              beautifully and efficiently.
+              We supply a series of design principles, practical patterns and
+              high quality design resources (Sketch and Axure), to help people
+              create their product prototypes beautifully and efficiently.
             </p>
           </div>
         </Skeleton>
@@ -34,4 +34,10 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <div id="components-skeleton-demo-children"><Demo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-skeleton-demo-children">
+      <Demo />
+    </div>
+  </div>
+);

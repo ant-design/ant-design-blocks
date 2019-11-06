@@ -1,11 +1,11 @@
-import React from 'react';
-import { Tag, Input, Tooltip, Icon } from 'antd';
+import React from "react";
+import { Tag, Input, Tooltip, Icon } from "antd";
 
 class EditableTagGroup extends React.Component {
   state = {
-    tags: ['Unremovable', 'Tag 2', 'Tag 3'],
+    tags: ["Unremovable", "Tag 2", "Tag 3"],
     inputVisible: false,
-    inputValue: '',
+    inputValue: ""
   };
 
   handleClose = removedTag => {
@@ -32,7 +32,7 @@ class EditableTagGroup extends React.Component {
     this.setState({
       tags,
       inputVisible: false,
-      inputValue: '',
+      inputValue: ""
     });
   };
 
@@ -45,7 +45,11 @@ class EditableTagGroup extends React.Component {
         {tags.map((tag, index) => {
           const isLongTag = tag.length > 20;
           const tagElem = (
-            <Tag key={tag} closable={index !== 0} onClose={() => this.handleClose(tag)}>
+            <Tag
+              key={tag}
+              closable={index !== 0}
+              onClose={() => this.handleClose(tag)}
+            >
               {isLongTag ? `${tag.slice(0, 20)}...` : tag}
             </Tag>
           );
@@ -70,7 +74,10 @@ class EditableTagGroup extends React.Component {
           />
         )}
         {!inputVisible && (
-          <Tag onClick={this.showInput} style={{ background: '#fff', borderStyle: 'dashed' }}>
+          <Tag
+            onClick={this.showInput}
+            style={{ background: "#fff", borderStyle: "dashed" }}
+          >
             <Icon type="plus" /> New Tag
           </Tag>
         )}
@@ -79,4 +86,10 @@ class EditableTagGroup extends React.Component {
   }
 }
 
-export default () => <div id="components-tag-demo-control"><EditableTagGroup /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-tag-demo-control">
+      <EditableTagGroup />
+    </div>
+  </div>
+);

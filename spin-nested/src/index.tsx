@@ -1,5 +1,5 @@
-import React from 'react';
-import { Spin, Switch, Alert } from 'antd';
+import React from "react";
+import { Spin, Switch, Alert } from "antd";
 
 class Card extends React.Component {
   state = { loading: false };
@@ -27,4 +27,10 @@ class Card extends React.Component {
   }
 }
 
-export default () => <div id="components-spin-demo-nested"><Card /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-spin-demo-nested">
+      <Card />
+    </div>
+  </div>
+);

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Select, Radio } from 'antd';
+import React from "react";
+import { Select, Radio } from "antd";
 
 const { Option } = Select;
 
@@ -14,7 +14,7 @@ function handleChange(value) {
 
 class SelectSizesDemo extends React.Component {
   state = {
-    size: 'default',
+    size: "default"
   };
 
   handleSizeChange = e => {
@@ -32,7 +32,12 @@ class SelectSizesDemo extends React.Component {
         </Radio.Group>
         <br />
         <br />
-        <Select size={size} defaultValue="a1" onChange={handleChange} style={{ width: 200 }}>
+        <Select
+          size={size}
+          defaultValue="a1"
+          onChange={handleChange}
+          style={{ width: 200 }}
+        >
           {children}
         </Select>
         <br />
@@ -40,9 +45,9 @@ class SelectSizesDemo extends React.Component {
           mode="multiple"
           size={size}
           placeholder="Please select"
-          defaultValue={['a10', 'c12']}
+          defaultValue={["a10", "c12"]}
           onChange={handleChange}
-          style={{ width: '100%' }}
+          style={{ width: "100%" }}
         >
           {children}
         </Select>
@@ -51,9 +56,9 @@ class SelectSizesDemo extends React.Component {
           mode="tags"
           size={size}
           placeholder="Please select"
-          defaultValue={['a10', 'c12']}
+          defaultValue={["a10", "c12"]}
           onChange={handleChange}
-          style={{ width: '100%' }}
+          style={{ width: "100%" }}
         >
           {children}
         </Select>
@@ -62,4 +67,10 @@ class SelectSizesDemo extends React.Component {
   }
 }
 
-export default () => <div id="components-select-demo-size"><SelectSizesDemo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-select-demo-size">
+      <SelectSizesDemo />
+    </div>
+  </div>
+);

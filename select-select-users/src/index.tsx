@@ -1,6 +1,6 @@
-import React from 'react';
-import { Select, Spin } from 'antd';
-import debounce from 'lodash/debounce';
+import React from "react";
+import { Select, Spin } from "antd";
+import debounce from "lodash/debounce";
 
 const { Option } = Select;
 
@@ -14,15 +14,15 @@ class UserRemoteSelect extends React.Component {
   state = {
     data: [],
     value: [],
-    fetching: false,
+    fetching: false
   };
 
   fetchUser = value => {
-    console.log('fetching user', value);
+    console.log("fetching user", value);
     this.lastFetchId += 1;
     const fetchId = this.lastFetchId;
     this.setState({ data: [], fetching: true });
-    fetch('https://randomuser.me/api/?results=5')
+    fetch("https://randomuser.me/api/?results=5")
       .then(response => response.json())
       .then(body => {
         if (fetchId !== this.lastFetchId) {
@@ -31,7 +31,7 @@ class UserRemoteSelect extends React.Component {
         }
         const data = body.results.map(user => ({
           text: `${user.name.first} ${user.name.last}`,
-          value: user.login.username,
+          value: user.login.username
         }));
         this.setState({ data, fetching: false });
       });
@@ -41,7 +41,7 @@ class UserRemoteSelect extends React.Component {
     this.setState({
       value,
       data: [],
-      fetching: false,
+      fetching: false
     });
   };
 
@@ -57,7 +57,7 @@ class UserRemoteSelect extends React.Component {
         filterOption={false}
         onSearch={this.fetchUser}
         onChange={this.handleChange}
-        style={{ width: '100%' }}
+        style={{ width: "100%" }}
       >
         {data.map(d => (
           <Option key={d.value}>{d.text}</Option>
@@ -67,4 +67,10 @@ class UserRemoteSelect extends React.Component {
   }
 }
 
-export default () => <div id="components-select-demo-select-users"><UserRemoteSelect /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-select-demo-select-users">
+      <UserRemoteSelect />
+    </div>
+  </div>
+);

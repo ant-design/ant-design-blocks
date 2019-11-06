@@ -1,9 +1,9 @@
-import React from 'react';
-import { Alert } from 'antd';
+import React from "react";
+import { Alert } from "antd";
 
 class App extends React.Component {
   state = {
-    visible: true,
+    visible: true
   };
 
   handleClose = () => {
@@ -27,4 +27,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-alert-demo-smooth-closed"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-alert-demo-smooth-closed">
+      <App />
+    </div>
+  </div>
+);

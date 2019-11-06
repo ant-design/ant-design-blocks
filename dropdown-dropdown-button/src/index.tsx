@@ -1,14 +1,14 @@
-import React from 'react';
-import { Menu, Dropdown, Button, Icon, message } from 'antd';
+import React from "react";
+import { Menu, Dropdown, Button, Icon, message } from "antd";
 
 function handleButtonClick(e) {
-  message.info('Click on left button.');
-  console.log('click left button', e);
+  message.info("Click on left button.");
+  console.log("click left button", e);
 }
 
 function handleMenuClick(e) {
-  message.info('Click on menu item.');
-  console.log('click', e);
+  message.info("Click on menu item.");
+  console.log("click", e);
 }
 
 const menu = (
@@ -28,20 +28,25 @@ const menu = (
   </Menu>
 );
 
-export default () => <div id="components-dropdown-demo-dropdown-button">
-  <div id="components-dropdown-demo-dropdown-button">
-    <Dropdown.Button onClick={handleButtonClick} overlay={menu}>
-      Dropdown
-    </Dropdown.Button>
-    <Dropdown.Button overlay={menu} icon={<Icon type="user" />}>
-      Dropdown
-    </Dropdown.Button>
-    <Dropdown.Button onClick={handleButtonClick} overlay={menu} disabled>
-      Dropdown
-    </Dropdown.Button>
-    <Dropdown overlay={menu}>
-      <Button>
-        Button <Icon type="down" />
-      </Button>
-    </Dropdown>
-  </div></div>;
+export default () => (
+  <div className="container">
+    <div id="components-dropdown-demo-dropdown-button">
+      <div id="components-dropdown-demo-dropdown-button">
+        <Dropdown.Button onClick={handleButtonClick} overlay={menu}>
+          Dropdown
+        </Dropdown.Button>
+        <Dropdown.Button overlay={menu} icon={<Icon type="user" />}>
+          Dropdown
+        </Dropdown.Button>
+        <Dropdown.Button onClick={handleButtonClick} overlay={menu} disabled>
+          Dropdown
+        </Dropdown.Button>
+        <Dropdown overlay={menu}>
+          <Button>
+            Button <Icon type="down" />
+          </Button>
+        </Dropdown>
+      </div>
+    </div>
+  </div>
+);

@@ -1,5 +1,5 @@
-import React from 'react';
-import { TimePicker, Button } from 'antd';
+import React from "react";
+import { TimePicker, Button } from "antd";
 
 class TimePickerAddonDemo extends React.Component {
   state = { open: false };
@@ -25,4 +25,10 @@ class TimePickerAddonDemo extends React.Component {
   }
 }
 
-export default () => <div id="components-time-picker-demo-addon"><TimePickerAddonDemo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-time-picker-demo-addon">
+      <TimePickerAddonDemo />
+    </div>
+  </div>
+);

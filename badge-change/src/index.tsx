@@ -1,12 +1,12 @@
-import React from 'react';
-import { Badge, Button, Icon, Switch } from 'antd';
+import React from "react";
+import { Badge, Button, Icon, Switch } from "antd";
 
 const ButtonGroup = Button.Group;
 
 class Demo extends React.Component {
   state = {
     count: 5,
-    show: true,
+    show: true
   };
 
   increase = () => {
@@ -53,4 +53,10 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <div id="components-badge-demo-change"><Demo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-badge-demo-change">
+      <Demo />
+    </div>
+  </div>
+);

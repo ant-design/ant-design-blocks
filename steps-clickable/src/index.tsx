@@ -1,15 +1,15 @@
-import React from 'react';
-import { Steps, Divider } from 'antd';
+import React from "react";
+import { Steps, Divider } from "antd";
 
 const { Step } = Steps;
 
 class Demo extends React.Component {
   state = {
-    current: 0,
+    current: 0
   };
 
   onChange = current => {
-    console.log('onChange:', current);
+    console.log("onChange:", current);
     this.setState({ current });
   };
 
@@ -36,4 +36,10 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <div id="components-steps-demo-clickable"><Demo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-steps-demo-clickable">
+      <Demo />
+    </div>
+  </div>
+);

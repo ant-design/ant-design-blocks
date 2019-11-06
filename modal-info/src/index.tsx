@@ -1,44 +1,48 @@
-import React from 'react';
-import { Modal, Button } from 'antd';
+import React from "react";
+import { Modal, Button } from "antd";
 
 function info() {
   Modal.info({
-    title: 'This is a notification message',
+    title: "This is a notification message",
     content: (
       <div>
         <p>some messages...some messages...</p>
         <p>some messages...some messages...</p>
       </div>
     ),
-    onOk() {},
+    onOk() {}
   });
 }
 
 function success() {
   Modal.success({
-    title: 'This is a success message',
-    content: 'some messages...some messages...',
+    content: "some messages...some messages..."
   });
 }
 
 function error() {
   Modal.error({
-    title: 'This is an error message',
-    content: 'some messages...some messages...',
+    title: "This is an error message",
+    content: "some messages...some messages..."
   });
 }
 
 function warning() {
   Modal.warning({
-    title: 'This is a warning message',
-    content: 'some messages...some messages...',
+    title: "This is a warning message",
+    content: "some messages...some messages..."
   });
 }
 
-export default () => <div id="components-modal-demo-info">
-  <div>
-    <Button onClick={info}>Info</Button>
-    <Button onClick={success}>Success</Button>
-    <Button onClick={error}>Error</Button>
-    <Button onClick={warning}>Warning</Button>
-  </div></div>;
+export default () => (
+  <div className="container">
+    <div id="components-modal-demo-info">
+      <div>
+        <Button onClick={info}>Info</Button>
+        <Button onClick={success}>Success</Button>
+        <Button onClick={error}>Error</Button>
+        <Button onClick={warning}>Warning</Button>
+      </div>
+    </div>
+  </div>
+);

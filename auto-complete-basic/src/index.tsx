@@ -1,19 +1,21 @@
-import React from 'react';
-import { AutoComplete } from 'antd';
+import React from "react";
+import { AutoComplete } from "antd";
 
 function onSelect(value) {
-  console.log('onSelect', value);
+  console.log("onSelect", value);
 }
 
 class Complete extends React.Component {
   state = {
-    value: '',
-    dataSource: [],
+    value: "",
+    dataSource: []
   };
 
   onSearch = searchText => {
     this.setState({
-      dataSource: !searchText ? [] : [searchText, searchText.repeat(2), searchText.repeat(3)],
+      dataSource: !searchText
+        ? []
+        : [searchText, searchText.repeat(2), searchText.repeat(3)]
     });
   };
 
@@ -48,4 +50,10 @@ class Complete extends React.Component {
   }
 }
 
-export default () => <div id="components-auto-complete-demo-basic"><Complete /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-auto-complete-demo-basic">
+      <Complete />
+    </div>
+  </div>
+);

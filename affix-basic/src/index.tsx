@@ -1,10 +1,10 @@
-import React from 'react';
-import { Affix, Button } from 'antd';
+import React from "react";
+import { Affix, Button } from "antd";
 
 class Demo extends React.Component {
   state = {
     top: 10,
-    bottom: 10,
+    bottom: 10
   };
 
   render() {
@@ -15,7 +15,7 @@ class Demo extends React.Component {
             type="primary"
             onClick={() => {
               this.setState({
-                top: this.state.top + 10,
+                top: this.state.top + 10
               });
             }}
           >
@@ -28,7 +28,7 @@ class Demo extends React.Component {
             type="primary"
             onClick={() => {
               this.setState({
-                bottom: this.state.bottom + 10,
+                bottom: this.state.bottom + 10
               });
             }}
           >
@@ -40,4 +40,10 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <div id="components-affix-demo-basic"><Demo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-affix-demo-basic">
+      <Demo />
+    </div>
+  </div>
+);

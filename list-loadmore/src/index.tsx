@@ -1,7 +1,7 @@
-import React from 'react';
-import { List, Avatar, Button, Skeleton } from 'antd';
+import React from "react";
+import { List, Avatar, Button, Skeleton } from "antd";
 
-import reqwest from 'reqwest';
+import reqwest from "reqwest";
 
 const count = 3;
 const fakeDataUrl = `https://randomuser.me/api/?results=${count}&inc=name,gender,email,nat&noinfo`;
@@ -11,7 +11,7 @@ class LoadMoreList extends React.Component {
     initLoading: true,
     loading: false,
     data: [],
-    list: [],
+    list: []
   };
 
   componentDidMount() {
@@ -19,7 +19,7 @@ class LoadMoreList extends React.Component {
       this.setState({
         initLoading: false,
         data: res.results,
-        list: res.results,
+        list: res.results
       });
     });
   }
@@ -27,19 +27,21 @@ class LoadMoreList extends React.Component {
   getData = callback => {
     reqwest({
       url: fakeDataUrl,
-      type: 'json',
-      method: 'get',
-      contentType: 'application/json',
+      type: "json",
+      method: "get",
+      contentType: "application/json",
       success: res => {
         callback(res);
-      },
+      }
     });
   };
 
   onLoadMore = () => {
     this.setState({
       loading: true,
-      list: this.state.data.concat([...new Array(count)].map(() => ({ loading: true, name: {} }))),
+      list: this.state.data.concat(
+        [...new Array(count)].map(() => ({ loading: true, name: {} }))
+      )
     });
     this.getData(res => {
       const data = this.state.data.concat(res.results);
@@ -47,14 +49,14 @@ class LoadMoreList extends React.Component {
         {
           data,
           list: data,
-          loading: false,
+          loading: false
         },
         () => {
           // Resetting window's offsetTop so as to display react-virtualized demo underfloor.
           // In real scene, you can using public method of react-virtualized:
           // https://stackoverflow.com/questions/46700726/how-to-use-public-method-updateposition-of-react-virtualized
-          window.dispatchEvent(new Event('resize'));
-        },
+          window.dispatchEvent(new Event("resize"));
+        }
       );
     });
   };
@@ -65,10 +67,10 @@ class LoadMoreList extends React.Component {
       !initLoading && !loading ? (
         <div
           style={{
-            textAlign: 'center',
+            textAlign: "center",
             marginTop: 12,
             height: 32,
-            lineHeight: '32px',
+            lineHeight: "32px"
           }}
         >
           <Button onClick={this.onLoadMore}>loading more</Button>
@@ -84,7 +86,10 @@ class LoadMoreList extends React.Component {
         dataSource={list}
         renderItem={item => (
           <List.Item
-            actions={[<a key="list-loadmore-edit">edit</a>, <a key="list-loadmore-more">more</a>]}
+            actions={[
+              <a key="list-loadmore-edit">edit</a>,
+              <a key="list-loadmore-more">more</a>
+            ]}
           >
             <Skeleton avatar title={false} loading={item.loading} active>
               <List.Item.Meta
@@ -103,4 +108,10 @@ class LoadMoreList extends React.Component {
   }
 }
 
-export default () => <div id="components-list-demo-loadmore"><LoadMoreList /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-list-demo-loadmore">
+      <LoadMoreList />
+    </div>
+  </div>
+);

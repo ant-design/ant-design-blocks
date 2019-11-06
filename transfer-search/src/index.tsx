@@ -1,10 +1,10 @@
-import React from 'react';
-import { Transfer } from 'antd';
+import React from "react";
+import { Transfer } from "antd";
 
 class App extends React.Component {
   state = {
     mockData: [],
-    targetKeys: [],
+    targetKeys: []
   };
 
   componentDidMount() {
@@ -19,7 +19,7 @@ class App extends React.Component {
         key: i.toString(),
         title: `content${i + 1}`,
         description: `description of content${i + 1}`,
-        chosen: Math.random() * 2 > 1,
+        chosen: Math.random() * 2 > 1
       };
       if (data.chosen) {
         targetKeys.push(data.key);
@@ -29,14 +29,15 @@ class App extends React.Component {
     this.setState({ mockData, targetKeys });
   };
 
-  filterOption = (inputValue, option) => option.description.indexOf(inputValue) > -1;
+  filterOption = (inputValue, option) =>
+    option.description.indexOf(inputValue) > -1;
 
   handleChange = targetKeys => {
     this.setState({ targetKeys });
   };
 
   handleSearch = (dir, value) => {
-    console.log('search:', dir, value);
+    console.log("search:", dir, value);
   };
 
   render() {
@@ -54,4 +55,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-transfer-demo-search"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-transfer-demo-search">
+      <App />
+    </div>
+  </div>
+);

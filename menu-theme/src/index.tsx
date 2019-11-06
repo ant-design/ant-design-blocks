@@ -1,24 +1,24 @@
-import React from 'react';
-import { Menu, Icon, Switch } from 'antd';
+import React from "react";
+import { Menu, Icon, Switch } from "antd";
 
 const { SubMenu } = Menu;
 
 class Sider extends React.Component {
   state = {
-    theme: 'dark',
-    current: '1',
+    theme: "dark",
+    current: "1"
   };
 
   changeTheme = value => {
     this.setState({
-      theme: value ? 'dark' : 'light',
+      theme: value ? "dark" : "light"
     });
   };
 
   handleClick = e => {
-    console.log('click ', e);
+    console.log("click ", e);
     this.setState({
-      current: e.key,
+      current: e.key
     });
   };
 
@@ -26,7 +26,7 @@ class Sider extends React.Component {
     return (
       <div>
         <Switch
-          checked={this.state.theme === 'dark'}
+          checked={this.state.theme === "dark"}
           onChange={this.changeTheme}
           checkedChildren="Dark"
           unCheckedChildren="Light"
@@ -37,7 +37,7 @@ class Sider extends React.Component {
           theme={this.state.theme}
           onClick={this.handleClick}
           style={{ width: 256 }}
-          defaultOpenKeys={['sub1']}
+          defaultOpenKeys={["sub1"]}
           selectedKeys={[this.state.current]}
           mode="inline"
         >
@@ -60,7 +60,7 @@ class Sider extends React.Component {
             title={
               <span>
                 <Icon type="appstore" />
-                <span>Navigtion Two</span>
+                <span>Navigation Two</span>
               </span>
             }
           >
@@ -91,4 +91,10 @@ class Sider extends React.Component {
   }
 }
 
-export default () => <div id="components-menu-demo-theme"><Sider /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-menu-demo-theme">
+      <Sider />
+    </div>
+  </div>
+);

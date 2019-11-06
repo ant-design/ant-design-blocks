@@ -1,5 +1,17 @@
-import React from 'react';
-import { PageHeader } from 'antd';
+import React from "react";
+import { PageHeader } from "antd";
 
-export default () => <div id="components-page-header-demo-basic">
-  <PageHeader onBack={() => null} title="Title" subTitle="This is a subtitle" /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-page-header-demo-basic">
+      <PageHeader
+        style={{
+          border: "1px solid rgb(235, 237, 240)"
+        }}
+        onBack={() => null}
+        title="Title"
+        subTitle="This is a subtitle"
+      />
+    </div>
+  </div>
+);

@@ -1,15 +1,15 @@
-import React from 'react';
-import { Tree } from 'antd';
+import React from "react";
+import { Tree } from "antd";
 
 const { TreeNode } = Tree;
 
 class Demo extends React.Component {
   state = {
     treeData: [
-      { title: 'Expand to load', key: '0' },
-      { title: 'Expand to load', key: '1' },
-      { title: 'Tree Node', key: '2', isLeaf: true },
-    ],
+      { title: "Expand to load", key: "0" },
+      { title: "Expand to load", key: "1" },
+      { title: "Tree Node", key: "2", isLeaf: true }
+    ]
   };
 
   onLoadData = treeNode =>
@@ -20,11 +20,11 @@ class Demo extends React.Component {
       }
       setTimeout(() => {
         treeNode.props.dataRef.children = [
-          { title: 'Child Node', key: `${treeNode.props.eventKey}-0` },
-          { title: 'Child Node', key: `${treeNode.props.eventKey}-1` },
+          { title: "Child Node", key: `${treeNode.props.eventKey}-0` },
+          { title: "Child Node", key: `${treeNode.props.eventKey}-1` }
         ];
         this.setState({
-          treeData: [...this.state.treeData],
+          treeData: [...this.state.treeData]
         });
         resolve();
       }, 1000);
@@ -43,8 +43,18 @@ class Demo extends React.Component {
     });
 
   render() {
-    return <Tree loadData={this.onLoadData}>{this.renderTreeNodes(this.state.treeData)}</Tree>;
+    return (
+      <Tree loadData={this.onLoadData}>
+        {this.renderTreeNodes(this.state.treeData)}
+      </Tree>
+    );
   }
 }
 
-export default () => <div id="components-tree-demo-dynamic"><Demo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-tree-demo-dynamic">
+      <Demo />
+    </div>
+  </div>
+);

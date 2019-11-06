@@ -1,7 +1,7 @@
-import React from 'react';
-import { Select } from 'antd';
-import jsonp from 'fetch-jsonp';
-import querystring from 'querystring';
+import React from "react";
+import { Select } from "antd";
+import jsonp from "fetch-jsonp";
+import querystring from "querystring";
 
 const { Option } = Select;
 
@@ -17,8 +17,8 @@ function fetch(value, callback) {
 
   function fake() {
     const str = querystring.encode({
-      code: 'utf-8',
-      q: value,
+      code: "utf-8",
+      q: value
     });
     jsonp(`https://suggest.taobao.com/sug?${str}`)
       .then(response => response.json())
@@ -29,7 +29,7 @@ function fetch(value, callback) {
           result.forEach(r => {
             data.push({
               value: r[0],
-              text: r[0],
+              text: r[0]
             });
           });
           callback(data);
@@ -43,7 +43,7 @@ function fetch(value, callback) {
 class SearchInput extends React.Component {
   state = {
     data: [],
-    value: undefined,
+    value: undefined
   };
 
   handleSearch = value => {
@@ -59,7 +59,9 @@ class SearchInput extends React.Component {
   };
 
   render() {
-    const options = this.state.data.map(d => <Option key={d.value}>{d.text}</Option>);
+    const options = this.state.data.map(d => (
+      <Option key={d.value}>{d.text}</Option>
+    ));
     return (
       <Select
         showSearch
@@ -79,4 +81,10 @@ class SearchInput extends React.Component {
   }
 }
 
-export default () => <div id="components-select-demo-search-box"><SearchInput placeholder="input search text" style={{ width: 200 }} /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-select-demo-search-box">
+      <SearchInput placeholder="input search text" style={{ width: 200 }} />
+    </div>
+  </div>
+);

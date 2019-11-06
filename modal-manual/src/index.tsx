@@ -1,16 +1,16 @@
-import React from 'react';
-import { Modal, Button } from 'antd';
+import React from "react";
+import { Modal, Button } from "antd";
 
 function countDown() {
   let secondsToGo = 5;
   const modal = Modal.success({
-    title: 'This is a notification message',
-    content: `This modal will be destroyed after ${secondsToGo} second.`,
+    title: "This is a notification message",
+    content: `This modal will be destroyed after ${secondsToGo} second.`
   });
   const timer = setInterval(() => {
     secondsToGo -= 1;
     modal.update({
-      content: `This modal will be destroyed after ${secondsToGo} second.`,
+      content: `This modal will be destroyed after ${secondsToGo} second.`
     });
   }, 1000);
   setTimeout(() => {
@@ -19,4 +19,10 @@ function countDown() {
   }, secondsToGo * 1000);
 }
 
-export default () => <div id="components-modal-demo-manual"><Button onClick={countDown}>Open modal to close in 5s</Button></div>;
+export default () => (
+  <div className="container">
+    <div id="components-modal-demo-manual">
+      <Button onClick={countDown}>Open modal to close in 5s</Button>
+    </div>
+  </div>
+);

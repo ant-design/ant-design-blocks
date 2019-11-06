@@ -1,23 +1,23 @@
-import React from 'react';
-import { Menu, Icon, Switch } from 'antd';
+import React from "react";
+import { Menu, Icon, Switch } from "antd";
 
 const { SubMenu } = Menu;
 
 class Sider extends React.Component {
   state = {
-    mode: 'inline',
-    theme: 'light',
+    mode: "inline",
+    theme: "light"
   };
 
   changeMode = value => {
     this.setState({
-      mode: value ? 'vertical' : 'inline',
+      mode: value ? "vertical" : "inline"
     });
   };
 
   changeTheme = value => {
     this.setState({
-      theme: value ? 'dark' : 'light',
+      theme: value ? "dark" : "light"
     });
   };
 
@@ -25,14 +25,14 @@ class Sider extends React.Component {
     return (
       <div>
         <Switch onChange={this.changeMode} /> Change Mode
-        <span className="ant-divider" style={{ margin: '0 1em' }} />
+        <span className="ant-divider" style={{ margin: "0 1em" }} />
         <Switch onChange={this.changeTheme} /> Change Theme
         <br />
         <br />
         <Menu
           style={{ width: 256 }}
-          defaultSelectedKeys={['1']}
-          defaultOpenKeys={['sub1']}
+          defaultSelectedKeys={["1"]}
+          defaultOpenKeys={["sub1"]}
           mode={this.state.mode}
           theme={this.state.theme}
         >
@@ -80,4 +80,10 @@ class Sider extends React.Component {
   }
 }
 
-export default () => <div id="components-menu-demo-switch-mode"><Sider /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-menu-demo-switch-mode">
+      <Sider />
+    </div>
+  </div>
+);

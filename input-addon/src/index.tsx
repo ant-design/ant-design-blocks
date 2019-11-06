@@ -1,5 +1,5 @@
-import React from 'react';
-import { Input, Select, Icon } from 'antd';
+import React from "react";
+import { Input, Select, Icon } from "antd";
 
 const { Option } = Select;
 
@@ -18,15 +18,28 @@ const selectAfter = (
   </Select>
 );
 
-export default () => <div id="components-input-demo-addon">
-  <div>
-    <div style={{ marginBottom: 16 }}>
-      <Input addonBefore="Http://" addonAfter=".com" defaultValue="mysite" />
+export default () => (
+  <div className="container">
+    <div id="components-input-demo-addon">
+      <div>
+        <div style={{ marginBottom: 16 }}>
+          <Input
+            addonBefore="Http://"
+            addonAfter=".com"
+            defaultValue="mysite"
+          />
+        </div>
+        <div style={{ marginBottom: 16 }}>
+          <Input
+            addonBefore={selectBefore}
+            addonAfter={selectAfter}
+            defaultValue="mysite"
+          />
+        </div>
+        <div style={{ marginBottom: 16 }}>
+          <Input addonAfter={<Icon type="setting" />} defaultValue="mysite" />
+        </div>
+      </div>
     </div>
-    <div style={{ marginBottom: 16 }}>
-      <Input addonBefore={selectBefore} addonAfter={selectAfter} defaultValue="mysite" />
-    </div>
-    <div style={{ marginBottom: 16 }}>
-      <Input addonAfter={<Icon type="setting" />} defaultValue="mysite" />
-    </div>
-  </div></div>;
+  </div>
+);

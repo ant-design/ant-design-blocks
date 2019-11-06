@@ -1,37 +1,37 @@
-import React from 'react';
-import { Cascader } from 'antd';
+import React from "react";
+import { Cascader } from "antd";
 
 const options = [
   {
-    value: 'zhejiang',
-    label: 'Zhejiang',
+    value: "zhejiang",
+    label: "Zhejiang",
     children: [
       {
-        value: 'hangzhou',
-        label: 'Hangzhou',
-      },
-    ],
+        value: "hangzhou",
+        label: "Hangzhou"
+      }
+    ]
   },
   {
-    value: 'jiangsu',
-    label: 'Jiangsu',
+    value: "jiangsu",
+    label: "Jiangsu",
     children: [
       {
-        value: 'nanjing',
-        label: 'Nanjing',
-      },
-    ],
-  },
+        value: "nanjing",
+        label: "Nanjing"
+      }
+    ]
+  }
 ];
 
 class CitySwitcher extends React.Component {
   state = {
-    text: 'Unselect',
+    text: "Unselect"
   };
 
   onChange = (value, selectedOptions) => {
     this.setState({
-      text: selectedOptions.map(o => o.label).join(', '),
+      text: selectedOptions.map(o => o.label).join(", ")
     });
   };
 
@@ -48,4 +48,10 @@ class CitySwitcher extends React.Component {
   }
 }
 
-export default () => <div id="components-cascader-demo-custom-trigger"><CitySwitcher /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-cascader-demo-custom-trigger">
+      <CitySwitcher />
+    </div>
+  </div>
+);

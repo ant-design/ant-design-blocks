@@ -1,17 +1,22 @@
-import React from 'react';
-import { Button, notification } from 'antd';
+import React from "react";
+import { Button, notification } from "antd";
 
 const openNotification = () => {
   const args = {
-    message: 'Notification Title',
+    message: "Notification Title",
     description:
-      'I will never close automatically. I will be close automatically. I will never close automatically.',
-    duration: 0,
+      "I will never close automatically. I will be close automatically. I will never close automatically.",
+    duration: 0
   };
   notification.open(args);
 };
 
-export default () => <div id="components-notification-demo-duration">
-  <Button type="primary" onClick={openNotification}>
-    Open the notification box
-  </Button></div>;
+export default () => (
+  <div className="container">
+    <div id="components-notification-demo-duration">
+      <Button type="primary" onClick={openNotification}>
+        Open the notification box
+      </Button>
+    </div>
+  </div>
+);

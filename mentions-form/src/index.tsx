@@ -1,5 +1,5 @@
-import React from 'react';
-import { Mentions, Form, Button } from 'antd';
+import React from "react";
+import { Mentions, Form, Button } from "antd";
 
 const { Option, getMentions } = Mentions;
 
@@ -13,10 +13,10 @@ class App extends React.Component {
     e.preventDefault();
     this.props.form.validateFields((errors, values) => {
       if (errors) {
-        console.log('Errors in the form!!!');
+        console.log("Errors in the form!!!");
         return;
       }
-      console.log('Submit!!!');
+      console.log("Submit!!!");
       console.log(values);
     });
   };
@@ -24,7 +24,7 @@ class App extends React.Component {
   checkMention = (rule, value, callback) => {
     const mentions = getMentions(value);
     if (mentions.length < 2) {
-      callback(new Error('More than one must be selected!'));
+      callback(new Error("More than one must be selected!"));
     } else {
       callback();
     }
@@ -32,31 +32,35 @@ class App extends React.Component {
 
   render() {
     const {
-      form: { getFieldDecorator },
+      form: { getFieldDecorator }
     } = this.props;
 
     return (
       <Form layout="horizontal">
-        <Form.Item label="Top coders" labelCol={{ span: 6 }} wrapperCol={{ span: 16 }}>
-          {getFieldDecorator('coders', {
-            rules: [{ validator: this.checkMention }],
+        <Form.Item
+          label="Top coders"
+          labelCol={{ span: 6 }}
+          wrapperCol={{ span: 16 }}
+        >
+          {getFieldDecorator("coders", {
+            rules: [{ validator: this.checkMention }]
           })(
             <Mentions rows="1">
               <Option value="afc163">afc163</Option>
               <Option value="zombieJ">zombieJ</Option>
               <Option value="yesmeck">yesmeck</Option>
-            </Mentions>,
+            </Mentions>
           )}
         </Form.Item>
         <Form.Item label="Bio" labelCol={{ span: 6 }} wrapperCol={{ span: 16 }}>
-          {getFieldDecorator('bio', {
-            rules: [{ required: true }],
+          {getFieldDecorator("bio", {
+            rules: [{ required: true }]
           })(
             <Mentions rows="3" placeholder="You can use @ to ref user here">
               <Option value="afc163">afc163</Option>
               <Option value="zombieJ">zombieJ</Option>
               <Option value="yesmeck">yesmeck</Option>
-            </Mentions>,
+            </Mentions>
           )}
         </Form.Item>
         <Form.Item wrapperCol={{ span: 14, offset: 6 }}>
@@ -73,4 +77,10 @@ class App extends React.Component {
 
 const FormDemo = Form.create()(App);
 
-export default () => <div id="components-mentions-demo-form"><FormDemo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-mentions-demo-form">
+      <FormDemo />
+    </div>
+  </div>
+);

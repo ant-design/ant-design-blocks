@@ -1,10 +1,10 @@
-import React from 'react';
-import { Tabs, Radio } from 'antd';
+import React from "react";
+import { Tabs, Radio } from "antd";
 
 const { TabPane } = Tabs;
 
 class Demo extends React.Component {
-  state = { size: 'small' };
+  state = { size: "small" };
 
   onChange = e => {
     this.setState({ size: e.target.value });
@@ -14,7 +14,11 @@ class Demo extends React.Component {
     const { size } = this.state;
     return (
       <div>
-        <Radio.Group value={size} onChange={this.onChange} style={{ marginBottom: 16 }}>
+        <Radio.Group
+          value={size}
+          onChange={this.onChange}
+          style={{ marginBottom: 16 }}
+        >
           <Radio.Button value="small">Small</Radio.Button>
           <Radio.Button value="default">Default</Radio.Button>
           <Radio.Button value="large">Large</Radio.Button>
@@ -35,4 +39,10 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <div id="components-tabs-demo-size"><Demo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-tabs-demo-size">
+      <Demo />
+    </div>
+  </div>
+);

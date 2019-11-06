@@ -1,5 +1,5 @@
-import React from 'react';
-import { Select, Icon, Divider } from 'antd';
+import React from "react";
+import { Select, Icon, Divider } from "antd";
 
 const { Option } = Select;
 
@@ -7,14 +7,14 @@ let index = 0;
 
 class App extends React.Component {
   state = {
-    items: ['jack', 'lucy'],
+    items: ["jack", "lucy"]
   };
 
   addItem = () => {
-    console.log('addItem');
+    console.log("addItem");
     const { items } = this.state;
     this.setState({
-      items: [...items, `New item ${index++}`],
+      items: [...items, `New item ${index++}`]
     });
   };
 
@@ -27,9 +27,9 @@ class App extends React.Component {
         dropdownRender={menu => (
           <div>
             {menu}
-            <Divider style={{ margin: '4px 0' }} />
+            <Divider style={{ margin: "4px 0" }} />
             <div
-              style={{ padding: '4px 8px', cursor: 'pointer' }}
+              style={{ padding: "4px 8px", cursor: "pointer" }}
               onMouseDown={e => e.preventDefault()}
               onClick={this.addItem}
             >
@@ -46,4 +46,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-select-demo-custom-dropdown-menu"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-select-demo-custom-dropdown-menu">
+      <App />
+    </div>
+  </div>
+);

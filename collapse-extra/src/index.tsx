@@ -1,5 +1,5 @@
-import React from 'react';
-import { Collapse, Icon, Select } from 'antd';
+import React from "react";
+import { Collapse, Icon, Select } from "antd";
 
 const { Panel } = Collapse;
 const { Option } = Select;
@@ -26,7 +26,7 @@ const genExtra = () => (
 
 class Demo extends React.Component {
   state = {
-    expandIconPosition: 'left',
+    expandIconPosition: "left"
   };
 
   onPositionChange = expandIconPosition => {
@@ -38,7 +38,7 @@ class Demo extends React.Component {
     return (
       <div>
         <Collapse
-          defaultActiveKey={['1']}
+          defaultActiveKey={["1"]}
           onChange={callback}
           expandIconPosition={expandIconPosition}
         >
@@ -53,7 +53,7 @@ class Demo extends React.Component {
           </Panel>
         </Collapse>
         <br />
-        Expand Icon Position:{' '}
+        <span>Expand Icon Position: </span>
         <Select value={expandIconPosition} onChange={this.onPositionChange}>
           <Option value="left">left</Option>
           <Option value="right">right</Option>
@@ -63,4 +63,10 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <div id="components-collapse-demo-extra"><Demo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-collapse-demo-extra">
+      <Demo />
+    </div>
+  </div>
+);

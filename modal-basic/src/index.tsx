@@ -1,26 +1,26 @@
-import React from 'react';
-import { Modal, Button } from 'antd';
+import React from "react";
+import { Modal, Button } from "antd";
 
 class App extends React.Component {
   state = { visible: false };
 
   showModal = () => {
     this.setState({
-      visible: true,
+      visible: true
     });
   };
 
   handleOk = e => {
     console.log(e);
     this.setState({
-      visible: false,
+      visible: false
     });
   };
 
   handleCancel = e => {
     console.log(e);
     this.setState({
-      visible: false,
+      visible: false
     });
   };
 
@@ -45,4 +45,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-modal-demo-basic"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-modal-demo-basic">
+      <App />
+    </div>
+  </div>
+);

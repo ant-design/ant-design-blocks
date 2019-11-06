@@ -1,11 +1,11 @@
-import React from 'react';
-import { TreeSelect } from 'antd';
+import React from "react";
+import { TreeSelect } from "antd";
 
 const { TreeNode } = TreeSelect;
 
 class Demo extends React.Component {
   state = {
-    value: undefined,
+    value: undefined
   };
 
   onChange = value => {
@@ -17,9 +17,9 @@ class Demo extends React.Component {
     return (
       <TreeSelect
         showSearch
-        style={{ width: 300 }}
+        style={{ width: "100%" }}
         value={this.state.value}
-        dropdownStyle={{ maxHeight: 400, overflow: 'auto' }}
+        dropdownStyle={{ maxHeight: 400, overflow: "auto" }}
         placeholder="Please select"
         allowClear
         multiple
@@ -32,7 +32,11 @@ class Demo extends React.Component {
             <TreeNode value="leaf2" title="your leaf" key="random1" />
           </TreeNode>
           <TreeNode value="parent 1-1" title="parent 1-1" key="random2">
-            <TreeNode value="sss" title={<b style={{ color: '#08c' }}>sss</b>} key="random3" />
+            <TreeNode
+              value="sss"
+              title={<b style={{ color: "#08c" }}>sss</b>}
+              key="random3"
+            />
           </TreeNode>
         </TreeNode>
       </TreeSelect>
@@ -40,4 +44,10 @@ class Demo extends React.Component {
   }
 }
 
-export default () => <div id="components-tree-select-demo-multiple"><Demo /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-tree-select-demo-multiple">
+      <Demo />
+    </div>
+  </div>
+);

@@ -1,7 +1,7 @@
-import React from 'react';
-import { Tabs } from 'antd';
-import { DndProvider, DragSource, DropTarget } from 'react-dnd';
-import HTML5Backend from 'react-dnd-html5-backend';
+import React from "react";
+import { Tabs } from "antd";
+import { DndProvider, DragSource, DropTarget } from "react-dnd";
+import HTML5Backend from "react-dnd-html5-backend";
 
 const { TabPane } = Tabs;
 
@@ -25,30 +25,30 @@ const cardTarget = {
 
     props.moveTabNode(dragKey, hoverKey);
     monitor.getItem().index = hoverKey;
-  },
+  }
 };
 
 const cardSource = {
   beginDrag(props) {
     return {
       id: props.id,
-      index: props.index,
+      index: props.index
     };
-  },
+  }
 };
 
-const WrapTabNode = DropTarget('DND_NODE', cardTarget, connect => ({
-  connectDropTarget: connect.dropTarget(),
+const WrapTabNode = DropTarget("DND_NODE", cardTarget, connect => ({
+  connectDropTarget: connect.dropTarget()
 }))(
-  DragSource('DND_NODE', cardSource, (connect, monitor) => ({
+  DragSource("DND_NODE", cardSource, (connect, monitor) => ({
     connectDragSource: connect.dragSource(),
-    isDragging: monitor.isDragging(),
-  }))(TabNode),
+    isDragging: monitor.isDragging()
+  }))(TabNode)
 );
 
 class DraggableTabs extends React.Component {
   state = {
-    order: [],
+    order: []
   };
 
   moveTabNode = (dragKey, hoverKey) => {
@@ -68,14 +68,18 @@ class DraggableTabs extends React.Component {
     newOrder.splice(hoverIndex, 0, dragKey);
 
     this.setState({
-      order: newOrder,
+      order: newOrder
     });
   };
 
   renderTabBar = (props, DefaultTabBar) => (
     <DefaultTabBar {...props}>
       {node => (
-        <WrapTabNode key={node.key} index={node.key} moveTabNode={this.moveTabNode}>
+        <WrapTabNode
+          key={node.key}
+          index={node.key}
+          moveTabNode={this.moveTabNode}
+        >
           {node}
         </WrapTabNode>
       )}
@@ -121,15 +125,20 @@ class DraggableTabs extends React.Component {
   }
 }
 
-export default () => <div id="components-tabs-demo-custom-tab-bar-node">
-  <DraggableTabs>
-    <TabPane tab="tab 1" key="1">
-      Content of Tab Pane 1
-    </TabPane>
-    <TabPane tab="tab 2" key="2">
-      Content of Tab Pane 2
-    </TabPane>
-    <TabPane tab="tab 3" key="3">
-      Content of Tab Pane 3
-    </TabPane>
-  </DraggableTabs></div>;
+export default () => (
+  <div className="container">
+    <div id="components-tabs-demo-custom-tab-bar-node">
+      <DraggableTabs>
+        <TabPane tab="tab 1" key="1">
+          Content of Tab Pane 1
+        </TabPane>
+        <TabPane tab="tab 2" key="2">
+          Content of Tab Pane 2
+        </TabPane>
+        <TabPane tab="tab 3" key="3">
+          Content of Tab Pane 3
+        </TabPane>
+      </DraggableTabs>
+    </div>
+  </div>
+);

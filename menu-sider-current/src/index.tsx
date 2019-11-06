@@ -1,23 +1,25 @@
-import React from 'react';
-import { Menu, Icon } from 'antd';
+import React from "react";
+import { Menu, Icon } from "antd";
 
 const { SubMenu } = Menu;
 
 class Sider extends React.Component {
   // submenu keys of first level
-  rootSubmenuKeys = ['sub1', 'sub2', 'sub4'];
+  rootSubmenuKeys = ["sub1", "sub2", "sub4"];
 
   state = {
-    openKeys: ['sub1'],
+    openKeys: ["sub1"]
   };
 
   onOpenChange = openKeys => {
-    const latestOpenKey = openKeys.find(key => this.state.openKeys.indexOf(key) === -1);
+    const latestOpenKey = openKeys.find(
+      key => this.state.openKeys.indexOf(key) === -1
+    );
     if (this.rootSubmenuKeys.indexOf(latestOpenKey) === -1) {
       this.setState({ openKeys });
     } else {
       this.setState({
-        openKeys: latestOpenKey ? [latestOpenKey] : [],
+        openKeys: latestOpenKey ? [latestOpenKey] : []
       });
     }
   };
@@ -79,4 +81,10 @@ class Sider extends React.Component {
   }
 }
 
-export default () => <div id="components-menu-demo-sider-current"><Sider /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-menu-demo-sider-current">
+      <Sider />
+    </div>
+  </div>
+);

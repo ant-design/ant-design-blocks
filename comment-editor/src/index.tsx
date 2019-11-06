@@ -1,13 +1,13 @@
-import React from 'react';
-import { Comment, Avatar, Form, Button, List, Input } from 'antd';
-import moment from 'moment';
+import React from "react";
+import { Comment, Avatar, Form, Button, List, Input } from "antd";
+import moment from "moment";
 
 const { TextArea } = Input;
 
 const CommentList = ({ comments }) => (
   <List
     dataSource={comments}
-    header={`${comments.length} ${comments.length > 1 ? 'replies' : 'reply'}`}
+    header={`${comments.length} ${comments.length > 1 ? "replies" : "reply"}`}
     itemLayout="horizontal"
     renderItem={props => <Comment {...props} />}
   />
@@ -19,7 +19,12 @@ const Editor = ({ onChange, onSubmit, submitting, value }) => (
       <TextArea rows={4} onChange={onChange} value={value} />
     </Form.Item>
     <Form.Item>
-      <Button htmlType="submit" loading={submitting} onClick={onSubmit} type="primary">
+      <Button
+        htmlType="submit"
+        loading={submitting}
+        onClick={onSubmit}
+        type="primary"
+      >
         Add Comment
       </Button>
     </Form.Item>
@@ -30,7 +35,7 @@ class App extends React.Component {
   state = {
     comments: [],
     submitting: false,
-    value: '',
+    value: ""
   };
 
   handleSubmit = () => {
@@ -39,29 +44,30 @@ class App extends React.Component {
     }
 
     this.setState({
-      submitting: true,
+      submitting: true
     });
 
     setTimeout(() => {
       this.setState({
         submitting: false,
-        value: '',
+        value: "",
         comments: [
           {
-            author: 'Han Solo',
-            avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
+            author: "Han Solo",
+            avatar:
+              "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
             content: <p>{this.state.value}</p>,
-            datetime: moment().fromNow(),
+            datetime: moment().fromNow()
           },
-          ...this.state.comments,
-        ],
+          ...this.state.comments
+        ]
       });
     }, 1000);
   };
 
   handleChange = e => {
     this.setState({
-      value: e.target.value,
+      value: e.target.value
     });
   };
 
@@ -92,4 +98,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-comment-demo-editor"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-comment-demo-editor">
+      <App />
+    </div>
+  </div>
+);

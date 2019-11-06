@@ -1,5 +1,5 @@
-import React from 'react';
-import { Transfer, Tree } from 'antd';
+import React from "react";
+import { Transfer, Tree } from "antd";
 
 const { TreeNode } = Tree;
 
@@ -10,7 +10,11 @@ const isChecked = (selectedKeys, eventKey) => {
 
 const generateTree = (treeNodes = [], checkedKeys = []) => {
   return treeNodes.map(({ children, ...props }) => (
-    <TreeNode {...props} disabled={checkedKeys.includes(props.key)} key={props.key}>
+    <TreeNode
+      {...props}
+      disabled={checkedKeys.includes(props.key)}
+      key={props.key}
+    >
       {generateTree(children, checkedKeys)}
     </TreeNode>
   ));
@@ -36,7 +40,7 @@ const TreeTransfer = ({ dataSource, targetKeys, ...restProps }) => {
       showSelectAll={false}
     >
       {({ direction, onItemSelect, selectedKeys }) => {
-        if (direction === 'left') {
+        if (direction === "left") {
           const checkedKeys = [...selectedKeys, ...targetKeys];
           return (
             <Tree
@@ -49,9 +53,9 @@ const TreeTransfer = ({ dataSource, targetKeys, ...restProps }) => {
                 _,
                 {
                   node: {
-                    props: { eventKey },
-                  },
-                },
+                    props: { eventKey }
+                  }
+                }
               ) => {
                 onItemSelect(eventKey, !isChecked(checkedKeys, eventKey));
               }}
@@ -59,9 +63,9 @@ const TreeTransfer = ({ dataSource, targetKeys, ...restProps }) => {
                 _,
                 {
                   node: {
-                    props: { eventKey },
-                  },
-                },
+                    props: { eventKey }
+                  }
+                }
               ) => {
                 onItemSelect(eventKey, !isChecked(checkedKeys, eventKey));
               }}
@@ -76,22 +80,25 @@ const TreeTransfer = ({ dataSource, targetKeys, ...restProps }) => {
 };
 
 const treeData = [
-  { key: '0-0', title: '0-0' },
+  { key: "0-0", title: "0-0" },
   {
-    key: '0-1',
-    title: '0-1',
-    children: [{ key: '0-1-0', title: '0-1-0' }, { key: '0-1-1', title: '0-1-1' }],
+    key: "0-1",
+    title: "0-1",
+    children: [
+      { key: "0-1-0", title: "0-1-0" },
+      { key: "0-1-1", title: "0-1-1" }
+    ]
   },
-  { key: '0-2', title: '0-3' },
+  { key: "0-2", title: "0-3" }
 ];
 
 class App extends React.Component {
   state = {
-    targetKeys: [],
+    targetKeys: []
   };
 
   onChange = targetKeys => {
-    console.log('Target Keys:', targetKeys);
+    console.log("Target Keys:", targetKeys);
     this.setState({ targetKeys });
   };
 
@@ -99,10 +106,20 @@ class App extends React.Component {
     const { targetKeys } = this.state;
     return (
       <div>
-        <TreeTransfer dataSource={treeData} targetKeys={targetKeys} onChange={this.onChange} />
+        <TreeTransfer
+          dataSource={treeData}
+          targetKeys={targetKeys}
+          onChange={this.onChange}
+        />
       </div>
     );
   }
 }
 
-export default () => <div id="components-transfer-demo-tree-transfer"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-transfer-demo-tree-transfer">
+      <App />
+    </div>
+  </div>
+);

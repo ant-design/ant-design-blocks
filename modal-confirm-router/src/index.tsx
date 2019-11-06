@@ -1,5 +1,5 @@
-import React from 'react';
-import { Modal, Button } from 'antd';
+import React from "react";
+import { Modal, Button } from "antd";
 
 function destroyAll() {
   Modal.destroyAll();
@@ -13,17 +13,22 @@ function showConfirm() {
       confirm({
         content: <Button onClick={destroyAll}>Click to destroy all</Button>,
         onOk() {
-          console.log('OK');
+          console.log("OK");
         },
         onCancel() {
-          console.log('Cancel');
-        },
+          console.log("Cancel");
+        }
       });
     }, i * 500);
   }
 }
 
-export default () => <div id="components-modal-demo-confirm-router">
-  <div>
-    <Button onClick={showConfirm}>Confirm</Button>
-  </div></div>;
+export default () => (
+  <div className="container">
+    <div id="components-modal-demo-confirm-router">
+      <div>
+        <Button onClick={showConfirm}>Confirm</Button>
+      </div>
+    </div>
+  </div>
+);

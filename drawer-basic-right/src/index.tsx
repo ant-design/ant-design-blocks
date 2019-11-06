@@ -1,18 +1,18 @@
-import React from 'react';
-import { Drawer, Button } from 'antd';
+import React from "react";
+import { Drawer, Button } from "antd";
 
 class App extends React.Component {
   state = { visible: false };
 
   showDrawer = () => {
     this.setState({
-      visible: true,
+      visible: true
     });
   };
 
   onClose = () => {
     this.setState({
-      visible: false,
+      visible: false
     });
   };
 
@@ -38,4 +38,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-drawer-demo-basic-right"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-drawer-demo-basic-right">
+      <App />
+    </div>
+  </div>
+);

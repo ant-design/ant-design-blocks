@@ -1,5 +1,5 @@
-import React from 'react';
-import { Collapse } from 'antd';
+import React from "react";
+import { Collapse } from "antd";
 
 const { Panel } = Collapse;
 
@@ -13,19 +13,24 @@ const text = `
   it can be found as a welcome guest in many households across the world.
 `;
 
-export default () => <div id="components-collapse-demo-mix">
-  <Collapse onChange={callback}>
-    <Panel header="This is panel header 1" key="1">
-      <Collapse defaultActiveKey="1">
-        <Panel header="This is panel nest panel" key="1">
+export default () => (
+  <div className="container">
+    <div id="components-collapse-demo-mix">
+      <Collapse onChange={callback}>
+        <Panel header="This is panel header 1" key="1">
+          <Collapse defaultActiveKey="1">
+            <Panel header="This is panel nest panel" key="1">
+              <p>{text}</p>
+            </Panel>
+          </Collapse>
+        </Panel>
+        <Panel header="This is panel header 2" key="2">
+          <p>{text}</p>
+        </Panel>
+        <Panel header="This is panel header 3" key="3">
           <p>{text}</p>
         </Panel>
       </Collapse>
-    </Panel>
-    <Panel header="This is panel header 2" key="2">
-      <p>{text}</p>
-    </Panel>
-    <Panel header="This is panel header 3" key="3">
-      <p>{text}</p>
-    </Panel>
-  </Collapse></div>;
+    </div>
+  </div>
+);

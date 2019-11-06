@@ -1,30 +1,30 @@
-import React from 'react';
-import { Drawer, Button } from 'antd';
+import React from "react";
+import { Drawer, Button } from "antd";
 
 class App extends React.Component {
   state = { visible: false, childrenDrawer: false };
 
   showDrawer = () => {
     this.setState({
-      visible: true,
+      visible: true
     });
   };
 
   onClose = () => {
     this.setState({
-      visible: false,
+      visible: false
     });
   };
 
   showChildrenDrawer = () => {
     this.setState({
-      childrenDrawer: true,
+      childrenDrawer: true
     });
   };
 
   onChildrenDrawerClose = () => {
     this.setState({
-      childrenDrawer: false,
+      childrenDrawer: false
     });
   };
 
@@ -55,20 +55,20 @@ class App extends React.Component {
           </Drawer>
           <div
             style={{
-              position: 'absolute',
+              position: "absolute",
               bottom: 0,
-              width: '100%',
-              borderTop: '1px solid #e8e8e8',
-              padding: '10px 16px',
-              textAlign: 'right',
+              width: "100%",
+              borderTop: "1px solid #e8e8e8",
+              padding: "10px 16px",
+              textAlign: "right",
               left: 0,
-              background: '#fff',
-              borderRadius: '0 0 4px 4px',
+              background: "#fff",
+              borderRadius: "0 0 4px 4px"
             }}
           >
             <Button
               style={{
-                marginRight: 8,
+                marginRight: 8
               }}
               onClick={this.onClose}
             >
@@ -84,4 +84,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-drawer-demo-multi-level-drawer"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-drawer-demo-multi-level-drawer">
+      <App />
+    </div>
+  </div>
+);

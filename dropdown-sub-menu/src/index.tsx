@@ -1,5 +1,5 @@
-import React from 'react';
-import { Menu, Dropdown, Icon } from 'antd';
+import React from "react";
+import { Menu, Dropdown, Icon } from "antd";
 
 const { SubMenu } = Menu;
 
@@ -18,9 +18,14 @@ const menu = (
   </Menu>
 );
 
-export default () => <div id="components-dropdown-demo-sub-menu">
-  <Dropdown overlay={menu}>
-    <a className="ant-dropdown-link" href="#">
-      Cascading menu <Icon type="down" />
-    </a>
-  </Dropdown></div>;
+export default () => (
+  <div className="container">
+    <div id="components-dropdown-demo-sub-menu">
+      <Dropdown overlay={menu}>
+        <a className="ant-dropdown-link" href="#">
+          Cascading menu <Icon type="down" />
+        </a>
+      </Dropdown>
+    </div>
+  </div>
+);

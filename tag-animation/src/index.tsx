@@ -1,12 +1,12 @@
-import React from 'react';
-import { Tag, Input, Icon } from 'antd';
-import { TweenOneGroup } from 'rc-tween-one';
+import React from "react";
+import { Tag, Input, Icon } from "antd";
+import { TweenOneGroup } from "rc-tween-one";
 
 class EditableTagGroup extends React.Component {
   state = {
-    tags: ['Tag 1', 'Tag 2', 'Tag 3'],
+    tags: ["Tag 1", "Tag 2", "Tag 3"],
     inputVisible: false,
-    inputValue: '',
+    inputValue: ""
   };
 
   handleClose = removedTag => {
@@ -33,7 +33,7 @@ class EditableTagGroup extends React.Component {
     this.setState({
       tags,
       inputVisible: false,
-      inputValue: '',
+      inputValue: ""
     });
   };
 
@@ -52,7 +52,7 @@ class EditableTagGroup extends React.Component {
       </Tag>
     );
     return (
-      <span key={tag} style={{ display: 'inline-block' }}>
+      <span key={tag} style={{ display: "inline-block" }}>
         {tagElem}
       </span>
     );
@@ -68,11 +68,11 @@ class EditableTagGroup extends React.Component {
             enter={{
               scale: 0.8,
               opacity: 0,
-              type: 'from',
+              type: "from",
               duration: 100,
               onComplete: e => {
-                e.target.style = '';
-              },
+                e.target.style = "";
+              }
             }}
             leave={{ opacity: 0, width: 0, scale: 0, duration: 200 }}
             appear={false}
@@ -93,7 +93,10 @@ class EditableTagGroup extends React.Component {
           />
         )}
         {!inputVisible && (
-          <Tag onClick={this.showInput} style={{ background: '#fff', borderStyle: 'dashed' }}>
+          <Tag
+            onClick={this.showInput}
+            style={{ background: "#fff", borderStyle: "dashed" }}
+          >
             <Icon type="plus" /> New Tag
           </Tag>
         )}
@@ -102,4 +105,10 @@ class EditableTagGroup extends React.Component {
   }
 }
 
-export default () => <div id="components-tag-demo-animation"><EditableTagGroup /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-tag-demo-animation">
+      <EditableTagGroup />
+    </div>
+  </div>
+);

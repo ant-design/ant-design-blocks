@@ -1,28 +1,32 @@
-import React from 'react';
-import { Menu, Icon, Button } from 'antd';
+import React from "react";
+import { Menu, Icon, Button } from "antd";
 
 const { SubMenu } = Menu;
 
 class App extends React.Component {
   state = {
-    collapsed: false,
+    collapsed: false
   };
 
   toggleCollapsed = () => {
     this.setState({
-      collapsed: !this.state.collapsed,
+      collapsed: !this.state.collapsed
     });
   };
 
   render() {
     return (
       <div style={{ width: 256 }}>
-        <Button type="primary" onClick={this.toggleCollapsed} style={{ marginBottom: 16 }}>
-          <Icon type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'} />
+        <Button
+          type="primary"
+          onClick={this.toggleCollapsed}
+          style={{ marginBottom: 16 }}
+        >
+          <Icon type={this.state.collapsed ? "menu-unfold" : "menu-fold"} />
         </Button>
         <Menu
-          defaultSelectedKeys={['1']}
-          defaultOpenKeys={['sub1']}
+          defaultSelectedKeys={["1"]}
+          defaultOpenKeys={["sub1"]}
           mode="inline"
           theme="dark"
           inlineCollapsed={this.state.collapsed}
@@ -75,4 +79,10 @@ class App extends React.Component {
   }
 }
 
-export default () => <div id="components-menu-demo-inline-collapsed"><App /></div>;
+export default () => (
+  <div className="container">
+    <div id="components-menu-demo-inline-collapsed">
+      <App />
+    </div>
+  </div>
+);
