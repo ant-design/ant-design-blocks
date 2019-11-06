@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./index.less";
 import { Timeline } from "antd";
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-timeline-demo-color">
       <Timeline>
         <Timeline.Item color="green">

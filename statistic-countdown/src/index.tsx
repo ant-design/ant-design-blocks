@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Statistic, Row, Col } from "antd";
 
 const { Countdown } = Statistic;
@@ -9,7 +10,7 @@ function onFinish() {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-statistic-demo-countdown">
       <Row gutter={16}>
         <Col span={12}>

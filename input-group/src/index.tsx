@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import {
   Input,
   Col,
@@ -172,7 +173,7 @@ class CompactDemo extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-input-demo-group">
       <CompactDemo />
     </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Pagination } from "antd";
 
 function onShowSizeChange(current, pageSize) {
@@ -6,7 +7,7 @@ function onShowSizeChange(current, pageSize) {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-pagination-demo-changer">
       <div>
         <Pagination

@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Select, Spin } from "antd";
 import debounce from "lodash/debounce";
 
@@ -68,7 +69,7 @@ class UserRemoteSelect extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-select-demo-select-users">
       <UserRemoteSelect />
     </div>

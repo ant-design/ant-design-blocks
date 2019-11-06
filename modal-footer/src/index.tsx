@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Modal, Button } from "antd";
 
 class App extends React.Component {
@@ -62,7 +63,7 @@ class App extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-modal-demo-footer">
       <App />
     </div>

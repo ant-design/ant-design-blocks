@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Select } from "antd";
 
 const { Option } = Select;
@@ -55,7 +56,7 @@ class App extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-select-demo-coordinate">
       <App />
     </div>

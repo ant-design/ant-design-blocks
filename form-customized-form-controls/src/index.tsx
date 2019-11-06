@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Form, Input, Select, Button } from "antd";
 
 const { Option } = Select;
@@ -120,7 +121,7 @@ class Demo extends React.Component {
 const WrappedDemo = Form.create({ name: "customized_form_controls" })(Demo);
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-form-demo-customized-form-controls">
       <WrappedDemo />
     </div>

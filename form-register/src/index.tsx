@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import {
   Form,
   Input,
@@ -277,7 +278,7 @@ const WrappedRegistrationForm = Form.create({ name: "register" })(
 );
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-form-demo-register">
       <WrappedRegistrationForm />
     </div>

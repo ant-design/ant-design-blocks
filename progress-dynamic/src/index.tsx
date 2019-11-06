@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Progress, Button } from "antd";
 
 const ButtonGroup = Button.Group;
@@ -38,7 +39,7 @@ class App extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-progress-demo-dynamic">
       <App />
     </div>

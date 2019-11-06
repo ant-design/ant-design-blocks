@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Row, Col, Slider } from "antd";
 
 class App extends React.Component {
@@ -102,7 +103,7 @@ class App extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-grid-demo-playground">
       <App />
     </div>

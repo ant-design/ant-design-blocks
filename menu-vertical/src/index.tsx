@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Menu, Icon } from "antd";
 
 const { SubMenu } = Menu;
@@ -8,7 +9,7 @@ function handleClick(e) {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-menu-demo-vertical">
       <Menu onClick={handleClick} style={{ width: 256 }} mode="vertical">
         <SubMenu

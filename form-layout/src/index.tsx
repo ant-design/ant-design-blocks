@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Form, Input, Button, Radio } from "antd";
 
 class FormLayoutDemo extends React.Component {
@@ -57,7 +58,7 @@ class FormLayoutDemo extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-form-demo-layout">
       <FormLayoutDemo />
     </div>

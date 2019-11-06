@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { AutoComplete } from "antd";
 
 const { Option } = AutoComplete;
@@ -36,7 +37,7 @@ class Complete extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-auto-complete-demo-options">
       <Complete />
     </div>

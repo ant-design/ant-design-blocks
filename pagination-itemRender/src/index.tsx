@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Pagination } from "antd";
 
 function itemRender(current, type, originalElement) {
@@ -12,7 +13,7 @@ function itemRender(current, type, originalElement) {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-pagination-demo-itemRender">
       <Pagination total={500} itemRender={itemRender} />
     </div>

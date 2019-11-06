@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Input } from "antd";
 
 const { TextArea } = Input;
@@ -39,7 +40,7 @@ class Demo extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-input-demo-autosize-textarea">
       <Demo />
     </div>

@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./index.less";
 import { Button } from "antd";
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-button-demo-disabled">
       <div>
         <Button type="primary">Primary</Button>

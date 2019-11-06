@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Form, Input } from "antd";
 
 const CustomizedForm = Form.create({
@@ -57,7 +58,7 @@ class Demo extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-form-demo-global-state">
       <Demo />
     </div>

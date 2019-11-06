@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Badge } from "antd";
 
 const colors = [
@@ -18,7 +19,7 @@ const colors = [
 ];
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-badge-demo-colorful">
       <div>
         <h4 style={{ marginBottom: 16 }}>Presets:</h4>

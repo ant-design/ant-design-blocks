@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Icon, Input, AutoComplete } from "antd";
 
 const { Option, OptGroup } = AutoComplete;
@@ -103,7 +104,7 @@ function Complete() {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-auto-complete-demo-certain-category">
       <Complete />
     </div>

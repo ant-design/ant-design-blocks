@@ -1,10 +1,11 @@
 import React from "react";
+import styles from "./index.less";
 import { Steps, Icon } from "antd";
 
 const { Step } = Steps;
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-steps-demo-icon">
       <Steps>
         <Step status="finish" title="Login" icon={<Icon type="user" />} />

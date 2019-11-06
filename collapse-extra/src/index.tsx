@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Collapse, Icon, Select } from "antd";
 
 const { Panel } = Collapse;
@@ -64,7 +65,7 @@ class Demo extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-collapse-demo-extra">
       <Demo />
     </div>

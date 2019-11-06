@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Tooltip, Button } from "antd";
 
 const text = <span>prompt text</span>;
@@ -6,7 +7,7 @@ const text = <span>prompt text</span>;
 const buttonWidth = 70;
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-tooltip-demo-placement">
       <div className="demo">
         <div style={{ marginLeft: buttonWidth, whiteSpace: "nowrap" }}>

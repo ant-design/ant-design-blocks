@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./index.less";
 import { Switch, Icon } from "antd";
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-switch-demo-text">
       <div>
         <Switch checkedChildren="开" unCheckedChildren="关" defaultChecked />

@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Anchor } from "antd";
 
 const { Link } = Anchor;
@@ -8,7 +9,7 @@ const getCurrentAnchor = () => {
 };
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-anchor-demo-customizeHighlight">
       <Anchor affix={false} getCurrentAnchor={getCurrentAnchor}>
         <Link href="#components-anchor-demo-basic" title="Basic demo" />

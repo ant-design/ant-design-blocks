@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Layout, Menu, Icon } from "antd";
 
 const { Header, Sider, Content } = Layout;
@@ -59,7 +60,7 @@ class SiderDemo extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-layout-demo-custom-trigger">
       <SiderDemo />
     </div>

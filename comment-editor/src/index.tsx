@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Comment, Avatar, Form, Button, List, Input } from "antd";
 import moment from "moment";
 
@@ -99,7 +100,7 @@ class App extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-comment-demo-editor">
       <App />
     </div>

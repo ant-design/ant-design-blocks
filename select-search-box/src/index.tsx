@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Select } from "antd";
 import jsonp from "fetch-jsonp";
 import querystring from "querystring";
@@ -82,7 +83,7 @@ class SearchInput extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-select-demo-search-box">
       <SearchInput placeholder="input search text" style={{ width: 200 }} />
     </div>

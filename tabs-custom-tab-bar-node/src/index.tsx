@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Tabs } from "antd";
 import { DndProvider, DragSource, DropTarget } from "react-dnd";
 import HTML5Backend from "react-dnd-html5-backend";
@@ -126,7 +127,7 @@ class DraggableTabs extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-tabs-demo-custom-tab-bar-node">
       <DraggableTabs>
         <TabPane tab="tab 1" key="1">

@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import {
   Form,
   Select,
@@ -208,7 +209,7 @@ class Demo extends React.Component {
 const WrappedDemo = Form.create({ name: "validate_other" })(Demo);
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-form-demo-validate-other">
       <WrappedDemo />
     </div>

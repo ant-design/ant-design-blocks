@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Form, Row, Col, Input, Button, Icon } from "antd";
 
 class AdvancedSearchForm extends React.Component {
@@ -72,7 +73,7 @@ const WrappedAdvancedSearchForm = Form.create({ name: "advanced_search" })(
   AdvancedSearchForm
 );
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-form-demo-advanced-search">
       <div>
         <WrappedAdvancedSearchForm />

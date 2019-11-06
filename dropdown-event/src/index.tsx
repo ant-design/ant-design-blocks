@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Menu, Dropdown, Icon, message } from "antd";
 
 const onClick = ({ key }) => {
@@ -14,7 +15,7 @@ const menu = (
 );
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-dropdown-demo-event">
       <Dropdown overlay={menu}>
         <a className="ant-dropdown-link" href="#">

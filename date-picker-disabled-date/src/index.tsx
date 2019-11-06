@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import moment from "moment";
 import { DatePicker } from "antd";
 
@@ -41,7 +42,7 @@ function disabledRangeTime(_, type) {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-date-picker-demo-disabled-date">
       <div>
         <DatePicker

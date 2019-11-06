@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Router, Route, Link, hashHistory } from "react-router";
 import { Breadcrumb, Alert } from "antd";
 
@@ -31,7 +32,7 @@ const Home = ({ routes, params, children }) => (
 );
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-breadcrumb-demo-router">
       <Router history={hashHistory}>
         <Route name="home" breadcrumbName="Home" path="/" component={Home}>

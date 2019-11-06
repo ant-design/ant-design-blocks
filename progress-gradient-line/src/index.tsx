@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Progress } from "antd";
 
 const Demo = () => (
@@ -38,7 +39,7 @@ const Demo = () => (
 );
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-progress-demo-gradient-line">
       <Demo />
     </div>

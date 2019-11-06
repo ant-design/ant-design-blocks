@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Tree } from "antd";
 
 const { TreeNode } = Tree;
@@ -40,7 +41,7 @@ class Demo extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-tree-demo-basic">
       <Demo />
     </div>

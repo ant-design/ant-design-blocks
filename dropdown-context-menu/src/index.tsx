@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Menu, Dropdown } from "antd";
 
 const menu = (
@@ -10,7 +11,7 @@ const menu = (
 );
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-dropdown-demo-context-menu">
       <Dropdown overlay={menu} trigger={["contextMenu"]}>
         <span style={{ userSelect: "none" }}>Right Click on Me</span>

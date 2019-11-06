@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Tabs } from "antd";
 
 const { TabPane } = Tabs;
@@ -80,7 +81,7 @@ class Demo extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-tabs-demo-editable-card">
       <Demo />
     </div>

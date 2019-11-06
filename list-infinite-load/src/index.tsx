@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { List, message, Avatar, Spin } from "antd";
 import reqwest from "reqwest";
 
@@ -94,7 +95,7 @@ class InfiniteListExample extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-list-demo-infinite-load">
       <InfiniteListExample />
     </div>

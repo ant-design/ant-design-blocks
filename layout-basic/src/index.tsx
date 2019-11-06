@@ -1,10 +1,11 @@
 import React from "react";
+import styles from "./index.less";
 import { Layout } from "antd";
 
 const { Header, Footer, Sider, Content } = Layout;
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-layout-demo-basic">
       <div>
         <Layout>

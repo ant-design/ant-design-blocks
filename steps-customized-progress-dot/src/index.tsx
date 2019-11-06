@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Steps, Popover } from "antd";
 
 const { Step } = Steps;
@@ -16,7 +17,7 @@ const customDot = (dot, { status, index }) => (
 );
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-steps-demo-customized-progress-dot">
       <Steps current={1} progressDot={customDot}>
         <Step title="Finished" description="You can hover on the dot." />

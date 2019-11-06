@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Affix, Button } from "antd";
 
 class Demo extends React.Component {
@@ -41,7 +42,7 @@ class Demo extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-affix-demo-basic">
       <Demo />
     </div>

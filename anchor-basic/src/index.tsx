@@ -1,10 +1,11 @@
 import React from "react";
+import styles from "./index.less";
 import { Anchor } from "antd";
 
 const { Link } = Anchor;
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-anchor-demo-basic">
       <Anchor>
         <Link href="#components-anchor-demo-basic" title="Basic demo" />

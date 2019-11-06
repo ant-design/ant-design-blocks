@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./index.less";
 import { Badge } from "antd";
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-badge-demo-no-wrapper">
       <div>
         <Badge count={25} />

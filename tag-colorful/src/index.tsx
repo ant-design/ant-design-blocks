@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./index.less";
 import { Tag } from "antd";
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-tag-demo-colorful">
       <div>
         <h4 style={{ marginBottom: 16 }}>Presets:</h4>

@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Radio } from "antd";
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-radio-demo-radiogroup-with-name">
       <App />
     </div>

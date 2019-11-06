@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import {
   Form,
   Input,
@@ -23,7 +24,7 @@ const formItemLayout = {
 };
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-form-demo-validate-static">
       <Form {...formItemLayout}>
         <Form.Item

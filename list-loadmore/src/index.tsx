@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { List, Avatar, Button, Skeleton } from "antd";
 
 import reqwest from "reqwest";
@@ -109,7 +110,7 @@ class LoadMoreList extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-list-demo-loadmore">
       <LoadMoreList />
     </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Menu, Dropdown, Button, Icon, message } from "antd";
 
 function handleButtonClick(e) {
@@ -29,7 +30,7 @@ const menu = (
 );
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-dropdown-demo-dropdown-button">
       <div id="components-dropdown-demo-dropdown-button">
         <Dropdown.Button onClick={handleButtonClick} overlay={menu}>

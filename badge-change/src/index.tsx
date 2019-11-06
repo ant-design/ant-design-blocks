@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Badge, Button, Icon, Switch } from "antd";
 
 const ButtonGroup = Button.Group;
@@ -54,7 +55,7 @@ class Demo extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-badge-demo-change">
       <Demo />
     </div>

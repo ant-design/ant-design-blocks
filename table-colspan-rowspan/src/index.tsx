@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Table } from "antd";
 
 // In the fifth row, other columns are merged into first column
@@ -114,7 +115,7 @@ const data = [
 ];
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-table-demo-colspan-rowspan">
       <Table columns={columns} dataSource={data} bordered />
     </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import {
   HashRouter as Router,
   Route,
@@ -64,7 +65,7 @@ const Home = withRouter(props => {
 });
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-breadcrumb-demo-router-4">
       <Router>
         <Home />

@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { message, Button } from "antd";
 
 const info = () => {
@@ -6,7 +7,7 @@ const info = () => {
 };
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-message-demo-info">
       <Button type="primary" onClick={info}>
         Display normal message

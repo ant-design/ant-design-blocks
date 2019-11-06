@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { DatePicker } from "antd";
 
 class DateRange extends React.Component {
@@ -77,7 +78,7 @@ class DateRange extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-date-picker-demo-start-end">
       <DateRange />
     </div>

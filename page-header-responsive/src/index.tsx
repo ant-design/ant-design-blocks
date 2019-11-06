@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { PageHeader, Tabs, Button, Statistic, Descriptions } from "antd";
 
 const { TabPane } = Tabs;
@@ -46,7 +47,7 @@ const Content = ({ children, extra }) => {
 };
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-page-header-demo-responsive">
       <div>
         <PageHeader

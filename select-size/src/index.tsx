@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Select, Radio } from "antd";
 
 const { Option } = Select;
@@ -68,7 +69,7 @@ class SelectSizesDemo extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-select-demo-size">
       <SelectSizesDemo />
     </div>

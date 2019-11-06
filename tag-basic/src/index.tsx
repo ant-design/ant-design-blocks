@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Tag } from "antd";
 
 function log(e) {
@@ -11,7 +12,7 @@ function preventDefault(e) {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-tag-demo-basic">
       <div>
         <Tag>Tag 1</Tag>

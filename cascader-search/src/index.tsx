@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Cascader } from "antd";
 
 const options = [
@@ -52,7 +53,7 @@ function filter(inputValue, path) {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-cascader-demo-search">
       <Cascader
         options={options}

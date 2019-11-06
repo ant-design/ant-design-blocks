@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { List, message, Avatar, Spin } from "antd";
 
 import reqwest from "reqwest";
@@ -159,7 +160,7 @@ class VirtualizedExample extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-list-demo-infinite-virtualized-load">
       <VirtualizedExample />
     </div>

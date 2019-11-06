@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Table } from "antd";
 
 const columns = [
@@ -79,7 +80,7 @@ for (let i = 0; i < 100; i++) {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-table-demo-fixed-columns-header">
       <Table columns={columns} dataSource={data} scroll={{ x: 1500, y: 300 }} />
     </div>

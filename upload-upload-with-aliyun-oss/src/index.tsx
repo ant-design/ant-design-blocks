@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Form, Upload, message, Button, Icon } from "antd";
 
 class AliyunOSSUpload extends React.Component {
@@ -122,7 +123,7 @@ class FormPage extends React.Component {
 const WrappedFormPage = Form.create()(FormPage);
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-upload-demo-upload-with-aliyun-oss">
       <WrappedFormPage />
     </div>

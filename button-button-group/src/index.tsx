@@ -1,10 +1,11 @@
 import React from "react";
+import styles from "./index.less";
 import { Button, Icon } from "antd";
 
 const ButtonGroup = Button.Group;
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-button-demo-button-group">
       <div>
         <h4>Basic</h4>

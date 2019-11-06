@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Timeline, Button } from "antd";
 
 class PendingTimeLine extends React.Component {
@@ -33,7 +34,7 @@ class PendingTimeLine extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-timeline-demo-pending">
       <PendingTimeLine />
     </div>

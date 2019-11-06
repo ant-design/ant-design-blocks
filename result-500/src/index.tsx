@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./index.less";
 import { Result, Button } from "antd";
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-result-demo-500">
       <Result
         status="500"

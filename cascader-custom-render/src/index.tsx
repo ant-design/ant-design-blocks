@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Cascader } from "antd";
 
 const options = [
@@ -58,7 +59,7 @@ const displayRender = (labels, selectedOptions) =>
   });
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-cascader-demo-custom-render">
       <Cascader
         options={options}

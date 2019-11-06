@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Table, Icon, Switch, Radio, Form, Divider } from "antd";
 
 const columns = [
@@ -227,7 +228,7 @@ class Demo extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-table-demo-dynamic-settings">
       <Demo />
     </div>

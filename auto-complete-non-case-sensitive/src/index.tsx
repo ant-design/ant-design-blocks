@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { AutoComplete } from "antd";
 
 const dataSource = ["Burns Bay Road", "Downing Street", "Wall Street"];
@@ -19,7 +20,7 @@ function Complete() {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-auto-complete-demo-non-case-sensitive">
       <Complete />
     </div>

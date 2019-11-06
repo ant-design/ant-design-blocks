@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { DatePicker, Radio } from "antd";
 
 const { MonthPicker, RangePicker, WeekPicker } = DatePicker;
@@ -36,7 +37,7 @@ class PickerSizesDemo extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-date-picker-demo-size">
       <PickerSizesDemo />
     </div>

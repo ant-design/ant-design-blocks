@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Comment, Avatar } from "antd";
 
 const ExampleComment = ({ children }) => (
@@ -23,7 +24,7 @@ const ExampleComment = ({ children }) => (
 );
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-comment-demo-nested">
       <ExampleComment>
         <ExampleComment>

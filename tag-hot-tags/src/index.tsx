@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Tag } from "antd";
 
 const { CheckableTag } = Tag;
@@ -39,7 +40,7 @@ class HotTags extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-tag-demo-hot-tags">
       <HotTags />
     </div>

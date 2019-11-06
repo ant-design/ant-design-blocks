@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Button, Select, notification } from "antd";
 
 const { Option } = Select;
@@ -12,7 +13,7 @@ const openNotification = () => {
 };
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-notification-demo-placement">
       <div>
         <Select

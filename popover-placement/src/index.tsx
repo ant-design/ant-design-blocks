@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Popover, Button } from "antd";
 
 const text = <span>Title</span>;
@@ -12,7 +13,7 @@ const content = (
 const buttonWidth = 70;
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-popover-demo-placement">
       <div className="demo">
         <div style={{ marginLeft: buttonWidth, whiteSpace: "nowrap" }}>

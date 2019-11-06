@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import {
   Drawer,
   Form,
@@ -175,7 +176,7 @@ class DrawerForm extends React.Component {
 const App = Form.create()(DrawerForm);
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-drawer-demo-form-in-drawer">
       <App />
     </div>

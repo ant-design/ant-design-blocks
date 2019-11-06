@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./index.less";
 import { BackTop } from "antd";
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-back-top-demo-basic">
       <div>
         <BackTop />

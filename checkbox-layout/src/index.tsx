@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Checkbox, Row, Col } from "antd";
 
 function onChange(checkedValues) {
@@ -6,7 +7,7 @@ function onChange(checkedValues) {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-checkbox-demo-layout">
       <Checkbox.Group style={{ width: "100%" }} onChange={onChange}>
         <Row>

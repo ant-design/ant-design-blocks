@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Table, Button } from "antd";
 
 const data = [
@@ -119,7 +120,7 @@ class App extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-table-demo-reset-filter">
       <App />
     </div>

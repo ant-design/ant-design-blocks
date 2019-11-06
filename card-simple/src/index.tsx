@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./index.less";
 import { Card } from "antd";
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-card-demo-simple">
       <Card style={{ width: 300 }}>
         <p>Card content</p>

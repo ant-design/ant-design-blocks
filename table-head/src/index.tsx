@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Table } from "antd";
 
 const columns = [
@@ -93,7 +94,7 @@ function onChange(pagination, filters, sorter, extra) {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-table-demo-head">
       <Table columns={columns} dataSource={data} onChange={onChange} />
     </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Mentions } from "antd";
 
 const { Option } = Mentions;
@@ -38,7 +39,7 @@ class App extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-mentions-demo-prefix">
       <App />
     </div>

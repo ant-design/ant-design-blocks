@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Upload, Icon, message } from "antd";
 
 function getBase64(img, callback) {
@@ -69,7 +70,7 @@ class Avatar extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-upload-demo-avatar">
       <Avatar />
     </div>

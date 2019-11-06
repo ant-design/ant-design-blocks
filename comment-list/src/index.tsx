@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Comment, Tooltip, List } from "antd";
 import moment from "moment";
 
@@ -56,7 +57,7 @@ const data = [
 ];
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-comment-demo-list">
       <List
         className="comment-list"

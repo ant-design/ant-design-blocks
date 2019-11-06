@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Mentions } from "antd";
 
 const { Option } = Mentions;
@@ -12,7 +13,7 @@ function onSelect(option) {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-mentions-demo-basic">
       <Mentions
         style={{ width: "100%" }}

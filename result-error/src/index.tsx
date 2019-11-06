@@ -1,10 +1,11 @@
 import React from "react";
+import styles from "./index.less";
 import { Result, Button, Icon, Typography } from "antd";
 
 const { Paragraph, Text } = Typography;
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-result-demo-error">
       <Result
         status="error"

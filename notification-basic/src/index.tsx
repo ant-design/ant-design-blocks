@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Button, notification } from "antd";
 
 const openNotification = () => {
@@ -13,7 +14,7 @@ const openNotification = () => {
 };
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-notification-demo-basic">
       <Button type="primary" onClick={openNotification}>
         Open the notification box

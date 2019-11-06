@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { DatePicker } from "antd";
 import moment from "moment";
 
@@ -10,7 +11,7 @@ const monthFormat = "YYYY/MM";
 const dateFormatList = ["DD/MM/YYYY", "DD/MM/YY"];
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-date-picker-demo-format">
       <div>
         <DatePicker

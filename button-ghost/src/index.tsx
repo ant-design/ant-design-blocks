@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./index.less";
 import { Button } from "antd";
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-button-demo-ghost">
       <div
         style={{ background: "rgb(190, 200, 200)", padding: "26px 16px 16px" }}

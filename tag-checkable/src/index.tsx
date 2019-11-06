@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Tag } from "antd";
 
 const { CheckableTag } = Tag;
@@ -22,7 +23,7 @@ class MyTag extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-tag-demo-checkable">
       <div>
         <MyTag>Tag1</MyTag>

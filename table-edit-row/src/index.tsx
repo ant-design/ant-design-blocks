@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Table, Input, InputNumber, Popconfirm, Form } from "antd";
 
 const data = [];
@@ -194,7 +195,7 @@ class EditableTable extends React.Component {
 const EditableFormTable = Form.create()(EditableTable);
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-table-demo-edit-row">
       <EditableFormTable />
     </div>

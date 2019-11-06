@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Button, Modal, Form, Input, Radio } from "antd";
 
 const CollectionCreateForm = Form.create({ name: "form_in_modal" })(
@@ -94,7 +95,7 @@ class CollectionsPage extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-form-demo-form-in-modal">
       <CollectionsPage />
     </div>

@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./index.less";
 import { Descriptions, Badge } from "antd";
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-descriptions-demo-border">
       <Descriptions title="User Info" bordered>
         <Descriptions.Item label="Product">Cloud Database</Descriptions.Item>

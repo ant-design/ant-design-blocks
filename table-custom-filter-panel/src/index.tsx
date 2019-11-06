@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Table, Input, Button, Icon } from "antd";
 import Highlighter from "react-highlight-words";
 
@@ -133,7 +134,7 @@ class App extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-table-demo-custom-filter-panel">
       <App />
     </div>

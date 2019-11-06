@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Table } from "antd";
 import { DndProvider, DragSource, DropTarget } from "react-dnd";
 import HTML5Backend from "react-dnd-html5-backend";
@@ -153,7 +154,7 @@ class DragSortingTable extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-table-demo-drag-sorting">
       <DragSortingTable />
     </div>

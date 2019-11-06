@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Form, Input, Icon, Button } from "antd";
 
 let id = 0;
@@ -115,7 +116,7 @@ const WrappedDynamicFieldSet = Form.create({ name: "dynamic_form_item" })(
   DynamicFieldSet
 );
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-form-demo-dynamic-form-item">
       <WrappedDynamicFieldSet />
     </div>

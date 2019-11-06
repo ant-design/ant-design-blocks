@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./index.less";
 import { Tooltip, Button } from "antd";
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-tooltip-demo-arrow-point-at-center">
       <div>
         <Tooltip placement="topLeft" title="Prompt Text">

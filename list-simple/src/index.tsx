@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { List, Typography } from "antd";
 
 const data = [
@@ -10,7 +11,7 @@ const data = [
 ];
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-list-demo-simple">
       <div>
         <h3 style={{ marginBottom: 16 }}>Default Size</h3>

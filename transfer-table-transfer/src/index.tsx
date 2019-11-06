@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Transfer, Switch, Table, Tag } from "antd";
 import difference from "lodash/difference";
 
@@ -146,7 +147,7 @@ class App extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-transfer-demo-table-transfer">
       <App />
     </div>

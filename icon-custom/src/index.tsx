@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Icon } from "antd";
 
 const HeartSvg = () => (
@@ -57,7 +58,7 @@ const HeartIcon = props => <Icon component={HeartSvg} {...props} />;
 const PandaIcon = props => <Icon component={PandaSvg} {...props} />;
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-icon-demo-custom">
       <div className="custom-icons-list">
         <HeartIcon style={{ color: "hotpink" }} />

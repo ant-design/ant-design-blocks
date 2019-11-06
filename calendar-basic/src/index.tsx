@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Calendar } from "antd";
 
 function onPanelChange(value, mode) {
@@ -6,7 +7,7 @@ function onPanelChange(value, mode) {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-calendar-demo-basic">
       <Calendar onPanelChange={onPanelChange} />
     </div>

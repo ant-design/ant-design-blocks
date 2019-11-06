@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { InputNumber } from "antd";
 
 function onChange(value) {
@@ -6,7 +7,7 @@ function onChange(value) {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-input-number-demo-formatter">
       <div>
         <InputNumber

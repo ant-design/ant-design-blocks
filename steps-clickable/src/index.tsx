@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Steps, Divider } from "antd";
 
 const { Step } = Steps;
@@ -37,7 +38,7 @@ class Demo extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-steps-demo-clickable">
       <Demo />
     </div>

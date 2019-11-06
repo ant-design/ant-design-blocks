@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Alert } from "antd";
 
 class App extends React.Component {
@@ -28,7 +29,7 @@ class App extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-alert-demo-smooth-closed">
       <App />
     </div>

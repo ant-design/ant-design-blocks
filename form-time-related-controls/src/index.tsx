@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Form, DatePicker, TimePicker, Button } from "antd";
 
 const { MonthPicker, RangePicker } = DatePicker;
@@ -100,7 +101,7 @@ const WrappedTimeRelatedForm = Form.create({ name: "time_related_controls" })(
 );
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-form-demo-time-related-controls">
       <WrappedTimeRelatedForm />
     </div>

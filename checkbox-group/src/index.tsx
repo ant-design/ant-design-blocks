@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Checkbox } from "antd";
 
 function onChange(checkedValues) {
@@ -18,7 +19,7 @@ const optionsWithDisabled = [
 ];
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-checkbox-demo-group">
       <div>
         <Checkbox.Group

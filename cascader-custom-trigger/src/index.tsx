@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Cascader } from "antd";
 
 const options = [
@@ -49,7 +50,7 @@ class CitySwitcher extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-cascader-demo-custom-trigger">
       <CitySwitcher />
     </div>

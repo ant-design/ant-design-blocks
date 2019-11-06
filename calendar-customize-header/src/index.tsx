@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Calendar, Select, Radio, Col, Row } from "antd";
 
 const { Group, Button } = Radio;
@@ -8,7 +9,7 @@ function onPanelChange(value, mode) {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-calendar-demo-customize-header">
       <div style={{ width: 300, border: "1px solid #d9d9d9", borderRadius: 4 }}>
         <Calendar

@@ -1,10 +1,11 @@
 import React from "react";
+import styles from "./index.less";
 import { DatePicker } from "antd";
 
 const { RangePicker, MonthPicker } = DatePicker;
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-date-picker-demo-extra-footer">
       <div>
         <DatePicker renderExtraFooter={() => "extra footer"} />

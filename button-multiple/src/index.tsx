@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Button, Menu, Dropdown, Icon } from "antd";
 
 function handleMenuClick(e) {
@@ -14,7 +15,7 @@ const menu = (
 );
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-button-demo-multiple">
       <div>
         <Button type="primary">primary</Button>

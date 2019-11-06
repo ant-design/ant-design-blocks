@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Cascader } from "antd";
 
 const options = [
@@ -42,7 +43,7 @@ function onChange(value) {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-cascader-demo-disabled-option">
       <Cascader options={options} onChange={onChange} />
     </div>

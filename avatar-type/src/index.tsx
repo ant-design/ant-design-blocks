@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./index.less";
 import { Avatar, Icon } from "antd";
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-avatar-demo-type">
       <div>
         <Avatar icon="user" />

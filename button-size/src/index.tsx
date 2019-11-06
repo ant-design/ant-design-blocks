@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Button, Radio, Icon } from "antd";
 
 class ButtonSize extends React.Component {
@@ -61,7 +62,7 @@ class ButtonSize extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-button-demo-size">
       <ButtonSize />
     </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Popover, Button } from "antd";
 
 class App extends React.Component {
@@ -32,7 +33,7 @@ class App extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-popover-demo-control">
       <App />
     </div>

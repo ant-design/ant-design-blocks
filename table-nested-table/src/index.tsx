@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Table, Badge, Menu, Dropdown, Icon } from "antd";
 
 const menu = (
@@ -88,7 +89,7 @@ function NestedTable() {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-table-demo-nested-table">
       <NestedTable />
     </div>

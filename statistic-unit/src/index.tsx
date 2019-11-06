@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./index.less";
 import { Statistic, Row, Col, Icon } from "antd";
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-statistic-demo-unit">
       <Row gutter={16}>
         <Col span={12}>

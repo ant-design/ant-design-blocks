@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Upload, Button, Icon } from "antd";
 
 class MyUpload extends React.Component {
@@ -49,7 +50,7 @@ class MyUpload extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-upload-demo-fileList">
       <MyUpload />
     </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Upload, Button, Icon } from "antd";
 
 const fileList = [
@@ -36,7 +37,7 @@ const props2 = {
 };
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-upload-demo-picture-style">
       <div>
         <Upload {...props}>

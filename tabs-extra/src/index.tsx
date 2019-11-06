@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Tabs, Button } from "antd";
 
 const { TabPane } = Tabs;
@@ -6,7 +7,7 @@ const { TabPane } = Tabs;
 const operations = <Button>Extra Action</Button>;
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-tabs-demo-extra">
       <Tabs tabBarExtraContent={operations}>
         <TabPane tab="Tab 1" key="1">

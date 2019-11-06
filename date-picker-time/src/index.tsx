@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { DatePicker } from "antd";
 
 const { RangePicker } = DatePicker;
@@ -13,7 +14,7 @@ function onOk(value) {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-date-picker-demo-time">
       <div>
         <DatePicker

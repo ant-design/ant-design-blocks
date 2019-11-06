@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Rate } from "antd";
 
 const desc = ["terrible", "bad", "normal", "good", "wonderful"];
@@ -24,7 +25,7 @@ class Rater extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-rate-demo-text">
       <Rater />
     </div>

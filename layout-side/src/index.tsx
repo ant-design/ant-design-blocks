@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Layout, Menu, Breadcrumb, Icon } from "antd";
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -84,7 +85,7 @@ class SiderDemo extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-layout-demo-side">
       <SiderDemo />
     </div>

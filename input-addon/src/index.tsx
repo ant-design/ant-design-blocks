@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Input, Select, Icon } from "antd";
 
 const { Option } = Select;
@@ -19,7 +20,7 @@ const selectAfter = (
 );
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-input-demo-addon">
       <div>
         <div style={{ marginBottom: 16 }}>

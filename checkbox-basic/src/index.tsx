@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Checkbox } from "antd";
 
 function onChange(e) {
@@ -6,7 +7,7 @@ function onChange(e) {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-checkbox-demo-basic">
       <Checkbox onChange={onChange}>Checkbox</Checkbox>
     </div>

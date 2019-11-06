@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Tabs } from "antd";
 import { StickyContainer, Sticky } from "react-sticky";
 
@@ -16,7 +17,7 @@ const renderTabBar = (props, DefaultTabBar) => (
 );
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-tabs-demo-custom-tab-bar">
       <StickyContainer>
         <Tabs defaultActiveKey="1" renderTabBar={renderTabBar}>

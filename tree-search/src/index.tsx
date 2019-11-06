@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Tree, Input } from "antd";
 
 const { TreeNode } = Tree;
@@ -137,7 +138,7 @@ class SearchTree extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-tree-demo-search">
       <SearchTree />
     </div>

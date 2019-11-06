@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Form, Icon, Input, Button } from "antd";
 
 function hasErrors(fieldsError) {
@@ -81,7 +82,7 @@ const WrappedHorizontalLoginForm = Form.create({ name: "horizontal_login" })(
 );
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-form-demo-inline-login">
       <WrappedHorizontalLoginForm />
     </div>

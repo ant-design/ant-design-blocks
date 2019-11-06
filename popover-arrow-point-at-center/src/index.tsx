@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Popover, Button } from "antd";
 
 const text = <span>Title</span>;
@@ -10,7 +11,7 @@ const content = (
 );
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-popover-demo-arrow-point-at-center">
       <div>
         <Popover placement="topLeft" title={text} content={content}>

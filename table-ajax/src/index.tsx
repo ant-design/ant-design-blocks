@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Table } from "antd";
 import reqwest from "reqwest";
 
@@ -90,7 +91,7 @@ class App extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-table-demo-ajax">
       <App />
     </div>

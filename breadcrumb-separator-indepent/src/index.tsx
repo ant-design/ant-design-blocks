@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./index.less";
 import { Breadcrumb } from "antd";
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-breadcrumb-demo-separator-indepent">
       <Breadcrumb separator="">
         <Breadcrumb.Item>Location</Breadcrumb.Item>

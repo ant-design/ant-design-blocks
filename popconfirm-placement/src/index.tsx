@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Popconfirm, message, Button } from "antd";
 
 const text = "Are you sure to delete this task?";
@@ -8,7 +9,7 @@ function confirm() {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-popconfirm-demo-placement">
       <div className="demo">
         <div style={{ marginLeft: 70, whiteSpace: "nowrap" }}>

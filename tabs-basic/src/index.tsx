@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Tabs } from "antd";
 
 const { TabPane } = Tabs;
@@ -8,7 +9,7 @@ function callback(key) {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-tabs-demo-basic">
       <Tabs defaultActiveKey="1" onChange={callback}>
         <TabPane tab="Tab 1" key="1">

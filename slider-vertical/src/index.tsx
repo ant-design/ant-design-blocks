@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Slider } from "antd";
 
 const style = {
@@ -20,7 +21,7 @@ const marks = {
 };
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-slider-demo-vertical">
       <div>
         <div style={style}>

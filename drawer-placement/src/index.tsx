@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Drawer, Button, Radio } from "antd";
 
 const RadioGroup = Radio.Group;
@@ -57,7 +58,7 @@ class App extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-drawer-demo-placement">
       <App />
     </div>

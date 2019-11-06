@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Modal, Button } from "antd";
 
 function countDown() {
@@ -20,7 +21,7 @@ function countDown() {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-modal-demo-manual">
       <Button onClick={countDown}>Open modal to close in 5s</Button>
     </div>

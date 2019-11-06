@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Table, Input, Button, Popconfirm, Form } from "antd";
 
 const EditableContext = React.createContext();
@@ -219,7 +220,7 @@ class EditableTable extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-table-demo-edit-cell">
       <EditableTable />
     </div>

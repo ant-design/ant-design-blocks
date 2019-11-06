@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Select } from "antd";
 
 const OPTIONS = ["Apples", "Nails", "Bananas", "Helicopters"];
@@ -34,7 +35,7 @@ class SelectWithHiddenSelectedOptions extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-select-demo-hide-selected">
       <SelectWithHiddenSelectedOptions />
     </div>

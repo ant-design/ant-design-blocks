@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Select } from "antd";
 
 const { Option } = Select;
@@ -13,7 +14,7 @@ function handleChange(value) {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-select-demo-multiple">
       <Select
         mode="multiple"

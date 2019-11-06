@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Menu, Dropdown, Icon } from "antd";
 
 const { SubMenu } = Menu;
@@ -19,7 +20,7 @@ const menu = (
 );
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-dropdown-demo-sub-menu">
       <Dropdown overlay={menu}>
         <a className="ant-dropdown-link" href="#">

@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import {
   PageHeader,
   Menu,
@@ -143,7 +144,7 @@ const Content = ({ children, extraContent }) => {
 };
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-page-header-demo-content">
       <PageHeader
         title="Title"

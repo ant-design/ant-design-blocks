@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Icon } from "antd";
 
 const IconFont = Icon.createFromIconfontCN({
@@ -6,7 +7,7 @@ const IconFont = Icon.createFromIconfontCN({
 });
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-icon-demo-iconfont">
       <div className="icons-list">
         <IconFont type="icon-tuichu" />

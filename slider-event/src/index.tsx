@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Slider } from "antd";
 
 function onChange(value) {
@@ -10,7 +11,7 @@ function onAfterChange(value) {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-slider-demo-event">
       <div>
         <Slider

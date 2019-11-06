@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Upload, Icon, Modal } from "antd";
 
 function getBase64(file) {
@@ -100,7 +101,7 @@ class PicturesWall extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-upload-demo-picture-card">
       <PicturesWall />
     </div>

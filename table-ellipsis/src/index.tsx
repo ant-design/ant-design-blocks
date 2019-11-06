@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Table } from "antd";
 
 const columns = [
@@ -66,7 +67,7 @@ const data = [
 ];
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-table-demo-ellipsis">
       <Table columns={columns} dataSource={data} />
     </div>

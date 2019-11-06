@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { message, Button } from "antd";
 
 const success = () => {
@@ -8,7 +9,7 @@ const success = () => {
 };
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-message-demo-loading">
       <Button onClick={success}>Display a loading indicator</Button>
     </div>

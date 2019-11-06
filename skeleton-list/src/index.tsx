@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Skeleton, Switch, List, Avatar, Icon } from "antd";
 
 const listData = [];
@@ -78,7 +79,7 @@ class App extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-skeleton-demo-list">
       <App />
     </div>

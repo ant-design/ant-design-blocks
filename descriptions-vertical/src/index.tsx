@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./index.less";
 import { Descriptions } from "antd";
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-descriptions-demo-vertical">
       <Descriptions title="User Info" layout="vertical">
         <Descriptions.Item label="UserName">Zhou Maomao</Descriptions.Item>

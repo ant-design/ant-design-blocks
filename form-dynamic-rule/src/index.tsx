@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Form, Input, Button, Checkbox } from "antd";
 
 const formItemLayout = {
@@ -74,7 +75,7 @@ class DynamicRule extends React.Component {
 
 const WrappedDynamicRule = Form.create({ name: "dynamic_rule" })(DynamicRule);
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-form-demo-dynamic-rule">
       <WrappedDynamicRule />
     </div>

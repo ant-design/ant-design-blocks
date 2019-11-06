@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./index.less";
 import { Statistic, Card, Row, Col, Icon } from "antd";
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-statistic-demo-card">
       <div style={{ background: "#ECECEC", padding: "30px" }}>
         <Row gutter={16}>

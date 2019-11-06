@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Table, Divider, Tag } from "antd";
 
 const { Column, ColumnGroup } = Table;
@@ -31,7 +32,7 @@ const data = [
 ];
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-table-demo-jsx">
       <Table dataSource={data}>
         <ColumnGroup title="Name">

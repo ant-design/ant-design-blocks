@@ -1,10 +1,11 @@
 import React from "react";
+import styles from "./index.less";
 import { Steps, Divider } from "antd";
 
 const { Step } = Steps;
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-steps-demo-progress-dot">
       <div>
         <Steps progressDot current={1}>

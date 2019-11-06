@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Collapse } from "antd";
 
 const { Panel } = Collapse;
@@ -14,7 +15,7 @@ const text = `
 `;
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-collapse-demo-noarrow">
       <Collapse defaultActiveKey={["1"]} onChange={callback}>
         <Panel header="This is panel header with arrow icon" key="1">

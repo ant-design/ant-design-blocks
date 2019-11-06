@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { TimePicker } from "antd";
 
 function onChange(time, timeString) {
@@ -6,7 +7,7 @@ function onChange(time, timeString) {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-time-picker-demo-12hours">
       <div>
         <TimePicker use12Hours onChange={onChange} />

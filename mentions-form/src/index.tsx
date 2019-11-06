@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Mentions, Form, Button } from "antd";
 
 const { Option, getMentions } = Mentions;
@@ -78,7 +79,7 @@ class App extends React.Component {
 const FormDemo = Form.create()(App);
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-mentions-demo-form">
       <FormDemo />
     </div>

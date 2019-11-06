@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Table } from "antd";
 
 const columns = [
@@ -59,7 +60,7 @@ const rowSelection = {
 };
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-table-demo-row-selection">
       <Table rowSelection={rowSelection} columns={columns} dataSource={data} />
     </div>

@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./index.less";
 import { Tooltip, Progress } from "antd";
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-progress-demo-segment">
       <div>
         <Tooltip title="3 done / 3 in progress / 4 to do">

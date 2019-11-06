@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Slider, InputNumber, Row, Col } from "antd";
 
 class IntegerStep extends React.Component {
@@ -81,7 +82,7 @@ class DecimalStep extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-slider-demo-input-number">
       <div>
         <IntegerStep />

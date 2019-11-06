@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Skeleton, Switch, Card, Icon, Avatar } from "antd";
 
 const { Meta } = Card;
@@ -53,7 +54,7 @@ class App extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-card-demo-loading">
       <App />
     </div>

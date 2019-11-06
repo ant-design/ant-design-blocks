@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Collapse } from "antd";
 
 const { Panel } = Collapse;
@@ -12,7 +13,7 @@ const text = (
 );
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-collapse-demo-borderless">
       <Collapse bordered={false} defaultActiveKey={["1"]}>
         <Panel header="This is panel header 1" key="1">

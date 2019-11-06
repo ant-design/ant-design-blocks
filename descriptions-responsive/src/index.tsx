@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Descriptions } from "antd";
 
 const Demo = () => {
@@ -34,7 +35,7 @@ const Demo = () => {
 };
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-descriptions-demo-responsive">
       <Demo />
     </div>

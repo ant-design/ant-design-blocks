@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Menu, Dropdown, Icon } from "antd";
 
 class OverlayVisible extends React.Component {
@@ -39,7 +40,7 @@ class OverlayVisible extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-dropdown-demo-overlay-visible">
       <OverlayVisible />
     </div>

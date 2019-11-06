@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { List, Avatar, Icon } from "antd";
 
 const listData = [];
@@ -22,7 +23,7 @@ const IconText = ({ type, text }) => (
 );
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-list-demo-vertical">
       <List
         itemLayout="vertical"

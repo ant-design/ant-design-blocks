@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./index.less";
 import { Progress } from "antd";
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-progress-demo-circle">
       <div>
         <Progress type="circle" percent={75} />

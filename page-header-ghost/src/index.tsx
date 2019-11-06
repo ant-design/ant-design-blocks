@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./index.less";
 import { PageHeader, Button, Descriptions } from "antd";
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-page-header-demo-ghost">
       <div
         style={{

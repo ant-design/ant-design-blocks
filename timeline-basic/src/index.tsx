@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./index.less";
 import { Timeline } from "antd";
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-timeline-demo-basic">
       <Timeline>
         <Timeline.Item>Create a services site 2015-09-01</Timeline.Item>

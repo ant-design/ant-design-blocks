@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Modal, Button } from "antd";
 
 const { confirm } = Modal;
@@ -52,7 +53,7 @@ function showPropsConfirm() {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-modal-demo-confirm">
       <div>
         <Button onClick={showConfirm}>Confirm</Button>

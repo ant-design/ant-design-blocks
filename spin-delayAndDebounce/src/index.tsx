@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Spin, Alert, Switch } from "antd";
 
 class Card extends React.Component {
@@ -31,7 +32,7 @@ class Card extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-spin-demo-delayAndDebounce">
       <Card />
     </div>

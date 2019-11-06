@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Menu, Icon, Switch } from "antd";
 
 const { SubMenu } = Menu;
@@ -81,7 +82,7 @@ class Sider extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-menu-demo-switch-mode">
       <Sider />
     </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Table, Button } from "antd";
 
 const columns = [
@@ -81,7 +82,7 @@ class App extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-table-demo-row-selection-and-operation">
       <App />
     </div>

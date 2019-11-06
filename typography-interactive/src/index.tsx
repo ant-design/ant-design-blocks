@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Typography } from "antd";
 
 const { Paragraph } = Typography;
@@ -29,7 +30,7 @@ class Demo extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-typography-demo-interactive">
       <Demo />
     </div>

@@ -1,10 +1,11 @@
 import React from "react";
+import styles from "./index.less";
 import { Card, Icon, Avatar } from "antd";
 
 const { Meta } = Card;
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-card-demo-meta">
       <Card
         style={{ width: 300 }}

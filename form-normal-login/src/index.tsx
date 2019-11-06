@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Form, Icon, Input, Button, Checkbox } from "antd";
 
 class NormalLoginForm extends React.Component {
@@ -63,7 +64,7 @@ const WrappedNormalLoginForm = Form.create({ name: "normal_login" })(
 );
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-form-demo-normal-login">
       <WrappedNormalLoginForm />
     </div>

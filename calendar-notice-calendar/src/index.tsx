@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { Calendar, Badge } from "antd";
 
 function getListData(value) {
@@ -62,7 +63,7 @@ function monthCellRender(value) {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-calendar-demo-notice-calendar">
       <Calendar
         dateCellRender={dateCellRender}

@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { List, Card } from "antd";
 
 const data = [
@@ -17,7 +18,7 @@ const data = [
 ];
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-list-demo-grid">
       <List
         grid={{ gutter: 16, column: 4 }}

@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./index.less";
 import { Input, Tooltip, Icon } from "antd";
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-input-demo-presuffix">
       <div>
         <Input

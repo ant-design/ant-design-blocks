@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.less";
 import { AutoComplete } from "antd";
 
 function onSelect(value) {
@@ -51,7 +52,7 @@ class Complete extends React.Component {
 }
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-auto-complete-demo-basic">
       <Complete />
     </div>

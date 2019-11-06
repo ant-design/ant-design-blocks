@@ -1,10 +1,11 @@
 import React from "react";
+import styles from "./index.less";
 import { Tabs } from "antd";
 
 const { TabPane } = Tabs;
 
 export default () => (
-  <div className="container">
+  <div className={styles.container}>
     <div id="components-tabs-demo-disabled">
       <Tabs defaultActiveKey="1">
         <TabPane tab="Tab 1" key="1">
