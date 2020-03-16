@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.less";
-import { Upload, message, Button, Icon } from "antd";
+import { Upload, message, Button } from "antd";
+import { UploadOutlined } from "@ant-design/icons";
 
 const props = {
   name: "file",
@@ -25,7 +26,7 @@ export default () => (
     <div id="components-upload-demo-basic">
       <Upload {...props}>
         <Button>
-          <Icon type="upload" /> Click to Upload
+          <UploadOutlined /> Click to Upload
         </Button>
       </Upload>
     </div>

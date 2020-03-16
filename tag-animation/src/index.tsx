@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./index.less";
-import { Tag, Input, Icon } from "antd";
+import { Tag, Input } from "antd";
 import { TweenOneGroup } from "rc-tween-one";
+import { PlusOutlined } from "@ant-design/icons";
 
 class EditableTagGroup extends React.Component {
   state = {
@@ -94,11 +95,8 @@ class EditableTagGroup extends React.Component {
           />
         )}
         {!inputVisible && (
-          <Tag
-            onClick={this.showInput}
-            style={{ background: "#fff", borderStyle: "dashed" }}
-          >
-            <Icon type="plus" /> New Tag
+          <Tag onClick={this.showInput} className="site-tag-plus">
+            <PlusOutlined /> New Tag
           </Tag>
         )}
       </div>

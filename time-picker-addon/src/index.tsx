@@ -16,7 +16,7 @@ class TimePickerAddonDemo extends React.Component {
       <TimePicker
         open={this.state.open}
         onOpenChange={this.handleOpenChange}
-        addon={() => (
+        renderExtraFooter={() => (
           <Button size="small" type="primary" onClick={this.handleClose}>
             Ok
           </Button>

@@ -14,7 +14,16 @@ export default () => (
   <div className={styles.container}>
     <div id="components-dropdown-demo-context-menu">
       <Dropdown overlay={menu} trigger={["contextMenu"]}>
-        <span style={{ userSelect: "none" }}>Right Click on Me</span>
+        <div
+          className="site-dropdown-context-menu"
+          style={{
+            textAlign: "center",
+            height: 200,
+            lineHeight: "200px"
+          }}
+        >
+          Right Click on here
+        </div>
       </Dropdown>
     </div>
   </div>

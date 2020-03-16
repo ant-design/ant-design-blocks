@@ -11,7 +11,7 @@ function handleChange(value) {
 export default () => (
   <div className={styles.container}>
     <div id="components-select-demo-basic">
-      <div>
+      <>
         <Select
           defaultValue="lucy"
           style={{ width: 120 }}
@@ -30,7 +30,10 @@ export default () => (
         <Select defaultValue="lucy" style={{ width: 120 }} loading>
           <Option value="lucy">Lucy</Option>
         </Select>
-      </div>
+        <Select defaultValue="lucy" style={{ width: 120 }} allowClear>
+          <Option value="lucy">Lucy</Option>
+        </Select>
+      </>
     </div>
   </div>
 );

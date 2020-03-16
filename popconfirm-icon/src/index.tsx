@@ -1,13 +1,14 @@
 import React from "react";
 import styles from "./index.less";
-import { Popconfirm, Icon } from "antd";
+import { Popconfirm } from "antd";
+import { QuestionCircleOutlined } from "@ant-design/icons";
 
 export default () => (
   <div className={styles.container}>
     <div id="components-popconfirm-demo-icon">
       <Popconfirm
         title="Are you sure？"
-        icon={<Icon type="question-circle-o" style={{ color: "red" }} />}
+        icon={<QuestionCircleOutlined style={{ color: "red" }} />}
       >
         <a href="#">Delete</a>
       </Popconfirm>

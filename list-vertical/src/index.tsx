@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.less";
-import { List, Avatar, Icon } from "antd";
+import { List, Avatar } from "antd";
+import { MessageOutlined, LikeOutlined, StarOutlined } from "@ant-design/icons";
 
 const listData = [];
 for (let i = 0; i < 23; i++) {
@@ -15,9 +16,9 @@ for (let i = 0; i < 23; i++) {
   });
 }
 
-const IconText = ({ type, text }) => (
+const IconText = ({ icon, text }) => (
   <span>
-    <Icon type={type} style={{ marginRight: 8 }} />
+    {React.createElement(icon, { style: { marginRight: 8 } })}
     {text}
   </span>
 );
@@ -44,9 +45,21 @@ export default () => (
           <List.Item
             key={item.title}
             actions={[
-              <IconText type="star-o" text="156" key="list-vertical-star-o" />,
-              <IconText type="like-o" text="156" key="list-vertical-like-o" />,
-              <IconText type="message" text="2" key="list-vertical-message" />
+              <IconText
+                icon={StarOutlined}
+                text="156"
+                key="list-vertical-star-o"
+              />,
+              <IconText
+                icon={LikeOutlined}
+                text="156"
+                key="list-vertical-like-o"
+              />,
+              <IconText
+                icon={MessageOutlined}
+                text="2"
+                key="list-vertical-message"
+              />
             ]}
             extra={
               <img

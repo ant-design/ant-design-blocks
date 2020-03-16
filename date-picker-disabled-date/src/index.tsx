@@ -3,7 +3,7 @@ import styles from "./index.less";
 import moment from "moment";
 import { DatePicker } from "antd";
 
-const { MonthPicker, RangePicker } = DatePicker;
+const { RangePicker } = DatePicker;
 
 function range(start, end) {
   const result = [];
@@ -52,7 +52,7 @@ export default () => (
           showTime={{ defaultValue: moment("00:00:00", "HH:mm:ss") }}
         />
         <br />
-        <MonthPicker disabledDate={disabledDate} placeholder="Select month" />
+        <DatePicker picker="month" disabledDate={disabledDate} />
         <br />
         <RangePicker
           disabledDate={disabledDate}

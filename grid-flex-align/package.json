@@ -1,7 +1,7 @@
 {
   "name": "@umi-block/grid-flex-align",
   "version": "0.0.1",
-  "description": "Flex 子元素垂直对齐。",
+  "description": "子元素垂直对齐。",
   "main": "src/index.js",
   "authors": { "name": "", "email": "" },
   "repository": "https://github.com/ant-design/ant-design-blocks/${BLOCKNAME}",

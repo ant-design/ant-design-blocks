@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.less";
-import { Menu, Dropdown, Icon } from "antd";
+import { Menu, Dropdown } from "antd";
+import { DownOutlined } from "@ant-design/icons";
 
 const menu = (
   <Menu>
@@ -33,8 +34,8 @@ export default () => (
   <div className={styles.container}>
     <div id="components-dropdown-demo-item">
       <Dropdown overlay={menu}>
-        <a className="ant-dropdown-link" href="#">
-          Hover me <Icon type="down" />
+        <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+          Hover me <DownOutlined />
         </a>
       </Dropdown>
     </div>

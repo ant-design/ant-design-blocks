@@ -1,6 +1,11 @@
 import React from "react";
 import styles from "./index.less";
-import { Menu, Icon, Switch } from "antd";
+import { Menu, Switch } from "antd";
+import {
+  MailOutlined,
+  AppstoreOutlined,
+  SettingOutlined
+} from "@ant-design/icons";
 
 const { SubMenu } = Menu;
 
@@ -46,7 +51,7 @@ class Sider extends React.Component {
             key="sub1"
             title={
               <span>
-                <Icon type="mail" />
+                <MailOutlined />
                 <span>Navigation One</span>
               </span>
             }
@@ -60,7 +65,7 @@ class Sider extends React.Component {
             key="sub2"
             title={
               <span>
-                <Icon type="appstore" />
+                <AppstoreOutlined />
                 <span>Navigation Two</span>
               </span>
             }
@@ -76,7 +81,7 @@ class Sider extends React.Component {
             key="sub4"
             title={
               <span>
-                <Icon type="setting" />
+                <SettingOutlined />
                 <span>Navigation Three</span>
               </span>
             }

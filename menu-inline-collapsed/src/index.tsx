@@ -1,6 +1,15 @@
 import React from "react";
 import styles from "./index.less";
-import { Menu, Icon, Button } from "antd";
+import { Menu, Button } from "antd";
+import {
+  AppstoreOutlined,
+  MenuUnfoldOutlined,
+  MenuFoldOutlined,
+  PieChartOutlined,
+  DesktopOutlined,
+  ContainerOutlined,
+  MailOutlined
+} from "@ant-design/icons";
 
 const { SubMenu } = Menu;
 
@@ -23,7 +32,9 @@ class App extends React.Component {
           onClick={this.toggleCollapsed}
           style={{ marginBottom: 16 }}
         >
-          <Icon type={this.state.collapsed ? "menu-unfold" : "menu-fold"} />
+          {React.createElement(
+            this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined
+          )}
         </Button>
         <Menu
           defaultSelectedKeys={["1"]}
@@ -33,22 +44,22 @@ class App extends React.Component {
           inlineCollapsed={this.state.collapsed}
         >
           <Menu.Item key="1">
-            <Icon type="pie-chart" />
+            <PieChartOutlined />
             <span>Option 1</span>
           </Menu.Item>
           <Menu.Item key="2">
-            <Icon type="desktop" />
+            <DesktopOutlined />
             <span>Option 2</span>
           </Menu.Item>
           <Menu.Item key="3">
-            <Icon type="inbox" />
+            <ContainerOutlined />
             <span>Option 3</span>
           </Menu.Item>
           <SubMenu
             key="sub1"
             title={
               <span>
-                <Icon type="mail" />
+                <MailOutlined />
                 <span>Navigation One</span>
               </span>
             }
@@ -62,7 +73,7 @@ class App extends React.Component {
             key="sub2"
             title={
               <span>
-                <Icon type="appstore" />
+                <AppstoreOutlined />
                 <span>Navigation Two</span>
               </span>
             }

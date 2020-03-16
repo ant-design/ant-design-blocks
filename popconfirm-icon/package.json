@@ -1,7 +1,7 @@
 {
   "name": "@umi-block/popconfirm-icon",
   "version": "0.0.1",
-  "description": "使用 `icon` 自定义提示 `icon`。",
+  "description": "自定义提示 `icon`。",
   "main": "src/index.js",
   "authors": { "name": "", "email": "" },
   "repository": "https://github.com/ant-design/ant-design-blocks/${BLOCKNAME}",

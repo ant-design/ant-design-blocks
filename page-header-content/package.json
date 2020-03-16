@@ -1,7 +1,7 @@
 {
   "name": "@umi-block/page-header-content",
   "version": "0.0.1",
-  "description": "使用了 pageHeader 提供的所有能力。",
+  "description": "使用了 PageHeader 提供的所有能力。",
   "main": "src/index.js",
   "authors": { "name": "", "email": "" },
   "repository": "https://github.com/ant-design/ant-design-blocks/${BLOCKNAME}",

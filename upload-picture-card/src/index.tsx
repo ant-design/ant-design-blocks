@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.less";
-import { Upload, Icon, Modal } from "antd";
+import { Upload, Modal } from "antd";
+import { PlusOutlined } from "@ant-design/icons";
 
 function getBase64(file) {
   return new Promise((resolve, reject) => {
@@ -47,9 +48,7 @@ class PicturesWall extends React.Component {
       {
         uid: "-5",
         name: "image.png",
-        status: "done",
-        url:
-          "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+        status: "error"
       }
     ]
   };
@@ -73,7 +72,7 @@ class PicturesWall extends React.Component {
     const { previewVisible, previewImage, fileList } = this.state;
     const uploadButton = (
       <div>
-        <Icon type="plus" />
+        <PlusOutlined />
         <div className="ant-upload-text">Upload</div>
       </div>
     );

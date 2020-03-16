@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.less";
-import { Upload, Button, Icon } from "antd";
+import { Upload, Button } from "antd";
+import { UploadOutlined } from "@ant-design/icons";
 
 const props = {
   action: "https://www.mocky.io/v2/5cc8019d300000980a055e76",
@@ -38,7 +39,7 @@ export default () => (
     <div id="components-upload-demo-defaultFileList">
       <Upload {...props}>
         <Button>
-          <Icon type="upload" /> Upload
+          <UploadOutlined /> Upload
         </Button>
       </Upload>
     </div>

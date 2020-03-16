@@ -21,6 +21,14 @@ export default () => (
           ]}
           disabled
         />
+        <br />
+        <RangePicker
+          defaultValue={[
+            moment("2019-09-03", dateFormat),
+            moment("2019-11-22", dateFormat)
+          ]}
+          disabled={[false, true]}
+        />
       </div>
     </div>
   </div>

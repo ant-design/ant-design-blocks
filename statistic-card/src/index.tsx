@@ -1,11 +1,12 @@
 import React from "react";
 import styles from "./index.less";
-import { Statistic, Card, Row, Col, Icon } from "antd";
+import { Statistic, Card, Row, Col } from "antd";
+import { ArrowUpOutlined, ArrowDownOutlined } from "@ant-design/icons";
 
 export default () => (
   <div className={styles.container}>
     <div id="components-statistic-demo-card">
-      <div style={{ background: "#ECECEC", padding: "30px" }}>
+      <div className="site-statistic-demo-card">
         <Row gutter={16}>
           <Col span={12}>
             <Card>
@@ -14,7 +15,7 @@ export default () => (
                 value={11.28}
                 precision={2}
                 valueStyle={{ color: "#3f8600" }}
-                prefix={<Icon type="arrow-up" />}
+                prefix={<ArrowUpOutlined />}
                 suffix="%"
               />
             </Card>
@@ -26,7 +27,7 @@ export default () => (
                 value={9.3}
                 precision={2}
                 valueStyle={{ color: "#cf1322" }}
-                prefix={<Icon type="arrow-down" />}
+                prefix={<ArrowDownOutlined />}
                 suffix="%"
               />
             </Card>

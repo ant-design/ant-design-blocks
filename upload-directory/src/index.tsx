@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.less";
-import { Upload, Button, Icon } from "antd";
+import { Upload, Button } from "antd";
+import { UploadOutlined } from "@ant-design/icons";
 
 export default () => (
   <div className={styles.container}>
@@ -10,7 +11,7 @@ export default () => (
         directory
       >
         <Button>
-          <Icon type="upload" /> Upload Directory
+          <UploadOutlined /> Upload Directory
         </Button>
       </Upload>
     </div>

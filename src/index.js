@@ -1,25 +1,19 @@
+/** @format */
+
 const fs = require('fs-extra');
 const path = require('path');
 const ora = require('ora');
 const prettier = require('prettier');
 const { winPath } = require('umi-utils');
 
-const {
-  parseJSX,
-  parseStyle,
-  parseTitle,
-  parseDesc,
-  parseIsDebug
-} = require('./parse');
+const { parseJSX, parseStyle, parseTitle, parseDesc, parseIsDebug } = require('./parse');
 const fetchAntDDemos = require('./fetchAntDDemos');
 const { screenshot, openBrowser, closeBrowser } = require('./screenshot');
 const topList = require('./top');
 
 require('events').EventEmitter.defaultMaxListeners = 0;
 
-const blockTemplateDir = winPath(
-  path.join(__dirname, '../assets/block-template')
-);
+const blockTemplateDir = winPath(path.join(__dirname, '../assets/block-template'));
 const rootDir = winPath(path.join(__dirname, '..'));
 const continueFilePath = winPath(path.join(__dirname, '../continue.json'));
 const spinner = ora();
@@ -33,7 +27,7 @@ const modifyPackageInfo = async (blockDir, name, description) => {
   const json = {
     ...pkg,
     name: `@umi-block/${name}`,
-    description
+    description,
   };
   const jsonStr = prettier.format(JSON.stringify(json), { parser: 'json' });
   await fs.outputFile(pkgFilePath, jsonStr);
@@ -77,7 +71,7 @@ const generateBlock = async demoWithText => {
   }
 
   const description = parseDesc(text);
-  await modifyPackageInfo(blockDir, name, description);
+  // await modifyPackageInfo(blockDir, name, description);
 
   await screenshot(name, blockDir, rootDir, width, height);
 };
@@ -107,13 +101,7 @@ const generateBlockList = async demosWithText => {
   let blockList = [];
   for (let index = 0; index < demosWithText.length; index++) {
     const demoWithText = demosWithText[index];
-    const {
-      name,
-      componentName,
-      mdBaseName,
-      text,
-      componentType
-    } = demoWithText;
+    const { name, componentName, mdBaseName, text, componentType } = demoWithText;
     const description = parseDesc(text);
     const demoTitle = parseTitle(text);
     const title = `${componentName}-${demoTitle}`;
@@ -135,7 +123,7 @@ const generateBlockList = async demosWithText => {
       tags,
       name: title,
       previewUrl,
-      features: ['antd']
+      features: ['antd'],
     });
   }
 
@@ -168,21 +156,16 @@ const main = async () => {
   const demos = await fetchAntDDemos();
 
   if (demos.length <= 0) {
-    console.error(
-      'antd demos not found, please check ant-design submodule is existed!'
-    );
+    console.error('antd demos not found, please check ant-design submodule is existed!');
     return;
   }
 
   let demosWithText = demos
     .map(demo => {
-      const text = fs.readFileSync(
-        isWin ? winPath(demo.filePath) : demo.filePath,
-        'utf8'
-      );
+      const text = fs.readFileSync(isWin ? winPath(demo.filePath) : demo.filePath, 'utf8');
       return {
         ...demo,
-        text
+        text,
       };
     })
     .filter(demo => !parseIsDebug(demo.text))

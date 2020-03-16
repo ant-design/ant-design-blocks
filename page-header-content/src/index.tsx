@@ -1,15 +1,7 @@
 import React from "react";
 import styles from "./index.less";
-import {
-  PageHeader,
-  Menu,
-  Dropdown,
-  Icon,
-  Button,
-  Tag,
-  Typography,
-  Row
-} from "antd";
+import { PageHeader, Menu, Dropdown, Button, Tag, Typography, Row } from "antd";
+import { EllipsisOutlined } from "@ant-design/icons";
 
 const { Paragraph } = Typography;
 
@@ -50,8 +42,7 @@ const DropdownMenu = () => {
           padding: 0
         }}
       >
-        <Icon
-          type="ellipsis"
+        <EllipsisOutlined
           style={{
             fontSize: 20,
             verticalAlign: "top"
@@ -80,9 +71,7 @@ const routes = [
 const IconLink = ({ src, text }) => (
   <a
     style={{
-      marginRight: 16,
-      display: "flex",
-      alignItems: "center"
+      marginRight: 16
     }}
   >
     <img
@@ -90,14 +79,14 @@ const IconLink = ({ src, text }) => (
         marginRight: 8
       }}
       src={src}
-      alt="start"
+      alt={text}
     />
     {text}
   </a>
 );
 
 const content = (
-  <div className="content">
+  <>
     <Paragraph>
       Ant Design interprets the color system into two levels: a system-level
       color system and a product-level color system.
@@ -108,7 +97,7 @@ const content = (
       expectation of color when adjusting colors, as well as facilitate
       communication in teams.
     </Paragraph>
-    <Row className="contentLink" type="flex">
+    <div>
       <IconLink
         src="https://gw.alipayobjects.com/zos/rmsportal/MjEImQtenlyueSmVEfUD.svg"
         text="Quick Start"
@@ -121,24 +110,15 @@ const content = (
         src="https://gw.alipayobjects.com/zos/rmsportal/ohOEPSYdDTNnyMbGuyLb.svg"
         text="Product Doc"
       />
-    </Row>
-  </div>
+    </div>
+  </>
 );
 
 const Content = ({ children, extraContent }) => {
   return (
-    <Row className="content" type="flex">
-      <div className="main" style={{ flex: 1 }}>
-        {children}
-      </div>
-      <div
-        className="extra"
-        style={{
-          marginLeft: 80
-        }}
-      >
-        {extraContent}
-      </div>
+    <Row>
+      <div style={{ flex: 1 }}>{children}</div>
+      <div className="image">{extraContent}</div>
     </Row>
   );
 };
@@ -148,9 +128,7 @@ export default () => (
     <div id="components-page-header-demo-content">
       <PageHeader
         title="Title"
-        style={{
-          border: "1px solid rgb(235, 237, 240)"
-        }}
+        className="site-page-header"
         subTitle="This is a subtitle"
         tags={<Tag color="blue">Running</Tag>}
         extra={[
@@ -169,8 +147,9 @@ export default () => (
         <Content
           extraContent={
             <img
-              src="https://gw.alipayobjects.com/mdn/mpaas_user/afts/img/A*KsfVQbuLRlYAAAAAAAAAAABjAQAAAQ/original"
+              src="https://gw.alipayobjects.com/zos/antfincdn/K%24NnlsB%26hz/pageHeader.svg"
               alt="content"
+              width="100%"
             />
           }
         >

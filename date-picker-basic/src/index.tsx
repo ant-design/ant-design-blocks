@@ -2,8 +2,6 @@ import React from "react";
 import styles from "./index.less";
 import { DatePicker } from "antd";
 
-const { MonthPicker, RangePicker, WeekPicker } = DatePicker;
-
 function onChange(date, dateString) {
   console.log(date, dateString);
 }
@@ -14,11 +12,11 @@ export default () => (
       <div>
         <DatePicker onChange={onChange} />
         <br />
-        <MonthPicker onChange={onChange} placeholder="Select month" />
+        <DatePicker onChange={onChange} picker="week" />
         <br />
-        <RangePicker onChange={onChange} />
+        <DatePicker onChange={onChange} picker="month" />
         <br />
-        <WeekPicker onChange={onChange} placeholder="Select week" />
+        <DatePicker onChange={onChange} picker="year" />
       </div>
     </div>
   </div>

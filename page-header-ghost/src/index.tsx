@@ -5,12 +5,7 @@ import { PageHeader, Button, Descriptions } from "antd";
 export default () => (
   <div className={styles.container}>
     <div id="components-page-header-demo-ghost">
-      <div
-        style={{
-          backgroundColor: "#F5F5F5",
-          padding: 24
-        }}
-      >
+      <div className="site-page-header-ghost-wrapper">
         <PageHeader
           ghost={false}
           onBack={() => window.history.back()}

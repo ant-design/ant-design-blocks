@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.less";
-import { Upload, Icon, message } from "antd";
+import { Upload, message } from "antd";
+import { LoadingOutlined, PlusOutlined } from "@ant-design/icons";
 
 function getBase64(img, callback) {
   const reader = new FileReader();
@@ -44,7 +45,7 @@ class Avatar extends React.Component {
   render() {
     const uploadButton = (
       <div>
-        <Icon type={this.state.loading ? "loading" : "plus"} />
+        {this.state.loading ? <LoadingOutlined /> : <PlusOutlined />}
         <div className="ant-upload-text">Upload</div>
       </div>
     );

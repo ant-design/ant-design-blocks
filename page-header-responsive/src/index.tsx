@@ -51,9 +51,7 @@ export default () => (
     <div id="components-page-header-demo-responsive">
       <div>
         <PageHeader
-          style={{
-            border: "1px solid rgb(235, 237, 240)"
-          }}
+          className="site-page-header-responsive"
           onBack={() => window.history.back()}
           title="Title"
           subTitle="This is a subtitle"

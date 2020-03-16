@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./index.less";
 import { DatePicker, Radio } from "antd";
 
-const { MonthPicker, RangePicker, WeekPicker } = DatePicker;
+const { RangePicker } = DatePicker;
 
 class PickerSizesDemo extends React.Component {
   state = {
@@ -26,11 +26,11 @@ class PickerSizesDemo extends React.Component {
         <br />
         <DatePicker size={size} />
         <br />
-        <MonthPicker size={size} placeholder="Select Month" />
+        <DatePicker size={size} picker="month" />
         <br />
         <RangePicker size={size} />
         <br />
-        <WeekPicker size={size} placeholder="Select Week" />
+        <DatePicker size={size} picker="week" />
       </div>
     );
   }

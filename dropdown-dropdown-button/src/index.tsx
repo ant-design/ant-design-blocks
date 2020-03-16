@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.less";
-import { Menu, Dropdown, Button, Icon, message } from "antd";
+import { Menu, Dropdown, Button, message, Tooltip } from "antd";
+import { DownOutlined, UserOutlined } from "@ant-design/icons";
 
 function handleButtonClick(e) {
   message.info("Click on left button.");
@@ -15,15 +16,15 @@ function handleMenuClick(e) {
 const menu = (
   <Menu onClick={handleMenuClick}>
     <Menu.Item key="1">
-      <Icon type="user" />
+      <UserOutlined />
       1st menu item
     </Menu.Item>
     <Menu.Item key="2">
-      <Icon type="user" />
+      <UserOutlined />
       2nd menu item
     </Menu.Item>
     <Menu.Item key="3">
-      <Icon type="user" />
+      <UserOutlined />
       3rd item
     </Menu.Item>
   </Menu>
@@ -36,15 +37,26 @@ export default () => (
         <Dropdown.Button onClick={handleButtonClick} overlay={menu}>
           Dropdown
         </Dropdown.Button>
-        <Dropdown.Button overlay={menu} icon={<Icon type="user" />}>
+        <Dropdown.Button overlay={menu} icon={<UserOutlined />}>
           Dropdown
         </Dropdown.Button>
         <Dropdown.Button onClick={handleButtonClick} overlay={menu} disabled>
           Dropdown
         </Dropdown.Button>
+        <Dropdown.Button
+          overlay={menu}
+          buttonsRender={([leftButton, rightButton]) => [
+            <Tooltip title="tooltip" key="leftButton">
+              {leftButton}
+            </Tooltip>,
+            rightButton
+          ]}
+        >
+          With Tooltip
+        </Dropdown.Button>
         <Dropdown overlay={menu}>
           <Button>
-            Button <Icon type="down" />
+            Button <DownOutlined />
           </Button>
         </Dropdown>
       </div>

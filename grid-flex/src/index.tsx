@@ -1,51 +1,76 @@
 import React from "react";
 import styles from "./index.less";
-import { Row, Col } from "antd";
+import { Row, Col, Divider } from "antd";
 
 export default () => (
   <div className={styles.container}>
     <div id="components-grid-demo-flex">
-      <div>
-        <p>sub-element align left</p>
-        <Row type="flex" justify="start">
+      <>
+        <Divider
+          orientation="left"
+          style={{ color: "#333", fontWeight: "normal" }}
+        >
+          sub-element align left
+        </Divider>
+        <Row justify="start">
           <Col span={4}>col-4</Col>
           <Col span={4}>col-4</Col>
           <Col span={4}>col-4</Col>
           <Col span={4}>col-4</Col>
         </Row>
 
-        <p>sub-element align center</p>
-        <Row type="flex" justify="center">
+        <Divider
+          orientation="left"
+          style={{ color: "#333", fontWeight: "normal" }}
+        >
+          sub-element align center
+        </Divider>
+        <Row justify="center">
           <Col span={4}>col-4</Col>
           <Col span={4}>col-4</Col>
           <Col span={4}>col-4</Col>
           <Col span={4}>col-4</Col>
         </Row>
 
-        <p>sub-element align right</p>
-        <Row type="flex" justify="end">
+        <Divider
+          orientation="left"
+          style={{ color: "#333", fontWeight: "normal" }}
+        >
+          sub-element align right
+        </Divider>
+        <Row justify="end">
           <Col span={4}>col-4</Col>
           <Col span={4}>col-4</Col>
           <Col span={4}>col-4</Col>
           <Col span={4}>col-4</Col>
         </Row>
 
-        <p>sub-element monospaced arrangement</p>
-        <Row type="flex" justify="space-between">
+        <Divider
+          orientation="left"
+          style={{ color: "#333", fontWeight: "normal" }}
+        >
+          sub-element monospaced arrangement
+        </Divider>
+        <Row justify="space-between">
           <Col span={4}>col-4</Col>
           <Col span={4}>col-4</Col>
           <Col span={4}>col-4</Col>
           <Col span={4}>col-4</Col>
         </Row>
 
-        <p>sub-element align full</p>
-        <Row type="flex" justify="space-around">
+        <Divider
+          orientation="left"
+          style={{ color: "#333", fontWeight: "normal" }}
+        >
+          sub-element align full
+        </Divider>
+        <Row justify="space-around">
           <Col span={4}>col-4</Col>
           <Col span={4}>col-4</Col>
           <Col span={4}>col-4</Col>
           <Col span={4}>col-4</Col>
         </Row>
-      </div>
+      </>
     </div>
   </div>
 );

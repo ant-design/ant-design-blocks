@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.less";
-import { Menu, Dropdown, Icon } from "antd";
+import { Menu, Dropdown } from "antd";
+import { DownOutlined } from "@ant-design/icons";
 
 const menu = (
   <Menu>
@@ -19,8 +20,8 @@ export default () => (
   <div className={styles.container}>
     <div id="components-dropdown-demo-trigger">
       <Dropdown overlay={menu} trigger={["click"]}>
-        <a className="ant-dropdown-link" href="#">
-          Click me <Icon type="down" />
+        <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+          Click me <DownOutlined />
         </a>
       </Dropdown>
     </div>

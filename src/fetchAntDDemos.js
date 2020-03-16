@@ -1,10 +1,12 @@
+/** @format */
+
 const path = require('path');
 const fs = require('fs-extra');
 const ora = require('ora');
 const { parseComponentType, parseCol } = require('./parse');
 
 const spinner = ora();
-const componentsDir = path.join(__dirname, '../ant-design/components');
+const componentsDir = path.join(__dirname, '../../ant-design/components');
 
 const filterFolders = ['__tests__', '_util'];
 
@@ -41,7 +43,7 @@ const fetchComponent = async componentName => {
           filePath,
           componentType,
           width: 900 / col,
-          height: 500 / col
+          height: 500 / col,
         };
       });
   } catch (err) {}
@@ -53,13 +55,12 @@ const fetchAntDDemos = async () => {
   const fileNames = await fs.readdir(componentsDir);
   const componentNames = fileNames.filter(fileName => {
     const filePath = path.join(componentsDir, fileName);
-    return (
-      !filterFolders.includes(fileName) && fs.statSync(filePath).isDirectory()
-    );
+    return !filterFolders.includes(fileName) && fs.statSync(filePath).isDirectory();
   });
   let demos = [];
   await Promise.all(
     componentNames.map(async name => {
+      console.log(name);
       const result = await fetchComponent(name);
       demos = demos.concat(result);
     })

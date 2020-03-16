@@ -9,7 +9,7 @@ function onPanelChange(value, mode) {
 export default () => (
   <div className={styles.container}>
     <div id="components-calendar-demo-card">
-      <div style={{ width: 300, border: "1px solid #d9d9d9", borderRadius: 4 }}>
+      <div className="site-calendar-demo-card">
         <Calendar fullscreen={false} onPanelChange={onPanelChange} />
       </div>
     </div>

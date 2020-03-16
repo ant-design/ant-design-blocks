@@ -1,3 +1,5 @@
+/** @format */
+
 const prettier = require('prettier');
 
 const JSX_SCRIPT = /```jsx\n*(.*?(?=```))/is;
@@ -15,12 +17,12 @@ const parseJSX = (text, id = '') => {
   if (result && result.length > 0) {
     jsxText = result[1];
   }
-  jsxText = jsxText.replace(
-    /ReactDOM.render\((.*),.*mountNode.*\)/is,
-    (match, key) => {
-      return `export default () => <div className={styles.container}><div id="${id}">${key}</div></div>`;
-    }
-  );
+  if (!jsxText) {
+    return '';
+  }
+  jsxText = jsxText.replace(/ReactDOM.render\((.*),.*mountNode.*\)/is, (match, key) => {
+    return `export default () => <div className={styles.container}><div id="${id}">${key}</div></div>`;
+  });
 
   jsxText = `import React from 'react';import styles from './index.less';\n${jsxText}`;
 
@@ -106,5 +108,5 @@ module.exports = {
   parseDesc,
   parseIsDebug,
   parseComponentType,
-  parseCol
+  parseCol,
 };

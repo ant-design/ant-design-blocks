@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.less";
-import { Input, Tooltip, Icon } from "antd";
+import { Input, Tooltip } from "antd";
+import { InfoCircleOutlined, UserOutlined } from "@ant-design/icons";
 
 export default () => (
   <div className={styles.container}>
@@ -8,18 +9,21 @@ export default () => (
       <div>
         <Input
           placeholder="Enter your username"
-          prefix={<Icon type="user" style={{ color: "rgba(0,0,0,.25)" }} />}
+          prefix={<UserOutlined className="site-form-item-icon" />}
           suffix={
             <Tooltip title="Extra information">
-              <Icon type="info-circle" style={{ color: "rgba(0,0,0,.45)" }} />
+              <InfoCircleOutlined style={{ color: "rgba(0,0,0,.45)" }} />
             </Tooltip>
           }
         />
-
         <br />
         <br />
-
         <Input prefix="￥" suffix="RMB" />
+
+        <br />
+        <br />
+
+        <Input prefix="￥" suffix="RMB" disabled />
       </div>
     </div>
   </div>

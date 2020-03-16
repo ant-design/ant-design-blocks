@@ -1,26 +1,10 @@
 .container {
   :global {
-    .icon-wrapper {
-      position: relative;
-      padding: 0px 30px;
+    [data-theme="dark"] .icon-wrapper .anticon {
+      color: rgba(255, 255, 255, 0.25);
     }
-
-    .icon-wrapper .anticon {
-      position: absolute;
-      top: -2px;
-      width: 16px;
-      height: 16px;
-      line-height: 1;
-      font-size: 16px;
-      color: rgba(0, 0, 0, 0.25);
-    }
-
-    .icon-wrapper .anticon:first-child {
-      left: 0;
-    }
-
-    .icon-wrapper .anticon:last-child {
-      right: 0;
+    [data-theme="dark"] .icon-wrapper .icon-wrapper-active {
+      color: rgba(255, 255, 255, 0.45);
     }
   }
 }

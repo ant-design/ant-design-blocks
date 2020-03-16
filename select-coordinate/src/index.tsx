@@ -31,7 +31,7 @@ class App extends React.Component {
   render() {
     const { cities } = this.state;
     return (
-      <div>
+      <>
         <Select
           defaultValue={provinceData[0]}
           style={{ width: 120 }}
@@ -50,7 +50,7 @@ class App extends React.Component {
             <Option key={city}>{city}</Option>
           ))}
         </Select>
-      </div>
+      </>
     );
   }
 }

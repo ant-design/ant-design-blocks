@@ -1,6 +1,11 @@
 import React from "react";
 import styles from "./index.less";
-import { Menu, Icon } from "antd";
+import { Menu } from "antd";
+import {
+  MailOutlined,
+  AppstoreOutlined,
+  SettingOutlined
+} from "@ant-design/icons";
 
 const { SubMenu } = Menu;
 
@@ -24,17 +29,17 @@ class App extends React.Component {
         mode="horizontal"
       >
         <Menu.Item key="mail">
-          <Icon type="mail" />
+          <MailOutlined />
           Navigation One
         </Menu.Item>
         <Menu.Item key="app" disabled>
-          <Icon type="appstore" />
+          <AppstoreOutlined />
           Navigation Two
         </Menu.Item>
         <SubMenu
           title={
             <span className="submenu-title-wrapper">
-              <Icon type="setting" />
+              <SettingOutlined />
               Navigation Three - Submenu
             </span>
           }

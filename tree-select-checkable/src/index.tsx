@@ -58,7 +58,7 @@ class Demo extends React.Component {
       onChange: this.onChange,
       treeCheckable: true,
       showCheckedStrategy: SHOW_PARENT,
-      searchPlaceholder: "Please select",
+      placeholder: "Please select",
       style: {
         width: "100%"
       }

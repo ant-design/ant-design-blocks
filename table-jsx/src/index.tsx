@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./index.less";
-import { Table, Divider, Tag } from "antd";
+import { Table, Tag } from "antd";
 
 const { Column, ColumnGroup } = Table;
 
@@ -60,8 +60,7 @@ export default () => (
           key="action"
           render={(text, record) => (
             <span>
-              <a>Invite {record.lastName}</a>
-              <Divider type="vertical" />
+              <a style={{ marginRight: 16 }}>Invite {record.lastName}</a>
               <a>Delete</a>
             </span>
           )}

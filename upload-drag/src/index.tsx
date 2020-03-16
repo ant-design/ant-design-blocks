@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.less";
-import { Upload, Icon, message } from "antd";
+import { Upload, message } from "antd";
+import { InboxOutlined } from "@ant-design/icons";
 
 const { Dragger } = Upload;
 
@@ -26,7 +27,7 @@ export default () => (
     <div id="components-upload-demo-drag">
       <Dragger {...props}>
         <p className="ant-upload-drag-icon">
-          <Icon type="inbox" />
+          <InboxOutlined />
         </p>
         <p className="ant-upload-text">
           Click or drag file to this area to upload

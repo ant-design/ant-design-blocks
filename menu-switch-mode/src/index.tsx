@@ -1,6 +1,12 @@
 import React from "react";
 import styles from "./index.less";
-import { Menu, Icon, Switch } from "antd";
+import { Menu, Switch } from "antd";
+import {
+  MailOutlined,
+  CalendarOutlined,
+  AppstoreOutlined,
+  SettingOutlined
+} from "@ant-design/icons";
 
 const { SubMenu } = Menu;
 
@@ -27,7 +33,7 @@ class Sider extends React.Component {
       <div>
         <Switch onChange={this.changeMode} /> Change Mode
         <span className="ant-divider" style={{ margin: "0 1em" }} />
-        <Switch onChange={this.changeTheme} /> Change Theme
+        <Switch onChange={this.changeTheme} /> Change Style
         <br />
         <br />
         <Menu
@@ -38,18 +44,18 @@ class Sider extends React.Component {
           theme={this.state.theme}
         >
           <Menu.Item key="1">
-            <Icon type="mail" />
+            <MailOutlined />
             Navigation One
           </Menu.Item>
           <Menu.Item key="2">
-            <Icon type="calendar" />
+            <CalendarOutlined />
             Navigation Two
           </Menu.Item>
           <SubMenu
             key="sub1"
             title={
               <span>
-                <Icon type="appstore" />
+                <AppstoreOutlined />
                 <span>Navigation Three</span>
               </span>
             }
@@ -65,7 +71,7 @@ class Sider extends React.Component {
             key="sub2"
             title={
               <span>
-                <Icon type="setting" />
+                <SettingOutlined />
                 <span>Navigation Four</span>
               </span>
             }

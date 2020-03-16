@@ -5,7 +5,7 @@ import { Row, Col } from "antd";
 export default () => (
   <div className={styles.container}>
     <div id="components-grid-demo-offset">
-      <div>
+      <>
         <Row>
           <Col span={8}>col-8</Col>
           <Col span={8} offset={8}>
@@ -25,7 +25,7 @@ export default () => (
             col-12 col-offset-6
           </Col>
         </Row>
-      </div>
+      </>
     </div>
   </div>
 );

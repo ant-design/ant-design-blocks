@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.less";
-import { Menu, Dropdown, Icon, message } from "antd";
+import { Menu, Dropdown, message } from "antd";
+import { DownOutlined } from "@ant-design/icons";
 
 const onClick = ({ key }) => {
   message.info(`Click on item ${key}`);
@@ -18,8 +19,8 @@ export default () => (
   <div className={styles.container}>
     <div id="components-dropdown-demo-event">
       <Dropdown overlay={menu}>
-        <a className="ant-dropdown-link" href="#">
-          Hover me, Click menu item <Icon type="down" />
+        <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+          Hover me, Click menu item <DownOutlined />
         </a>
       </Dropdown>
     </div>

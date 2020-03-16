@@ -10,7 +10,8 @@ const renderTabBar = (props, DefaultTabBar) => (
     {({ style }) => (
       <DefaultTabBar
         {...props}
-        style={{ ...style, zIndex: 1, background: "#fff" }}
+        className="site-custom-tab-bar"
+        style={{ ...style }}
       />
     )}
   </Sticky>

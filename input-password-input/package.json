@@ -1,7 +1,7 @@
 {
   "name": "@umi-block/input-password-input",
   "version": "0.0.1",
-  "description": "密码框，版本 3.12.0 中新增。",
+  "description": "密码框。",
   "main": "src/index.js",
   "authors": { "name": "", "email": "" },
   "repository": "https://github.com/ant-design/ant-design-blocks/${BLOCKNAME}",

@@ -5,7 +5,7 @@ import { Card, Col, Row } from "antd";
 export default () => (
   <div className={styles.container}>
     <div id="components-card-demo-in-column">
-      <div style={{ background: "#ECECEC", padding: "30px" }}>
+      <div className="site-card-wrapper">
         <Row gutter={16}>
           <Col span={8}>
             <Card title="Card title" bordered={false}>

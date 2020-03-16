@@ -6,9 +6,7 @@ export default () => (
   <div className={styles.container}>
     <div id="components-page-header-demo-basic">
       <PageHeader
-        style={{
-          border: "1px solid rgb(235, 237, 240)"
-        }}
+        className="site-page-header"
         onBack={() => null}
         title="Title"
         subTitle="This is a subtitle"

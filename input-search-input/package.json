@@ -1,7 +1,7 @@
 {
   "name": "@umi-block/input-search-input",
   "version": "0.0.1",
-  "description": "带有搜索按钮的输入框，`2.5.0` 时新增。",
+  "description": "带有搜索按钮的输入框。",
   "main": "src/index.js",
   "authors": { "name": "", "email": "" },
   "repository": "https://github.com/ant-design/ant-design-blocks/${BLOCKNAME}",

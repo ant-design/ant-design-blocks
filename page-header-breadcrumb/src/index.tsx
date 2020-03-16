@@ -21,9 +21,7 @@ export default () => (
   <div className={styles.container}>
     <div id="components-page-header-demo-breadcrumb">
       <PageHeader
-        style={{
-          border: "1px solid rgb(235, 237, 240)"
-        }}
+        className="site-page-header"
         title="Title"
         breadcrumb={{ routes }}
         subTitle="This is a subtitle"

@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./index.less";
-import { Icon } from "antd";
+import { createFromIconfontCN } from "@ant-design/icons";
 
-const IconFont = Icon.createFromIconfontCN({
+const IconFont = createFromIconfontCN({
   scriptUrl: "//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js"
 });
 

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.less";
 import { Modal, Button } from "antd";
+import { ExclamationCircleOutlined } from "@ant-design/icons";
 
 class LocalizedModal extends React.Component {
   state = { visible: false };
@@ -43,6 +44,7 @@ class LocalizedModal extends React.Component {
 function confirm() {
   Modal.confirm({
     title: "Confirm",
+    icon: <ExclamationCircleOutlined />,
     content: "Bla bla ...",
     okText: "确认",
     cancelText: "取消"

@@ -34,7 +34,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div style={{ borderBottom: "1px solid #E9E9E9" }}>
+        <div className="site-checkbox-all-wrapper">
           <Checkbox
             indeterminate={this.state.indeterminate}
             onChange={this.onCheckAllChange}

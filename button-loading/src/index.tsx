@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.less";
 import { Button } from "antd";
+import { PoweroffOutlined } from "@ant-design/icons";
 
 class App extends React.Component {
   state = {
@@ -35,16 +36,12 @@ class App extends React.Component {
         </Button>
         <Button
           type="primary"
-          icon="poweroff"
+          icon={<PoweroffOutlined />}
           loading={this.state.iconLoading}
           onClick={this.enterIconLoading}
         >
           Click me!
         </Button>
-        <br />
-        <Button type="primary" loading />
-        <Button type="primary" shape="circle" loading />
-        <Button type="danger" shape="round" loading />
       </div>
     );
   }

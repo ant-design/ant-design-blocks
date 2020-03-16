@@ -1,6 +1,11 @@
 import React from "react";
 import styles from "./index.less";
-import { Layout, Menu, Breadcrumb, Icon } from "antd";
+import { Layout, Menu, Breadcrumb } from "antd";
+import {
+  UserOutlined,
+  LaptopOutlined,
+  NotificationOutlined
+} from "@ant-design/icons";
 
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
@@ -23,7 +28,7 @@ export default () => (
           </Menu>
         </Header>
         <Layout>
-          <Sider width={200} style={{ background: "#fff" }}>
+          <Sider width={200} className="site-layout-background">
             <Menu
               mode="inline"
               defaultSelectedKeys={["1"]}
@@ -34,7 +39,7 @@ export default () => (
                 key="sub1"
                 title={
                   <span>
-                    <Icon type="user" />
+                    <UserOutlined />
                     subnav 1
                   </span>
                 }
@@ -48,7 +53,7 @@ export default () => (
                 key="sub2"
                 title={
                   <span>
-                    <Icon type="laptop" />
+                    <LaptopOutlined />
                     subnav 2
                   </span>
                 }
@@ -62,7 +67,7 @@ export default () => (
                 key="sub3"
                 title={
                   <span>
-                    <Icon type="notification" />
+                    <NotificationOutlined />
                     subnav 3
                   </span>
                 }
@@ -81,8 +86,8 @@ export default () => (
               <Breadcrumb.Item>App</Breadcrumb.Item>
             </Breadcrumb>
             <Content
+              className="site-layout-background"
               style={{
-                background: "#fff",
                 padding: 24,
                 margin: 0,
                 minHeight: 280

@@ -1,7 +1,7 @@
 {
   "name": "@umi-block/icon-two-tone",
   "version": "0.0.1",
-  "description": "可以通过设置 `theme` 属性为 `twoTone` 来渲染双色图标，并且可以设置主题色。",
+  "description": "双色图标可以通过 `twoToneColor` 属性设置主题色。",
   "main": "src/index.js",
   "authors": { "name": "", "email": "" },
   "repository": "https://github.com/ant-design/ant-design-blocks/${BLOCKNAME}",

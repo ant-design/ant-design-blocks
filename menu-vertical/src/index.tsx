@@ -1,6 +1,11 @@
 import React from "react";
 import styles from "./index.less";
-import { Menu, Icon } from "antd";
+import { Menu } from "antd";
+import {
+  MailOutlined,
+  AppstoreOutlined,
+  SettingOutlined
+} from "@ant-design/icons";
 
 const { SubMenu } = Menu;
 
@@ -16,7 +21,7 @@ export default () => (
           key="sub1"
           title={
             <span>
-              <Icon type="mail" />
+              <MailOutlined />
               <span>Navigation One</span>
             </span>
           }
@@ -34,7 +39,7 @@ export default () => (
           key="sub2"
           title={
             <span>
-              <Icon type="appstore" />
+              <AppstoreOutlined />
               <span>Navigation Two</span>
             </span>
           }
@@ -50,7 +55,7 @@ export default () => (
           key="sub4"
           title={
             <span>
-              <Icon type="setting" />
+              <SettingOutlined />
               <span>Navigation Three</span>
             </span>
           }

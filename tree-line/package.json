@@ -1,7 +1,7 @@
 {
   "name": "@umi-block/tree-line",
   "version": "0.0.1",
-  "description": "带连接线的树。",
+  "description": "节点之间带连接线的树，常用于文件目录结构展示。使用 `showLine` 开启，可以用 `switcherIcon` 修改默认图标。",
   "main": "src/index.js",
   "authors": { "name": "", "email": "" },
   "repository": "https://github.com/ant-design/ant-design-blocks/${BLOCKNAME}",

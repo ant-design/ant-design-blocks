@@ -3,7 +3,7 @@ import styles from "./index.less";
 import { DatePicker } from "antd";
 import moment from "moment";
 
-const { MonthPicker, RangePicker } = DatePicker;
+const { RangePicker } = DatePicker;
 
 const dateFormat = "YYYY/MM/DD";
 const monthFormat = "YYYY/MM";
@@ -24,9 +24,10 @@ export default () => (
           format={dateFormatList}
         />
         <br />
-        <MonthPicker
+        <DatePicker
           defaultValue={moment("2015/01", monthFormat)}
           format={monthFormat}
+          picker="month"
         />
         <br />
         <RangePicker

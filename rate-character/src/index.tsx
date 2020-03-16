@@ -1,12 +1,13 @@
 import React from "react";
 import styles from "./index.less";
-import { Rate, Icon } from "antd";
+import { Rate } from "antd";
+import { HeartOutlined } from "@ant-design/icons";
 
 export default () => (
   <div className={styles.container}>
     <div id="components-rate-demo-character">
       <div>
-        <Rate character={<Icon type="heart" />} allowHalf />
+        <Rate character={<HeartOutlined />} allowHalf />
         <br />
         <Rate character="A" allowHalf style={{ fontSize: 36 }} />
         <br />

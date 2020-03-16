@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./index.less";
 import { Tree, Input } from "antd";
 
-const { TreeNode } = Tree;
 const { Search } = Input;
 
 const x = 3;
@@ -103,20 +102,20 @@ class SearchTree extends React.Component {
           index > -1 ? (
             <span>
               {beforeStr}
-              <span style={{ color: "#f50" }}>{searchValue}</span>
+              <span className="site-tree-search-value">{searchValue}</span>
               {afterStr}
             </span>
           ) : (
             <span>{item.title}</span>
           );
         if (item.children) {
-          return (
-            <TreeNode key={item.key} title={title}>
-              {loop(item.children)}
-            </TreeNode>
-          );
+          return { title, key: item.key, children: loop(item.children) };
         }
-        return <TreeNode key={item.key} title={title} />;
+
+        return {
+          title,
+          key: item.key
+        };
       });
     return (
       <div>
@@ -129,9 +128,8 @@ class SearchTree extends React.Component {
           onExpand={this.onExpand}
           expandedKeys={expandedKeys}
           autoExpandParent={autoExpandParent}
-        >
-          {loop(gData)}
-        </Tree>
+          treeData={loop(gData)}
+        />
       </div>
     );
   }

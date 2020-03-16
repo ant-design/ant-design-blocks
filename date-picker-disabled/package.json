@@ -1,7 +1,7 @@
 {
   "name": "@umi-block/date-picker-disabled",
   "version": "0.0.1",
-  "description": "选择框的不可用状态。",
+  "description": "选择框的不可用状态。你也可以通过数组单独禁用 RangePicker 的其中一项。",
   "main": "src/index.js",
   "authors": { "name": "", "email": "" },
   "repository": "https://github.com/ant-design/ant-design-blocks/${BLOCKNAME}",

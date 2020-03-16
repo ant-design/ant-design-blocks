@@ -1,7 +1,7 @@
 {
   "name": "@umi-block/notification-placement",
   "version": "0.0.1",
-  "description": "可以设置通知从右上角、右下角、左下角、左上角弹出。",
+  "description": "通知从右上角、右下角、左下角、左上角弹出。",
   "main": "src/index.js",
   "authors": { "name": "", "email": "" },
   "repository": "https://github.com/ant-design/ant-design-blocks/${BLOCKNAME}",

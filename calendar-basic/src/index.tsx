@@ -3,7 +3,7 @@ import styles from "./index.less";
 import { Calendar } from "antd";
 
 function onPanelChange(value, mode) {
-  console.log(value, mode);
+  console.log(value.format("YYYY-MM-DD"), mode);
 }
 
 export default () => (

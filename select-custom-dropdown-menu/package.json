@@ -1,7 +1,7 @@
 {
   "name": "@umi-block/select-custom-dropdown-menu",
   "version": "0.0.1",
-  "description": "使用 `dropdownRender` 对下拉菜单进行自由扩展。自定义内容点击时会关闭浮层，如果不喜欢关闭，可以添加 `onMouseDown={e => e.preventDefault()}` 进行阻止（更多详情见 [#13448](https://github.com/ant-design/ant-design/issues/13448)）。",
+  "description": "使用 `dropdownRender` 对下拉菜单进行自由扩展。",
   "main": "src/index.js",
   "authors": { "name": "", "email": "" },
   "repository": "https://github.com/ant-design/ant-design-blocks/${BLOCKNAME}",

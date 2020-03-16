@@ -1,7 +1,7 @@
 {
   "name": "@umi-block/typography-interactive",
   "version": "0.0.1",
-  "description": "提供额外的交互能力。",
+  "description": "提供可编辑和可复制等额外的交互能力。",
   "main": "src/index.js",
   "authors": { "name": "", "email": "" },
   "repository": "https://github.com/ant-design/ant-design-blocks/${BLOCKNAME}",

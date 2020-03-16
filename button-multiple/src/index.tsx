@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.less";
-import { Button, Menu, Dropdown, Icon } from "antd";
+import { Button, Menu, Dropdown } from "antd";
+import { DownOutlined } from "@ant-design/icons";
 
 function handleMenuClick(e) {
   console.log("click", e);
@@ -22,7 +23,7 @@ export default () => (
         <Button>secondary</Button>
         <Dropdown overlay={menu}>
           <Button>
-            Actions <Icon type="down" />
+            Actions <DownOutlined />
           </Button>
         </Dropdown>
       </div>

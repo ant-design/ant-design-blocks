@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.less";
-import { Switch, Icon } from "antd";
+import { Switch } from "antd";
+import { CloseOutlined, CheckOutlined } from "@ant-design/icons";
 
 export default () => (
   <div className={styles.container}>
@@ -11,8 +12,8 @@ export default () => (
         <Switch checkedChildren="1" unCheckedChildren="0" />
         <br />
         <Switch
-          checkedChildren={<Icon type="check" />}
-          unCheckedChildren={<Icon type="close" />}
+          checkedChildren={<CheckOutlined />}
+          unCheckedChildren={<CloseOutlined />}
           defaultChecked
         />
       </div>

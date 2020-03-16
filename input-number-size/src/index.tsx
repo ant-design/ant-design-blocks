@@ -9,7 +9,7 @@ function onChange(value) {
 export default () => (
   <div className={styles.container}>
     <div id="components-input-number-demo-size">
-      <div>
+      <div className="site-input-number-wrapper">
         <InputNumber
           size="large"
           min={1}

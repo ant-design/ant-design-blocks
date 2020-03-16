@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.less";
-import { Timeline, Icon } from "antd";
+import { Timeline } from "antd";
+import { ClockCircleOutlined } from "@ant-design/icons";
 
 export default () => (
   <div className={styles.container}>
@@ -9,7 +10,7 @@ export default () => (
         <Timeline.Item>Create a services site 2015-09-01</Timeline.Item>
         <Timeline.Item>Solve initial network problems 2015-09-01</Timeline.Item>
         <Timeline.Item
-          dot={<Icon type="clock-circle-o" style={{ fontSize: "16px" }} />}
+          dot={<ClockCircleOutlined style={{ fontSize: "16px" }} />}
           color="red"
         >
           Technical testing 2015-09-01

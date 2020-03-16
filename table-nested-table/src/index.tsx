@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.less";
-import { Table, Badge, Menu, Dropdown, Icon } from "antd";
+import { Table, Badge, Menu, Dropdown } from "antd";
+import { DownOutlined } from "@ant-design/icons";
 
 const menu = (
   <Menu>
@@ -35,7 +36,7 @@ function NestedTable() {
             <a>Stop</a>
             <Dropdown overlay={menu}>
               <a>
-                More <Icon type="down" />
+                More <DownOutlined />
               </a>
             </Dropdown>
           </span>
@@ -82,7 +83,7 @@ function NestedTable() {
     <Table
       className="components-table-demo-nested"
       columns={columns}
-      expandedRowRender={expandedRowRender}
+      expandable={{ expandedRowRender }}
       dataSource={data}
     />
   );

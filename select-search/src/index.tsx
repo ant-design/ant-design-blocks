@@ -33,7 +33,7 @@ export default () => (
         onBlur={onBlur}
         onSearch={onSearch}
         filterOption={(input, option) =>
-          option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+          option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
         }
       >
         <Option value="jack">Jack</Option>

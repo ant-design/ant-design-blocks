@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.less";
-import { Result, Button, Icon, Typography } from "antd";
+import { Result, Button, Typography } from "antd";
+import { CloseCircleOutlined } from "@ant-design/icons";
 
 const { Paragraph, Text } = Typography;
 
@@ -30,13 +31,13 @@ export default () => (
             </Text>
           </Paragraph>
           <Paragraph>
-            <Icon style={{ color: "red" }} type="close-circle" /> Your account
-            has been frozen
+            <CloseCircleOutlined className="site-result-demo-error-icon" /> Your
+            account has been frozen
             <a>Thaw immediately &gt;</a>
           </Paragraph>
           <Paragraph>
-            <Icon style={{ color: "red" }} type="close-circle" /> Your account
-            is not yet eligible to apply <a>Apply Unlock &gt;</a>
+            <CloseCircleOutlined className="site-result-demo-error-icon" /> Your
+            account is not yet eligible to apply <a>Apply Unlock &gt;</a>
           </Paragraph>
         </div>
       </Result>

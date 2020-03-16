@@ -1,7 +1,7 @@
 {
   "name": "@umi-block/grid-flex",
   "version": "0.0.1",
-  "description": "Flex 布局基础。\n\n使用 `row-flex` 定义 `flex` 布局，其子元素根据不同的值 `start`,`center`,`end`,`space-between`,`space-around`，分别定义其在父节点里面的排版方式。",
+  "description": "布局基础。\n\n子元素根据不同的值 `start`,`center`,`end`,`space-between`,`space-around`，分别定义其在父节点里面的排版方式。",
   "main": "src/index.js",
   "authors": { "name": "", "email": "" },
   "repository": "https://github.com/ant-design/ant-design-blocks/${BLOCKNAME}",

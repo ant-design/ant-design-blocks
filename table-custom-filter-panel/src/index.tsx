@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./index.less";
-import { Table, Input, Button, Icon } from "antd";
+import { Table, Input, Button } from "antd";
 import Highlighter from "react-highlight-words";
+import { SearchOutlined } from "@ant-design/icons";
 
 const data = [
   {
@@ -32,7 +33,8 @@ const data = [
 
 class App extends React.Component {
   state = {
-    searchText: ""
+    searchText: "",
+    searchedColumn: ""
   };
 
   getColumnSearchProps = dataIndex => ({
@@ -52,13 +54,15 @@ class App extends React.Component {
           onChange={e =>
             setSelectedKeys(e.target.value ? [e.target.value] : [])
           }
-          onPressEnter={() => this.handleSearch(selectedKeys, confirm)}
+          onPressEnter={() =>
+            this.handleSearch(selectedKeys, confirm, dataIndex)
+          }
           style={{ width: 188, marginBottom: 8, display: "block" }}
         />
         <Button
           type="primary"
-          onClick={() => this.handleSearch(selectedKeys, confirm)}
-          icon="search"
+          onClick={() => this.handleSearch(selectedKeys, confirm, dataIndex)}
+          icon={<SearchOutlined />}
           size="small"
           style={{ width: 90, marginRight: 8 }}
         >
@@ -74,7 +78,7 @@ class App extends React.Component {
       </div>
     ),
     filterIcon: filtered => (
-      <Icon type="search" style={{ color: filtered ? "#1890ff" : undefined }} />
+      <SearchOutlined style={{ color: filtered ? "#1890ff" : undefined }} />
     ),
     onFilter: (value, record) =>
       record[dataIndex]
@@ -86,19 +90,25 @@ class App extends React.Component {
         setTimeout(() => this.searchInput.select());
       }
     },
-    render: text => (
-      <Highlighter
-        highlightStyle={{ backgroundColor: "#ffc069", padding: 0 }}
-        searchWords={[this.state.searchText]}
-        autoEscape
-        textToHighlight={text.toString()}
-      />
-    )
+    render: text =>
+      this.state.searchedColumn === dataIndex ? (
+        <Highlighter
+          highlightStyle={{ backgroundColor: "#ffc069", padding: 0 }}
+          searchWords={[this.state.searchText]}
+          autoEscape
+          textToHighlight={text.toString()}
+        />
+      ) : (
+        text
+      )
   });
 
-  handleSearch = (selectedKeys, confirm) => {
+  handleSearch = (selectedKeys, confirm, dataIndex) => {
     confirm();
-    this.setState({ searchText: selectedKeys[0] });
+    this.setState({
+      searchText: selectedKeys[0],
+      searchedColumn: dataIndex
+    });
   };
 
   handleReset = clearFilters => {

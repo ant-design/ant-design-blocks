@@ -11,7 +11,7 @@ function onPanelChange(value, mode) {
 export default () => (
   <div className={styles.container}>
     <div id="components-calendar-demo-customize-header">
-      <div style={{ width: 300, border: "1px solid #d9d9d9", borderRadius: 4 }}>
+      <div className="site-calendar-customize-header-wrapper">
         <Calendar
           fullscreen={false}
           headerRender={({ value, type, onChange, onTypeChange }) => {
@@ -48,8 +48,8 @@ export default () => (
             return (
               <div style={{ padding: 10 }}>
                 <div style={{ marginBottom: "10px" }}>Custom header </div>
-                <Row type="flex" justify="space-between">
-                  <Col>
+                <Row style={{ flexWrap: "nowrap" }} gutter={8}>
+                  <Col style={{ flex: "none" }}>
                     <Group
                       size="small"
                       onChange={e => onTypeChange(e.target.value)}
@@ -59,7 +59,7 @@ export default () => (
                       <Button value="year">Year</Button>
                     </Group>
                   </Col>
-                  <Col>
+                  <Col style={{ flex: "auto" }}>
                     <Select
                       size="small"
                       dropdownMatchSelectWidth={false}
@@ -73,7 +73,7 @@ export default () => (
                       {options}
                     </Select>
                   </Col>
-                  <Col>
+                  <Col style={{ flex: "auto" }}>
                     <Select
                       size="small"
                       dropdownMatchSelectWidth={false}

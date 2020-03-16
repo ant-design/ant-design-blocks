@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.less";
-import { Tree, Icon } from "antd";
+import { Tree } from "antd";
+import { DownOutlined } from "@ant-design/icons";
 
 const { TreeNode } = Tree;
 
@@ -13,7 +14,7 @@ class Demo extends React.Component {
     return (
       <Tree
         showLine
-        switcherIcon={<Icon type="down" />}
+        switcherIcon={<DownOutlined />}
         defaultExpandedKeys={["0-0-0"]}
         onSelect={this.onSelect}
       >

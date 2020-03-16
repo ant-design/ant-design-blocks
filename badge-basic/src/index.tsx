@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.less";
-import { Badge, Icon } from "antd";
+import { Badge } from "antd";
+import { ClockCircleOutlined } from "@ant-design/icons";
 
 export default () => (
   <div className={styles.container}>
@@ -12,9 +13,7 @@ export default () => (
         <Badge count={0} showZero>
           <a href="#" className="head-example" />
         </Badge>
-        <Badge
-          count={<Icon type="clock-circle" style={{ color: "#f5222d" }} />}
-        >
+        <Badge count={<ClockCircleOutlined style={{ color: "#f5222d" }} />}>
           <a href="#" className="head-example" />
         </Badge>
       </div>

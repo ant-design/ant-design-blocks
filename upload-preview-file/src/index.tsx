@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.less";
-import { Upload, Button, Icon } from "antd";
+import { Upload, Button } from "antd";
+import { UploadOutlined } from "@ant-design/icons";
 
 const props = {
   action: "//jsonplaceholder.typicode.com/posts/",
@@ -23,7 +24,7 @@ export default () => (
       <div>
         <Upload {...props}>
           <Button>
-            <Icon type="upload" /> Upload
+            <UploadOutlined /> Upload
           </Button>
         </Upload>
       </div>

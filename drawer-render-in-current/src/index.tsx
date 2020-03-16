@@ -19,18 +19,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div
-        style={{
-          height: 200,
-          overflow: "hidden",
-          position: "relative",
-          border: "1px solid #ebedf0",
-          borderRadius: 2,
-          padding: 48,
-          textAlign: "center",
-          background: "#fafafa"
-        }}
-      >
+      <div className="site-drawer-render-in-current-wrapper">
         Render in this
         <div style={{ marginTop: 16 }}>
           <Button type="primary" onClick={this.showDrawer}>

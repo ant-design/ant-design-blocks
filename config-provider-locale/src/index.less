@@ -1,20 +1,10 @@
 .container {
   :global {
-    .locale-components {
-      border-top: 1px solid #d9d9d9;
-      padding-top: 16px;
+    [data-theme="dark"] .locale-components {
+      border-top: 1px solid #303030;
     }
-
-    .example {
-      margin: 16px 0;
-    }
-
-    .example > * {
-      margin-right: 8px;
-    }
-
-    .change-locale {
-      margin-bottom: 16px;
+    [data-theme="dark"] .site-config-provider-calendar-wrapper {
+      border: 1px solid #303030;
     }
   }
 }

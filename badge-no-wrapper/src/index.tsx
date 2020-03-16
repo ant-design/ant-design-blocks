@@ -7,15 +7,12 @@ export default () => (
     <div id="components-badge-demo-no-wrapper">
       <div>
         <Badge count={25} />
+        <Badge count={4} className="site-badge-count-4" />
         <Badge
-          count={4}
-          style={{
-            backgroundColor: "#fff",
-            color: "#999",
-            boxShadow: "0 0 0 1px #d9d9d9 inset"
-          }}
+          className="site-badge-count-109"
+          count={109}
+          style={{ backgroundColor: "#52c41a" }}
         />
-        <Badge count={109} style={{ backgroundColor: "#52c41a" }} />
       </div>
     </div>
   </div>

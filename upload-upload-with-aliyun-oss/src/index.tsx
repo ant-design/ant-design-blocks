@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.less";
-import { Form, Upload, message, Button, Icon } from "antd";
+import { Form, Upload, message, Button } from "antd";
+import { UploadOutlined } from "@ant-design/icons";
 
 class AliyunOSSUpload extends React.Component {
   state = {
@@ -100,32 +101,25 @@ class AliyunOSSUpload extends React.Component {
     return (
       <Upload {...props}>
         <Button>
-          <Icon type="upload" /> Click to Upload
+          <UploadOutlined /> Click to Upload
         </Button>
       </Upload>
     );
   }
 }
 
-class FormPage extends React.Component {
-  render() {
-    const { getFieldDecorator } = this.props.form;
-    return (
-      <Form onSubmit={this.handleSubmit} labelCol={{ span: 4 }}>
-        <Form.Item label="Photos">
-          {getFieldDecorator("photos")(<AliyunOSSUpload />)}
-        </Form.Item>
-      </Form>
-    );
-  }
-}
-
-const WrappedFormPage = Form.create()(FormPage);
+const FormPage = () => (
+  <Form labelCol={{ span: 4 }}>
+    <Form.Item label="Photos" name="photos">
+      <AliyunOSSUpload />
+    </Form.Item>
+  </Form>
+);
 
 export default () => (
   <div className={styles.container}>
     <div id="components-upload-demo-upload-with-aliyun-oss">
-      <WrappedFormPage />
+      <FormPage />
     </div>
   </div>
 );

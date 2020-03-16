@@ -7,9 +7,7 @@ export default () => (
     <div id="components-page-header-demo-actions">
       <div>
         <PageHeader
-          style={{
-            border: "1px solid rgb(235, 237, 240)"
-          }}
+          className="site-page-header"
           onBack={() => window.history.back()}
           title="Title"
           subTitle="This is a subtitle"
@@ -51,7 +49,7 @@ export default () => (
             </Button>
           ]}
         >
-          <Row type="flex">
+          <Row>
             <Statistic title="Status" value="Pending" />
             <Statistic
               title="Price"

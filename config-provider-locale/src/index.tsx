@@ -99,9 +99,7 @@ class Page extends React.Component {
             render={item => item.title}
           />
         </div>
-        <div
-          style={{ width: 319, border: "1px solid #d9d9d9", borderRadius: 4 }}
-        >
+        <div className="site-config-provider-calendar-wrapper">
           <Calendar fullscreen={false} value={moment()} />
         </div>
         <div className="example">

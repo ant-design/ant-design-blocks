@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.less";
-import { Button, Radio, Icon } from "antd";
+import { Button, Radio } from "antd";
+import { DownloadOutlined } from "@ant-design/icons";
 
 class ButtonSize extends React.Component {
   state = {
@@ -25,37 +26,39 @@ class ButtonSize extends React.Component {
         <Button type="primary" size={size}>
           Primary
         </Button>
-        <Button size={size}>Normal</Button>
+        <Button size={size}>Default</Button>
         <Button type="dashed" size={size}>
           Dashed
         </Button>
-        <Button type="danger" size={size}>
-          Danger
-        </Button>
+        <br />
         <Button type="link" size={size}>
           Link
         </Button>
         <br />
-        <Button type="primary" icon="download" size={size} />
-        <Button type="primary" shape="circle" icon="download" size={size} />
-        <Button type="primary" shape="round" icon="download" size={size} />
-        <Button type="primary" shape="round" icon="download" size={size}>
+        <Button type="primary" icon={<DownloadOutlined />} size={size} />
+        <Button
+          type="primary"
+          shape="circle"
+          icon={<DownloadOutlined />}
+          size={size}
+        />
+        <Button
+          type="primary"
+          shape="round"
+          icon={<DownloadOutlined />}
+          size={size}
+        />
+        <Button
+          type="primary"
+          shape="round"
+          icon={<DownloadOutlined />}
+          size={size}
+        >
           Download
         </Button>
-        <Button type="primary" icon="download" size={size}>
+        <Button type="primary" icon={<DownloadOutlined />} size={size}>
           Download
         </Button>
-        <br />
-        <Button.Group size={size}>
-          <Button type="primary">
-            <Icon type="left" />
-            Backward
-          </Button>
-          <Button type="primary">
-            Forward
-            <Icon type="right" />
-          </Button>
-        </Button.Group>
       </div>
     );
   }

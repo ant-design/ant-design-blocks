@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.less";
-import { Tabs, Icon } from "antd";
+import { Tabs } from "antd";
+import { AppleOutlined, AndroidOutlined } from "@ant-design/icons";
 
 const { TabPane } = Tabs;
 
@@ -11,7 +12,7 @@ export default () => (
         <TabPane
           tab={
             <span>
-              <Icon type="apple" />
+              <AppleOutlined />
               Tab 1
             </span>
           }
@@ -22,7 +23,7 @@ export default () => (
         <TabPane
           tab={
             <span>
-              <Icon type="android" />
+              <AndroidOutlined />
               Tab 2
             </span>
           }

@@ -1,13 +1,14 @@
 import React from "react";
 import styles from "./index.less";
-import { Input, Select, Icon } from "antd";
+import { Input, Select } from "antd";
+import { SettingOutlined } from "@ant-design/icons";
 
 const { Option } = Select;
 
 const selectBefore = (
-  <Select defaultValue="Http://" style={{ width: 90 }}>
-    <Option value="Http://">Http://</Option>
-    <Option value="Https://">Https://</Option>
+  <Select defaultValue="http://" style={{ width: 90 }}>
+    <Option value="http://">http://</Option>
+    <Option value="https://">https://</Option>
   </Select>
 );
 const selectAfter = (
@@ -25,7 +26,7 @@ export default () => (
       <div>
         <div style={{ marginBottom: 16 }}>
           <Input
-            addonBefore="Http://"
+            addonBefore="http://"
             addonAfter=".com"
             defaultValue="mysite"
           />
@@ -38,7 +39,10 @@ export default () => (
           />
         </div>
         <div style={{ marginBottom: 16 }}>
-          <Input addonAfter={<Icon type="setting" />} defaultValue="mysite" />
+          <Input addonAfter={<SettingOutlined />} defaultValue="mysite" />
+        </div>
+        <div style={{ marginBottom: 16 }}>
+          <Input addonBefore="http://" suffix=".com" defaultValue="mysite" />
         </div>
       </div>
     </div>

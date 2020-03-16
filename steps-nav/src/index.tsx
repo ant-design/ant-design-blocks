@@ -4,11 +4,6 @@ import { Steps } from "antd";
 
 const { Step } = Steps;
 
-const stepStyle = {
-  marginBottom: 60,
-  boxShadow: "0px -1px 0 0 #e8e8e8 inset"
-};
-
 class Demo extends React.Component {
   state = {
     current: 0
@@ -28,7 +23,7 @@ class Demo extends React.Component {
           size="small"
           current={current}
           onChange={this.onChange}
-          style={stepStyle}
+          className="site-navigation-steps"
         >
           <Step
             title="Step 1"
@@ -53,7 +48,7 @@ class Demo extends React.Component {
           type="navigation"
           current={current}
           onChange={this.onChange}
-          style={stepStyle}
+          className="site-navigation-steps"
         >
           <Step status="finish" title="Step 1" />
           <Step status="process" title="Step 2" />
@@ -65,7 +60,7 @@ class Demo extends React.Component {
           size="small"
           current={current}
           onChange={this.onChange}
-          style={stepStyle}
+          className="site-navigation-steps"
         >
           <Step status="finish" title="finish 1" />
           <Step status="finish" title="finish 2" />
