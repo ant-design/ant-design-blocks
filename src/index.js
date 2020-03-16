@@ -71,7 +71,7 @@ const generateBlock = async demoWithText => {
   }
 
   const description = parseDesc(text);
-  // await modifyPackageInfo(blockDir, name, description);
+  await modifyPackageInfo(blockDir, name, description);
 
   await screenshot(name, blockDir, rootDir, width, height);
 };
