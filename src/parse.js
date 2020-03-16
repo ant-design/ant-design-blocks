@@ -24,7 +24,7 @@ const parseJSX = (text, id = '') => {
 
   jsxText = `import React from 'react';import styles from './index.less';\n${jsxText}`;
 
-  jsxText = prettier.format(jsxText, { parser: 'babel' });
+  jsxText = prettier.format(jsxText, { parser: 'typescript' });
 
   return jsxText;
 };
