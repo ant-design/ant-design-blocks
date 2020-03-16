@@ -13,7 +13,7 @@ const parseJSX = (text, id = '') => {
   let jsxText = null;
   const result = text.match(JSX_SCRIPT);
   if (result && result.length > 0) {
-    jsxText = result[1];
+    jsxText = result[2];
   }
   jsxText = jsxText.replace(
     /ReactDOM.render\((.*),.*mountNode.*\)/is,
