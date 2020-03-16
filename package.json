@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node src/index.js",
     "start-c": "node src/index.js -c",
+    "prepublishOnly": "npm run test && np --yolo --no-publish",
     "dev": "umi dev",
     "test": "jest --config .jest.js --no-cache"
   },
