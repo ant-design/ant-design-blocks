@@ -3,10 +3,17 @@
   "version": "0.0.1",
   "description": "我们推荐使用 `Form.useForm` 创建表单数据域进行控制。如果是在 class component 下，你也可以通过 `ref` 获取数据域。",
   "main": "src/index.js",
-  "authors": { "name": "", "email": "" },
+  "authors": {
+    "name": "",
+    "email": ""
+  },
   "repository": "https://github.com/ant-design/ant-design-blocks/${BLOCKNAME}",
-  "scripts": { "dev": "umi dev" },
-  "dependencies": { "antd": "^3.23.4" },
+  "scripts": {
+    "dev": "umi dev"
+  },
+  "dependencies": {
+    "antd": "^4.0.0"
+  },
   "devDependencies": {
     "umi": "^2.9.0",
     "umi-plugin-block-dev": "^2.0.0",

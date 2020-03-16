@@ -3,10 +3,17 @@
   "version": "0.0.1",
   "description": "使用 `marks` 属性标注分段式滑块，使用 `value` / `defaultValue` 指定滑块位置。当 `included=false` 时，表明不同标记间为并列关系。当 `step=null` 时，Slider 的可选值仅有 `marks` 标出来的部分。",
   "main": "src/index.js",
-  "authors": { "name": "", "email": "" },
+  "authors": {
+    "name": "",
+    "email": ""
+  },
   "repository": "https://github.com/ant-design/ant-design-blocks/${BLOCKNAME}",
-  "scripts": { "dev": "umi dev" },
-  "dependencies": { "antd": "^3.23.4" },
+  "scripts": {
+    "dev": "umi dev"
+  },
+  "dependencies": {
+    "antd": "^4.0.0"
+  },
   "devDependencies": {
     "umi": "^2.9.0",
     "umi-plugin-block-dev": "^2.0.0",

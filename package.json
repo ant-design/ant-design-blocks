@@ -36,7 +36,7 @@
     "react-virtualized": "^9.21.1",
     "reqwest": "^2.0.5",
     "typescript": "^3.6.3",
-    "umi": "^2.9.0",
+    "umi": "2",
     "umi-plugin-block-dev": "^2.0.0",
     "umi-plugin-react": "^1.10.1",
     "umi-types": "^0.3.0",

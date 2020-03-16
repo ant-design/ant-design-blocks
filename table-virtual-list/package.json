@@ -3,10 +3,17 @@
   "version": "0.0.1",
   "description": "通过 `react-window` 引入虚拟滚动方案，实现 100000 条数据的高性能表格。",
   "main": "src/index.js",
-  "authors": { "name": "", "email": "" },
+  "authors": {
+    "name": "",
+    "email": ""
+  },
   "repository": "https://github.com/ant-design/ant-design-blocks/${BLOCKNAME}",
-  "scripts": { "dev": "umi dev" },
-  "dependencies": { "antd": "^3.23.4" },
+  "scripts": {
+    "dev": "umi dev"
+  },
+  "dependencies": {
+    "antd": "^4.0.0"
+  },
   "devDependencies": {
     "umi": "^2.9.0",
     "umi-plugin-block-dev": "^2.0.0",

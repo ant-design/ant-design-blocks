@@ -3,10 +3,17 @@
   "version": "0.0.1",
   "description": "TimePicker 浮层中的列会随着 `format` 变化，当略去 `format` 中的某部分时，浮层中对应的列也会消失。",
   "main": "src/index.js",
-  "authors": { "name": "", "email": "" },
+  "authors": {
+    "name": "",
+    "email": ""
+  },
   "repository": "https://github.com/ant-design/ant-design-blocks/${BLOCKNAME}",
-  "scripts": { "dev": "umi dev" },
-  "dependencies": { "antd": "^3.23.4" },
+  "scripts": {
+    "dev": "umi dev"
+  },
+  "dependencies": {
+    "antd": "^4.0.0"
+  },
   "devDependencies": {
     "umi": "^2.9.0",
     "umi-plugin-block-dev": "^2.0.0",

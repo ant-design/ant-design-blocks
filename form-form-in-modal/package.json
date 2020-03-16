@@ -3,10 +3,17 @@
   "version": "0.0.1",
   "description": "当用户访问一个展示了某个列表的页面，想新建一项但又不想跳转页面时，可以用 Modal 弹出一个表单，用户填写必要信息后创建新的项。",
   "main": "src/index.js",
-  "authors": { "name": "", "email": "" },
+  "authors": {
+    "name": "",
+    "email": ""
+  },
   "repository": "https://github.com/ant-design/ant-design-blocks/${BLOCKNAME}",
-  "scripts": { "dev": "umi dev" },
-  "dependencies": { "antd": "^3.23.4" },
+  "scripts": {
+    "dev": "umi dev"
+  },
+  "dependencies": {
+    "antd": "^4.0.0"
+  },
   "devDependencies": {
     "umi": "^2.9.0",
     "umi-plugin-block-dev": "^2.0.0",

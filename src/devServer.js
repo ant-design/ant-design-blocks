@@ -1,3 +1,5 @@
+/** @format */
+
 const { exec } = require('child_process');
 
 let devServer = null;
@@ -7,9 +9,10 @@ const runDevServer = ({ cwd, blockName, port = 1234 }) => {
 
     const devServerUrl = `http://localhost:${port}`;
     devServer = exec(`${command} -- --port ${port}`, { cwd });
-    // console.log(blockName);
+    console.log(blockName);
+    console.log(`${command} -- --port ${port}`, { cwd });
+
     devServer.stdout.on('data', data => {
-      // console.log(data.toString());
       if (/DONE/.test(data.toString())) {
         resolve(devServerUrl);
       }
@@ -23,6 +26,13 @@ const runDevServer = ({ cwd, blockName, port = 1234 }) => {
         devServer = null;
       }
     });
+
+    setTimeout(() => {
+      if (devServer !== null) {
+        devServer.kill('SIGINT');
+        devServer = null;
+      }
+    }, 200000);
   });
 };
 

@@ -3,10 +3,17 @@
   "version": "0.0.1",
   "description": "使用 `fileList` 对列表进行完全控制，可以实现各种自定义功能，以下演示二种情况：\n\n1. 上传列表数量的限制。\n\n2. 读取远程路径并显示链接。",
   "main": "src/index.js",
-  "authors": { "name": "", "email": "" },
+  "authors": {
+    "name": "",
+    "email": ""
+  },
   "repository": "https://github.com/ant-design/ant-design-blocks/${BLOCKNAME}",
-  "scripts": { "dev": "umi dev" },
-  "dependencies": { "antd": "^3.23.4" },
+  "scripts": {
+    "dev": "umi dev"
+  },
+  "dependencies": {
+    "antd": "^4.0.0"
+  },
   "devDependencies": {
     "umi": "^2.9.0",
     "umi-plugin-block-dev": "^2.0.0",
