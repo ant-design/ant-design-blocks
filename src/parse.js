@@ -1,6 +1,6 @@
 const prettier = require('prettier');
 
-const JSX_SCRIPT = /```jsx\n*(.*?(?=```))/is;
+const JSX_SCRIPT = /```(jsx|tsx)\n*(.*?(?=```))/is;
 const STYLE_TAG_SCRIPT = /<style>\n*(.*(?=<\/style>))/is;
 const CSS_MARK_SCRIPT = /```css\n*(.*?(?=```))/is;
 const TITLE_SCRIPT = /zh-CN: (.*)/i;
