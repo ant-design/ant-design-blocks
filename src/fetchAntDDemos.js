@@ -4,7 +4,7 @@ const ora = require('ora');
 const { parseComponentType, parseCol } = require('./parse');
 
 const spinner = ora();
-const componentsDir = path.join(__dirname, '../ant-design/components');
+const componentsDir = path.join(__dirname, '../../ant-design/components');
 
 const filterFolders = ['__tests__', '_util'];
 

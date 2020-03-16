@@ -1,0 +1,24 @@
+{
+  "name": "",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/index.js",
+  "authors": {
+    "name": "",
+    "email": ""
+  },
+  "repository": "https://github.com/ant-design/ant-design-blocks/${BLOCKNAME}",
+  "scripts": {
+    "dev": "umi dev"
+  },
+  "dependencies": {
+    "antd": "^4.0.0"
+  },
+  "devDependencies": {
+    "umi": "^3.0.0",
+    "@umijs/plugin-block-devtool": "^1.1.1",
+    "@umijs/preset-react": "^1.4.3",
+    "react": ">=16.0.0"
+  },
+  "license": "MIT"
+}
