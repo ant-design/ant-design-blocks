@@ -1,14 +1,18 @@
-const { runDevServer, killDevServer } = require('./devServer');
+/** @format */
+
+const { runDevServer } = require('./devServer');
 const puppeteer = require('puppeteer');
 const path = require('path');
+const { exec } = require('child_process');
 
 let browser = null;
 let page = null;
 
 const openBrowser = async () => {
   try {
+    exec('npm run serve');
     browser = await puppeteer.launch({
-      headless: true,
+      headless: false,
       args: [
         '--disable-gpu',
         '--disable-dev-shm-usage',
@@ -16,8 +20,8 @@ const openBrowser = async () => {
         '--disable-setuid-sandbox',
         '--no-zygote',
         '--no-sandbox',
-        '--single-process'
-      ]
+        '--single-process',
+      ],
     });
     page = await browser.newPage();
   } catch (error) {
@@ -29,8 +33,9 @@ const screenshot = async (blockName, blockDir, rootDir, width, height) => {
   const imagePath = path.join(blockDir, 'snapshot.png');
   const devServerUrl = await runDevServer({
     cwd: rootDir,
-    blockName
+    blockName,
   });
+  console.log(devServerUrl);
   await page.goto(devServerUrl);
   await page.evaluate(() => {
     document.body.style.padding = '24px';
@@ -45,12 +50,11 @@ const screenshot = async (blockName, blockDir, rootDir, width, height) => {
 
   await page.setViewport({
     width: width + 56,
-    height: height + 56
+    height: height + 56,
   });
   await page.screenshot({
-    path: imagePath
+    path: imagePath,
   });
-  await killDevServer();
 };
 
 const closeBrowser = async () => {

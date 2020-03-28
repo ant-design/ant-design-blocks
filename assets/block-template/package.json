@@ -1,25 +1,17 @@
 {
-  "name": "",
-  "version": "0.0.1",
-  "description": "",
+  "name": "ant-design-blocks",
+  "version": "1.0.0",
+  "description": "umi blocks of Ant Design.",
   "main": "src/index.js",
-  "authors": {
-    "name": "",
-    "email": ""
-  },
-  "repository": "https://github.com/ant-design/ant-design-blocks/${BLOCKNAME}",
   "scripts": {
-    "dev": "umi dev"
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
   },
+  "license": "MIT",
   "dependencies": {
+    "@ant-design/icons": "^4.0.2",
     "antd": "^4.0.0"
-  },
-  "devDependencies": {
-    "umi": "^2.9.0",
-    "umi-plugin-block-dev": "^2.0.0",
-    "umi-types": "^0.3.0",
-    "react": ">=16.0.0",
-    "umi-plugin-react": "^1.10.1"
-  },
-  "license": "MIT"
+  }
 }

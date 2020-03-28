@@ -60,7 +60,6 @@ const fetchAntDDemos = async () => {
   let demos = [];
   await Promise.all(
     componentNames.map(async name => {
-      console.log(name);
       const result = await fetchComponent(name);
       demos = demos.concat(result);
     })

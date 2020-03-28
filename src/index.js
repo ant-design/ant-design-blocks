@@ -44,6 +44,15 @@ const generateBlock = async demoWithText => {
     console.log(err);
   }
 
+  const id = `components-${componentName}-demo-${mdBaseName}`;
+  const jsxText = parseJSX(text, id);
+  const cssText = parseStyle(text, componentName);
+  const indexTSXPath = path.join(blockDir, 'src/index.tsx');
+  const indexLessPath = path.join(blockDir, 'src/index.less');
+  if (!jsxText) {
+    return;
+  }
+
   try {
     await fs.ensureDir(blockDir);
   } catch (err) {
@@ -56,11 +65,6 @@ const generateBlock = async demoWithText => {
     console.log(err);
   }
 
-  const id = `components-${componentName}-demo-${mdBaseName}`;
-  const jsxText = parseJSX(text, id);
-  const cssText = parseStyle(text, componentName);
-  const indexTSXPath = path.join(blockDir, 'src/index.tsx');
-  const indexLessPath = path.join(blockDir, 'src/index.less');
   try {
     await fs.outputFile(indexTSXPath, jsxText);
     if (cssText !== null) {
@@ -71,9 +75,12 @@ const generateBlock = async demoWithText => {
   }
 
   const description = parseDesc(text);
-  await modifyPackageInfo(blockDir, name, description);
-
-  await screenshot(name, blockDir, rootDir, width, height);
+  try {
+    await modifyPackageInfo(blockDir, name, description);
+    await screenshot(name, blockDir, rootDir, width, height);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 const generateBlocks = async (demosWithText, needContinue) => {
