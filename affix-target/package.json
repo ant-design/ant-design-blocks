@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/affix-target",
+  "version": "1.0.0",
+  "description": "用 `target` 设置 `Affix` 需要监听其滚动事件的元素，默认为 `window`。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

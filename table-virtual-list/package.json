@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/table-virtual-list",
+  "version": "1.0.0",
+  "description": "通过 `react-window` 引入虚拟滚动方案，实现 100000 条数据的高性能表格。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

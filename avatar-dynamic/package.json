@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/avatar-dynamic",
+  "version": "1.0.0",
+  "description": "对于字符型的头像，当字符串较长时，字体大小可以根据头像宽度自动调整。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

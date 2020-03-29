@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/alert-close-text",
+  "version": "1.0.0",
+  "description": "可以自定义关闭，自定义的文字会替换原先的关闭 `Icon`。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

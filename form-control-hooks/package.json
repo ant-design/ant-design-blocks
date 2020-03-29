@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/form-control-hooks",
+  "version": "1.0.0",
+  "description": "通过 `Form.useForm` 对表单数据域进行交互。\n\n> 注意 `useForm` 是 [React Hooks](https://reactjs.org/docs/hooks-intro.html) 的实现，只能用于函数组件，class 组件请查看下面的例子。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

@@ -17,7 +17,6 @@ const blockTemplateDir = winPath(path.join(__dirname, '../assets/block-template'
 const rootDir = winPath(path.join(__dirname, '..'));
 const continueFilePath = winPath(path.join(__dirname, '../continue.json'));
 const spinner = ora();
-let historyList = [];
 const DEBUG_COUNT = 0;
 const isWin = process.platform === 'win32';
 
@@ -49,6 +48,7 @@ const generateBlock = async demoWithText => {
   const cssText = parseStyle(text, componentName);
   const indexTSXPath = path.join(blockDir, 'src/index.tsx');
   const indexLessPath = path.join(blockDir, 'src/index.less');
+
   if (!jsxText) {
     return;
   }
@@ -87,17 +87,15 @@ const generateBlocks = async (demosWithText, needContinue) => {
   for (let index = 0; index < demosWithText.length; index++) {
     const demoWithText = demosWithText[index];
     const { name } = demoWithText;
-    if (needContinue && historyList.indexOf(name) !== -1) {
+
+    if (needContinue && fs.existsSync(path.join(__dirname, '../', name))) {
       continue;
     }
 
-    const current = historyList.length + 1;
     const total = demosWithText.length;
-    spinner.start(`[${current}/${total}] generate block ${name}`);
+    spinner.start(`[${index}/${total}] generate block ${name}`);
 
     await generateBlock(demoWithText);
-    historyList.push(name);
-    await fs.writeJSON(continueFilePath, historyList);
   }
   const total = demosWithText.length;
   spinner.succeed(`${total} blocks generated`);
@@ -156,12 +154,6 @@ const generateBlockList = async demosWithText => {
 const main = async () => {
   const needContinue = process.argv[2] === '-c';
 
-  if (needContinue) {
-    historyList = await fs.readJSON(continueFilePath, 'utf8');
-  } else {
-    await fs.writeJSON(continueFilePath, historyList);
-  }
-
   const demos = await fetchAntDDemos();
 
   if (demos.length <= 0) {
@@ -185,13 +177,15 @@ const main = async () => {
   }
 
   console.log(`will generate ${demosWithText.length} blocks`);
-  // await openBrowser();
+  await openBrowser();
 
-  // await generateBlocks(demosWithText, needContinue);
+  await generateBlocks(demosWithText, needContinue);
 
   await generateBlockList(demosWithText);
 
   await closeBrowser();
+
+  process.exit();
 };
 
 main();

@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/auto-complete-uncertain-category",
+  "version": "1.0.0",
+  "description": "[查询模式: 不确定类目](https://ant.design/docs/spec/reaction#Lookup-Patterns) 示例。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

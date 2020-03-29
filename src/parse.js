@@ -3,6 +3,7 @@
 const prettier = require('prettier');
 
 const JSX_SCRIPT = /```jsx\n*(.*?(?=```))/is;
+const TSX_SCRIPT = /```tsx\n*(.*?(?=```))/is;
 const STYLE_TAG_SCRIPT = /<style>\n*(.*(?=<\/style>))/is;
 const CSS_MARK_SCRIPT = /```css\n*(.*?(?=```))/is;
 const TITLE_SCRIPT = /zh-CN: (.*)/i;
@@ -13,10 +14,19 @@ const COL_SCRIPT = /\ncols: (\d)(?=\n)/i;
 
 const parseJSX = (text, id = '') => {
   let jsxText = null;
-  const result = text.match(JSX_SCRIPT);
+  let result = text.match(JSX_SCRIPT);
+
   if (result && result.length > 0) {
     jsxText = result[1];
   }
+
+  if (!jsxText) {
+    let result = text.match(TSX_SCRIPT);
+    if (result && result.length > 0) {
+      jsxText = result[1];
+    }
+  }
+
   if (!jsxText) {
     return '';
   }
@@ -24,9 +34,11 @@ const parseJSX = (text, id = '') => {
     return `export default () => <div className={styles.container}><div id="${id}">${key}</div></div>`;
   });
 
-  jsxText = `import React from 'react';import styles from './index.less';\n${jsxText}`;
+  jsxText = `import React from 'react';import styles from './index.less';\n\n${jsxText}`;
 
-  jsxText = prettier.format(jsxText, { parser: 'babel' });
+  try {
+    jsxText = prettier.format(jsxText, { parser: 'babel' });
+  } catch (error) {}
 
   return jsxText;
 };

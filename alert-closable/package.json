@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/alert-closable",
+  "version": "1.0.0",
+  "description": "显示关闭按钮，点击可关闭警告提示。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/form-customized-form-controls",
+  "version": "1.0.0",
+  "description": "自定义或第三方的表单控件，也可以与 Form 组件一起使用。只要该组件遵循以下的约定：\n\n> - 提供受控属性 `value` 或其它与 [`valuePropName`](http://ant.design/components/form/#getFieldDecorator-参数) 的值同名的属性。\n> - 提供 `onChange` 事件或 [`trigger`](http://ant.design/components/form/#getFieldDecorator-参数) 的值同名的事件。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}
