@@ -111,27 +111,29 @@ const generateBlockList = async demosWithText => {
     const { name, componentName, mdBaseName, text, componentType } = demoWithText;
     const description = parseDesc(text);
     const demoTitle = parseTitle(text);
-    const title = `${componentName}-${demoTitle}`;
-    const img = `https://raw.githubusercontent.com/ant-design/ant-design-blocks/master/${name}/snapshot.png`;
-    const previewUrl = `https://ant.design/components/${componentName}-cn/#components-${componentName}-demo-${mdBaseName}`;
-    const url = `https://github.com/ant-design/ant-design-blocks/tree/master/${name}`;
-    const tags = [componentType];
-    blockList.push({
-      title,
-      value: name,
-      key: name,
-      description,
-      url,
-      type: 'block',
-      path: name,
-      isPage: false,
-      defaultPath: `/${name}`,
-      img,
-      tags,
-      name: title,
-      previewUrl,
-      features: ['antd'],
-    });
+    if (fs.existsSync(path.join(__dirname, '../', name))) {
+      const title = `${componentName}-${demoTitle}`;
+      const img = `https://raw.githubusercontent.com/ant-design/ant-design-blocks/master/${name}/snapshot.png`;
+      const previewUrl = `https://ant.design/components/${componentName}-cn/#components-${componentName}-demo-${mdBaseName}`;
+      const url = `https://github.com/ant-design/ant-design-blocks/tree/master/${name}`;
+      const tags = [componentType];
+      blockList.push({
+        title,
+        value: name,
+        key: name,
+        description,
+        url,
+        type: 'block',
+        path: name,
+        isPage: false,
+        defaultPath: `/${name}`,
+        img,
+        tags,
+        name: title,
+        previewUrl,
+        features: ['antd'],
+      });
+    }
   }
 
   const topBlocks = [];
@@ -183,9 +185,9 @@ const main = async () => {
   }
 
   console.log(`will generate ${demosWithText.length} blocks`);
-  await openBrowser();
+  // await openBrowser();
 
-  await generateBlocks(demosWithText, needContinue);
+  // await generateBlocks(demosWithText, needContinue);
 
   await generateBlockList(demosWithText);
 
