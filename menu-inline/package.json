@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/menu-inline",
+  "version": "1.0.0",
+  "description": "垂直菜单，子菜单内嵌在菜单区域。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

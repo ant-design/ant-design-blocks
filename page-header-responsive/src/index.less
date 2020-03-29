@@ -1,0 +1,33 @@
+.container {
+  :global {
+    [data-theme="dark"] .site-page-header-responsive {
+      border: 1px solid #303030;
+    }
+    tr:last-child td {
+      padding-bottom: 0;
+    }
+    .ant-statistic-content {
+      font-size: 20px;
+      line-height: 28px;
+    }
+    #components-page-header-demo-responsive .content {
+      display: flex;
+    }
+    @media (max-width: 576px) {
+      #components-page-header-demo-responsive .content {
+        display: block;
+      }
+
+      #components-page-header-demo-responsive .main {
+        width: 100%;
+        margin-bottom: 12px;
+      }
+
+      #components-page-header-demo-responsive .extra {
+        width: 100%;
+        margin-left: 0;
+        text-align: left;
+      }
+    }
+  }
+}

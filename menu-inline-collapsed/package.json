@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/menu-inline-collapsed",
+  "version": "1.0.0",
+  "description": "内嵌菜单可以被缩起/展开。\n\n你可以在 [Layout](/components/layout/#components-layout-demo-side) 里查看侧边布局结合的完整示例。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

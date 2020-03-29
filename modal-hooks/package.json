@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/modal-hooks",
+  "version": "1.0.0",
+  "description": "通过 `Modal.useModal` 创建支持读取 context 的 `contextHolder`。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/modal-footer",
+  "version": "1.0.0",
+  "description": "更复杂的例子，自定义了页脚的按钮，点击提交后进入 loading 状态，完成后关闭。\n\n不需要默认确定取消按钮时，你可以把 `footer` 设为 `null`。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

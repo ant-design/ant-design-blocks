@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/button-danger",
+  "version": "1.0.0",
+  "description": "在 4.0 之后，危险成为一种按钮属性而不是按钮类型。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/time-picker-12hours",
+  "version": "1.0.0",
+  "description": "12 小时制的时间选择器，默认的 format 为 `h:mm:ss a`。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

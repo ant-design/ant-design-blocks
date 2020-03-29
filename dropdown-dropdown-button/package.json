@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/dropdown-dropdown-button",
+  "version": "1.0.0",
+  "description": "左边是按钮，右边是额外的相关功能菜单。可设置 `icon` 属性来修改右边的图标。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

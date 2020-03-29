@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/select-label-in-value",
+  "version": "1.0.0",
+  "description": "默认情况下 `onChange` 里只能拿到 value，如果需要拿到选中的节点文本 label，可以使用 `labelInValue` 属性。\n\n选中项的 label 会被包装到 value 中传递给 `onChange` 等函数，此时 value 是一个对象。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

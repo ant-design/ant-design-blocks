@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/message-loading",
+  "version": "1.0.0",
+  "description": "进行全局 loading，异步自行移除。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

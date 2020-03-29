@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/upload-drag",
+  "version": "1.0.0",
+  "description": "把文件拖入指定区域，完成上传，同样支持点击上传。\n\n设置 `multiple` 后，在 `IE10+` 可以一次上传多个文件。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

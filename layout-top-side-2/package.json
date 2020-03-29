@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/layout-top-side-2",
+  "version": "1.0.0",
+  "description": "同样拥有顶部导航及侧边栏，区别是两边未留边距，多用于应用型的网站。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/drawer-multi-level-drawer",
+  "version": "1.0.0",
+  "description": "在抽屉内打开新的抽屉，用以解决多分支任务的复杂状况。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

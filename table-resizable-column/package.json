@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/table-resizable-column",
+  "version": "1.0.0",
+  "description": "集成 [react-resizable](https://github.com/STRML/react-resizable) 来实现可伸缩列。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

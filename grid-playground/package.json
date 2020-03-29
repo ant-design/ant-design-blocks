@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/grid-playground",
+  "version": "1.0.0",
+  "description": "可以简单配置几种等分栅格和间距。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

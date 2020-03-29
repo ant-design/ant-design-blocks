@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/select-select-users",
+  "version": "1.0.0",
+  "description": "一个带有远程搜索，防抖控制，请求时序控制，加载状态的多选示例。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

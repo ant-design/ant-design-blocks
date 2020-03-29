@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/select-automatic-tokenization",
+  "version": "1.0.0",
+  "description": "试下复制 `露西,杰克` 到输入框里。只在 tags 和 multiple 模式下可用。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

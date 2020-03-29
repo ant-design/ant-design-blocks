@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/drawer-user-profile",
+  "version": "1.0.0",
+  "description": "需要快速预览对象概要时使用，点击遮罩区关闭。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/tag-checkable",
+  "version": "1.0.0",
+  "description": "可通过 `CheckableTag` 实现类似 Checkbox 的效果，点击切换选中效果。\n\n> 该组件为完全受控组件，不支持非受控用法。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

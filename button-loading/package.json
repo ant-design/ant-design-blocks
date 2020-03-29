@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/button-loading",
+  "version": "1.0.0",
+  "description": "添加 `loading` 属性即可让按钮处于加载状态，最后两个按钮演示点击后进入加载状态。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

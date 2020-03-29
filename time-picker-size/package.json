@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/time-picker-size",
+  "version": "1.0.0",
+  "description": "三种大小的输入框，大的用在表单中，中的为默认。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

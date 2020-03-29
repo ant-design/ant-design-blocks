@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/select-coordinate",
+  "version": "1.0.0",
+  "description": "省市联动是典型的例子。\n\n推荐使用 [Cascader](/components/cascader/) 组件。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

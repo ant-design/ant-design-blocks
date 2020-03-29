@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/grid-responsive-more",
+  "version": "1.0.0",
+  "description": "`span` `pull` `push` `offset` `order` 属性可以通过内嵌到 `xs` `sm` `md` `lg` `xl` `xxl` 属性中来使用。\n\n其中 `xs={6}` 相当于 `xs={{ span: 6 }}`。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

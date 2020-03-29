@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/comment-basic",
+  "version": "1.0.0",
+  "description": "一个基本的评论组件，带有作者、头像、时间和操作。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

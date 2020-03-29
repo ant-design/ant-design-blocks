@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/layout-top-side",
+  "version": "1.0.0",
+  "description": "拥有顶部导航及侧边栏的页面，多用于展示类网站。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

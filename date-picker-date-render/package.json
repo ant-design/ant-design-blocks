@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/date-picker-date-render",
+  "version": "1.0.0",
+  "description": "使用 `dateRender` 可以自定义日期单元格的内容和样式。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

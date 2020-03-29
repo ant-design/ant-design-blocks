@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/cascader-lazy",
+  "version": "1.0.0",
+  "description": "使用 `loadData` 实现动态加载选项。\n\n> 注意：`loadData` 与 `showSearch` 无法一起使用。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

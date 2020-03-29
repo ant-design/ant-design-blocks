@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/tag-animation",
+  "version": "1.0.0",
+  "description": "使用 [rc-tween-one](https://github.com/react-component/tween-one) 给标签增加添加或删除动画。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

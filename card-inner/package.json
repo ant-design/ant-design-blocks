@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/card-inner",
+  "version": "1.0.0",
+  "description": "可以放在普通卡片内部，展示多层级结构的信息。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

@@ -61,6 +61,8 @@ const closeBrowser = async () => {
   if (browser !== null) {
     browser.close();
   }
+  process.exitCode = 1;
+  return;
 };
 
 module.exports = { screenshot, openBrowser, closeBrowser };

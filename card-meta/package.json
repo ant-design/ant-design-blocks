@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/card-meta",
+  "version": "1.0.0",
+  "description": "一种支持封面、头像、标题和描述信息的卡片。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

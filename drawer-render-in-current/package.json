@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/drawer-render-in-current",
+  "version": "1.0.0",
+  "description": "渲染在当前 dom 里。自定义容器，查看 getContainer。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

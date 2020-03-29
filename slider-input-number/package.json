@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/slider-input-number",
+  "version": "1.0.0",
+  "description": "和 [数字输入框](/components/input-number/) 组件保持同步。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

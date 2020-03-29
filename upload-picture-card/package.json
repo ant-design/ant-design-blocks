@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/upload-picture-card",
+  "version": "1.0.0",
+  "description": "用户可以上传图片并在列表中显示缩略图。当上传照片数到达限制后，上传按钮消失。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

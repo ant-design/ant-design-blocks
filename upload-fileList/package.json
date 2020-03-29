@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/upload-fileList",
+  "version": "1.0.0",
+  "description": "使用 `fileList` 对列表进行完全控制，可以实现各种自定义功能，以下演示二种情况：\n\n1. 上传列表数量的限制。\n\n2. 读取远程路径并显示链接。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

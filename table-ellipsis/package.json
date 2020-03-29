@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/table-ellipsis",
+  "version": "1.0.0",
+  "description": "设置 `column.ellipsis` 可以让单元格内容根据宽度自动省略。\n\n> 列头缩略暂不支持和排序筛选一起使用。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

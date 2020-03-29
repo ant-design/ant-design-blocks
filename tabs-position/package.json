@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/tabs-position",
+  "version": "1.0.0",
+  "description": "有四个位置，`tabPosition=\"left|right|top|bottom\"`。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

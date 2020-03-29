@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/page-header-basic",
+  "version": "1.0.0",
+  "description": "标准页头，适合使用在需要简单描述的场景。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/input-number-digit",
+  "version": "1.0.0",
+  "description": "和原生的数字输入框一样，value 的精度由 step 的小数位数决定。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

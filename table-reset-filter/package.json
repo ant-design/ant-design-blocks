@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/table-reset-filter",
+  "version": "1.0.0",
+  "description": "使用受控属性对筛选和排序状态进行控制。\n\n> 1. columns 中定义了 filteredValue 和 sortOrder 属性即视为受控模式。\n> 2. 只支持同时对一列进行排序，请保证只有一列的 sortOrder 属性是生效的。\n> 3. 务必指定 `column.key`。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

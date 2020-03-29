@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/date-picker-disabled",
+  "version": "1.0.0",
+  "description": "选择框的不可用状态。你也可以通过数组单独禁用 RangePicker 的其中一项。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

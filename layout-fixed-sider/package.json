@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/layout-fixed-sider",
+  "version": "1.0.0",
+  "description": "当内容较长时，使用固定侧边栏可以提供更好的体验。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

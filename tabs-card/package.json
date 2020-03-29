@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/tabs-card",
+  "version": "1.0.0",
+  "description": "另一种样式的页签，不提供对应的垂直样式。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

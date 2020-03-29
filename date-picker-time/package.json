@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/date-picker-time",
+  "version": "1.0.0",
+  "description": "增加选择时间功能，当 `showTime` 为一个对象时，其属性会传递给内建的 `TimePicker`。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

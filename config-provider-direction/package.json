@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/config-provider-direction",
+  "version": "1.0.0",
+  "description": "这里列出了支持 `rtl` 方向的组件，您可以在演示中切换方向。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

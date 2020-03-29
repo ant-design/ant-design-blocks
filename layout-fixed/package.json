@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/layout-fixed",
+  "version": "1.0.0",
+  "description": "一般用于固定顶部导航，方便页面切换。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

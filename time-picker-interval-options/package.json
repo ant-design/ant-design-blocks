@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/time-picker-interval-options",
+  "version": "1.0.0",
+  "description": "可以使用 `hourStep` `minuteStep` `secondStep` 按步长展示可选的时分秒。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

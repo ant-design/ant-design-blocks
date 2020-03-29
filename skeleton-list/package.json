@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/skeleton-list",
+  "version": "1.0.0",
+  "description": "在列表组件中使用加载占位符。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

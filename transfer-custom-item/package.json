@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/transfer-custom-item",
+  "version": "1.0.0",
+  "description": "自定义渲染每一个 Transfer Item，可用于渲染复杂数据。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

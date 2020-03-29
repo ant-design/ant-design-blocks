@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/form-dynamic-form-item",
+  "version": "1.0.0",
+  "description": "动态增加、减少表单项。如果需要动态支持多项字段时，可以参考[此处](https://codesandbox.io/s/wonderful-lichterman-br63z)。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

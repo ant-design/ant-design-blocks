@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/spin-size",
+  "version": "1.0.0",
+  "description": "小的用于文本加载，默认用于卡片容器级加载，大的用于**页面级**加载。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

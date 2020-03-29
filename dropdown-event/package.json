@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/dropdown-event",
+  "version": "1.0.0",
+  "description": "点击菜单项后会触发事件，用户可以通过相应的菜单项 key 进行不同的操作。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}

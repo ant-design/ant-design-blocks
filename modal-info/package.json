@@ -1,0 +1,14 @@
+{
+  "name": "@umi-block/modal-info",
+  "version": "1.0.0",
+  "description": "各种类型的信息提示，只提供一个按钮用于关闭。",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start-c": "node src/index.js -c",
+    "dev": "umi dev",
+    "test": "jest --config .jest.js --no-cache"
+  },
+  "license": "MIT",
+  "dependencies": { "@ant-design/icons": "^4.0.2", "antd": "^4.0.0" }
+}
