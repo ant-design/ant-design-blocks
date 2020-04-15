@@ -1,13 +1,11 @@
-import React from "react";
-import styles from "./index.less";
 import React, { useState, useEffect } from "react";
 import { Anchor } from "antd";
+import styles from "./index.less";
 
 const { Link } = Anchor;
 
 const AnchorExample: React.FC = () => {
-  const [targetOffset, setTargetOffset] =
-    (useState < number) | (undefined > undefined);
+  const [targetOffset, setTargetOffset] = useState<number | undefined>(undefined);
   useEffect(() => {
     setTargetOffset(window.innerHeight / 2);
   }, []);

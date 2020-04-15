@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./index.less";
 import { Affix, Button } from "antd";
+import styles from "./index.less";
 
 export default () => (
   <div className={styles.container}>

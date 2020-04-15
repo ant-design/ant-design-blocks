@@ -1,8 +1,7 @@
-import React from "react";
-import styles from "./index.less";
 import React, { useState } from "react";
 import { Input, AutoComplete } from "antd";
 import { SelectProps } from "antd/es/select";
+import styles from "./index.less";
 
 function getRandomInt(max: number, min: number = 0) {
   return Math.floor(Math.random() * (max - min + 1)) + min; // eslint-disable-line no-mixed-operators
@@ -41,8 +40,7 @@ const searchResult = (query: string) => {
 };
 
 const Complete: React.FC = () => {
-  const [options, setOptions] =
-    useState < SelectProps < object > ["options"] > [];
+  const [options, setOptions] = useState<SelectProps<object>["options"]>([]);
 
   const handleSearch = (value: string) => {
     setOptions(value ? searchResult(value) : []);

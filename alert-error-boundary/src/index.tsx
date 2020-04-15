@@ -1,6 +1,6 @@
-import React from 'react';import styles from './index.less';
 import React, { useState } from 'react';
 import { Button, Alert } from 'antd';
+import styles from './index.less';
 
 const { ErrorBoundary } = Alert;
 const ThrowError: React.FC = () => {

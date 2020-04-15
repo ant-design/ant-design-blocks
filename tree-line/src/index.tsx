@@ -1,6 +1,4 @@
-import React from "react";
 import styles from "./index.less";
-
 import React, { useState } from "react";
 import { Tree, Switch } from "antd";
 import { CarryOutOutlined, FormOutlined } from "@ant-design/icons";

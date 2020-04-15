@@ -1,7 +1,6 @@
-import React from "react";
-import styles from "./index.less";
 import React, { useState } from "react";
 import { Affix, Button } from "antd";
+import styles from "./index.less";
 
 const Demo: React.FC = () => {
   const [top, setTop] = useState(10);

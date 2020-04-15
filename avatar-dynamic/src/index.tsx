@@ -1,7 +1,6 @@
-import React from "react";
-import styles from "./index.less";
 import React, { useState } from "react";
 import { Avatar, Button } from "antd";
+import styles from "./index.less";
 
 const UserList = ["U", "Lucy", "Tom", "Edward"];
 const ColorList = ["#f56a00", "#7265e6", "#ffbf00", "#00a2ae"];
