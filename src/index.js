@@ -145,7 +145,7 @@ const generateBlockList = async demosWithText => {
     }
   });
 
-  const umiBlockJSON = { blocks: topBlocks.concat(restBlocks) };
+  const umiBlockJSON = { blocks: topBlocks.concat(restBlocks).filter(item=>item) };
   const blockListFilePath = path.join(rootDir, 'umi-block.json');
   await fs.writeJSON(blockListFilePath, umiBlockJSON);
   spinner.succeed();

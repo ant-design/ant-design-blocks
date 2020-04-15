@@ -6,6 +6,8 @@ const ora = require('ora');
 const { parseComponentType, parseCol } = require('./parse');
 
 const spinner = ora();
+
+// 需要修改为本地 ant-design 目录
 const componentsDir = path.join(__dirname, '../../ant-design/components');
 
 const filterFolders = ['__tests__', '_util'];

@@ -33,8 +33,9 @@ const parseJSX = (text, id = '') => {
   jsxText = jsxText.replace(/ReactDOM.render\((.*),.*mountNode.*\)/is, (match, key) => {
     return `export default () => <div className={styles.container}><div id="${id}">${key}</div></div>`;
   });
-
-  jsxText = `import React from 'react';import styles from './index.less';\n\n${jsxText}`;
+  const importReactReg = /import(\D*)from 'react'/;
+  const importReactContent = importReactReg.test(jsxText) ? '' : "import React from 'react';";
+  jsxText = `${importReactContent}import styles from './index.less';\n\n${jsxText}`;
 
   try {
     jsxText = prettier.format(jsxText, { parser: 'babel' });
