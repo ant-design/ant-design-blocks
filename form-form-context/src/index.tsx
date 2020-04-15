@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./index.less";
 import React, { useState, useEffect, useRef } from "react";
 import {

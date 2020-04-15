@@ -1,8 +1,9 @@
 import React from "react";
-import styles from "./index.less";
 import { Calendar } from "antd";
+import { CalendarMode } from "antd/es/calendar/generateCalendar";
+import styles from "./index.less";
 
-function onPanelChange(value, mode) {
+function onPanelChange(value: any, mode: CalendarMode) {
   console.log(value.format("YYYY-MM-DD"), mode);
 }
 

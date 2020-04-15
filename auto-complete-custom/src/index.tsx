@@ -1,6 +1,6 @@
-import React from 'react';import styles from './index.less';
 import React, { useState } from 'react';
 import { AutoComplete, Input } from 'antd';
+import styles from './index.less';
 
 const { TextArea } = Input;
 
