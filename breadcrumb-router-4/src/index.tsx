@@ -28,7 +28,7 @@ const breadcrumbNameMap = {
   "/apps/2": "Application2",
   "/apps/1/detail": "Detail",
   "/apps/2/detail": "Detail"
-};
+} as { [key: string]: string };
 const Home = withRouter(props => {
   const { location } = props;
   const pathSnippets = location.pathname.split("/").filter(i => i);

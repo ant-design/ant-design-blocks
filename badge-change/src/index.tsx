@@ -24,7 +24,7 @@ class Demo extends React.Component {
     this.setState({ count });
   };
 
-  onChange = show => {
+  onChange = (show: boolean) => {
     this.setState({ show });
   };
 

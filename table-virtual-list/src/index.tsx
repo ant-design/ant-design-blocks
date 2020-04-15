@@ -1,5 +1,4 @@
-import React from 'react';import styles from './index.less';
-
+import styles from './index.less';
 import React, { useState, useEffect, useRef } from 'react';
 import { VariableSizeGrid as Grid } from 'react-window';
 import ResizeObserver from 'rc-resize-observer';

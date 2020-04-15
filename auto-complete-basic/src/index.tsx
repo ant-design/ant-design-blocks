@@ -1,6 +1,6 @@
-import React from 'react';import styles from './index.less';
 import React, { useState } from 'react';
 import { AutoComplete } from 'antd';
+import styles from './index.less';
 
 const mockVal = (str: string, repeat: number = 1) => {
   return {

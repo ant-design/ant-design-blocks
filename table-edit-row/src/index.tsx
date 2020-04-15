@@ -1,4 +1,4 @@
-import React from 'react';import styles from './index.less';
+import styles from './index.less';
 import React, { useState } from 'react';
 import { Table, Input, InputNumber, Popconfirm, Form } from 'antd';
 

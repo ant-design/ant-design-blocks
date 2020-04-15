@@ -2,9 +2,10 @@ import React from "react";
 import styles from "./index.less";
 import { Button, Menu, Dropdown } from "antd";
 import { DownOutlined } from "@ant-design/icons";
+import { ClickParam } from 'antd/es/menu';
 
-function handleMenuClick(e) {
-  console.log("click", e);
+function handleMenuClick(param: ClickParam) {
+  console.log("click", param);
 }
 
 const menu = (

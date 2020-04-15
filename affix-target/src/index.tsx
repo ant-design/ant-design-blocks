@@ -1,10 +1,9 @@
-import React from "react";
-import styles from "./index.less";
 import React, { useState } from "react";
 import { Affix, Button } from "antd";
+import styles from "./index.less";
 
 const Demo: React.FC = () => {
-  const [container, setContainer] = useState(null);
+  const [container, setContainer] = useState<HTMLDivElement | null>(null);
   return (
     <div className="scrollable-container" ref={setContainer}>
       <div className="background">

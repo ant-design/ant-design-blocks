@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./index.less";
 import React, { useState } from "react";
 import { Form, Row, Col, Input, Button } from "antd";
